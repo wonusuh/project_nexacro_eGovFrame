@@ -10,10 +10,10 @@
       <GeneratorInfo rule_version="1.3"/>
     </Rule>
     <Info project="C:\dev_wonuSuh\project_nexacro_eGovFrame\myNexacro\NP20260527\" generated="C:\Users\wonwo\OneDrive\Documents\TOBESOFT\Nexacro N\outputs\NP20260527\">
-      <File url="environment.xml" checksum="20260527174026" errormsg=""/>
-      <File url="typedefinition.xml" checksum="20260527174026" errormsg=""/>
-      <File url="appvariables.xml" checksum="20260527174026" errormsg=""/>
-      <File url="_resource_\_theme_\blue\theme.xcss" checksum="20260527174026" errormsg=""/>
+      <File url="environment.xml" checksum="20260527174707" errormsg=""/>
+      <File url="typedefinition.xml" checksum="20260527175103" errormsg=""/>
+      <File url="appvariables.xml" checksum="20260527174707" errormsg=""/>
+      <File url="_resource_\_theme_\blue\theme.xcss" checksum="20260527174707" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260306094100" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20260306094100" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20260306094056" errormsg=""/>
@@ -22,6 +22,7 @@
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260306094102" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260306094056" errormsg=""/>
       <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260306094102" errormsg=""/>
+      <File url="Application_Desktop.xadl" checksum="20260527174707" errormsg=""/>
     </Info>
   </GenInfo>
 </root>
