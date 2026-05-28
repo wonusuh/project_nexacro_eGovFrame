@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Hello" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="btnHello" taborder="0" text="hello2" left="130" top="55" width="120" height="50" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[var var1 = 'abc';
+this.var2 = 'abc';
+var3 = 'abc';
+let var4 = 'abc';
+const var5 = 'abc';
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.alert('hello');
+	const objApp = nexacro.getApplication();
+	objApp.trace('안녕하세요.');
+	obj.text = '안녕하세요';
+	trace(obj.text);
+};
+
+this.fn_click = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>
