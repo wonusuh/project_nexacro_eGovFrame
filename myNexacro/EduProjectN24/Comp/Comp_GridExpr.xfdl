@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_GridExpr" width="1020" height="720" titletext="Comp_GridExpr">
+    <Layouts>
+      <Layout height="720" horizontalgap="0" mobileorientation="landscape" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="1020">
+        <Grid id="grd_data" taborder="0" left="20.00" top="95" onheadclick="grd_emp_onheadclick" height="185" width="980" binddataset="ds_data">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="28" band="head"/>
+                <Row size="28"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="EMP_ID"/>
+                <Cell col="2" text="DEPT_CODE"/>
+                <Cell col="3" text="POSITION"/>
+                <Cell col="4" text="HIRE_DATE"/>
+                <Cell col="5" text="SALARY"/>
+                <Cell col="6" text="GENDER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:EMP_ID"/>
+                <Cell col="2" text="bind:DEPT_CODE"/>
+                <Cell col="3" text="bind:POSITION"/>
+                <Cell col="4" text="bind:HIRE_DATE"/>
+                <Cell col="5" text="bind:SALARY"/>
+                <Cell col="6" text="bind:GENDER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static03_00" taborder="1" text="cell expr" left="20.00" top="305" width="250" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Grid id="grd_expr" taborder="2" left="20.00" top="338" onheadclick="grd_emp_onheadclick" height="238" binddataset="ds_data" autofittype="col" width="980">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="62"/>
+                <Column size="140"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="180"/>
+              </Columns>
+              <Rows>
+                <Row size="42" band="head"/>
+                <Row size="30"/>
+                <Row size="28" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="1) Property"/>
+                <Cell col="1" text="2) EMP_ID + EMP_NAME"/>
+                <Cell col="2" text="3) Javascript API&#13;&#10;(String)"/>
+                <Cell col="3" text="4) SALARY / 12"/>
+                <Cell col="4" text="5) Javascript API&#13;&#10;(Math)"/>
+                <Cell col="5" text="6) Nexacro API"/>
+                <Cell col="6" text="7) Operator"/>
+                <Cell col="7" text="8) Form Function Call"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow + 1" displaytype="text"/>
+                <Cell col="1" text="expr:EMP_ID + ' ' + EMP_NAME"/>
+                <Cell col="2" text="expr:EMP_NAME.substr(0,3).padEnd(EMP_NAME.length, '*')"/>
+                <Cell col="3" text="expr:SALARY / 12" displaytype="number"/>
+                <Cell col="4" text="expr:Math.round(SALARY / 12)" displaytype="number"/>
+                <Cell col="5" text="expr:nexacro.round(SALARY / 12, 2)" displaytype="mask" maskeditformat="#,##0.00"/>
+                <Cell col="6" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;" cssclass="expr:GENDER == &quot;F&quot; ? &quot;cell_WF_ExprF&quot; : &quot;cell_WF_ExprM&quot;"/>
+                <Cell col="7" text="expr:comp.parent.fv_text + EMP_NAME + comp.parent.fn_position(POSITION)"/>
+              </Band>
+              <Band id="summary">
+                <Cell text="9) " textAlign="right"/>
+                <Cell col="1" text="expr:&quot;Count: &quot; + dataset.getRowCount()"/>
+                <Cell col="2" text="10) " textAlign="right"/>
+                <Cell col="3" text="expr:dataset.getAvg(&quot;SALARY / 12&quot;)" displaytype="mask" textAlign="right" maskeditformat="#,#.00"/>
+                <Cell col="4"/>
+                <Cell col="5"/>
+                <Cell col="6"/>
+                <Cell col="7"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="sta_title" taborder="3" text="Grid Expression" left="20.00" top="0" width="210" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="4" text="bind - ds_data" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <TextArea id="txt_desc1" taborder="5" left="20.00" top="580" width="430" height="130" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value=" 1) currow + 1&#10; 2) EMP_ID + ' ' + EMP_NAME&#10; 3) EMP_NAME.substr(0,3).padEnd(EMP_NAME.length, '*')&#10; 4) SALARY / 12&#10; 5) Math.round(SALARY / 12)"/>
+        <TextArea id="txt_desc1_00" taborder="6" left="460.00" top="580" width="540" height="130" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value=" 6) nexacro.round(SALARY / 12, 2)&#10; 7) GENDER == &quot;M&quot;; ? &quot;Male&quot; : &quot;Female&quot;&#10; 8) comp.parent.fv_text + EMP_NAME + comp.parent.fn_position(POSITION)&#10; 9) &quot;Count: &quot; + dataset.getRowCount()&#10;10) dataset.getAvg(&quot;SALARY / 12&quot;)"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="DEPT_CODE">10</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="DEPT_CODE">20</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="DEPT_CODE">40</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="DEPT_CODE">30</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="DEPT_CODE">60</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="255"/>
+          <Column id="DEPT_NAME" type="STRING" size="255"/>
+          <Column id="DEPT_EMP" type="STRING" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.fv_text = "Hello! ";
+this.fn_position = function(pCode)
+{
+	var sName = this.ds_pos.lookup("CODE", pCode, "NAME");
+	return " [" + sName + "]";
+}
+
+
+]]></Script>
+  </Form>
+</FDL>

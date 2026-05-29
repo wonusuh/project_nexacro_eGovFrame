@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.1">
+  <Predefines>
+    <Group id="Group0">
+      <Define id="Default11px" value="11px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Default12px" value="12px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Default13px" value="13px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Default14px" value="14px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Default16px" value="16px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Default18px" value="18px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold12px" value="600 12px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold13px" value="600 13px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold14px" value="600 14px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold15px" value="600 15px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold16px" value="600 16px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="Bold18px" value="600 18px &quot;Segoe UI&quot;, &quot;Malgun Gothic&quot;"/>
+      <Define id="lineheight13px" value="13px/21px &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;"/>
+      <Define id="Con13px" value="13px &quot;Consolas&quot;"/>
+      <Define id="Con14px" value="14px &quot;Consolas&quot;"/>
+      <Define id="ConBold12px" value="600 12px &quot;Consolas&quot;"/>
+    </Group>
+  </Predefines>
+  <CSSData><![CDATA[.Button.btn_TF_Menu,
+.Button.btn_TF_Menu[status=disabled],
+.Button.btn_TF_Menu[status=focused],
+.Button.btn_TF_Menu[status=mouseover],
+.Button.btn_TF_Menu[userstatus=pushed]
+{
+	background : #ffffff;
+	-nexa-border : 0px none,0px none,1px solid #e3e4e9;		
+	color : #003d9f;
+	font : -nexa-define(--Bold14px);
+	-nexa-padding : 0px 6px 2px 6px;	
+}
+
+.Button.btn_TF_Menu[userstatus=selected]
+{
+	background : #ffffff;
+	-nexa-border : 0px none,0px none,3px solid #17a2b8;	
+	color : #17a2b8;
+	font : -nexa-define(--Bold14px);
+	-nexa-padding : 0px 6px;
+}
+
+.Button.btn_WF_GuideExec,
+.Button.btn_WF_GuideExec[status=disabled],
+.Button.btn_WF_GuideExec[status=focused],
+.Button.btn_WF_GuideExec[userstatus=pushed],
+.Button.btn_WF_GuideExec[userstatus=selected]
+{
+	background : transparent;
+	-nexa-border : 0px none;	
+	-nexa-icon : url('imagerc::guide/btn_WF_ExecIcon.png');
+	-nexa-text-padding : 0px 0px 0px 5px;
+	color : #003d9f;
+	-nexa-text-align : left;
+	-nexa-padding : 5px 5px 6px 0px;
+	font : -nexa-define(--Con13px);
+}
+
+.Button.btn_WF_GuideExec[status=mouseover]
+{
+	background : transparent;
+	-nexa-border : 0px none;	
+	-nexa-icon : url('imagerc::guide/btn_WF_ExecIcon.png');
+	-nexa-text-padding : 0px 0px 0px 5px;
+	color : #003d9f;
+	-nexa-text-align : left;
+	-nexa-padding : 5px 5px 6px 0px;
+	font : -nexa-define(--Con13px);
+	-nexa-text-decoration : underline;
+}
+
+.Button.btn_WF_GuideStatus,
+.Button.btn_WF_GuideStatus[status=focused],
+.Button.btn_WF_GuideStatus[status=mouseover]
+{
+	-nexa-border : 1px solid #5ab0ff;
+	color : #003d9f;
+	font : -nexa-define(--Default13px);
+	background : #ffffff;
+	-nexa-padding : 4px 12px 5px;
+}
+
+.Button.btn_WF_GuideStatus[status=disabled]
+{
+	background : #eaeaea;
+	-nexa-border : 1px solid #acacac;
+}
+
+.Button.btn_WF_GuideStatus[userstatus=pushed]
+{
+	color : #ffffff;
+	background : #c50005 ;
+	-nexa-border : 1px solid #eB9c58;
+
+}
+
+.Button.btn_WF_GuideStatus[userstatus=selected]
+{
+	color : #ffffff;
+	background : #003d9f;
+}
+
+.Grid.grd_LF_Tree .body .row .cell
+{
+	-nexa-background-odd : transparent;	
+	background	: transparent ;	
+	-nexa-border : 0px none;
+	color : #1c1c1c;
+	font : -nexa-define(--Bold14px);
+}
+.Grid.grd_LF_Tree .body .row .cell[status=mouseover]
+{
+	-nexa-background-odd : transparent;	
+	background	: transparent ;	
+	-nexa-border : 0px none;
+	color : #002795;
+	font : -nexa-define(--Bold14px);	
+}
+.Grid.grd_LF_Tree .body .row .cell[userstatus=selected]
+{
+	-nexa-background-odd : transparent;	
+	background	: transparent ;	
+	color : #002795;		
+	-nexa-border : 0px none;
+	font : -nexa-define(--Bold14px);		
+}
+.Grid.grd_LF_Tree .body .row .cell.grd_LF_TreeCell
+{
+	-nexa-background-odd : transparent;	
+	background	: transparent ;	
+	-nexa-border : 0px none;
+	color : #1c1c1c;
+	font : -nexa-define(--Default13px);
+}
+
+
+.Grid.grd_LF_Tree .body .row .cell.grd_LF_TreeCell[status=mouseover]
+{
+	background	: transparent ;	
+	-nexa-border : 0px none;
+	color : #002795;
+	font : -nexa-define(--Default13px);
+}
+
+
+.Grid.grd_LF_Tree .body .row .cell.grd_LF_TreeCell[userstatus=selected]
+{
+	color : #dc3545;		
+	background	: transparent ;	
+	-nexa-border : 0px none;
+	font : -nexa-define(--Bold13px);	
+}
+
+.Static.sta_WF_GuideScript
+{
+	font : normal 13px/23px "Consolas";
+	-nexa-padding : 5px 8px 6px;
+	-nexa-border : 1px solid #dedede;
+	background : #f8f8f8;
+	-nexa-word-wrap : english;
+}
+
+.Static.sta_WF_GuideRefer
+{
+	font : -nexa-define(--ConBold12px);
+	-nexa-padding : 4px 0px 0px;
+	-nexa-text-decoration : underline;
+	color : #143a84;
+}
+
+.Static.sta_WF_GuideResult
+{
+	font : -nexa-define(--Default13px);
+	-nexa-border : 1px solid #dedede;
+	-nexa-padding : 4px 0px 5px;
+}
+
+.Static.sta_WF_GuideTitle1
+{
+	font : -nexa-define(--Bold18px);
+}
+
+.Static.sta_WF_GuideTitle2
+{
+	background : url('theme://images/icon_Dot.png') no-repeat left center;
+	font : -nexa-define(--Bold15px);	
+	-nexa-padding : 6px 10px 7px 13px;	
+}
+
+.Static.sta_WF_GuideTitle3
+{
+	font : -nexa-define(--Bold14px);
+	-nexa-padding : 5px 10px 5px 0px;
+}
+
+.Static.sta_WF_GuideTitle4
+{
+	font : -nexa-define(--Bold13px);
+	-nexa-padding : 5px 10px 5px 0px;
+}
+
+.Static.sta_WF_GuideLabel
+{
+	font : -nexa-define(--Bold13px);
+	-nexa-padding : 5px 10px 6px 0px;
+}
+
+
+
+.TextArea.txt_WF_GuideDesc,
+.TextArea.txt_WF_GuideDesc[status=disabled],
+.TextArea.txt_WF_GuideDesc[status=mouseover],
+.TextArea.txt_WF_GuideDesc[status=focused],
+.TextArea.txt_WF_GuideDesc[status=readonly]
+{
+	font : normal 13px/22px "Consolas";
+	-nexa-padding : 6px 10px;
+	-nexa-word-wrap : none;
+	-nexa-border : 1px solid #dedede;
+	background : #FFFFCC;
+	color : #000000;
+	letter-spacing : 0px;
+}
+]]></CSSData>
+  <CSSData type="desktop"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
+</XCSS>

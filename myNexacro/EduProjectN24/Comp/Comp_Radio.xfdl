@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Radio" width="1020" height="800" titletext="Comp_Radio">
+    <Layouts>
+      <Layout height="800" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Radio" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] innerdataset, codecolumn, datacolumn" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="innerdataset - ds_code" left="20" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio00" taborder="4" left="20" top="157" width="140" height="150" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME"/>
+        <Static id="Static03" taborder="5" text="innerdataset - set code, data" left="259.00" top="131" width="191" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio01" taborder="6" left="259.00" top="157" width="140" height="160" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio1" taborder="7" left="800.00" top="157" width="200" height="80" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" columncount="2"/>
+        <Static id="Static06" taborder="8" text="column, row count" left="20.00" top="514" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static07" taborder="9" text=" [Property] columncount, rowcount, &#13;&#10;direction = &quot;horizontal&quot; | &quot;vertical&quot;" left="20.00" top="549" height="50" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static08" taborder="10" text="columncount = 3 or rowcount = 2" left="20" top="599" width="205" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio04" taborder="11" left="20" top="625" width="300" height="75" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="3">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static09" taborder="12" text="direction" left="370.00" top="599" width="100" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio05" taborder="13" left="370.00" top="625" width="100" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="horizontal" text="horizontal" index="0" onitemchanged="Radio05_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">horizontal</Col>
+                <Col id="datacolumn">horizontal</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">vertical</Col>
+                <Col id="datacolumn">vertical</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static10" taborder="14" text="columncount = -1 &amp; rowcount = -1" left="20.00" top="707" width="211" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio06" taborder="15" left="20" top="733" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="-1" rowcount="-1" width="680">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static04_00" taborder="16" text="※ ds_code" left="20.00" top="330" width="63" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid00" taborder="17" left="20.00" top="356" width="230" height="106" binddataset="ds_code" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="68"/>
+                <Column size="144"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="text"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="18" text="※ data bind - ds_data" left="259.00" top="330" width="142" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid01" taborder="19" left="260.00" top="356" width="230" height="106" binddataset="ds_data" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="85"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="CODE"/>
+                <Cell col="2" text="DAY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DAY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="txt_desc1" taborder="20" left="530.00" top="260" width="470" height="90" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Button id="Button03" taborder="21" text="text" left="530.00" top="229" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button02" taborder="22" text="value = &quot;03&quot;" left="530.00" top="198" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="23" text="index = -1" left="530.00" top="167" width="173" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button00" taborder="24" text="index = 0" left="530.00" top="136" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Static id="Static11" taborder="25" text=" [Property] index, value, text" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static12" taborder="26" text="index, value, text" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static20" taborder="27" text="id = Radio1" left="800.00" top="131" width="195" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.Radio1, this.txt_desc1);	
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;	// index = "0,2
+	var strDesc = ``
+	strDesc = `this.${objComp.name}.${strText}`;
+	switch(strText) {
+		case 'index = 0':
+			objComp.index = 0 ;
+			break;
+		case 'index = -1':
+			objComp.index = -1;
+			break;
+		case 'value = "03"':
+			objComp.value = "03";
+			break;
+		case 'text':
+			strDesc += `\n//Result
+			            ${objComp.text}`
+			break;
+		default:
+			break;
+	}
+	//백틱 줄바꿈 사용하면 제너레이트시 줄바꿈 앞에 공백 들어가서 제거 필요
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}
+
+this.Radio05_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Radio04.direction = e.postvalue;
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DAY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DAY">SUN</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DAY">MON</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="CODE">05</Col>
+            <Col id="DAY">FRI</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+          <Column id="READONLY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Radio00" propid="value" datasetid="ds_data" columnid="CODE"/>
+      <BindItem id="item1" compid="Radio01" propid="value" datasetid="ds_data" columnid="DAY"/>
+    </Bind>
+  </Form>
+</FDL>

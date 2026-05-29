@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_TextField" width="1020" height="700" titletext="Comp_TextField">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="TextField" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] labeltext, labelfloatingfixed, &#13;&#10;labelposition = &quot;overlap&quot; | &quot;outside&quot; | &quot;inside&quot;" left="20.00" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static07" taborder="3" text="helper text" left="530" top="60" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static08" taborder="4" text="[Property] usehelpertext, helpertext, usecharcount" left="530" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static09" taborder="5" text="usehelpertext = true, helpertext = &quot;Please enter your email&quot;" left="530" top="159" width="396" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static10" taborder="6" text="usecharcount = true" left="530" top="275" width="126" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static14" taborder="7" text="use image button" left="20" top="415" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static15" taborder="8" text="[Property] useleadingbutton, usetrailingbutton" left="20" top="450" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <TextField id="TextField00" taborder="10" labeltext="TextField00" left="20" top="190" width="220" height="60"/>
+        <Static id="Static02" taborder="9" text="labeltext = &quot;Email&quot; labelfloatingfixed = true" left="20" top="275" width="297" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio00" taborder="12" left="20" top="159" width="250" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" text="overlap" index="0" columncount="-1" rowcount="-1" onitemchanged="Radio_onitemchanged" value="overlap">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">overlap</Col>
+                <Col id="datacolumn">overlap</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">outside</Col>
+                <Col id="datacolumn">outside</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">inside</Col>
+                <Col id="datacolumn">inside</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <TextField id="TextField01" taborder="11" labeltext="Email" left="20" top="Static02:-2" width="220" height="60" labelfloatingfixed="true"/>
+        <TextField id="TextField02" taborder="13" labeltext="Email" left="530" top="190" width="220" height="70" helpertext="Please enter your email" usehelpertext="true"/>
+        <TextField id="TextField03" taborder="14" labeltext="Email" left="530" top="299" width="220" height="70" helpertext="Please enter your email" usehelpertext="true" usecharcount="true"/>
+        <Static id="Static03" taborder="15" text="useleadingbutton = true, usetrailingbutton = true" left="20" top="509" width="323" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextField id="TextField04" taborder="16" labeltext="Email" left="20" top="535" width="250" height="60" useleadingbutton="true" usetrailingbutton="true" leadingbuttonsize="26" trailingbuttonsize="30" ontrailingbuttonclick="TextField04_ontrailingbuttonclick"/>
+        <Static id="Static05" taborder="17" text="[Property] inputtype  = &quot;text&quot; | &quot;email&quot; | &quot;url&quot; | &quot;password&quot; | &quot;number&quot; | &quot;tel&quot;" left="530.00" top="449" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static04" taborder="18" text="input type" left="530.00" top="414" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <TextField id="TextField05" taborder="19" labeltext="Email" left="530" top="535" width="220" height="70" helpertext="Please enter your email" usehelpertext="true" usecharcount="true" inputtype="email" useleadingbutton="true" usetrailingbutton="true" value="nexacro"/>
+        <TextField id="TextField06" taborder="20" labeltext="Password" left="780" top="535" width="220" height="70" helpertext="Please enter password" usehelpertext="true" usecharcount="true" inputtype="password"/>
+        <Static id="Static06" taborder="21" text="inputtype = email" left="530" top="509" width="153" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static11" taborder="22" text="inputtype = password" left="780" top="509" width="153" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.TextField04_ontrailingbuttonclick = function(obj:nexacro.TextField,e:nexacro.ClickEventInfo)
+{
+	obj.value = "";
+};
+
+this.Radio_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.TextField00.labelposition = this.Radio00.value;
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

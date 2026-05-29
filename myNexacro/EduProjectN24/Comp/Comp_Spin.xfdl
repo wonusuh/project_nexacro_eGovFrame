@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Spin" width="1020" height="700" titletext="Comp_Spin">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Spin" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="9" text="increment, max, min value" left="20.00" top="240" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static02" taborder="2" text="[Property] type = &quot;normal&quot; | &quot;noneditable&quot; | &quot;spinonly&quot;" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static03" taborder="3" text="normal (default)" left="20.00" top="131" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static04" taborder="5" text="noneditable" left="150.00" top="131" width="112" height="26" cssclass="sta_WF_GuideRefer" onclick="Static03_00_00_onclick"/>
+        <Static id="Static05" taborder="7" text="spinonly" left="280.00" top="131" width="118" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static06" taborder="11" text="increment = 1000, max = 20000, min = 10000" left="20.00" top="311" width="277" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static07" taborder="10" text="[Property] increment, max, min, circulation = &quot;true&quot; | &quot;false&quot;, displaycomma = &quot;true&quot; | &quot;false&quot;" left="20.00" top="275" height="36" cssclass="sta_WF_GuideScript" width="696"/>
+        <Spin id="Spin10" taborder="4" left="20" top="157" width="100" height="26" value="10"/>
+        <Spin id="Spin11" taborder="6" left="150.00" top="157" width="100" height="26" value="10" type="noneditable"/>
+        <Spin id="Spin12" taborder="8" left="280.00" top="157" width="36" height="26" value="10" type="spinonly"/>
+        <Spin id="Spin00" taborder="12" left="20.00" top="337" width="100" height="26" value="15000" increment="1000" max="20000" min="10000" circulation="true" displaycomma="true"/>
+        <CheckBox id="CheckBox00" taborder="13" text="circulation" left="145" top="337" width="100" height="26" value="true" onchanged="CheckBox00_onchanged"/>
+        <CheckBox id="CheckBox01" taborder="14" text="displaycomma" left="261" top="337" width="120" height="26" value="true" onchanged="CheckBox01_onchanged"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.Spin00.circulation = e.postvalue;
+};
+
+this.CheckBox01_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.Spin00.displaycomma = e.postvalue;	
+};]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

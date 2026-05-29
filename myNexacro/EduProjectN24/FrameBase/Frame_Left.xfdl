@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Left" width="200" height="728" titletext="Frame_Left" cssclass="frm_Bg" onload="form_onload">
+    <Layouts>
+      <Layout width="200" height="728" screenid="Desktop_screen">
+        <Static id="Static00" taborder="3" left="0" top="0" right="1" bottom="0" cssclass="sta_LF_Bg"/>
+        <Grid id="grd_menu" taborder="0" left="0" top="35" binddataset="gds_menu" treeinitstatus="expand,null" treeusecheckbox="false" bottom="0" oncelldblclick="grd_menu_oncelldblclick" cssclass="grd_LF_Tree" treeuseline="false" treeuseimage="false" autofittype="col" right="1">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="136"/>
+              </Columns>
+              <Rows>
+                <Row size="30"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LEVEL" cssclass="expr:comp.isTreeLeafRow(currow) == true ? &quot;grd_LF_TreeCell&quot; : &quot;&quot;" treestate="bind:TREE_STATUS"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static01" taborder="4" left="0" top="0" right="0" background="#dee3f2" height="35"/>
+        <Edit id="Edit00" taborder="1" left="0" top="3" width="196" height="27" cssclass="edt_LF_Find" displaynulltext="Search..." border="0px none"/>
+        <Button id="Button00" taborder="2" left="180" top="9" width="15" height="15" cssclass="btn_WF_Find"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+//	this.fn_openForm("MAIN", "MAIN", "FrameBase::Frame_Main.xfdl");
+};
+
+this.grd_menu_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var objDs = obj.getBindDataset();
+	var sID   = objDs.getColumn(e.row, "MENU_ID");
+	var sName = objDs.getColumn(e.row, "MENU_NAME");
+	var sURL  = objDs.getColumn(e.row, "FORM_URL");	
+	this.fn_openForm(sID, sName, sURL);
+};
+
+
+this.fn_openForm = function(sID, sName, sURL)
+{
+	if(sURL == null || sURL == "")	return;
+
+	var objApp = nexacro.getApplication();
+	var nCnt = objApp.gds_openForm.getRowCount();
+	if(nCnt >= 10){
+		this.alert("The Form can be opened up to 10.");
+		return;
+	}
+	
+	//업무영역 Size, application.av_WorkFrame --> WorkFrame Path
+	var nWidth  = objApp.av_WorkFrame.getOffsetWidth();
+	var nHeight = objApp.av_WorkFrame.getOffsetHeight();
+	trace(nWidth + " : " + nHeight);
+
+	//화면 ID 생성("FORM_" + 메뉴ID + random)
+	var sFormID = "FORM_" + sID + "_" + parseInt(Math.random() * 1000);
+
+	var objChildFrame = new ChildFrame();	
+	objChildFrame.init(sFormID, 0, 0, nWidth, nHeight);
+
+	objChildFrame.addEventHandler("onsize", this.fn_onsize, this);
+	objChildFrame.addEventHandler("onsyscommand", nexacro.getApplication().afn_onsyscommand,  nexacro.getApplication());
+	objApp.av_WorkFrame.addChild(sFormID, objChildFrame);
+	
+
+	objChildFrame.set_resizable(true);
+ 	objChildFrame.set_openstatus("maximize");
+	objChildFrame.set_titlebarheight(30);	
+	objChildFrame.titletext = sName;
+	objChildFrame.showcascadetitletext = false;
+ 	objChildFrame.set_showtitlebar(false);
+//	objChildFrame.set_border("1px solid #B4B4B4");
+
+	var oParam = { FORM_ID : sFormID, 
+                   MENU_ID : sID, 
+                   MENU_NM : sName, 
+                   FORM_URL : sURL,
+                   FORM_TYPE : "ADD" };	
+	
+	//Work Frame에 필요한 정보 Set
+	objChildFrame.param = oParam;
+ 	objChildFrame.set_formurl("FrameBase::Frame_Work.xfdl");	
+	objChildFrame.show();
+
+	//열린 화면 Tab 생성
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.VFrameSet00.MdiFrame.form.fn_addTab(oParam);
+}
+
+]]></Script>
+  </Form>
+</FDL>

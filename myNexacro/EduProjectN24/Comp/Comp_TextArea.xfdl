@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_TextArea" width="1020" height="700" titletext="Comp_TextArea">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="TextArea" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] enable, readonly, displaynulltext" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="enable = true" left="20" top="131" width="86" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea00" taborder="4" left="20" top="157" width="200" height="80" value="NEXACRO&#10;Hello World"/>
+        <Static id="Static03" taborder="5" text="enable = false" left="230.00" top="131" width="93" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea01" taborder="6" left="230.00" top="157" width="200" height="80" value="NEXACRO&#10;Hello World" enable="false"/>
+        <Static id="Static04" taborder="7" text="readonly = true" left="20" top="247" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea02" taborder="8" left="20" top="273" width="200" height="80" value="NEXACRO&#10;Hello World" readonly="true"/>
+        <Static id="Static05" taborder="9" text="displaynulltext" left="231.00" top="247" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea03" taborder="10" left="230.00" top="273" width="200" height="80" displaynulltext="Please enter your email"/>
+        <Static id="Static06" taborder="11" text="max length, auto skip, auto select, tab key" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static07" taborder="12" text=" [Property] maxlength, autoskip, autoselect, acceptstab" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static08" taborder="13" text="maxlength = 4, autoskip = true" left="530.00" top="131" width="198" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea04" taborder="14" left="530.00" top="157" width="200" height="80" value="ABCD" autoskip="true" maxlength="4"/>
+        <Static id="Static09" taborder="15" text="autoselect = true, acceptstab = true" left="530.00" top="247" width="238" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea05" taborder="16" left="530.00" top="273" width="200" height="80" value="NEXACRO&#10;&#9;Hello World" autoselect="true" acceptstab="true"/>
+        <Static id="Static10" taborder="17" text="input type" left="20.00" top="392" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static11" taborder="18" text="[Property] inputtype = &quot;english&quot; &amp; &quot;number&quot; &amp; &quot;digit&quot;..." left="20.00" top="427" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static12" taborder="19" text="inputtype = english,digit" left="20" top="463" width="165" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea06" taborder="20" left="20" top="489" width="200" height="80" value="NEXACRO 24&#10;Hello World" inputtype="english,digit"/>
+        <Static id="Static13" taborder="21" text="inputtype = number" left="231.00" top="463" width="119" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea07" taborder="22" left="231.00" top="489" width="200" height="80" value="12345&#10;-1,200.34" inputtype="number"/>
+        <Static id="Static14" taborder="23" text="input filter" left="530.00" top="392" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static15" taborder="24" text="[Property] inputfilter = &quot;none&quot; &amp; &quot;alpha&quot; &amp; &quot;digit&quot;..." left="530.00" top="427" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static16" taborder="25" text="inputfilter = digit" left="530.00" top="463" width="126" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="TextArea08" taborder="26" left="530.00" top="489" width="200" height="80" value="NEXACRO&#10;Hello World" inputfilter="digit"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

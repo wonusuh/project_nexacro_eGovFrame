@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_GridCell" width="1020" height="950" titletext="Comp_GridCell">
+    <Layouts>
+      <Layout height="950" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Grid Cell" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] displaytype, edittype" left="20" top="95" height="36" cssclass="sta_WF_GuideScript" width="980"/>
+        <Static id="Static02" taborder="3" text="displaytype = xxxxcontrol" left="20" top="372" width="165" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid00" taborder="4" left="20.00" top="136" height="226" right="20" binddataset="ds_data" enable="true">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="100"/>
+                <Column size="140"/>
+                <Column size="140"/>
+              </Columns>
+              <Rows>
+                <Row size="45" band="head"/>
+                <Row size="45"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="normal&#13;&#10;none"/>
+                <Cell col="1" text="text&#13;&#10;text"/>
+                <Cell col="2" text="mask&#13;&#10;mask"/>
+                <Cell col="3" text="text&#13;&#10;textarea" displaytype="text"/>
+                <Cell col="4" text="decoratetext&#13;&#10;normal"/>
+                <Cell col="5" text="number&#13;&#10;mask"/>
+                <Cell col="6" text="date&#13;&#10;date"/>
+                <Cell col="7" text="combotext&#13;&#10;combo"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:EMP_NAME" displaytype="text" edittype="text"/>
+                <Cell col="2" text="bind:EMP_ID" maskedittype="string" maskeditformat="AA-###" displaytype="mask" edittype="mask"/>
+                <Cell col="3" text="bind:MEMO" displaytype="text" edittype="textarea"/>
+                <Cell col="4" text="bind:DECORATE" displaytype="decoratetext" progressbarsmooth="true" edittype="normal"/>
+                <Cell col="5" text="bind:SALARY" displaytype="number" textAlign="right" edittype="mask" maskeditformat="#,###"/>
+                <Cell col="6" text="bind:HIRE_DATE" displaytype="date" edittype="date" calendarbuttonsize="24"/>
+                <Cell col="7" text="bind:DEPT_CODE" displaytype="combotext" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME" edittype="combo" combobuttonsize="24"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="5" left="20" top="398" height="188" right="20" binddataset="ds_data" enable="true" cellsizingtype="col" autosizingtype="row" extendsizetype="row">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="140"/>
+                <Column size="140"/>
+                <Column size="140"/>
+                <Column size="140"/>
+                <Column size="140"/>
+              </Columns>
+              <Rows>
+                <Row size="45" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="editcontrol&#13;&#10;text"/>
+                <Cell col="1" text="maskeditcontrol&#13;&#10;mask"/>
+                <Cell col="2" text="textareacontrol&#13;&#10;textarea" displaytype="text"/>
+                <Cell col="3" text="calendarcontrol&#13;&#10;date"/>
+                <Cell col="4" text="combocontrol&#13;&#10;combo"/>
+                <Cell col="5" text="multicombocontrol&#13;&#10;multicombo"/>
+                <Cell col="6" text="checkboxcontrol&#13;&#10;checkbox"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME" displaytype="editcontrol" edittype="text" controlautosizingtype="width"/>
+                <Cell col="1" text="bind:EMP_ID" maskedittype="string" maskeditformat="AA-###" displaytype="maskeditcontrol" edittype="mask" controlautosizingtype="width"/>
+                <Cell col="2" text="bind:MEMO" displaytype="textareacontrol" edittype="textarea"/>
+                <Cell col="3" text="bind:HIRE_DATE" displaytype="calendarcontrol" edittype="date" calendarbuttonsize="24" controlautosizingtype="width"/>
+                <Cell col="4" text="bind:DEPT_CODE" displaytype="combocontrol" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME" edittype="combo" combobuttonsize="24" controlautosizingtype="width"/>
+                <Cell col="5" displaytype="multicombocontrol" edittype="multicombo" text="bind:SKILL" multicombobuttonsize="24" multicombodataset="ds_skill" multicombocodecol="CODE" multicombodatacol="NAME" controlautosizingtype="width"/>
+                <Cell col="6" displaytype="checkboxcontrol" edittype="checkbox" text="bind:MARRIED"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="6" left="20" top="591" width="255" height="286" binddataset="gds_menu" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="161"/>
+              </Columns>
+              <Rows>
+                <Row size="45" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="treeitemcontrol&#13;&#10;tree"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LEVEL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid03" taborder="7" left="280.00" top="591" height="286" right="20" binddataset="ds_data" enable="true" extendsizetype="row" cellsizingtype="col" onexpandup="Grid03_onexpandup">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="140"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="100"/>
+                <Column size="90"/>
+                <Column size="140"/>
+              </Columns>
+              <Rows>
+                <Row size="45" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="expand"/>
+                <Cell col="1"/>
+                <Cell col="2" colspan="2" text="radioitemcontrol&#13;&#10;radioitem"/>
+                <Cell col="4" text="buttoncontrol&#13;&#10;button"/>
+                <Cell col="5" text="imagecontrol"/>
+                <Cell col="6" text="progressbarcontrol&#13;&#10;mask"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CODE" expandshow="show" displaytype="text"/>
+                <Cell col="1" displaytype="combotext" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME" text="bind:DEPT_CODE"/>
+                <Cell col="2" text="bind:GENDER" displaytype="radioitemcontrol" edittype="radioitem" radioitemcodevalue="M"/>
+                <Cell col="3" text="bind:GENDER" displaytype="radioitemcontrol" edittype="radioitem" radioitemcodevalue="F"/>
+                <Cell col="4" displaytype="buttoncontrol" edittype="button" text="bind:EMP_NAME" controlautosizingtype="none"/>
+                <Cell col="5" displaytype="imagecontrol" text="bind:IMAGE"/>
+                <Cell col="6" displaytype="progressbarcontrol" text="bind:PERCENT" progressbarsmooth="true" controlautosizingtype="width"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+
+this.Grid03_onexpandup = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo)
+{
+
+	var objChild = new ChildFrame("popupDept", 0, 0, 360, 440);
+	objChild.formurl = "Popup::Popup_SearchDept.xfdl";
+	objChild.openalign = "center middle";
+	objChild.dragmovetype = "all"; 
+	objChild.showtytlebar = false;
+
+    objChild.showModal(this.getOwnerFrame()
+                     , {}
+                     , this
+                     , "fn_callback_popup");
+};
+
+// Dept Popup Callback
+this.fn_callback_popup = function(sPopupId, sReturn)
+{
+	if(typeof sReturn === "undefined")	return;
+	if(sPopupId == "popupDept"){
+		if(sReturn.length > 0){
+			var arrRtn = sReturn.split("||");
+			this.ds_data.setColumn(this.ds_data.rowposition, "DEPT_CODE", arrRtn[0]);
+		}
+	}
+}]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+          <Column id="IMAGE" type="STRING" size="256"/>
+          <Column id="PERCENT" type="STRING" size="256"/>
+          <Column id="DECORATE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">TOBESOFT
+NEXACRO</Col>
+            <Col id="IMAGE">imagerc::img_btn_new.png</Col>
+            <Col id="PERCENT">20</Col>
+            <Col id="DECORATE">NEXACRO &lt;fs v='16'&gt;N24&lt;/fs&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">NEXACRO
+Studio</Col>
+            <Col id="IMAGE">imagerc::img_btn_save.png</Col>
+            <Col id="PERCENT">40</Col>
+            <Col id="DECORATE">NEXACRO &lt;fc v='red'&gt;N24&lt;/fc&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">NEXACRO
+GRID Component</Col>
+            <Col id="IMAGE"/>
+            <Col id="PERCENT">70</Col>
+            <Col id="DECORATE">NEXACRO &lt;b v='true'&gt;N24&lt;/b&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">TOBESOFT
+NEXACRO</Col>
+            <Col id="IMAGE">imagerc::img_btn_delete.png</Col>
+            <Col id="PERCENT">100</Col>
+            <Col id="DECORATE">NEXACRO &lt;i v='true'&gt;N24&lt;/i&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">NEXACRO
+Studio</Col>
+            <Col id="IMAGE">imagerc::img_btn_new.png</Col>
+            <Col id="PERCENT">90</Col>
+            <Col id="DECORATE">NEXACRO &lt;u v='true'&gt;N24&lt;/u&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">NEXACRO
+GRID Component</Col>
+            <Col id="IMAGE">imagerc::img_btn_delete.png</Col>
+            <Col id="PERCENT">30</Col>
+            <Col id="DECORATE">NEXACRO &lt;s v='true'&gt;N24&lt;/s&gt;</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">Studio</Col>
+            <Col id="IMAGE"/>
+            <Col id="PERCENT">50</Col>
+            <Col id="DECORATE">&lt;l v='http://www.tobesoft.com'&gt;Link WebPage&lt;/l&gt;</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="string" size="255"/>
+          <Column id="DEPT_NAME" type="string" size="255"/>
+          <Column id="DEPT_EMP" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_hobby">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Climbing</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Running</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Cycling</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Swimming</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Yoga</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Golf</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">tennis</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Reading </Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Cooking</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Photography</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Painting</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Movie and Drama</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Game</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Sleeping</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Shopping</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

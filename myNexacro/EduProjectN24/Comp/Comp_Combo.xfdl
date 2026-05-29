@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Combo" width="1020" height="700" titletext="Comp_Combo">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Combo" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] innerdataset, codecolumn, datacolumn" left="20" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="innerdataset - ds_code" left="20" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Combo id="Combo00" taborder="4" left="20" top="157" width="180" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" value="" index="-1" text=""/>
+        <Static id="Static03" taborder="5" text="innerdataset - set code, data" left="259.00" top="131" width="191" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Combo id="Combo01" taborder="6" left="259.00" top="157" width="190" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="" index="-1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Static id="Static04" taborder="7" text="※ ds_code" left="20" top="203" width="63" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid00" taborder="8" left="20.00" top="233" width="230" height="106" binddataset="ds_code" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="68"/>
+                <Column size="144"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="text"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="9" text="※ data bind - ds_data" left="259.00" top="203" width="142" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid01" taborder="10" left="260.00" top="233" width="230" height="106" binddataset="ds_data" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="85"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="CODE"/>
+                <Cell col="2" text="DAY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DAY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="11" text="combo type" left="18.00" top="392" width="478" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static07" taborder="12" text="[Property] type = &quot;dropdown&quot; | &quot;search&quot; | &quot;filter&quot; ... " left="18.00" top="427" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Radio id="rdo_type" taborder="13" left="18.00" top="468" width="402" height="50" codecolumn="codecolumn" datacolumn="datacolumn" value="dropdown" index="0" innerdataset="innerdataset" rowcount="2" fittocontents="width" onitemchanged="rdo_type_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">dropdown</Col>
+                <Col id="datacolumn">dropdown</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">search</Col>
+                <Col id="datacolumn">search</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">filter</Col>
+                <Col id="datacolumn">filter</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">filterlike</Col>
+                <Col id="codecolumn">filterlike</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">caseisearch</Col>
+                <Col id="codecolumn">caseisearch</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">caseifilter</Col>
+                <Col id="codecolumn">caseifilter</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">caseifilterlike</Col>
+                <Col id="codecolumn">caseifilterlike</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Combo id="cmb_type" taborder="14" text="Combo02" left="18.00" top="529" width="190" height="26" innerdataset="ds_type" codecolumn="CODE" datacolumn="NAME"/>
+        <Static id="Static08" taborder="15" text="index, value, text" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static09" taborder="16" text=" [Property] index, value, text" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button00" taborder="17" text="index = 0" left="530.00" top="136" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="18" text="index = -1" left="530.00" top="167" width="173" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button02" taborder="19" text="value = &quot;03&quot;" left="530.00" top="198" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button03" taborder="20" text="text" left="530.00" top="229" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Combo id="Combo1" taborder="21" left="800" top="162" width="180" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" value="" index="-1"/>
+        <Button id="Button04" taborder="22" text="dropdown()" left="800" top="229" width="106" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <TextArea id="txt_desc1" taborder="23" left="530" top="260" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static10" taborder="24" text="null text" left="530.00" top="392" width="275" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static11" taborder="25" text="[Property] displaynulltext" left="530.00" top="427" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Combo id="Combo02" taborder="26" left="530.00" top="468" width="198" height="26" codecolumn="CODE" datacolumn="NAME" innerdataset="ds_code" displaynulltext="Please Select..."/>
+        <Static id="Static12" taborder="27" text="display count" left="530.00" top="539" width="491" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static13" taborder="28" text="[Property] displayrowcount" left="530.00" top="574" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static14" taborder="29" text="count" left="530" top="610" width="33" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Spin id="spn_count" taborder="30" left="530" top="636" width="74" height="26" max="20" min="5" value="5" onchanged="spn_count_onchanged"/>
+        <Static id="Static15" taborder="31" text="result" left="610.00" top="611" width="40" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Combo id="cmb_count" taborder="32" text="Accounting Team" left="610.00" top="636" width="198" height="26" codecolumn="CODE" datacolumn="NAME" innerdataset="ds_type" index="0" value="01" displayrowcount="5"/>
+        <Static id="Static20" taborder="33" text="id = Combo1" left="800.00" top="136" width="195" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.Combo1, this.txt_desc1);	
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;
+	var strDesc = ``
+	strDesc = `this.${objComp.name}.${strText}`;
+	switch(strText) {
+		case 'index = 0':
+			objComp.index = 0 ;
+			objComp.dropdown();	
+			break;
+		case 'index = -1':
+			objComp.index = -1;
+			objComp.dropdown();	
+			break;
+		case 'value = "03"':
+			objComp.value = "03";
+			break;
+		case 'text':
+			strDesc += `\n//Result \n${objComp.text}`
+			break;
+		case 'dropdown()':
+			objComp.dropdown();
+			break;			
+		default:
+			break;
+	}
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}
+
+
+this.rdo_type_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.cmb_type.type = e.postvalue;
+};
+
+this.spn_count_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
+{
+	this.cmb_count.displayrowcount = obj.value;
+};
+
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DAY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DAY">SUN</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DAY">MON</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="CODE">05</Col>
+            <Col id="DAY">FRI</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+          <Column id="READONLY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_type">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="32"/>
+          <Column id="NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Finances Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Sales 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Sales 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">Sales 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Sales Management Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Consulting 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Consulting 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Consulting 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Mobile Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Technical Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">16</Col>
+            <Col id="NAME">Technical Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">17</Col>
+            <Col id="NAME">Technical Support 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">18</Col>
+            <Col id="NAME">Customer Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">19</Col>
+            <Col id="NAME">Customer Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Customer Support 3 Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Combo00" propid="value" datasetid="ds_data" columnid="CODE"/>
+      <BindItem id="item1" compid="Combo01" propid="value" datasetid="ds_data" columnid="DAY"/>
+    </Bind>
+  </Form>
+</FDL>

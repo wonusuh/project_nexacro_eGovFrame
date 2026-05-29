@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_BaseSub" width="370" height="150" titletext="Components Sub">
+    <Layouts>
+      <Layout height="150" width="370">
+        <Static id="Static00" taborder="0" text="Name" left="20.00" top="10" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+        <Edit id="Edit00" taborder="1" left="106.00" top="10" width="140" height="26" value="Nexaro N" text="Nexaro N"/>
+        <Edit id="Edit00_00" taborder="2" left="106.00" top="46" width="140" height="26" value="Education Team" text="Education Team"/>
+        <Static id="Static01" taborder="3" text="Department" left="20.00" top="46" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+        <Static id="Static02" taborder="4" text="※ Comp::Comp_BaseSub.xfdl" left="20.00" top="84" width="220" height="26" cssclass="sta_WF_GuideLabel"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

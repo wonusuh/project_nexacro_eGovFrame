@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="App_Environment" width="1020" height="700" titletext="App_Environment">
+    <Layouts>
+      <Layout height="700" width="1020">
+        <Static id="sta_title" taborder="0" text="Environment" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static00" taborder="1" text="Variables" left="20" top="60" width="300" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Button id="btn_getVariable" taborder="2" text="Get Variable" left="20.00" top="136" width="109" height="26" cssclass="btn_WF_GuideExec" onclick="btn_getVariable_onclick"/>
+        <Static id="sta_variable" taborder="3" left="135.00" top="136" width="150" height="26" cssclass="sta_WF_GuideResult"/>
+        <Edit id="edt_variable" taborder="4" left="135.00" top="167" width="150" height="26" value="NEXACRO" text="NEXACRO"/>
+        <Button id="btn_setVariable" taborder="5" text="Set Variable" left="20.00" top="167" width="109" height="26" cssclass="btn_WF_GuideExec" onclick="btn_setVariable_onclick"/>
+        <Static id="Static10" taborder="6" text="Cookies" left="20.00" top="313" width="300" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static13" taborder="7" text="{Method] getCookieVariable(), setCookieVariable()" left="20.00" top="348" width="475" height="36" cssclass="sta_WF_GuideScript"/>
+        <Button id="btn_getCookie" taborder="8" text="Get Cookie" left="20.00" top="389" width="100" height="26" cssclass="btn_WF_GuideExec" onclick="btn_getCookie_onclick"/>
+        <Static id="sta_cookie" taborder="9" left="btn_getCookie:15" top="389" width="150" height="26" cssclass="sta_WF_GuideResult"/>
+        <Edit id="edt_cookie" taborder="10" left="135" top="420" width="150" height="26" value="NEXACRO" text="NEXACRO"/>
+        <Static id="Static20" taborder="11" text="HTTP Header" left="530" top="60" width="300" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static23" taborder="12" text="[Method] getHTTPHeaderVariable(), setHTTPHeaderVariable()" left="530.00" top="95" width="468" height="36" cssclass="sta_WF_GuideScript"/>
+        <Button id="btn_getHeader" taborder="13" text="Get Header" left="530.00" top="136" width="95" height="26" cssclass="btn_WF_GuideExec" onclick="btn_getHeader_onclick"/>
+        <Static id="sta_header" taborder="14" left="btn_getHeader:15" top="136" width="150" height="26" cssclass="sta_WF_GuideResult"/>
+        <Edit id="edt_header" taborder="15" left="640.00" top="167" width="150" height="26" value="NEXACRO" text="NEXACRO"/>
+        <Button id="btn_setHeader" taborder="16" text="Set Header" left="530" top="167" width="95" height="26" cssclass="btn_WF_GuideExec" onclick="btn_setHeader_onclick"/>
+        <Static id="Static30" taborder="17" text="Property, Script" left="530.00" top="313" width="300" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static33" taborder="18" text="[Method] getEnvironment()" left="530.00" top="348" width="468" height="36" cssclass="sta_WF_GuideScript"/>
+        <Button id="btn_callScript" taborder="19" text="Call Script" left="530.00" top="389" width="102" height="26" cssclass="btn_WF_GuideExec" onclick="btn_callScript_onclick"/>
+        <Static id="Static09" taborder="20" text="[Method] getEnvironmentVariable(), setEnvironmentVariable()" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="475"/>
+        <TextArea id="txt_desc1" taborder="21" left="20.00" top="198" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var strValue = nexacro.getEnvironmentVariable(&quot;env_var1&quot;);&#10;nexacro.setEnvironmentVariable(&quot;env_var1&quot;, &quot;NEXACRO&quot;);"/>
+        <TextArea id="txt_desc2" taborder="22" left="530" top="198" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="strValue = nexacro.getHTTPHeaderVariable(&quot;env_hreader1&quot;);&#10;nexacro.setHTTPHeaderVariable(&quot;env_hreader1&quot;, &quot;NEXACRO&quot;);"/>
+        <TextArea id="txt_desc4" taborder="23" left="530" top="450" width="470" height="90" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var objEnv = nexacro.getEnvironment();&#10;var strValue = objEnv.locale;&#10;objEnv.env_script();"/>
+        <TextArea id="txt_desc3" taborder="24" left="20" top="450" width="470" height="90" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var strValue = nexacro.getCookieVariable(&quot;env_cookie1&quot;);&#10;nexacro.setCookieVariable(&quot;env_cookie1&quot;, &quot;NEXACRO&quot;);"/>
+        <Button id="btn_setVariable00" taborder="25" text="Set Cookie" left="20" top="420" width="109" height="26" cssclass="btn_WF_GuideExec" onclick="btn_setCookie_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+/********************************************************************
+	Environment Variable
+*********************************************************************/
+this.btn_getVariable_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = nexacro.getEnvironmentVariable("env_var1");
+	this.sta_variable.text = strValue;
+};
+
+this.btn_setVariable_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = this.edt_variable.value;
+	nexacro.setEnvironmentVariable("env_var1", strValue);
+};
+
+/********************************************************************
+	Environment Cookies
+*********************************************************************/
+this.btn_getCookie_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = nexacro.getCookieVariable("env_cookie1");
+	this.sta_cookie.text = strValue;
+};
+
+this.btn_setCookie_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = this.edt_cookie.value;
+	nexacro.setCookieVariable("env_cookie1", strValue);
+};
+
+/********************************************************************
+	Environment HTTP Header
+*********************************************************************/
+this.btn_getHeader_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = nexacro.getHTTPHeaderVariable("env_header1");
+	this.sta_header.text = strValue;	
+};
+
+this.btn_setHeader_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strValue = this.edt_header.value;
+	nexacro.setHTTPHeaderVariable("env_header1", strValue);
+};
+
+/********************************************************************
+	Environment Object
+*********************************************************************/
+this.btn_callScript_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objEnv = nexacro.getEnvironment();
+	objEnv.efn_script();
+};
+
+
+
+]]></Script>
+  </Form>
+</FDL>

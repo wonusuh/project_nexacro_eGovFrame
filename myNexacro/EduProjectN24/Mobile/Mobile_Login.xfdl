@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Mobile_Login" width="480" height="768" titletext="로그인">
+    <Layouts>
+      <Layout height="768" mobileorientation="portrait" width="480">
+        <CheckBox id="chk_save" taborder="0" text="Remember me" left="72" top="440" width="340" height="30" cssclass="chk_Login_idsave" value="true"/>
+        <Button id="btn_login" taborder="1" text="Login" left="0" cssclass="btn_LOGIN_Login" onclick="btn_login_onclick" bottom="0" height="80" right="0"/>
+        <Static id="Static00_00" taborder="2" left="72" top="0" height="220" right="72" cssclass="sta_LOGIN_Logo"/>
+        <TextField id="tf_id" taborder="3" labeltext="USER ID" left="72" top="220" height="80" cssclass="txtf_LOGIN_ID" useleadingbutton="true" labelfloatingfixed="true" right="72"/>
+        <TextField id="tf_pwd" taborder="4" labeltext="PASSWORD" left="72" top="320" height="80" cssclass="txtf_LOGIN_PW" useleadingbutton="true" labelfloatingfixed="true" right="72" inputtype="password"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[//로그인 버튼 선택
+this.btn_login_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sId = this.tf_id.value;
+	var sPw = this.tf_pwd.value;
+	//화면이동
+	nexacro.getApplication().av_WorkFrame.form.fn_login(sId, sPw);
+
+};
+]]></Script>
+  </Form>
+</FDL>

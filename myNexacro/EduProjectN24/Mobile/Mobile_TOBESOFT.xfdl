@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Mobile_TOBESOFT" width="480" height="728" titletext="웹브라우저컴포넌트" onload="Form_onload">
+    <Layouts>
+      <Layout height="728" mobileorientation="portrait" screenid="Phone_screen" width="480">
+        <WebView id="WebView00" taborder="0" left="0" top="0" right="0" bottom="0" url="http://edu.tobesoft.com/book/book.html"/>
+      </Layout>
+      <Layout height="728" mobileorientation="portrait" screenid="Phone_screen" width="480" name="default0"/>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

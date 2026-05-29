@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="M_MLM_MainSub" width="480" height="696" titletext="New Form">
+    <Layouts>
+      <Layout height="696" width="480">
+        <Static id="Static00" taborder="0" cssclass="sta_MLM_Bg" bottom="0" top="0" left="0" right="0"/>
+        <Static id="Static01" taborder="1" left="30" top="125" width="420" height="338" cssclass="sta_MLM_Img"/>
+        <Button id="Button00" taborder="2" text="Community" width="120" height="90" left="0" cssclass="btn_MLM_Cmunity" bottom="20"/>
+        <Button id="Button00_00" taborder="3" text="Product Inquiry" left="119" width="123" height="90" cssclass="btn_MLM_Inquiry" bottom="20"/>
+        <Button id="Button00_01" taborder="4" text="Support" left="241" width="120" height="90" cssclass="btn_MLM_Support" bottom="20"/>
+        <Button id="Button00_02" taborder="5" text="Product Guide" left="360" width="120" height="90" cssclass="btn_MLM_Guide" bottom="20"/>
+      </Layout>
+      <Layout height="480" mobileorientation="landscape" name="Mobile" type="default" width="696">
+        <Static id="Static01" left="0" top="71" width="100.00%" height="338"/>
+        <Button id="Button00" left="16" width="120" height="90" top="110"/>
+        <Button id="Button00_00" left="16" top="279" width="123" height="90"/>
+        <Button id="Button00_01" top="110" width="120" height="90" right="16"/>
+        <Button id="Button00_02" top="279" width="120" height="90" right="16"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

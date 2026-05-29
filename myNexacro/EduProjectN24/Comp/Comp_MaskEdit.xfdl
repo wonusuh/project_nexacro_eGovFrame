@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_MaskEdit" width="1020" height="700" titletext="Comp_MaskEdit">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="MaskEdit" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] type = &quot;number&quot; | &quot;string&quot; , format" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="970"/>
+        <Static id="Static02" taborder="3" text="type = &quot;string&quot;" left="20" top="141" width="120" height="26" cssclass="sta_WF_GuideTitle3"/>
+        <Static id="Static03" taborder="4" text="format = &quot;AA-###&quot;" left="20" top="167" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit00" taborder="5" left="20" top="193" width="120" height="26" type="string" format="AA-###"/>
+        <Static id="Static04" taborder="6" text="format = &quot;aa-@@@&quot;" left="160.00" top="167" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit01" taborder="7" left="160.00" top="193" width="120" height="26" type="string" format="aa-@@@"/>
+        <Static id="Static05" taborder="8" text="format = &quot;######-#{######}&quot;" left="300.00" top="167" width="178" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit02" taborder="9" left="300.00" top="193" width="120" height="26" type="string" format="######-#{######}"/>
+        <Grid id="Grid00" taborder="10" left="20" top="224" width="395" height="54" binddataset="ds_data" autofittype="col" useselcolor="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="string1"/>
+                <Cell col="1" text="string2"/>
+                <Cell col="2" text="string3"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:STR1"/>
+                <Cell col="1" text="bind:STR2"/>
+                <Cell col="2" text="bind:STR3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="11" text="type = &quot;number&quot;" left="530.00" top="141" width="120" height="26" cssclass="sta_WF_GuideTitle3"/>
+        <Static id="Static07" taborder="12" text="format = &quot;#,#&quot;" left="530.00" top="167" width="93" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit03" taborder="13" left="530.00" top="193" width="120" height="26" format="#,#"/>
+        <Static id="Static08" taborder="14" text="format = &quot;#,#.##&quot;" left="670.00" top="167" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit04" taborder="15" left="670.00" top="193" width="120" height="26" format="#,#.##"/>
+        <Static id="Static09" taborder="16" text="format = &quot;#,#.00&quot;" left="810.00" top="167" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit05" taborder="17" left="810.00" top="193" width="120" height="26" format="#,#.00"/>
+        <Grid id="Grid01" taborder="18" left="530.00" top="224" width="395" height="54" binddataset="ds_data" autofittype="col" useselcolor="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="number1"/>
+                <Cell col="1" text="number2"/>
+                <Cell col="2" text="number3"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:NUM1"/>
+                <Cell col="1" text="bind:NUM2"/>
+                <Cell col="2" text="bind:NUM3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static10" taborder="19" text="value, space" left="20.00" top="320" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static11" taborder="20" text="[Property] value, clipmode = &quot;includespace&quot; | &quot;excludespace&quot;" left="20.00" top="355" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static12" taborder="21" text="type = &quot;AA-###&quot;" left="20" top="391" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit1" taborder="22" left="20" top="417" width="100" height="26" type="string" format="AA-###"/>
+        <Button id="Button00" taborder="23" text="get value" left="125.00" top="417" width="96" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Radio id="Radio00" taborder="24" left="244" top="417" width="230" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="1" onitemchanged="Radio00_onitemchanged" index="0" text="includespace" value="includespace">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">includespace</Col>
+                <Col id="datacolumn">includespace</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">excludespace</Col>
+                <Col id="datacolumn">excludespace</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <TextArea id="txt_desc" taborder="25" left="20" top="448" width="350" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static13" taborder="26" text="locale" left="529" top="320" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static14" taborder="27" text="[Property] locale = &quot;ko_KR&quot; | &quot;en_US&quot; | &quot;en_JP&quot; ..." left="529" top="355" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static15" taborder="28" text="fr_FR / France" left="529" top="391" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit06" taborder="29" left="529" top="417" width="120" height="26" format="#,#.00" value="1200.50" locale="fr_FR"/>
+        <Static id="Static16" taborder="30" text="de_DE / Germany" left="671" top="391" width="109" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MaskEdit id="MaskEdit07" taborder="31" left="670" top="417" width="120" height="26" format="#,#.00" value="1200.50" locale="de_DE"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objComp = this.MaskEdit1;	
+	var objDesc = this.txt_desc;
+	var strDesc;
+
+	objComp.clipmode = this.Radio00.value;
+	strDesc = `${this.Radio00.value}
+	           value: "${objComp.value}", length: ${typeof objComp.value === "undefined" ? "" : objComp.value.length}`;
+			   
+	objDesc.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+	
+};
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.MaskEdit1.value = "";
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="STR1" type="STRING" size="256"/>
+          <Column id="STR2" type="STRING" size="256"/>
+          <Column id="STR3" type="STRING" size="256"/>
+          <Column id="NUM1" type="STRING" size="256"/>
+          <Column id="NUM2" type="STRING" size="256"/>
+          <Column id="NUM3" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="STR2">nx1Ab</Col>
+            <Col id="STR1">NX123</Col>
+            <Col id="STR3">0710011234567</Col>
+            <Col id="NUM1">1250000.25</Col>
+            <Col id="NUM2">1200.50</Col>
+            <Col id="NUM3">1200.5</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="MaskEdit00" propid="value" datasetid="ds_data" columnid="STR1"/>
+      <BindItem id="item1" compid="MaskEdit01" propid="value" datasetid="ds_data" columnid="STR2"/>
+      <BindItem id="item2" compid="MaskEdit02" propid="value" datasetid="ds_data" columnid="STR3"/>
+      <BindItem id="item3" compid="MaskEdit03" propid="value" datasetid="ds_data" columnid="NUM1"/>
+      <BindItem id="item4" compid="MaskEdit04" propid="value" datasetid="ds_data" columnid="NUM2"/>
+      <BindItem id="item5" compid="MaskEdit05" propid="value" datasetid="ds_data" columnid="NUM3"/>
+    </Bind>
+  </Form>
+</FDL>

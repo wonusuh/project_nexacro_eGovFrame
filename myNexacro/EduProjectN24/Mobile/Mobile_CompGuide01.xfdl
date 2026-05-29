@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Mobile_Work" width="1680" height="1420" onload="Form_onload" onbindingvaluechanged="Mobile_Work_onbindingvaluechanged" titletext="edt,msk,txt,btn,cbo,lst,cal">
+    <Layouts>
+      <Layout height="1420" screenid="Phone_screen" width="1680">
+        <Static id="Static01" taborder="0" text="Style" left="199.00" top="0" width="1421" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static00" taborder="1" text="Component" left="0" top="0" width="200" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static02" taborder="2" text="Edit" left="0" top="29" width="200" height="162" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03" taborder="3" left="199.00" top="29" width="1421" height="162" cssclass="sta_WF_GArea"/>
+        <Static id="Static05" taborder="4" text="[enabled]" left="220" top="50" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01" taborder="5" text="[disabled]" left="550" top="50" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00" taborder="6" text="[readonly]" left="880" top="50" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_00" taborder="7" text="[nulltext]" left="1210" top="50" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Edit id="Edit00" taborder="8" left="220" top="100" width="280" height="50" value="Nexacro N24" text="Nexacro N24"/>
+        <Edit id="Edit00_00" taborder="9" left="550" top="100" width="280" height="50" enable="false" value="Nexacro N24" text="Nexacro N24"/>
+        <Edit id="Edit00_01" taborder="10" left="880" top="100" width="280" height="50" readonly="true" value="Nexacro N24" text="Nexacro N24"/>
+        <Edit id="Edit00_02" taborder="11" left="1210" top="100" width="280" height="50" displaynulltext="PASSWORD"/>
+        <Static id="Static07" taborder="12" text="50" left="516" top="116" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_02" taborder="13" left="505" top="100" width="5" height="50" cssclass="sta_WF_GLineV"/>
+        <Static id="Static02_00" taborder="14" text="MaskEdit" left="0" top="190" width="200" height="162" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00" taborder="15" left="199" top="190" width="1421" height="162" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00" taborder="16" text="[enabled]" left="220" top="211" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_01" taborder="17" text="[disabled]" left="550" top="211" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_01" taborder="18" text="[readonly]" left="880" top="211" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_00_00" taborder="19" text="[invalidtext]" left="1210" top="211" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static07_00" taborder="20" text="50" left="516" top="278" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_02_00" taborder="21" left="505" top="262" width="5" height="50" cssclass="sta_WF_GLineV"/>
+        <Static id="Static02_00_00" taborder="22" text="TextArea" left="0" top="351" width="200" height="282" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00_00" taborder="23" left="199" top="351" width="1421" height="282" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00_00" taborder="24" text="[enabled]" left="220" top="372" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_01_00" taborder="25" text="[disabled]" left="550" top="372" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_01_00" taborder="26" text="[readonly]" left="880" top="372" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_00_00_00" taborder="27" text="[nulltext]" left="1210" top="372" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <MaskEdit id="MaskEdit00" taborder="28" left="220" top="262" width="280" height="50" value="12345000"/>
+        <MaskEdit id="MaskEdit00_00" taborder="29" left="550" top="262" width="280" height="50" value="12345000"/>
+        <MaskEdit id="MaskEdit00_01" taborder="30" left="880" top="262" width="280" height="50" value="12345000"/>
+        <MaskEdit id="MaskEdit00_02" taborder="31" left="1210" top="262" width="280" height="50" value="12345000" type="string" format="AAAA_####"/>
+        <TextArea id="TextArea00" taborder="32" left="220" top="422" width="280" height="180" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+        <TextArea id="TextArea00_00" taborder="33" left="550" top="422" width="280" height="180" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+        <TextArea id="TextArea00_01" taborder="34" left="880" top="422" width="280" height="180" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+        <TextArea id="TextArea00_02" taborder="35" left="1210" top="422" width="280" height="180" displaynulltext="Memo"/>
+        <Static id="Static03_00_01" taborder="36" left="199" top="632" width="1421" height="162" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00_01" taborder="37" text="[enabled]" left="220" top="653" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static02_00_01" taborder="38" text="Button" left="0" top="632" width="200" height="162" cssclass="sta_WF_GLabel"/>
+        <Static id="Static05_01_01_01_01" taborder="39" text="[disabled]" left="550" top="653" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Button id="Button00" taborder="40" text="Button" left="220" top="703" width="280" height="50"/>
+        <Button id="Button00_00" taborder="41" text="Button" left="550" top="703" width="280" height="50" enable="false"/>
+        <Static id="Static02_00_02" taborder="42" text="Combo" left="0" top="793" width="200" height="162" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00_02" taborder="46" left="199" top="793" width="1421" height="162" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00_02" taborder="43" text="[enabled]" left="220" top="814" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_01_02" taborder="44" text="[disabled]" left="550" top="814" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_00_01_01" taborder="45" text="[readonly]" left="880" top="814" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Combo id="Combo00" taborder="47" text="Combo00" left="220" top="864" width="280" height="50" innerdataset="ds_dept" codecolumn="code" datacolumn="data"/>
+        <Combo id="Combo00_00" taborder="48" text="Combo00" left="550" top="864" width="280" height="50" innerdataset="ds_dept" codecolumn="code" datacolumn="data" enable="false"/>
+        <Combo id="Combo00_01" taborder="49" text="Combo00" left="880" top="864" width="280" height="50" innerdataset="ds_dept" codecolumn="code" datacolumn="data" readonly="true"/>
+        <Static id="Static02_00_00_00" taborder="50" text="ListBox" left="0" top="954" width="200" height="282" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00_00_00" taborder="53" left="199" top="954" width="1421" height="282" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00_00_00" taborder="51" text="[enabled]" left="220" top="975" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_01_00_00" taborder="52" text="[disabled]" left="550" top="975" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <ListBox id="ListBox00" taborder="54" left="220" top="1025" width="280" height="180" innerdataset="ds_position" codecolumn="code" datacolumn="data"/>
+        <ListBox id="ListBox00_00" taborder="55" left="550" top="1025" width="280" height="180" innerdataset="ds_position" codecolumn="code" datacolumn="data" enable="false"/>
+        <Static id="Static02_00_00_00_00" taborder="56" text="Calendar" left="0" top="1235" width="200" height="162" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00_00_00_00" taborder="59" left="199" top="1235" width="1421" height="162" cssclass="sta_WF_GArea"/>
+        <Static id="Static05_00_00_00_00" taborder="57" text="[enabled]" left="220" top="1256" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Static id="Static05_01_01_01_00_00_00" taborder="58" text="[disabled]" left="550" top="1256" width="120" height="20" cssclass="sta_WF_GStatus"/>
+        <Calendar id="Calendar00" taborder="60" left="220" top="1306" width="280" height="50" popupsize="355 353"/>
+        <Calendar id="Calendar00_00" taborder="61" left="550" top="1306" width="280" height="50" popupsize="355 353"/>
+      </Layout>
+      <Layout height="728" mobileorientation="portrait" screenid="Phone_screen" width="480" name="default0"/>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">Financial Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">Presales Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">7</Col>
+            <Col id="data">Technical Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">8</Col>
+            <Col id="data">Server Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">9</Col>
+            <Col id="data">Mobile Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">10</Col>
+            <Col id="data">Architecture  Team</Col>
+          </Row>
+          <Row>
+            <Col id="data">Platform Team</Col>
+            <Col id="code">11</Col>
+          </Row>
+          <Row>
+            <Col id="data">Cloud Team</Col>
+            <Col id="code">12</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_position">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Director</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

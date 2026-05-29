@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Obj_Dataset" width="1020" height="700" titletext="Obj_Dataset">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Dataset" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Grid id="Grid00" taborder="1" left="20" top="86" binddataset="ds_data" onheadclick="grd_emp_onheadclick" height="181" width="480" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="60"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="55"/>
+                <Column size="65"/>
+                <Column size="65"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CORP_CODE"/>
+                <Cell col="1" text="EMP_ID"/>
+                <Cell col="2" text="EMP_NAME"/>
+                <Cell col="3" text="DEPT_CODE"/>
+                <Cell col="4" text="GENDER"/>
+                <Cell col="5" text="SALARY"/>
+                <Cell col="6" text="BONUS"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CORP_CODE"/>
+                <Cell col="1" text="bind:EMP_ID"/>
+                <Cell col="2" text="bind:EMP_NAME"/>
+                <Cell col="3" text="bind:DEPT_CODE"/>
+                <Cell col="4" text="bind:GENDER"/>
+                <Cell col="5" text="bind:SALARY"/>
+                <Cell col="6" text="bind:BONUS"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="5" left="520" top="86" binddataset="ds_temp" onheadclick="grd_emp_onheadclick" height="181" width="480" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="60"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="55"/>
+                <Column size="65"/>
+                <Column size="65"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CORP_CODE"/>
+                <Cell col="1" text="EMP_ID"/>
+                <Cell col="2" text="EMP_NAME"/>
+                <Cell col="3" text="DEPT_CODE"/>
+                <Cell col="4" text="GENDER"/>
+                <Cell col="5" text="SALARY"/>
+                <Cell col="6" text="BONUS"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CORP_CODE"/>
+                <Cell col="1" text="bind:EMP_ID"/>
+                <Cell col="2" text="bind:EMP_NAME"/>
+                <Cell col="3" text="bind:DEPT_CODE"/>
+                <Cell col="4" text="bind:GENDER"/>
+                <Cell col="5" text="bind:SALARY"/>
+                <Cell col="6" text="bind:BONUS"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="txt_desc1" taborder="2" left="520" top="280" width="480" height="399" positionstep="0" cssclass="txt_WF_GuideDesc"/>
+        <Static id="Static01" taborder="3" text="binddataset = &quot;ds_data&quot;" left="20.00" top="60" width="152" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static02" taborder="4" text="binddataset = &quot;ds_temp&quot;" left="520" top="60" width="152" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Div id="Div00" taborder="6" text="Div00" left="20" top="280" width="480" height="400">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="dataset - column" left="0" top="0" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static01" taborder="1" text="[Property] colcount&#13;&#10;[Method] getColCount, addColumn, getColID, getColumnInfo" left="0" top="35" height="59" cssclass="sta_WF_GuideScript" right="20"/>
+              <Button id="Button00" taborder="2" text="column count" left="0" top="99" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button01" taborder="3" text="column add" left="129" top="99" width="95" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button02" taborder="4" text="column id" left="244" top="99" width="88" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button03" taborder="5" text="column info" left="352" top="99" width="102" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static02" taborder="6" text="dataset - row" left="0" top="160" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static03" taborder="7" text="[Property] rowposition, rowcount&#13;&#10;[Method] getRowCount, addRow, insertRow, deleteRow, deleteMultiRows&#9;deleteAll" left="0" top="195" height="82" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button04" taborder="8" text="row index" left="0" top="282" width="88" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button05" taborder="9" text="row count" left="108" top="282" width="88" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button06" taborder="10" text="row add, insert" left="216" top="282" width="131" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button07" taborder="11" text="row delete" left="367" top="282" width="95" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static04" taborder="12" text="data control" left="2" top="343" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static05" taborder="13" text="[Method] getColumn, setColumn, getOrgColumn, getDeletedRowCount, getDeletedColumn" left="0" top="378" height="59" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button08" taborder="14" text="get data" left="0" top="442" width="81" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button09" taborder="15" text="set data" left="101" top="442" width="81" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button10" taborder="16" text="original data" left="202" top="442" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button11" taborder="17" text="deleted data" left="338" top="442" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static06" taborder="18" text="find data" left="0" top="503" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static07" taborder="19" text="[Method] getColumn, setColumn, getOrgColumn, getDeletedRowCount, getDeletedColumn" left="0" top="538" height="59" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button12" taborder="20" text="find-single" left="10" top="602" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button13" taborder="21" text="find-multi" left="146" top="602" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button14" taborder="22" text="find-array" left="275" top="602" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static08" taborder="23" text="sort, filter" left="0" top="663" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static09" taborder="24" text="[Property] keystring&#13;&#10;[Method] filter, getRowCountNF" left="0" top="698" height="59" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button15" taborder="25" text="sort" left="10" top="762" width="52" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button16" taborder="28" text="clear filter" left="107" top="793" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button17" taborder="29" text="filterd count" left="246" top="793" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button18" taborder="27" text="filter" left="11" top="793" width="66" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button19" taborder="26" text="clear sorting" left="107" top="762" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static10" taborder="30" text="data calculation" left="5" top="854" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static11" taborder="31" text="[Method] getAvg, getSum,  getCaseAvg" left="2" top="889" height="36" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button20" taborder="32" text="average" left="5" top="930" width="73" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button21" taborder="34" text="case" left="211" top="930" width="52" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Static id="Static12" taborder="35" text="data copy" left="10" top="991" width="188" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Static id="Static13" taborder="36" text="[Method] copyData, appendData, copyRow&#9;" left="2" top="1026" height="36" cssclass="sta_WF_GuideScript" width="460"/>
+              <Button id="Button22" taborder="37" text="copy" left="11" top="1067" width="52" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button23" taborder="39" text="append" left="204" top="1067" width="66" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button24" taborder="38" text="row copy" left="93" top="1067" width="81" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+              <Button id="Button25" taborder="33" text="summary" left="108" top="930" width="73" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.ds_data, this.txt_desc1);	
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;
+	var strDesc = ``;
+	switch(strText) {
+		case 'column count':
+			var nCnt1 = this.ds_data.colcount;
+			var nCnt2 = this.ds_data.getColCount();
+			strDesc  = `* colcount, getColCount()	\n
+                        var nCnt1 = this.ds_data.colcount;
+                        // Result: ${nCnt1}	\n
+                        var nCnt2 = his.ds_data.getColCount();
+                        // Result: ${nCnt2}`;
+			break;
+			
+		case 'column add':
+			var sRtn = this.ds_data.addColumn("MEMO", "STRING", 100);
+			strDesc  = `* addColumn()	\n
+                        this.ds_data.addColumn("MEMO", "STRING", 100);
+                        // Column Index: ${sRtn}`
+			break;
+				
+		case 'column id':
+			var arrColID = [];
+			for(var i=0; i<this.ds_data.colcount; i++){
+                arrColID.push(this.ds_data.getColID(i));
+			};
+			strDesc  = `* getColID()	\n
+                        for(var i=0; i<this.ds_data.colcount; i++){
+                        	var sRtn = this.ds_data.getColID(i);
+                        };	\n
+                        // Result
+                        ${arrColID}`;		
+			break;			
+
+		case 'column info':
+			strDesc  = `* getColumnInfo()	\n
+                        var objColInfo, sID, sType, nSize;
+                        for(var i=0; i<this.ds_data.colcount; i++){
+                        	objColInfo = this.ds_data.getColumnInfo(i);
+                        	sID = objColInfo.id;
+                        	sType = objColInfo.type;
+                        	nSize = objColInfo.size
+                        };		\n
+                        // Result`
+                        for(var i=0; i<this.ds_data.colcount; i++){
+                        	objColInfo = this.ds_data.getColumnInfo(i);
+                        	sID = objColInfo.id;
+                        	sType = objColInfo.type;
+                        	nSize = objColInfo.size
+							strDesc += `\n ${sID},${sType}, ${nSize}`
+                        };
+			break;			
+		
+		case 'row index':
+			var nRow = this.ds_data.rowposition;
+			strDesc  = `* rowposition	\n
+                        var nRow = this.ds_data.rowposition;
+                        // row index: ${nRow}`;
+			break;
+			
+		case 'row count':
+			var nCnt1 = this.ds_data.rowcount;
+			var nCnt2 = this.ds_data.getRowCount();
+			strDesc  = `* rowcount, getRowCount()	\n
+                        var nCnt1 = this.ds_data.rowcount;
+                        // Result: ${nCnt1}		\n
+                        var nCnt2 = his.ds_data.getRowCount();
+                        // Result: ${nCnt2}`;
+			break;
+
+		case 'row add, insert':
+			var nRow1 = this.ds_data.addRow();
+			var nRow2 = this.ds_data.insertRow(1);
+			strDesc  = `* addRow(), insertRow()		\n
+                        var nRow1 = this.ds_data.addRow();
+                        // row index: ${nRow1}		\n
+                        var nRow2 = this.ds_data.insertRow(1);
+                        // row index: ${nRow2}`;
+			break;
+
+		case 'row delete':
+			this.ds_data.deleteRow(this.ds_data.rowposition);
+			strDesc  = `* deleteRow(), deleteAll(), deleteMultiRows()		\n
+                        this.ds_data.deleteRow(this.ds_data.rowposition);	\n
+                        // this.ds_data.deleteAll();
+                        // this.ds_data.deleteMultiRows([0,2,3]);	`;
+			break;
+
+		case 'get data':
+			var nRow = this.ds_data.rowposition;
+			var sRtn = this.ds_data.getColumn(nRow, "EMP_NAME");
+			strDesc  = `* getColumn()	\n
+                        var nRow = this.ds_data.rowposition;
+                        var sRtn = this.ds_data.getColumn(nRow, "EMP_NAME");	\n
+                        // Result: ${sRtn}`;
+			break;
+
+		case 'set data':
+			var nRow = this.ds_data.rowposition;
+			this.ds_data.setColumn(nRow, "EMP_NAME", "NEXACRO");
+			strDesc  = `* setColumn()	\n
+                        var nRow = this.ds_data.rowposition;
+                        this.ds_data.setColumn(nRow, "EMP_NAME", "NEXACRO");	`;
+			break;
+
+		case 'original data':
+			var nRow = this.ds_data.rowposition;
+			var sRtn = this.ds_data.getOrgColumn(nRow, "EMP_NAME");
+			strDesc  = `* getOrgColumn()	\n
+                        var nRow = this.ds_data.rowposition;
+                        var sRtn = this.ds_data.getOrgColumn(nRow, "EMP_NAME");		\n
+                        // Result: ${sRtn}`;
+			break;
+			
+		case 'deleted data':
+			var arrName = [];
+			for(var i=0; i<this.ds_data.getDeletedRowCount(); i++){
+				arrName.push( this.ds_data.getDeletedColumn(i, "EMP_NAME") );
+			}	
+			strDesc  = `* getDeletedRowCount(), getDeletedColumn()		\n
+                        for(var i=0; i<this.ds_data.getDeletedRowCount(); i++){
+                        	var sRtn = this.ds_data.getDeletedColumn(i, "EMP_NAME");
+                        }	\n
+                        // Result: ${arrName}`;
+			break;
+
+		case 'find-single':
+			var nRow = this.ds_data.findRow("EMP_ID", "KR240");
+			var sRtn1 = this.ds_data.getColumn(nRow, "EMP_NAME");
+			var sRtn2 = this.ds_data.lookup("EMP_ID", "KR240", "EMP_NAME");
+			strDesc  = `* findRow(), lookup()	\n
+                        -------------------------------------------------
+                        Find the 'EMP_NAME' where 'EMP_ID' is 'KR240'
+                        -------------------------------------------------	\n
+                        * findRow()
+                        var nRow = this.ds_data.findRow("EMP_ID", "KR240");
+                        var sRtn1 = this.ds_data.getColumn(nRow, "EMP_NAME");
+                        // Result: ${sRtn1}		\n
+                        * lookup()
+                        var sRtn2 = this.ds_data.lookup("EMP_ID", "KR240", "EMP_NAME");
+                        // Result: ${sRtn2}	`;
+			break;
+		case 'find-multi':
+			var nRow = this.ds_data.findRowExpr("CORP_CODE == 'KR' && DEPT_CODE == '40'");
+			var sRtn = this.ds_data.getColumn(nRow, "EMP_NAME");
+			strDesc  = `* findRowExpr()		\n
+                        ---------------------------------------------------------------------
+                        Find the 'EMP_NAME' where 'CORP_CODE' is 'KR' and 'DEPT_CODE' is '40'
+                        ---------------------------------------------------------------------	\n
+                        var nRow = this.ds_data.findRowExpr("CORP_CODE == 'KR' && DEPT_CODE == '40'");
+                        var sRtn = this.ds_data.getColumn(nRow, "EMP_NAME"); 
+                        // Result: ${sRtn}`;
+			break;
+		case 'find-array':	
+			var arrRows = this.ds_data.extractRows("DEPT_CODE == '40'");
+			var arrName = [];
+			for(var i=0; i<arrRows.length; i++){
+				arrName.push(this.ds_data.getColumn(arrRows[i], "EMP_NAME"));
+			}					
+			strDesc  = `* extractRows()		\n
+                        -----------------------------------------------------
+                        Find the list of 'EMP_NAME' where 'DEPT_CODE' is '40' 
+                        -----------------------------------------------------		\n
+                        var arrRows = this.ds_data.extractRows("DEPT_CODE == '40'");
+                        for(var i=0; i<arrRows.length; i++){
+                        	var sRtn = this.ds_data.getColumn(arrRows[i], "EMP_NAME"));
+                        }
+                        // Result: ${arrName}`;
+			break;
+			
+		case 'sort':	
+			this.ds_data.keystring = "S:-CORP_CODE+DEPT_CODE";			
+			strDesc  = `* keystring		\n
+                        ------------------------------------------------------------
+                        Sort by CORP_CODE in descending and DEPT_CODE in ascending
+                        ------------------------------------------------------------	\n
+                        this.ds_data.keystring = "S:-CORP_CODE+DEPT_CODE";	`;
+			break;		
+			
+		case 'clear sorting':	
+			this.ds_data.keystring = "";			
+			strDesc  = `* keystring			\n
+                        this.ds_data.keystring = "";	`;
+			break;		
+
+		case 'filter':	
+			this.ds_data.filter("DEPT_CODE == '40'");			
+			strDesc  = `* filter()		\n
+                        ------------------------------------------------------------
+                        Filter data where 'DEPT_CODE' is '40'.
+                        ------------------------------------------------------------	\n
+                        this.ds_data.filter("DEPT_CODE == '40'");	`;
+			break;		
+			
+		case 'clear filter':	
+			this.ds_data.filter("");			
+			strDesc  = `* filter()		\n
+                        this.ds_data.filter("");	`;
+			break;	
+			
+		case 'filterd count':
+			var nCnt1 = this.ds_data.getRowCount();
+			var nCnt2 = this.ds_data.getRowCountNF();			
+			strDesc  = `* getRowCountNF()		\n
+                        var nCnt1 = this.ds_data.getRowCount();
+                        var nCnt2 = this.ds_data.getRowCountNF();	\n
+                        // Result
+                        getRowCount: ${nCnt1}
+                        getRowCountNF: ${nCnt2}	`;
+			break;		
+			
+		case 'average':
+			var nAvg1 = this.ds_data.getAvg("SALARY");
+			var nAvg2 = this.ds_data.getAvg("SALARY",0, -1, false);				
+			strDesc  = `* getAvg()		\n
+                        var nAvg1 = this.ds_data.getAvg("SALARY");
+                        var nAvg2 = this.ds_data.getAvg("SALARY",0, -1, false);		\n
+                        // Result
+                        nAvg1: ${nAvg1}
+                        nAvg2: ${nAvg2}	`;
+			break;	
+			
+		case 'summary':
+			var nSum1 = this.ds_data.getSum("SALARY");
+			var nSum2 = this.ds_data.getSum("SALARY",0, 2);				
+			strDesc  = `* getSum() 		\n
+                        var nSum1 = this.ds_data.getSum("SALARY");
+                        var nSum2 = this.ds_data.getSum("SALARY",0, 2);		\n
+                        // Result
+                        nSum1: ${nSum1}
+                        nSum2: ${nSum2}	`;
+			break;		
+		case 'case':
+			var nAvg = this.ds_data.getCaseAvg("GENDER == 'M'", "SALARY+BONUS");
+			var nSum = this.ds_data.getCaseSum("GENDER == 'F'", "SALARY+BONUS");		
+			strDesc  = `* getCaseAvg(), getCaseSum()... 		\n
+                        var nAvg = this.ds_data.getCaseAvg("GENDER == 'M'", "SALARY+BONUS");
+                        var nSum = this.ds_data.getCaseSum("GENDER == 'F'", "SALARY+BONUS");		\n
+                        // Result
+                        nAvg: ${nAvg}
+                        nSum: ${nSum}	`;
+			break;	
+			
+		case 'copy':
+			var nCnt = this.ds_temp.copyData(this.ds_data);			
+			strDesc  = `* copyData() 		\n
+                        var nCnt = this.ds_temp.copyData(this.ds_data);
+                        // Result: ${nCnt}	`;
+			break;				
+
+		case 'append':
+			var nCnt = this.ds_temp.appendData(this.ds_data);			
+			strDesc  = `* appendData() 		\n
+                        var nCnt = this.ds_temp.appendData(this.ds_data);
+                        // Result: ${nCnt}	`;
+			break;				
+
+		case 'row copy':
+			var nFromRow = this.ds_data.findRow("EMP_ID", "KR010");
+			var nToRow = this.ds_temp.addRow();
+			this.ds_temp.copyRow(nToRow, this.ds_data, nFromRow);			
+			strDesc  = `* copyRow() 		\n
+                        var nFromRow = this.ds_data.findRow("EMP_ID", "KR010");
+                        var nToRow = this.ds_temp.addRow();
+                        this.ds_temp.copyRow(nToRow, this.ds_data, nFromRow);		`;
+			break;		
+	
+		default:
+			break;
+	}
+
+	// split 줄바꿈으로 분리, line.replace 각 줄 앞의 스페이스 제거, join 다시 문자열로 결합
+	objTxt.value = strDesc.split('\n').map(line => line.replace(/^[ ]+/g, '')).join('\n');
+	//objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}
+
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data" cancolumnchange="ds_data_cancolumnchange" oncolumnchanged="ds_data_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="CORP_CODE" type="STRING" size="256"/>
+          <Column id="EMP_ID" type="STRING" size="256"/>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="HIRE_DATE" type="STRING" size="256"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="BONUS" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">4000</Col>
+            <Col id="GENDER">F</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">US</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="BONUS">2000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="GENDER">F</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">JP</Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="EMP_NAME">Dennis</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">US</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">4000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+          <Row>
+            <Col id="CORP_CODE">KR</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="GENDER">M</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_temp"/>
+    </Objects>
+  </Form>
+</FDL>

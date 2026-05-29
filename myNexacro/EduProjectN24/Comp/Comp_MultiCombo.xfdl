@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Combo" width="1020" height="820" titletext="Comp_MultiCombo">
+    <Layouts>
+      <Layout height="820" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="MultiCombo" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static01" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static02" taborder="2" text="[Property] innerdataset, codecolumn, datacolumn" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static03" taborder="3" text="innerdataset - ds_code" left="20" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MultiCombo id="MultiCombo00" taborder="4" text="" left="20" top="157" width="200" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" value="" index="-1"/>
+        <Static id="Static04" taborder="5" text="innerdataset - set code, data" left="259.00" top="131" width="191" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MultiCombo id="MultiCombo01" taborder="6" text="MultiCombo01" left="259.00" top="157" width="200" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" readonlycolumn="readonlycolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </MultiCombo>
+        <Static id="Static05" taborder="7" text="※ ds_code" left="20.00" top="195" width="63" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid01" taborder="8" left="20.00" top="221" width="230" height="106" binddataset="ds_code" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="68"/>
+                <Column size="144"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="text"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="9" text="※ data bind - ds_data" left="259.00" top="195" width="142" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid02" taborder="10" left="260.00" top="221" width="230" height="106" binddataset="ds_data" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="85"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="CODE"/>
+                <Cell col="2" text="DAY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DAY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static07" taborder="11" text="type, select all" left="21.00" top="408" width="242" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static08" taborder="12" text="[Property] edittype = &quot;text&quot; | &quot;singletag&quot; | &quot;multitag&quot; | &quot;count&quot;&#13;&#10;           showselectallcheckbox = true | false" left="21.00" top="453" height="59" cssclass="sta_WF_GuideScript" width="482"/>
+        <Static id="Static09" taborder="13" text="edittype=&quot;singletag&quot;" left="20" top="512" width="230" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MultiCombo id="MultiCombo02" taborder="14" text="CSS,JavaScript,JAVA" left="20" top="538" width="230" height="50" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" edittype="singletag" index="1,2,3" value="02,03,04" buttonsize="26"/>
+        <Static id="Static10" taborder="15" text="edittype=&quot;multitag&quot;" left="260.00" top="512" width="175" height="26" cssclass="sta_WF_GuideRefer"/>
+        <MultiCombo id="MultiCombo03" taborder="16" text="CSS,JavaScript,JAVA" left="260.00" top="538" width="230" height="129" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" edittype="multitag" index="1,2,3" value="02,03,04" buttonsize="26"/>
+        <Static id="Static11" taborder="17" text="edittype=&quot;count&quot;&#13;&#10;showselectallcheckbox = true" left="20" top="606" width="230" height="40" cssclass="sta_WF_GuideRefer"/>
+        <MultiCombo id="MultiCombo04" taborder="18" text="CSS,JavaScript,JAVA" left="20.00" top="643" width="230" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" edittype="count" value="02,03,04" index="1,2,3" showselectallcheckbox="true" counttextformat=""/>
+        <Static id="Static12" taborder="19" text="count text" left="18.00" top="694" width="93" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static13" taborder="20" text="[Property] counttextformat // [*] item count,  [#] seleced count " left="18.00" top="729" height="36" cssclass="sta_WF_GuideScript" width="482"/>
+        <Button id="Button00" taborder="21" text="[#] / [*]" left="18.00" top="770" width="91" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec3"/>
+        <Button id="Button01" taborder="22" text="[#] selected from [*] items" left="168.00" top="770" width="216" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec3"/>
+        <Static id="Static14" taborder="23" text="index, value, text" left="530.00" top="62" width="189" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static15" taborder="24" text=" [Property] index, value, text, textseparator" left="530.00" top="97" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button02" taborder="25" text="index = &quot;0,2&quot;" left="530.00" top="138" width="230" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button03" taborder="26" text="index = &quot;-1&quot;" left="530.00" top="169" width="223" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button04" taborder="27" text="value = &quot;02,04&quot;" left="530.00" top="200" width="245" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button05" taborder="28" text="text" left="530.00" top="231" width="202" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button06" taborder="29" text="textseparator = &quot;^&quot;" left="530.00" top="262" width="273" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button07" taborder="30" text="dropdown()" left="827.00" top="262" width="173" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <MultiCombo id="MultiCombo1" taborder="31" text="MultiCombo00" left="800.00" top="157" width="195" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME"/>
+        <TextArea id="txt_desc1" taborder="32" left="530.00" top="293" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static16" taborder="33" text="get, set select" left="530.00" top="408" width="116" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static17" taborder="34" text="[Method] getSelectedItems(), setSelectedItems(), getSelectedCount(), selectAll(), clearSelect()" left="530.00" top="453" height="59" cssclass="sta_WF_GuideScript" width="469"/>
+        <Button id="Button08" taborder="35" text="setSelectItems([2, 4], true)" left="530.00" top="514" width="223" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button09" taborder="36" text="getSelectedCount()" left="530.00" top="545" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button10" taborder="37" text="getSelectedItems()" left="530.00" top="576" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2" font="13px/normal consolas"/>
+        <Button id="Button12" taborder="38" text="selectAll()" left="530.00" top="607" width="102" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button13" taborder="39" text="clearSelect()" left="530.00" top="638" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <MultiCombo id="MultiCombo2" taborder="40" text="HTML,JavaScript" left="800.00" top="538" width="195" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" index="0,2" value="01,03"/>
+        <TextArea id="txt_desc2" taborder="41" left="530.00" top="669" width="470" height="90" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static20" taborder="42" text="id = MultiCombo1" left="800.00" top="131" width="195" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static21" taborder="43" text="id = MultiCombo2" left="800.00" top="512" width="195" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.MultiCombo1, this.txt_desc1);	
+};
+
+this.fn_exec2 = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_result(obj, this.MultiCombo2, this.txt_desc2);	
+};
+
+this.fn_exec3 = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.MultiCombo04.counttextformat = obj.text;
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;
+	var strDesc = ``;
+	strDesc = `this.${objComp.name}.${strText}`;
+	switch(strText) {
+		case 'index = "0,2"':
+			objComp.index = "0,2";
+			objComp.dropdown();	
+			break;
+		case 'index = "-1"':
+			objComp.index = "-1";
+			objComp.dropdown();	
+			break;
+		case 'value = "02,04"':
+			objComp.value = "02,04";
+			objComp.dropdown();	
+			break;
+		case 'text':
+			strDesc += `\n//Result
+			            ${objComp.text}`
+			break;
+		case 'textseparator = "^"':
+			objComp.textseparator = "^";
+			strDesc += `\n//Result
+			            ${objComp.text}`
+			break;
+		case 'dropdown()':
+			objComp.dropdown();
+			break;
+		case 'setSelectItems([2, 4], true)':
+			objComp.setSelectItems([2, 4], true);
+			objComp.dropdown();	
+			break;
+		case 'getSelectedCount()':
+			objComp.getSelectedCount();
+			strDesc += `\n//Result
+			           ${objComp.getSelectedCount()}`
+			break;
+		case 'getSelectedItems()':
+			objComp.getSelectedItems();
+			strDesc += `\n//Result
+			           ${objComp.getSelectedItems()}`
+			break;			
+			
+		case 'selectAll()':
+			objComp.selectAll();
+			objComp.dropdown();	
+			break;
+		case 'clearSelect()':
+			objComp.clearSelect();
+			objComp.dropdown();	
+			break;
+		default:
+			break;
+	}
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}
+
+
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DAY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01,03</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DAY">MON,FRI</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02,04</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DAY">SUN</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="CODE">01,02,05</Col>
+            <Col id="DAY">MON,WED</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+          <Column id="READONLY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_type">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="32"/>
+          <Column id="NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Finances Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Sales 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Sales 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">Sales 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Sales Management Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Consulting 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Consulting 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Consulting 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Design Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Mobile Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Technical Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">16</Col>
+            <Col id="NAME">Technical Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">17</Col>
+            <Col id="NAME">Technical Support 3 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">18</Col>
+            <Col id="NAME">Customer Support 1 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">19</Col>
+            <Col id="NAME">Customer Support 2 Team</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Customer Support 3 Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="MultiCombo00" propid="value" datasetid="ds_data" columnid="CODE"/>
+      <BindItem id="item1" compid="MultiCombo01" propid="value" datasetid="ds_data" columnid="DAY"/>
+    </Bind>
+  </Form>
+</FDL>

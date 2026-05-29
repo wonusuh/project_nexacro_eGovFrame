@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide_Preset02" width="1090" height="1330" titletext="Component Preset Sample">
+    <Layouts>
+      <Layout height="1330" width="1090">
+        <Static id="Static01_00_00" taborder="15" left="149" top="567" height="208" cssclass="sta_WF_DetailArea" width="921" text=""/>
+        <Static id="Static01_00" taborder="14" left="149" top="315" height="253" cssclass="sta_WF_DetailArea" width="921" text=""/>
+        <Static id="Static03_00" taborder="0" text="Style" left="149" top="0" width="921" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static03" taborder="1" text="Category" left="0" top="0" width="150" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static00" taborder="2" text="Component" left="0" top="29" width="150" height="1282" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static01" taborder="4" left="149" top="29" height="287" cssclass="sta_WF_DetailArea" width="921" text=""/>
+        <Static id="Static04_00" taborder="3" text="카테고리명 = Calendar_monthonly" left="159" top="39" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Calendar width="200" height="220" type="monthonly" cssclass="cal_WF_Month" id="Calendar01" left="159" top="75" taborder="5"/>
+        <Static id="Static05" taborder="6" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;width = 200&#13;&#10;height = 220&#13;&#10;type = monthonly&#13;&#10;cssclass = cal_WF_Month&lt;/fc&gt;" left="389" top="75" width="181" height="135" cssclass="sta_WF_Contents" usedecorate="true"/>
+        <Static id="Static04_00_00" taborder="7" text="카테고리명 = TextField_email" left="159" top="325" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="Static05_00" taborder="8" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;width = 300&#13;&#10;height = 70&#13;&#10;helpertext = 이메일을 입력하세요&#13;&#10;labeltext = E-Mail&#13;&#10;inputtype = email&#13;&#10;usehelpertext = true&#13;&#10;usetrailingbutton = true&#13;&#10;&lt;/fc&gt;" left="489" top="361" width="231" height="175" cssclass="sta_WF_Contents" usedecorate="true" onclick="Static05_00_onclick"/>
+        <TextField id="TextField00_00_00_00_00" taborder="9" labeltext="E-Mail" left="159" top="361" width="300" height="70" usehelpertext="true" helpertext="이메일을 입력하세요" inputtype="email" usetrailingbutton="true"/>
+        <Static id="Static04_00_00_00_00" taborder="10" text="&lt;fc v=&quot;#254edb&quot;&gt;[입력 값에 따른 활용 예시]&lt;/fc&gt;" left="735" top="361" width="291" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <TextField id="TextField00_00_00_01" taborder="11" labeltext="E-Mail" left="735" top="397" width="300" height="70" usehelpertext="true" helpertext="이메일을 입력하세요" inputtype="email" usetrailingbutton="true" value="tobe"/>
+        <TextField id="TextField00_00_00_00_01" taborder="12" labeltext="E-Mail" left="735" top="477" width="300" height="70" usehelpertext="true" helpertext="이메일을 입력하세요" inputtype="email" usetrailingbutton="true" value="tobe@tobesoft.com"/>
+        <Static id="Static04_00_00_00" taborder="13" text="카테고리명 = Tab_btngap" left="159" top="586" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Tab id="Tab00" taborder="16" tabindex="0" left="159" top="622" width="618" height="132" tabbuttongap="2" showextrabutton="true" showtabbuttonicon="true" tabbuttoniconsize="30">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1"/>
+            <Tabpage id="Tabpage2" text="Tabpage2"/>
+          </Tabpages>
+        </Tab>
+        <Static id="Static05_00_00" taborder="17" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;showextrabutton = true&#13;&#10;showtabbuttonicon = true&#13;&#10;tabbuttongap = 2&#13;&#10;tabbuttoniconsize = 30&#13;&#10;&lt;/fc&gt;" left="807" top="622" width="231" height="105" cssclass="sta_WF_Contents" usedecorate="true" onclick="Static05_00_onclick"/>
+        <Static id="Static01_00_00_00" taborder="18" left="149" top="774" height="537" cssclass="sta_WF_DetailArea" width="921" text=""/>
+        <Calendar width="200" height="220" type="monthonly" cssclass="cal_WF_Month" id="Calendar01_00" left="620" top="75" taborder="19" datepickerchangetype="button"/>
+        <Static id="Static05_01" taborder="20" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;width = 200&#13;&#10;height = 220&#13;&#10;type = monthonly&#13;&#10;cssclass = cal_WF_Month&#13;&#10;datepickerchangetype = button&#13;&#10;&lt;/fc&gt;" left="850" top="75" width="201" height="135" cssclass="sta_WF_Contents" usedecorate="true"/>
+        <Static id="Static04_00_01" taborder="21" text="카테고리명 = Calendar_btn type" left="620" top="39" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <DateRangePicker id="DateRangePicker00" taborder="22" left="159" top="860" width="410" height="315" innerdataset="innerdataset" backgroundcolumn="backgroundcolumn" bordercolumn="bordercolumn" datecolumn="datecolumn" hintingcolumn="hintingcolumn" readonlycolumn="readonlycolumn" textcolorcolumn="textcolorcolumn" mindate="20250915" maxdate="20251025">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="backgroundcolumn" size="256"/>
+              <Column id="bordercolumn" size="256"/>
+              <Column id="datecolumn" size="256"/>
+              <Column id="hintingcolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+              <Column id="textcolorcolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datecolumn">20251021</Col>
+                <Col id="backgroundcolumn">cornflowerblue</Col>
+                <Col id="readonlycolumn">true</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </DateRangePicker>
+        <Static id="Static04_00_00_00_01" taborder="23" text="카테고리명 = DateRangePicker_minmax" left="159" top="824" width="271" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <DateRangePicker id="DateRangePicker01" taborder="24" left="619" top="860" width="410" height="315" startdate="20250910" enddate="20251002"/>
+        <Static id="Static05_00_01" taborder="25" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;width = 410&#13;&#10;height = 315&#13;&#10;maxdate = 20251025&#13;&#10;mindate  = 20250915&#13;&#10;&lt;/fc&gt;" left="159" top="1185" width="231" height="105" cssclass="sta_WF_Contents" usedecorate="true" onclick="Static05_00_onclick"/>
+        <Static id="Static05_00_01_00" taborder="26" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 정보&#13;&#10;width = 410&#13;&#10;height = 315&#13;&#10;enddate = 20251002&#13;&#10;startdate  = 20250910&#13;&#10;&lt;/fc&gt;" left="619" top="1185" width="231" height="105" cssclass="sta_WF_Contents" usedecorate="true" onclick="Static05_00_onclick"/>
+        <Static id="Static04_00_00_00_01_00" taborder="27" text="카테고리명 = DateRangePicker_sstartend" left="619" top="824" width="261" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="Static04_00_00_00_00_00" taborder="28" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 활용예시를 위해 속성을 이용하였음&lt;/fc&gt;" left="159" top="794" width="461" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="background" type="STRING" size="256"/>
+          <Column id="border" type="STRING" size="256"/>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="hinting" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+          <Column id="textcolor" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="background">cornflowerblue</Col>
+            <Col id="date">20251001</Col>
+            <Col id="hinting">해당 날짜는 선택 할 수 없습니다.</Col>
+            <Col id="readonly">true</Col>
+            <Col id="textcolor">#ffffff</Col>
+          </Row>
+          <Row>
+            <Col id="background">cornflowerblue</Col>
+            <Col id="date">20251008</Col>
+            <Col id="hinting">해당 날짜는 선택 할 수 없습니다.</Col>
+            <Col id="readonly">true</Col>
+            <Col id="textcolor">#ffffff</Col>
+          </Row>
+          <Row>
+            <Col id="background">cornflowerblue</Col>
+            <Col id="date">20251015</Col>
+            <Col id="hinting">해당 날짜는 선택 할 수 없습니다.</Col>
+            <Col id="readonly">true</Col>
+            <Col id="textcolor">#ffffff</Col>
+          </Row>
+          <Row>
+            <Col id="background">cornflowerblue</Col>
+            <Col id="date">20251022</Col>
+            <Col id="hinting">해당 날짜는 선택 할 수 없습니다.</Col>
+            <Col id="readonly">true</Col>
+            <Col id="textcolor">#ffffff</Col>
+          </Row>
+          <Row>
+            <Col id="background">cornflowerblue</Col>
+            <Col id="date">20251029</Col>
+            <Col id="hinting">해당 날짜는 선택 할 수 없습니다.</Col>
+            <Col id="readonly">true</Col>
+            <Col id="textcolor">#ffffff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

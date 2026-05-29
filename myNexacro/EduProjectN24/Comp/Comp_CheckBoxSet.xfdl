@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_CheckBoxSet" width="1020" height="850" titletext="Comp_CheckBoxSet">
+    <Layouts>
+      <Layout height="850" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="CheckBoxSet" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="3" text="innerdataset - ds_code" left="20" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <CheckBoxSet id="CheckBoxSet00" taborder="4" left="20" top="157" width="507" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" readonlycolumn="READONLY"/>
+        <Static id="Static01" taborder="2" text="[Property] innerdataset, codecolumn, datacolumn, readonlycolumn" left="20" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <CheckBoxSet id="CheckBoxSet01" taborder="6" left="20" top="236" width="471" height="46" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" readonlycolumn="readonlycolumn" rowcount="2">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </CheckBoxSet>
+        <Static id="Static02" taborder="1" text="Basic Usage" left="20.00" top="60" width="300" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static03" taborder="5" text="innerdataset - set code, data" left="20.00" top="210" width="201" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static04" taborder="7" text="※ ds_code" left="20.00" top="314" width="63" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid00" taborder="8" left="20.00" top="340" width="230" height="106" binddataset="ds_code" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="68"/>
+                <Column size="144"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="text"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="9" text="※ data bind - ds_data" left="259.00" top="314" width="142" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid01" taborder="10" left="260.00" top="340" width="230" height="106" binddataset="ds_data" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="85"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="CODE"/>
+                <Cell col="2" text="DAY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DAY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static06" taborder="11" text="column, row count" left="20.00" top="496" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static07" taborder="12" text="[Property] columncount, rowcount, &#13;&#10;direction = &quot;horizontal&quot; | &quot;vertical&quot;" left="20.00" top="531" height="50" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static08" taborder="13" text="columncount = 3 or rowcount = 2" left="20" top="581" width="205" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static09" taborder="15" text="direction" left="370.00" top="581" width="60" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static10" taborder="17" text="columncount = -1 &amp; rowcount = -1" left="20.00" top="698" width="211" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio05" taborder="16" left="370.00" top="607" width="100" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" value="horizontal" text="horizontal" index="0" onitemchanged="Radio05_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">horizontal</Col>
+                <Col id="datacolumn">horizontal</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">vertical</Col>
+                <Col id="datacolumn">vertical</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <CheckBoxSet id="CheckBoxSet02" taborder="14" left="20.00" top="607" width="311" height="76" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" readonlycolumn="readonlycolumn" columncount="3">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="readonlycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </CheckBoxSet>
+        <Static id="Static14" taborder="19" text="index, value, text" left="530.00" top="60" width="189" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static15" taborder="20" text="[Property] index, value, text, textseparator" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button02" taborder="21" text="index = &quot;0,2&quot;" left="530" top="131" width="180" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button03" taborder="22" text="index = &quot;-1&quot;" left="530.00" top="162" width="180" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button04" taborder="23" text="value = &quot;02,04&quot;" left="530.00" top="193" width="180" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button05" taborder="24" text="text" left="530.00" top="224" width="180" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button06" taborder="25" text="textseparator = &quot;^&quot;" left="530.00" top="255" width="180" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <TextArea id="txt_desc1" taborder="28" left="530" top="286" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static16" taborder="29" text="get, set select" left="530.00" top="496" width="116" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static17" taborder="30" text="[Method] getSelectedItems(), setSelectedItems(), getSelectedCount(), selectAll(), clearSelect()" left="530" top="531" height="56" cssclass="sta_WF_GuideScript" width="469"/>
+        <Button id="Button08" taborder="31" text="setSelectItems([2, 4], true)" left="530" top="587" width="223" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button09" taborder="32" text="getSelectedCount()" left="530.00" top="618" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button10" taborder="33" text="getSelectedItems()" left="530.00" top="649" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2" font="13px/normal consolas"/>
+        <Button id="Button12" taborder="34" text="selectAll()" left="530.00" top="680" width="102" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button13" taborder="35" text="clearSelect()" left="530.00" top="711" width="116" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <TextArea id="txt_desc2" taborder="38" left="530.00" top="742" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <CheckBoxSet id="CheckBoxSet03" taborder="18" left="20" top="724" width="407" height="26" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" readonlycolumn="READONLY" columncount="-1" rowcount="-1"/>
+        <CheckBoxSet id="CheckBoxSet1" taborder="27" left="800" top="157" width="197" height="78" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" readonlycolumn="READONLY" columncount="2"/>
+        <CheckBoxSet id="CheckBoxSet2" taborder="37" left="800" top="613" width="197" height="76" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" readonlycolumn="READONLY" columncount="2"/>
+        <Static id="Static18" taborder="26" text="id = CheckBoxSet1" left="800.00" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static19" taborder="36" text="id = CheckBoxSet2" left="800.00" top="587" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.CheckBoxSet1, this.txt_desc1);	
+};
+
+this.fn_exec2 = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_result(obj, this.CheckBoxSet2, this.txt_desc2);	
+};
+
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;	// index = "0,2
+	var strDesc = ``;
+	strDesc = `this.${objComp.name}.${strText}`;
+	switch(strText) {
+		case 'index = "0,2"':
+			objComp.index = "0,2";
+			break;
+		case 'index = "-1"':
+			objComp.index = "-1";
+			break;
+		case 'value = "02,04"':
+			objComp.value = "02,04";
+			break;
+		case 'text':
+			strDesc += `\n//Result \n${objComp.text}`;
+			break;
+		case 'textseparator = "^"':
+			objComp.textseparator = "^";
+			strDesc += `\n//Result \n${objComp.text}`;
+			break;
+		case 'setSelectItems([2, 4], true)':
+			objComp.setSelectItems([2, 4], true);
+			break;
+		case 'getSelectedCount()':
+			objComp.getSelectedCount();
+			strDesc += `\n//Result \n${objComp.getSelectedCount()}`
+			break;
+		case 'getSelectedItems()':
+			objComp.getSelectedItems();
+			strDesc += `\n//Result \n${objComp.getSelectedItems()}`
+			break;			
+		case 'selectAll()':
+			objComp.selectAll();
+			break;
+		case 'clearSelect()':
+			objComp.clearSelect();
+			break;
+		default:
+			break;
+	}
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}
+
+
+this.Radio05_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.CheckBoxSet02.direction = e.postvalue;
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01,03</Col>
+            <Col id="EMP_NAME">Melon</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02,04</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="CODE">01,02,05</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+          <Column id="READONLY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

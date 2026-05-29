@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_DateField" width="1020" height="900" titletext="Comp_DateField">
+    <Layouts>
+      <Layout height="900" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="DateField" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] labeltext, labelfloatingfixed, &#13;&#10;labelposition = &quot;overlap&quot; | &quot;outside&quot; | &quot;inside&quot;" left="20.00" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static07" taborder="3" text="helper text" left="530" top="60" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static08" taborder="4" text="[Property] usehelpertext, helpertext" left="530" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static09" taborder="5" text="usehelpertext = true, helpertext = &quot;Please enter a date&quot;" left="530" top="154" width="369" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static02" taborder="6" text="labeltext = &quot;Date&quot;, labelfloatingfixed = true" left="20" top="265" width="297" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio00" taborder="7" left="20" top="159" width="250" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" text="overlap" index="0" columncount="-1" rowcount="-1" onitemchanged="Radio_onitemchanged" value="overlap">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">overlap</Col>
+                <Col id="datacolumn">overlap</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">outside</Col>
+                <Col id="datacolumn">outside</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">inside</Col>
+                <Col id="datacolumn">inside</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static05" taborder="8" text="[Property] inputtype  = &quot;date&quot; | &quot;datetime&quot; | &quot;time&quot;" left="20" top="438" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static04" taborder="9" text="input type" left="20" top="403" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static06" taborder="10" text="inputtype = &quot;datetime&quot;" left="20" top="474" width="153" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static11" taborder="11" text="inputtype = &quot;time&quot;" left="270" top="474" width="153" height="26" cssclass="sta_WF_GuideRefer"/>
+        <DateField id="DateField00" taborder="12" labeltext="DateField00" left="20" top="190" width="220" height="60"/>
+        <DateField id="DateField01" taborder="13" labeltext="Date" left="20" top="283" width="220" height="60"/>
+        <DateField id="DateField02" taborder="14" labeltext="Date" left="530" top="180" width="220" height="70" helpertext="Please enter a date" usehelpertext="true"/>
+        <DateField id="DateField03" taborder="15" labeltext="Date" left="20" top="500" width="220" height="70" helpertext="Please enter a date" usehelpertext="true" inputtype="datetime" okbuttontext="OK"/>
+        <DateField id="DateField04" taborder="16" labeltext="Date" left="262" top="500" width="220" height="70" helpertext="Please enter a date" usehelpertext="true" inputtype="time"/>
+        <DateField id="DateField05" taborder="17" labeltext="Date" left="530" top="500" width="220" height="70" helpertext="Please enter a date" usehelpertext="true" displayformat="yyyy/MM/dd dddd" format="yyyy/MM/dd" value="20241001"/>
+        <Static id="Static12" taborder="18" text="displayformat = &quot;yyyy/MM/dd dddd&quot;, format = &quot;yyyy/MM//dd&quot;" left="530.00" top="474" width="376" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static13" taborder="19" text="date format" left="530" top="403" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static14" taborder="20" text="[Property] displayformat, format" left="530" top="438" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static20" taborder="21" text="holidays, specific dates" left="20" top="616" height="35" cssclass="sta_WF_GuideTitle2" right="530"/>
+        <Static id="Static21" taborder="22" text="[Property] innerdataset, datecolumn, backgroundcolumn, bordercolumn, textcolorcolumn, hintingcolumn, readonlycolumn" left="20" top="651" height="56" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static22" taborder="23" left="20" top="707" width="139" height="26" cssclass="sta_WF_GuideRefer" text="innerdataset - ds_day"/>
+        <Grid id="Grid00" taborder="24" left="20" top="733" width="510" height="140" binddataset="ds_day" autofittype="col" useselcolor="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="82"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="28"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="date"/>
+                <Cell col="1" text="text color"/>
+                <Cell col="2" text="bg color"/>
+                <Cell col="3" text="border color"/>
+                <Cell col="4" text="hint text"/>
+                <Cell col="5" text="readonly"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:date" displaytype="date" textAlign="center" calendardateformat="yyyy-MM-dd"/>
+                <Cell col="1" text="bind:text_color" edittype="text"/>
+                <Cell col="2" text="bind:bg_color" edittype="text"/>
+                <Cell col="3" text="bind:border_color" edittype="text"/>
+                <Cell col="4" text="bind:hint_text"/>
+                <Cell col="5" text="bind:readonly"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <DateField id="DateField06" taborder="25" labeltext="Date" left="535" top="735" width="220" height="70" helpertext="Please enter a date" usehelpertext="true" displayformat="yyyy/MM/dd dddd" format="yyyy/MM/dd" value="20241001" innerdataset="ds_day" backgroundcolumn="bg_color" bordercolumn="border_color" datecolumn="date" hintingcolumn="hint_text" readonlycolumn="readonly" textcolorcolumn="text_color"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.DateField00.labelposition = this.Radio00.value;
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_day">
+        <ColumnInfo>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="text_color" type="STRING" size="256"/>
+          <Column id="bg_color" type="STRING" size="256"/>
+          <Column id="border_color" type="STRING" size="256"/>
+          <Column id="hint_text" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="date">20241003</Col>
+            <Col id="text_color">red</Col>
+            <Col id="bg_color">yellow</Col>
+            <Col id="border_color">1px solid red</Col>
+            <Col id="hint_text">meeting</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="date">20241015</Col>
+            <Col id="text_color">blue</Col>
+            <Col id="bg_color">yellow</Col>
+            <Col id="border_color">1px solid blue</Col>
+            <Col id="readonly">0</Col>
+            <Col id="hint_text">education</Col>
+          </Row>
+          <Row>
+            <Col id="date">20241016</Col>
+            <Col id="text_color">#7f7f7f</Col>
+            <Col id="bg_color">#e0e0e0</Col>
+            <Col id="border_color">1px solid #e0e0e0</Col>
+            <Col id="readonly">1</Col>
+            <Col id="hint_text"/>
+          </Row>
+          <Row>
+            <Col id="date">20241017</Col>
+            <Col id="text_color">#7f7f7f</Col>
+            <Col id="bg_color">#e0e0e0</Col>
+            <Col id="border_color">1px solid #e0e0e0</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

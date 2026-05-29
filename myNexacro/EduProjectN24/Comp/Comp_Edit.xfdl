@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Edit" width="1020" height="650" titletext="Comp_Edit">
+    <Layouts>
+      <Layout height="650" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Edit" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] enable, readonly, password, displaynulltext" left="20" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="enable = true" left="20" top="131" width="86" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit00" taborder="4" left="20" top="157" width="140" height="26" value="NEXACRO" text="NEXACRO"/>
+        <Static id="Static03" taborder="5" text="enable = false" left="170.00" top="131" width="93" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit01" taborder="6" left="170.00" top="157" width="140" height="26" value="NEXACRO" text="NEXACRO" enable="false"/>
+        <Static id="Static04" taborder="7" text="readonly = true" left="320.00" top="131" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit02" taborder="8" left="320.00" top="157" width="140" height="26" value="NEXACRO" text="NEXACRO" readonly="true"/>
+        <Static id="Static05" taborder="9" text="password = true" left="20" top="193" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit03" taborder="10" left="20" top="219" width="140" height="26" value="NEXACRO" text="NEXACRO" password="true"/>
+        <Static id="Static06" taborder="11" text="displaynulltext" left="170.00" top="193" width="99" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit04" taborder="12" left="170.00" top="219" width="160" height="26" text="" displaynulltext="Please enter your email"/>
+        <Static id="Static07" taborder="13" text="input type" left="20.00" top="310" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static08" taborder="14" text="[Property] inputtype = &quot;english&quot; &amp; &quot;number&quot; &amp; &quot;digit&quot;..." left="20.00" top="345" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static09" taborder="15" text="inputtype = english,digit" left="20" top="381" width="165" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit07" taborder="16" left="20.00" top="407" width="170" height="26" value="NEXACRO 24" text="NEXACRO 24" inputtype="english,digit"/>
+        <Static id="Static10" taborder="17" text="inputtype = number" left="200.00" top="381" width="119" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit08" taborder="18" left="201.00" top="407" width="170" height="26" value="-1,234.55" text="-1,234.55" autoselect="true"/>
+        <Static id="Static11" taborder="19" text="input mode" left="20.00" top="490" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static12" taborder="20" text="[Property] inputmode = &quot;normal&quot; | &quot;upper&quot; | &quot;lower&quot;" left="20.00" top="525" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static13" taborder="21" text="inputmode = upper" left="20.00" top="561" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit10" taborder="22" left="20.00" top="587" width="170" height="26" text="" inputmode="upper"/>
+        <Static id="Static14" taborder="23" text="max length, auto skip, auto select" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static15" taborder="24" text=" [Property] maxlength, autoskip, autoselect" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static16" taborder="25" text="maxlength = 4, autoskip = true" left="530.00" top="131" width="198" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit05" taborder="26" left="530.00" top="157" width="140" height="26" value="ABCD" text="ABCD" autoskip="true" maxlength="4"/>
+        <Static id="Static17" taborder="27" text="autoselect = true" left="530.00" top="193" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit06" taborder="28" left="530.00" top="219" width="140" height="26" value="NEXACRO" text="NEXACRO" autoselect="true"/>
+        <Static id="Static18" taborder="29" text="input filter" left="530.00" top="310" width="279" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static19" taborder="30" text="[Property] inputfilter = &quot;none&quot; &amp; &quot;alpha&quot; &amp; &quot;digit&quot;..." left="530.00" top="345" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static20" taborder="31" text="inputfilter = digit" left="530.00" top="381" width="126" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit09" taborder="32" left="530" top="407" width="170" height="26" value="NEXACRO" text="NEXACRO" inputfilter="digit"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

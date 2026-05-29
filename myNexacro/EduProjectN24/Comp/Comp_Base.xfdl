@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Base" width="1020" height="700" titletext="Components" ontimer="Comp_Base_ontimer">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="5" stepindex="0">
+        <Static id="Static54" taborder="67" left="20" top="60" height="160" positionstep="4" cssclass="sta_WF_DetailArea" right="20"/>
+        <Static id="Static54_00_00" taborder="76" left="20" top="328" height="320" positionstep="4" cssclass="sta_WF_DetailArea" right="20"/>
+        <Static id="Static54_00" taborder="71" left="20" top="219" height="110" positionstep="4" cssclass="sta_WF_DetailArea" right="20"/>
+        <Static id="Static36" taborder="55" text="" left="20" top="60" height="170" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="3"/>
+        <Static id="Static34" taborder="64" text="" left="20" top="408" height="120" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="3"/>
+        <Static id="Static35" taborder="61" text="" left="20" top="229" height="180" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="3"/>
+        <Static id="Static33" taborder="19" text="" left="20" top="542" height="68" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="1"/>
+        <Static id="Static28" taborder="32" text="" left="20" top="60" height="118" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="1"/>
+        <Static id="Static29" taborder="37" text="" left="20" top="177" height="170" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="1"/>
+        <Static id="Static30" taborder="41" text="" left="20" top="346" height="130" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="1"/>
+        <Static id="Static32" taborder="46" text="" left="20" top="475" height="68" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="1"/>
+        <Static id="Static12" taborder="5" text="" left="20" top="60" height="68" right="20" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static06" taborder="0" text="" left="20" top="127" height="68" right="20" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static20_00" taborder="3" text="" left="20" top="381" height="68" right="20" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static11" taborder="1" text="Static" left="20.00" top="60" width="150" height="68" background="url('imagerc::comp/comp_static.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static00" taborder="2" text="Components - Single" left="20.00" top="0" width="250" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static04" taborder="4" text="Button" left="510" top="60" width="150" height="68" background="url('imagerc::comp/comp_button.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static25" taborder="6" left="180.00" top="80" width="160" height="28" text="Nexacro N"/>
+        <Static id="Static05" taborder="7" text="Edit" left="20.00" top="127" width="150" height="68" background="url('imagerc::comp/comp_edit.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Button id="Button00" taborder="8" text="Save" left="670.00" top="80" width="70" height="28"/>
+        <Static id="Static07" taborder="9" text="MaskEdit" left="510" top="127" width="150" height="68" background="url('imagerc::comp/comp_maskedit.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static20" taborder="17" text="" left="20" top="448" height="68" right="20" cssclass="sta_WF_DetailArea"/>
+        <Button id="Button01" taborder="10" text="Delete" left="750.00" top="80" width="70" height="28" cssclass="btn_WF_CRUD"/>
+        <Static id="Static10" taborder="12" text="" left="20" top="194" height="188" right="20" cssclass="sta_WF_DetailArea"/>
+        <Edit id="Edit00" taborder="14" left="180.00" top="148" width="180" height="26" value="Nexacro N" text="Nexacro N"/>
+        <Static id="Static09" taborder="11" text="TextArea" left="20.00" top="194" width="150" height="188" background="url('imagerc::comp/comp_textarea.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static15" taborder="15" text="CheckBox" left="20.00" top="381" width="150" height="68" background="url('imagerc::comp/comp_checkbox.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static21" taborder="13" text="Calendar" left="510" top="194" width="150" height="188" background="url('imagerc::comp/comp_calendar.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <MaskEdit id="MaskEdit00" taborder="16" left="670.00" top="148" width="134" height="26" value="8307011234567" type="string" textAlign="center" format="######-#######"/>
+        <MaskEdit id="MaskEdit01" taborder="18" left="812.00" top="148" width="116" height="26" value="12345.88" format="#,###.00"/>
+        <TextArea id="TextArea00" taborder="20" left="180.00" top="205" width="200" height="120" value="Nexacro N&#10;Hello World&#10;TextArea Component"/>
+        <Static id="Static31" taborder="21" text="" left="20" top="60" height="230" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="2"/>
+        <Static id="Static50" taborder="22" text="" left="20" top="289" height="330" right="20" border="" background="" padding="" cssclass="sta_WF_DetailArea" positionstep="2"/>
+        <Calendar id="Calendar00" taborder="23" left="670.00" top="205" width="140" height="26" value="20240102"/>
+        <Calendar id="Calendar01" taborder="24" left="818" top="205" width="180" height="170" value="20240102" datepickerchangetype="button" type="monthonly"/>
+        <CheckBox id="CheckBox00" taborder="25" text="Check" left="180.00" top="402" width="180" height="26" value="true"/>
+        <Spin id="Spin00" taborder="26" left="670.00" top="402" width="68" height="26" value="17"/>
+        <ImageViewer id="ImageViewer00" taborder="28" text="" left="180.00" top="469" width="172" height="26" image="url('theme://images/sta_TF_NexacroN.png')"/>
+        <ProgressBar id="ProgressBar00" taborder="29" max="100" min="0" text="" left="670.00" top="469" width="260" height="26" pos="70"/>
+        <Button id="btn_exe" taborder="30" text="exe" left="940" top="469" width="54" height="26" onclick="btn_exe_onclick"/>
+        <Static id="Static27" taborder="31" text="Combo" left="20" top="60" width="150" height="118" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1" background="url('imagerc::comp/comp_combo.png') no-repeat 2% center #f7f8f9"/>
+        <Static id="Static45" taborder="33" text="MultiCombo" left="510" top="60" width="150" height="118" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1" background="url('imagerc::comp/comp_multicombo.png') no-repeat 2% center #f7f8f9"/>
+        <Static id="Static01" taborder="27" text="ImageViwer" left="20.00" top="448" width="150" height="68" border="" background="url('imagerc::comp/comp_imageviwer.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_DetailLabel"/>
+        <MultiCombo id="MultiCombo00" taborder="34" text="Monday,Thursday" left="670.00" top="76" width="200" height="26" positionstep="1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" readonlycolumn="readonlycolumn" value="1,4" index="1,4">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </MultiCombo>
+        <MultiCombo id="MultiCombo01" taborder="35" text="Marketing Team,Sales Team" left="670.00" top="111" width="320" height="56" positionstep="1" innerdataset="ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" readonlycolumn="" value="20,30" index="1,2" edittype="singletag"/>
+        <Static id="Static17" taborder="36" text="ListBox" left="20" top="177" width="150" height="170" border="" background="url('imagerc::comp/comp_listbox.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <Static id="Static13" taborder="88" text="Multi Select" left="670" top="189" width="120" height="26" positionstep="1" cssclass="sta_WF_GuideLabel"/>
+        <ListBox id="ListBox01" taborder="38" left="670" top="215" width="200" height="114" codecolumn="DEPT_CD" datacolumn="DEPT_NAME" innerdataset="@ds_dept" text="Marketing Team" positionstep="1" multiselect="true" value="20" index="1"/>
+        <ListBox id="ListBox00" taborder="39" left="180.00" top="215" width="200" height="114" codecolumn="codecolumn" datacolumn="datacolumn" value="1" innerdataset="innerdataset" positionstep="1" text="Monday" index="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Static id="Static18" taborder="40" text="Radio" left="20" top="346" width="150" height="130" border="" background="url('imagerc::comp/comp_radio.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <Radio id="Radio00" taborder="42" left="180.00" top="359" width="300" height="104" codecolumn="codecolumn" datacolumn="datacolumn" value="FR" innerdataset="innerdataset" positionstep="1" rowcount="3">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="codecolumn">SU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Monday</Col>
+                <Col id="codecolumn">MO</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Tuesday</Col>
+                <Col id="codecolumn">TU</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Wednesday</Col>
+                <Col id="codecolumn">WE</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Thursday</Col>
+                <Col id="codecolumn">TH</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Friday</Col>
+                <Col id="codecolumn">FR</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="codecolumn">SA</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static47" taborder="43" text="CheckBoxSet" left="510" top="346" width="150" height="130" border="" background="url('imagerc::comp/comp_checkboxset.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <CheckBoxSet id="CheckBoxSet00" taborder="44" left="670.00" top="359" height="104" positionstep="1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="3" value="1,4" text="Monday,Thursday" index="1,4" readonlycolumn="readonlycolumn" width="300">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+              <Column id="readonlycolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Sunday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">Saturday</Col>
+                <Col id="readonlycolumn">1</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </CheckBoxSet>
+        <Static id="Static24" taborder="45" text="Menu" left="20" top="475" width="150" height="68" border="" background="url('imagerc::comp/comp_menu.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <Menu id="Menu00" taborder="47" left="180.00" top="495" width="493" height="28" innerdataset="@gds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" levelcolumn="MENU_LEVEL" popupitemheight="30" enablecolumn="MENU_ENABLE" hotkeycolumn="HOTKEY" iconcolumn="MENU_ICON" positionstep="1"/>
+        <Static id="Static26" taborder="48" text="PopupMenu" left="20" top="542" width="150" height="68" border="" background="url('imagerc::comp/comp_popupmenu.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <Button id="btn_popMenu" taborder="49" text="Click" left="180.00" top="563" width="70" height="26" positionstep="1" onclick="btn_popMenu_onclick" cssclass="btn_WF_FillBlue"/>
+        <Static id="Static23" taborder="50" text="Grid" left="20" top="60" width="150" height="230" border="" background="url('imagerc::comp/comp_grid.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel" positionstep="2"/>
+        <Grid id="Grid00" taborder="51" left="178.00" top="71" width="642" height="209" binddataset="ds_data" autosizingtype="" autofittype="col" fillareatype="linerow" positionstep="2">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="42"/>
+                <Column size="126"/>
+                <Column size="136"/>
+                <Column size="147"/>
+                <Column size="73"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Hire Date"/>
+                <Cell col="3" text="Annual Salary"/>
+                <Cell col="4" text="Married"/>
+                <Cell col="5"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow + 1" displaytype="text"/>
+                <Cell col="1" text="bind:EMP_NAME" textAlign="center"/>
+                <Cell col="2" text="bind:HIRE_DATE" textAlign="center" edittype="date"/>
+                <Cell col="3" text="bind:SALARY" textAlign="right"/>
+                <Cell col="4" displaytype="checkboxcontrol" edittype="checkbox" text="bind:MARRIED"/>
+                <Cell col="5" text="bind:IMG_URL" displaytype="imagecontrol"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static49" taborder="52" text="ListView" left="20" top="289" width="150" height="330" border="" background="url('imagerc::comp/comp_listview.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="2"/>
+        <ListView id="ListView00" taborder="53" left="178.00" top="303" width="642" height="303" binddataset="ds_movie" bandexpandtype="accordion" positionstep="2">
+          <Formats>
+            <Format id="default">
+              <Band id="body" width="100%" height="180" expandbartype="true" expandbarsize="25">
+                <Cell id="Cell01" left="205.00" top="20" width="295" height="28" text="bind:TITLE" cssclass="lstv_WF_BLabel"/>
+                <Cell id="Cell02" left="205.00" top="58" width="100" height="28" text="DIRECTOR" cssclass="lstv_WF_BLabel"/>
+                <Cell id="Cell03" left="305.00" top="58" width="195" height="28" text="bind:DIRECTOR" cssclass="lstv_WF_BContents"/>
+                <Cell id="Cell04" left="205.00" top="96" width="100" height="28" text="WRITERS" cssclass="lstv_WF_BLabel"/>
+                <Cell id="Cell05" left="305.00" top="96" width="195" height="28" text="bind:WRITERS" cssclass="lstv_WF_BContents"/>
+                <Cell id="Cell06" left="205.00" top="134" width="100" height="28" text="YEAR" cssclass="lstv_WF_BLabel"/>
+                <Cell id="Cell07" left="305.00" top="134" width="195" height="28" text="bind:YEAR" cssclass="lstv_WF_BContents"/>
+                <Cell id="Cell11" left="30" top="20" width="120" height="150" text="bind:POSTER" displaytype="imagecontrol" imagestretch="fit"/>
+              </Band>
+              <Band id="detail" width="100%" height="180">
+                <Cell id="Cell00" left="20.00" top="38" width="460" height="128" text="bind:SUMMARY" cssclass="lstv_WF_DContents"/>
+                <Cell id="Cell01" left="20" top="10" width="153" height="28" text="Summary" cssclass="lstv_WF_DLabel"/>
+              </Band>
+            </Format>
+          </Formats>
+        </ListView>
+        <Static id="Static37" taborder="54" text="Div" left="20" top="60" width="150" height="170" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="3" background="url('imagerc::comp/comp_div.png') no-repeat 2% center #f7f8f9"/>
+        <Static id="Static51" taborder="56" text="Contents" left="180.00" top="70" width="170" height="20" cssclass="sta_WF_GuideLabel" positionstep="3"/>
+        <Div id="Div00" taborder="57" text="Div00" left="180.00" top="95" width="320" height="120" positionstep="3" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Name" left="20" top="10" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+              <Static id="Static01" taborder="1" text="Department" left="20.00" top="46" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+              <Edit id="Edit00" taborder="2" left="106" top="10" width="140" height="26" value="Nexaro N" text="Nexaro N"/>
+              <Edit id="Edit01" taborder="3" left="106.00" top="46" width="140" height="26" value="Education Team" text="Education Team"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static52" taborder="58" text="Linked" left="506.00" top="70" width="170" height="20" cssclass="sta_WF_GuideLabel" positionstep="3"/>
+        <Div id="Div01" taborder="59" text="Div00" left="509.00" top="95" width="320" height="120" positionstep="3" url="Comp::Comp_BaseSub.xfdl" cssclass="div_WF_Area"/>
+        <Static id="Static38" taborder="60" text="Tab" left="20.00" top="229" width="150" height="180" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="3" background="url('imagerc::comp/comp_tab.png') no-repeat 2% center #f7f8f9"/>
+        <Tab id="Tab00" taborder="62" tabindex="0" left="180.00" top="244" width="328" height="151" positionstep="3" tabbuttongap="2" showextrabutton="true">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Contents">
+              <Layouts>
+                <Layout>
+                  <Static id="Static00" taborder="0" text="Name" left="20.00" top="10" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+                  <Edit id="Edit00" taborder="1" left="106.00" top="10" width="140" height="26" value="Nexaro N" text="Nexaro N"/>
+                  <Edit id="Edit01" taborder="2" left="106.00" top="46" width="140" height="26" value="Education Team" text="Education Team"/>
+                  <Static id="Static01" taborder="3" text="Department" left="20.00" top="46" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="Linked" url="Comp::Comp_BaseSub.xfdl"/>
+          </Tabpages>
+        </Tab>
+        <Static id="Static39" taborder="63" text="PopupDiv" left="20.00" top="408" width="150" height="120" border="" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="3" background="url('imagerc::comp/comp_popupdiv.png') no-repeat 2% center #f7f8f9"/>
+        <Button id="btn_popDiv" taborder="65" text="Click" left="180.00" top="422" width="70" height="26" positionstep="3" onclick="btn_popDiv_onclick" cssclass="btn_WF_FillBlue"/>
+        <Static id="Static53" taborder="66" text="TextField" left="20" top="60" width="150" height="160" positionstep="4" cssclass="sta_WF_CompLabel" background="url('imagerc::comp/comp_textfield.png') no-repeat 2% center #f7f8f9"/>
+        <TextField id="TextField00" taborder="68" left="180.00" top="103" width="210" height="75" helpertext="Please enter your name." labeltext="User Name" usehelpertext="true" usecharcount="true" positionstep="4" value="Nexacro"/>
+        <Static id="Static53_00" taborder="69" text="MultLineTextField" left="480.00" top="60" width="180" height="160" positionstep="4" cssclass="sta_WF_CompLabel" background="url('imagerc::comp/comp_multlinetextfield.png') no-repeat 2% center #f7f8f9"/>
+        <Static id="Static53_01" taborder="70" text="DateField" left="20.00" top="219" width="150" height="110" positionstep="4" cssclass="sta_WF_CompLabel" background="url('imagerc::comp/comp_datefield.png') no-repeat 2% center #f7f8f9"/>
+        <DateField id="DateField00" taborder="72" left="180.00" top="237" width="210" height="75" labeltext="Birth Day" usehelpertext="true" positionstep="4" value="20240701"/>
+        <Static id="Static53_00_00" taborder="73" text="PopupDateRangePicker" left="480.00" top="219" width="180" height="110" positionstep="4" cssclass="sta_WF_CompLabel" background="url('imagerc::comp/comp_popupdaterangepicker.png') no-repeat 2% center #f7f8f9"/>
+        <Button id="btn_openDateRange" taborder="74" text="Click" left="670.00" top="260" width="80" height="28" positionstep="4" onclick="btn_openDateRange_onclick" cssclass="btn_WF_FillBlue"/>
+        <Static id="Static53_01_00" taborder="75" text="DateRangePicker" left="20.00" top="328" width="150" height="320" positionstep="4" cssclass="sta_WF_CompLabel" background="url('imagerc::comp/comp_daterangepicker.png') no-repeat 2% center #f7f8f9"/>
+        <DateRangePicker id="DateRangePicker00" taborder="77" left="180.00" top="338" width="410" height="300" positionstep="4" startdate="20240402" enddate="20240510"/>
+        <Combo id="Combo00" taborder="78" text="nexacro platform" left="180.00" top="106" width="200" height="26" codecolumn="codecolumn" datacolumn="datacolumn" value="10" index="0" innerdataset="innerdataset" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <PopupMenu id="PopupMenu00" left="324.00" top="554" width="176" height="106" innerdataset="ds_menu" captioncolumn="MENU_NAME" idcolumn="MENU_ID" levelcolumn="LEVEL" hotkeycolumn="HOT_KEY" enablecolumn="" positionstep="1" checkboxcolumn="CHECK"/>
+        <Static id="Static19_00" taborder="99" text="Spin" left="510" top="381" width="150" height="68" background="url('imagerc::comp/comp_button.png') no-repeat 2% center #f7f8f9" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static01_00" taborder="101" text="ProgressBar" left="510" top="448" width="150" height="68" border="" background="url('imagerc::comp/comp_progressbar.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static17_00" taborder="83" text="ListBox&#13;&#10;(Multi Select)" left="510" top="177" width="150" height="170" border="" background="url('imagerc::comp/comp_listbox.png') no-repeat 2% center #f7f8f9" padding="0px 0px 0px 30px" cssclass="sta_WF_CompLabel" positionstep="1"/>
+        <PopupDateRangePicker id="PopupDateRangePicker00" left="5120.00" top="214" width="400" height="300" positionstep="0" startdate="20240402" enddate="20240421" oncloseup="PopupDateRangePicker00_oncloseup"/>
+        <MultiLineTextField id="MultiLineTextField00" taborder="82" left="670.00" top="71" width="250" height="139" value="Nexacro N24&#10;Hello World&#10;MultLineTextField Component" helpertext="Hepler Text" labeltext="Meno" usehelpertext="true" usecharcount="true" positionstep="4"/>
+        <Static id="Static02" taborder="84" text="Components - Selective" left="20.00" top="0" width="250" height="60" cssclass="sta_WF_GuideTitle1" positionstep="1"/>
+        <Static id="Static00_01" taborder="85" text="Components - List" left="20" top="0" width="250" height="60" cssclass="sta_WF_GuideTitle1" positionstep="2"/>
+        <Static id="Static03" taborder="86" text="Components - Container" left="20" top="0" width="250" height="60" cssclass="sta_WF_GuideTitle1" positionstep="3"/>
+        <Static id="Static00_01_00_00" taborder="87" text="Components - Mobile First" left="20" top="0" width="250" height="60" cssclass="sta_WF_Title" positionstep="4"/>
+        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="288.00" top="431" width="270" height="90" positionstep="3" border="1px solid #d3dce1">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Name" left="20.00" top="10" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+              <Edit id="Edit00" taborder="1" left="106.00" top="10" width="140" height="26" value="Nexaro N" text="Nexaro N"/>
+              <Static id="Static01" taborder="2" text="Department" left="20.00" top="46" width="80" height="26" cssclass="sta_WF_GuideLabel"/>
+              <Edit id="Edit01" taborder="3" left="106.00" top="46" width="140" height="26" value="Education Team" text="Education Team"/>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+        <Static id="Static08" taborder="87" text="Single Select" left="180" top="189" width="120" height="26" positionstep="1" cssclass="sta_WF_GuideLabel"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CD" type="STRING" size="256"/>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CD">10</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">20</Col>
+            <Col id="DEPT_NAME">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">30</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">40</Col>
+            <Col id="DEPT_NAME">Platform Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">50</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CD">60</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_menu">
+        <ColumnInfo>
+          <Column id="MENU_ID" type="STRING" size="256"/>
+          <Column id="MENU_NAME" type="STRING" size="256"/>
+          <Column id="LEVEL" type="STRING" size="256"/>
+          <Column id="HOT_KEY" type="STRING" size="256"/>
+          <Column id="CHECK" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="MENU_ID">10</Col>
+            <Col id="MENU_NAME">New Folder</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="HOT_KEY">Ctrl+N</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">20</Col>
+            <Col id="MENU_NAME">View</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="HOT_KEY"/>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">30</Col>
+            <Col id="MENU_NAME">Sort by</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="HOT_KEY"/>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">Name</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="CHECK">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">Date modified</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">Size</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">Ascending</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="CHECK">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_NAME">Descending</Col>
+            <Col id="LEVEL">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">40</Col>
+            <Col id="MENU_NAME">Refresh</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="HOT_KEY">F5</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_ID">50</Col>
+            <Col id="MENU_NAME">Properties</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="HOT_KEY">Ctrl+P</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_movie">
+        <ColumnInfo>
+          <Column id="TITLE" type="STRING" size="256"/>
+          <Column id="DIRECTOR" type="STRING" size="256"/>
+          <Column id="WRITERS" type="STRING" size="256"/>
+          <Column id="YEAR" type="STRING" size="256"/>
+          <Column id="SUMMARY" type="STRING" size="256"/>
+          <Column id="POSTER" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="TITLE">The Shawshank Redemption</Col>
+            <Col id="DIRECTOR">Frank Darabont</Col>
+            <Col id="YEAR">1994</Col>
+            <Col id="WRITERS">Stephen King</Col>
+            <Col id="SUMMARY">Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_shawshank.png</Col>
+          </Row>
+          <Row>
+            <Col id="TITLE">Die Hard with a Vengeance</Col>
+            <Col id="YEAR">1995</Col>
+            <Col id="DIRECTOR">John McTiernan</Col>
+            <Col id="WRITERS">Jonathan Hensleigh</Col>
+            <Col id="SUMMARY">John McClane is now almost a full-blown alcoholic and is suspended from the NYPD. But when a bomb goes off in the Bonwit Teller Department Store the police go insane trying to figure out what's going on. Soon, a man named Simon calls and asks for McClane. Simon tells Inspector Walter Cobb that McClane is going to play a game called "Simon Says". He says that McClane is going to do the tasks he assigns him. If not, he'll set off another bomb. With the help of a Harlem electrician, John McClane must race all over New York trying to figure out the frustrating puzzles that the crafty terrorist gives him. But when a bomb goes off in a subway station right by the Federal Reserve (the biggest gold storage in the world) things start to get heated</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_diehard.png</Col>
+          </Row>
+          <Row>
+            <Col id="WRITERS">James DeMonaco</Col>
+            <Col id="TITLE">The Negotiator</Col>
+            <Col id="YEAR">1998</Col>
+            <Col id="DIRECTOR">F. Gray Gray</Col>
+            <Col id="SUMMARY">In the midst of an elaborate conspiracy, an expert negotiator is driven to the edge when he's framed for the murder of his partner, as well as embezzling money from his department's pension fund. His only chance to prove his innocence is to take hostages himself, acquire the services of another expert negotiator, and find out who's running the conspiracy before it's too late.</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_negotiator.png</Col>
+          </Row>
+          <Row>
+            <Col id="TITLE">The Net</Col>
+            <Col id="YEAR">1995</Col>
+            <Col id="DIRECTOR">Irwin Winkler</Col>
+            <Col id="WRITERS">John Brancato</Col>
+            <Col id="SUMMARY">Angela Bennett is a computer expert. This young and beautiful analyst is never far from a computer and modem. The only activity she has outside of computers is visiting her mother. A friend, whom she's only spoken to over the net and phone, Dale Hessman, sent her a program with a weird glitch for her to de-bug. That night, he left to meet her and was killed in a plane crash. Angela discovers secret information on the disk she has received only hours before she leaves for vacation. Her life then turns into a nightmare, her records are erased from existence and she is given a new identity, one with a police record. She struggles to find out why this has happened and who has it in for her.</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_net.png</Col>
+          </Row>
+          <Row>
+            <Col id="TITLE">Terminator 2: Judgment Day</Col>
+            <Col id="DIRECTOR">James Cameron</Col>
+            <Col id="WRITERS">James Cameron</Col>
+            <Col id="YEAR">1991</Col>
+            <Col id="SUMMARY">Over ten years have passed since the first machine called The Terminator tried to kill Sarah Connor and her unborn son, John. The man who will become the future leader of the human resistance against the Machines is now a healthy young boy. However, another Terminator, called the T-1000, is sent back through time by the supercomputer Skynet. This new Terminator is more advanced and more powerful than its predecessor and its mission is to kill John Connor when he's still a child. However, Sarah and John do not have to face the threat of the T-1000 alone. Another Terminator (identical to the same model that tried and failed to kill Sarah Connor in 1984) is also sent back through time to protect them. Now, the battle for tomorrow has begun.</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_terminator2.png</Col>
+          </Row>
+          <Row>
+            <Col id="TITLE">Sliding Doors</Col>
+            <Col id="DIRECTOR">Peter Howitt</Col>
+            <Col id="WRITERS">Peter Howitt</Col>
+            <Col id="YEAR">1998</Col>
+            <Col id="SUMMARY">In London, the public relation Helen is fired from her position in a PR company. While returning home, she does not catch the train in the subway. But in another possibility of her life, she catches the train in the subway. The story shows two parallel lives of Helen: in one life, she stays with her boyfriend Gerry, and in the other life, she finds that Gerry cheats her with Lydia and falls in love with James Hammerton.</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_slidingdoors.png</Col>
+          </Row>
+          <Row>
+            <Col id="TITLE">Unbreakable</Col>
+            <Col id="DIRECTOR">M. Night Shyamalan</Col>
+            <Col id="WRITERS">M. Night Shyamalan</Col>
+            <Col id="YEAR">2000</Col>
+            <Col id="SUMMARY">David Dunn (Willis) is taking a train from New York City back home to Philadelphia after a job interview that didn't go well when his car jumps the tracks and collides with an oncoming engine, with David the only survivor among the 131 passengers on board. Astoundingly, David is not only alive, he hardly seems to have been touched. As David wonders what has happened to him and why he was able to walk away, he encounters a mysterious stranger, Elijah Prince (Samuel L. Jackson), who explains to David that there are a certain number of people who are "unbreakable" -- they have remarkable endurance and courage, a predisposition toward dangerous behavior, and feel invincible but also have strange premonitions of terrible events. Is David "unbreakable"? And if he is, what are the physical and psychological ramifications of this knowledge?</Col>
+            <Col id="POSTER">imagerc::movie/img_movie_unbreakable.png</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+          <Column id="IMG_URL" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="IMG_URL">imagerc::img_btn_save.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="IMG_URL">imagerc::img_btn_new.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">60</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="IMG_URL">imagerc::img_btn_delete.png</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_exe_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar00.pos = 0;
+	this.setTimer(0,10);
+};
+
+this.btn_popMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nX = parseInt(obj.width);	
+	var nY = 0;
+	this.PopupMenu00.trackPopupByComponent(obj, nX, nY);	
+};
+
+this.btn_popDiv_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nX = parseInt(obj.width);	
+	var nY = 0;
+	this.PopupDiv00.trackPopupByComponent(obj, nX, nY, 270, 90);	
+};
+
+
+this.Comp_Base_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 0 ){
+		if(this.ProgressBar00.pos == 100){
+			this.killTimer(0);
+		}
+		this.ProgressBar00.stepIt();
+	}
+	
+};
+
+this.btn_openDateRange_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.PopupDateRangePicker00.trackPopupByComponent("start", obj, 0, obj.height);
+};
+]]></Script>
+  </Form>
+</FDL>

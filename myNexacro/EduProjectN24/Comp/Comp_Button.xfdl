@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Button" width="1020" height="700" titletext="Comp_Button">
+    <Layouts>
+      <Layout height="700" width="1020">
+        <Static id="sta_title" taborder="0" text="Button" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="131" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Button id="Button00" taborder="2" text="Button - enable" left="20.00" top="95" width="116" height="30"/>
+        <Button id="Button01" taborder="3" text="Button - disable" left="Button00:5" top="95" width="118" height="30" enable="false"/>
+        <Button id="Button02" taborder="4" text="cssclass" left="18" top="267" width="116" height="30" cssclass="btn_WF_FillBlue"/>
+        <Static id="Static01" taborder="5" text="button deesign - cssclass, icon, background" left="20.00" top="170" width="323" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Button id="Button03" taborder="6" text="Save" left="18" top="340" width="116" height="40" icon="url('imagerc::img_icon_save.png')" textPadding="0px 0px 0px 10px"/>
+        <Button id="Button04" taborder="7" left="18" top="418" width="246" height="70" textPadding="0px 0px 0px 10px" background="url('imagerc::img_nexacro.png') no-repeat center center"/>
+        <Button id="btn_sun" taborder="8" text="Sun" left="20.00" top="606" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Button id="btn_mon" taborder="9" text="Mon" left="75" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Static id="Static07" taborder="16" text="[Method] getSelectStatus(),setSelectStatus()" left="21" top="565" height="36" cssclass="sta_WF_GuideScript" width="482"/>
+        <Button id="btn_tue" taborder="10" text="Tue" left="130" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Button id="btn_wed" taborder="11" text="Wed" left="185" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Button id="btn_thu" taborder="12" text="Thu" left="240" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Button id="btn_fri" taborder="13" text="Fri" left="295" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Button id="btn_sat" taborder="14" text="Sat" left="350" top="607" width="50" height="26" onclick="fn_status" cssclass="btn_WF_GuideStatus"/>
+        <Static id="Static06" taborder="15" text="status - selected" left="20.00" top="530" width="323" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static03" taborder="17" text="[Property] cssclass, icon, background" left="18.00" top="205" height="36" cssclass="sta_WF_GuideScript" width="482"/>
+        <Static id="Static02" taborder="18" text="cssclass = &quot;btn_WF_FillBlue&quot;" left="21" top="241" width="185" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static04" taborder="19" text="icon = &quot;imagerc::img_icon_save.png&quot;" left="21" top="314" width="231" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static05" taborder="20" text="background = &quot;url('imagerc::img_nexacro.png') no-repeat center center&quot;" left="20" top="392" width="462" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.fn_status = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bStatus = obj.getSelectStatus();
+	
+	if(bStatus){
+		obj.setSelectStatus(false);
+	}
+	else{
+		obj.setSelectStatus(true);
+	}
+	
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

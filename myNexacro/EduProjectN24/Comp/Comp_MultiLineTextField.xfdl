@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_MultiLineTextField" width="1020" height="700" titletext="Comp_MultiLineTextField">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="MultiLineTextField" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="30" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] labeltext, labelfloatingfixed, &#13;&#10;labelposition = &quot;overlap&quot; | &quot;outside&quot; | &quot;inside&quot;" left="20.00" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static07" taborder="3" text="helper text" left="530" top="60" width="279" height="30" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static10" taborder="4" text="usecharcount = true" left="530" top="325" width="126" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static02" taborder="5" text="labeltext = &quot;Memo&quot;, labelfloatingfixed = true" left="21" top="325" width="297" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Radio id="Radio00" taborder="6" left="20" top="159" width="250" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" text="overlap" index="0" columncount="-1" rowcount="-1" onitemchanged="Radio_onitemchanged" value="overlap">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">overlap</Col>
+                <Col id="datacolumn">overlap</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">outside</Col>
+                <Col id="datacolumn">outside</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">inside</Col>
+                <Col id="datacolumn">inside</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <MultiLineTextField id="MultiLineTextField00" taborder="7" labeltext="MultiLineTextField00" left="20" top="190" width="250" height="100"/>
+        <MultiLineTextField id="MultiLineTextField01" taborder="8" labeltext="Memo" left="20" top="351" width="250" height="100"/>
+        <MultiLineTextField id="MultiLineTextField02" taborder="9" labeltext="Memo" left="530" top="180" width="250" height="110" usehelpertext="true" helpertext="Please enter a note"/>
+        <MultiLineTextField id="MultiLineTextField03" taborder="10" labeltext="Memo" left="530" top="351" width="250" height="110" usecharcount="true"/>
+        <Static id="Static08" taborder="11" text="[Property] usehelpertext, helpertext, usecharcount" left="530" top="95" height="59" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static09" taborder="12" text="usehelpertext = true, helpertext = &quot;Please enter a note&quot;" left="530" top="154" width="396" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.MultiLineTextField00.labelposition = this.Radio00.value;
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

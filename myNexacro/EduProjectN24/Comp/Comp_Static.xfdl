@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Static" width="1020" height="700" titletext="Comp_Static">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Static" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="default" left="20.00" top="90" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static02" taborder="3" text="NEXACRO" left="32" top="116" width="120" height="26"/>
+        <Static id="Static03" taborder="4" text="cssclass" left="150.00" top="90" width="112" height="26" cssclass="sta_WF_GuideRefer" onclick="Static03_00_00_onclick"/>
+        <Static id="Static04" taborder="5" text="NEXACRO" left="150" top="116" width="120" height="46" cssclass="sta_WF_CompLabel"/>
+        <Static id="Static05" taborder="6" text="decorate" left="20.00" top="209" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static06" taborder="7" text="[Property] usedecorate = &quot;true&quot; | &quot;false&quot;" left="20.00" top="244" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static07" taborder="8" text="default" left="20.00" top="280" width="112" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static08" taborder="9" text="usedecorate = &quot;true&quot;" left="410.00" top="280" width="132" height="26" onclick="Static03_00_00_onclick" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static09" taborder="10" text="NEXACRO &lt;fs v='16'&gt;N24&lt;/fs&gt;" left="20" top="306" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static10" taborder="11" text="NEXACRO &lt;fs v='16'&gt;N24&lt;/fs&gt;" left="410.00" top="308" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static11" taborder="12" text="NEXACRO &lt;fc v='red'&gt;N24&lt;/fc&gt;" left="20.00" top="337" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static12" taborder="13" text="NEXACRO &lt;fc v='red'&gt;N24&lt;/fc&gt;" left="410.00" top="339" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static13" taborder="14" text="&lt;ff v='Arial'&gt;NEXACRO N24&lt;/ff&gt;" left="20.00" top="368" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static14" taborder="15" text="&lt;ff v='Arial'&gt;NEXACRO N24&lt;/ff&gt;" left="410.00" top="370" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static15" taborder="16" text="NEXACRO &lt;b v='true'&gt;N24&lt;/b&gt;" left="20.00" top="399" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static16" taborder="17" text="NEXACRO &lt;b v='true'&gt;N24&lt;/b&gt;" left="410.00" top="401" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static17" taborder="18" text="NEXACRO &lt;i v='true'&gt;N24&lt;/i&gt;" left="20.00" top="430" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static18" taborder="19" text="NEXACRO &lt;i v='true'&gt;N24&lt;/i&gt;" left="410.00" top="432" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static19" taborder="20" text="NEXACRO &lt;u v='true'&gt;N24&lt;/u&gt;" left="20.00" top="461" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static20" taborder="21" text="NEXACRO &lt;u v='true'&gt;N24&lt;/u&gt;" left="410.00" top="463" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static21" taborder="22" text="NEXACRO &lt;s v='true'&gt;N24&lt;/s&gt;" left="20.00" top="492" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static22" taborder="23" text="NEXACRO &lt;s v='true'&gt;N24&lt;/s&gt;" left="410.00" top="494" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static23" taborder="24" text="&lt;l v='http://www.tobesoft.com'&gt;Link WebPage&lt;/l&gt;" left="20.00" top="523" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static24" taborder="25" text="&lt;l v='http://www.tobesoft.com'&gt;Link WebPage&lt;/l&gt;" left="410.00" top="525" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static25" taborder="26" text="&lt;l v='tel:010-1234-5678'&gt; Phone Call &lt;/l&gt;" left="20.00" top="554" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static26" taborder="27" text="&lt;l v='tel:010-1234-5678'&gt; Phone Call &lt;/l&gt;" left="410.00" top="556" width="204" height="26" expr="" usedecorate="true"/>
+        <Static id="Static27" taborder="28" text="&lt;l v='mailto:edu@tobesoft.com'&gt; Send Mail &lt;/l&gt;" left="20.00" top="585" width="354" height="26" expr="" cssclass="sta_WF_GuideScript"/>
+        <Static id="Static28" taborder="29" text="&lt;l v='mailto:edu@tobesoft.com'&gt; Send Mail &lt;/l&gt;" left="410.00" top="587" width="204" height="26" expr="" usedecorate="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.Spin00.circulation = e.postvalue;
+};
+
+this.CheckBox01_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	this.Spin00.displaycomma = e.postvalue;	
+};]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

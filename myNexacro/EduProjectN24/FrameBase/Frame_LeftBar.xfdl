@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Menu" width="45" height="728" titletext="New Form">
+    <Layouts>
+      <Layout height="728" width="45">
+        <Static id="Static00" taborder="0" left="0" top="0" bottom="0" cssclass="sta_LF_MnuBg" right="0"/>
+        <Static id="Static02" taborder="1" text="Quick" left="8" top="161" width="30" height="20" cssclass="sta_LF_MnuTitle"/>
+        <Button id="btn_menu" taborder="2" left="10" top="10" width="24" height="24" cssclass="btn_LF_Mnu"/>
+        <Button id="btn_home" taborder="3" left="10" top="49" width="24" height="24" cssclass="btn_LF_Home"/>
+        <Button id="btn_find" taborder="4" left="10" top="88" width="24" height="24" cssclass="btn_LF_Search"/>
+        <Button id="Button01" taborder="5" left="-50" top="10" width="24" height="24" visible="false" cssclass="btn_LF_Bookmark"/>
+        <Static id="Static01_00" taborder="6" left="3" top="150" height="1" right="3" cssclass="sta_LF_Line"/>
+        <Button id="btn_quick1" taborder="7" left="12" top="196" width="20" height="20" cssclass="btn_LF_Quick" text="1"/>
+        <Button id="btn_quick2" taborder="8" left="12" top="230" width="20" height="20" cssclass="btn_LF_Quick" text="2"/>
+        <Button id="btn_quick3" taborder="9" left="12" top="264" width="20" height="20" cssclass="btn_LF_Quick" text="3"/>
+        <Button id="btn_quick4" taborder="10" left="12" top="298" width="20" height="20" cssclass="btn_LF_Quick" text="4"/>
+        <Button id="btn_quick5" taborder="11" left="12" top="332" width="20" height="20" cssclass="btn_LF_Quick" text="5"/>
+        <Button id="btn_quick6" taborder="12" left="12" top="366" width="20" height="20" cssclass="btn_LF_Quick" text="6"/>
+        <Button id="Button02" taborder="13" left="10" width="24" height="24" cssclass="btn_LF_Setting" bottom="50"/>
+        <Button id="Button03" taborder="14" left="10" width="24" height="24" bottom="20" cssclass="btn_LF_Logout"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>
