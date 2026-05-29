@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentPreset version="1.0">
+  <Category id="Static">
+    <Preset id="Static_화면타이틀" classname="nexacro.Static" text="화면타이틀명" width="170" height="50" cssclass="sta_WF_GuideTitle1"/>
+    <Preset id="Static_서브타이틀" classname="nexacro.Static" text="서브타이틀" width="170" height="40" cssclass="sta_WF_GuideTitle2"/>
+    <Preset id="Static_라벨텍스트" classname="nexacro.Static" text="라벨텍스트" width="115" height="26" cssclass="sta_WF_SchLabel"/>
+    <Preset id="Static_디테일라벨" classname="nexacro.Static" text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel"/>
+    <Preset id="Static_디테일영역" classname="nexacro.Static" height="36" cssclass="sta_WF_DetailArea" width="150" text="디테일영역"/>
+  </Category>
+  <Category id="Button">
+    <Preset id="Button_CRUD" classname="nexacro.Button" text="CRUD" width="80" height="30" cssclass="btn_WF_CRUD"/>
+    <Preset id="Button_찾기(아이콘)" classname="nexacro.Button" width="26" height="26" cssclass="btn_WF_Find"/>
+  </Category>
+  <Category id="검색영역">
+    <Preset id="Div_검색영역(1줄)" classname="nexacro.Div" text="Div00" height="44" cssclass="div_WF_Search" formscrollbartype="none none" maxwidth="" width="1003">
+      <Layouts>
+        <Layout>
+          <Static id="Static00" taborder="0" text="Department" left="0" top="8" width="122" height="26" cssclass="sta_WF_SchLabel"/>
+          <Edit id="edt_deptCode" taborder="1" left="122" top="8" width="90" height="26" text=""/>
+          <Button id="btn_findDept" taborder="2" left="186" top="8" width="26" height="26" cssclass="btn_WF_Find" onclick="div_search_btn_findDept_onclick"/>
+          <Edit id="edt_deptName" taborder="3" left="211" top="8" width="170" height="26" readonly="true" text=""/>
+          <Static id="Static02" taborder="4" text="Gender" left="597" top="8" width="94" height="26" cssclass="sta_WF_SchLabel"/>
+          <Radio id="rdo_gender" taborder="5" left="691" top="8" width="220" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" columncount="-1" value="A" text="All" index="0" onitemchanged="div_search_rdo_gender_onitemchanged">
+            <Dataset id="innerdataset">
+              <ColumnInfo>
+                <Column id="codecolumn" size="256"/>
+                <Column id="datacolumn" size="256"/>
+              </ColumnInfo>
+              <Rows>
+                <Row>
+                  <Col id="codecolumn">A</Col>
+                  <Col id="datacolumn">All</Col>
+                </Row>
+                <Row>
+                  <Col id="codecolumn">M</Col>
+                  <Col id="datacolumn">Male</Col>
+                </Row>
+                <Row>
+                  <Col id="codecolumn">F</Col>
+                  <Col id="datacolumn">Female</Col>
+                </Row>
+              </Rows>
+            </Dataset>
+          </Radio>
+          <Static id="Static01" taborder="6" text="Name" left="381" top="8" width="86" height="26" cssclass="sta_WF_SchLabel"/>
+          <Edit id="edt_empName" taborder="7" left="467" top="8" width="130" height="26"/>
+        </Layout>
+      </Layouts>
+    </Preset>
+    <Preset id="Div_검색영역(2줄)" classname="nexacro.Div" text="Div00" height="78" cssclass="div_WF_Search" formscrollbartype="none none" maxwidth="" width="1003">
+      <Layouts>
+        <Layout>
+          <Static id="Static00" taborder="0" text="Department" left="0" top="8" width="122" height="26" cssclass="sta_WF_SchLabel"/>
+          <Edit id="edt_deptCode" taborder="1" left="122" top="8" width="90" height="26" text=""/>
+          <Edit id="edt_deptName" taborder="3" left="211" top="8" width="170" height="26" readonly="true" text=""/>
+          <Static id="Static02" taborder="4" text="Gender" left="604" top="8" width="94" height="26" cssclass="sta_WF_SchLabel"/>
+          <Radio id="rdo_gender" taborder="5" left="710" top="8" width="220" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" columncount="-1" value="A" text="All" index="0" onitemchanged="div_search_rdo_gender_onitemchanged">
+            <Dataset id="innerdataset">
+              <ColumnInfo>
+                <Column id="codecolumn" size="256"/>
+                <Column id="datacolumn" size="256"/>
+              </ColumnInfo>
+              <Rows>
+                <Row>
+                  <Col id="codecolumn">A</Col>
+                  <Col id="datacolumn">All</Col>
+                </Row>
+                <Row>
+                  <Col id="codecolumn">M</Col>
+                  <Col id="datacolumn">Male</Col>
+                </Row>
+                <Row>
+                  <Col id="codecolumn">F</Col>
+                  <Col id="datacolumn">Female</Col>
+                </Row>
+              </Rows>
+            </Dataset>
+          </Radio>
+          <Static id="Static01" taborder="6" text="Name" left="381" top="8" width="86" height="26" cssclass="sta_WF_SchLabel"/>
+          <Edit id="edt_empName" taborder="7" left="474" top="8" width="130" height="26"/>
+          <Button id="btn_findDept" taborder="2" left="186" top="8" width="26" height="26" cssclass="btn_WF_Find" onclick="div_search_btn_findDept_onclick"/>
+          <Static id="Static00_00" taborder="8" text="Skill" left="0" top="42" width="74" height="26" cssclass="sta_WF_SchLabel"/>
+          <Static id="Static01_00" taborder="9" text="Hire Date" left="604" top="42" width="106" height="26" cssclass="sta_WF_SchLabel"/>
+          <MultiCombo id="MultiCombo00" taborder="10" text="MultiCombo00" left="122" top="42" width="259" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME"/>
+          <Calendar id="Calendar00" taborder="11" left="710" top="42" width="130" height="27"/>
+          <Static id="Static01_01" taborder="12" text="Emp ID" left="381" top="42" width="93" height="26" cssclass="sta_WF_SchLabel"/>
+          <MaskEdit id="MaskEdit00" taborder="13" left="474" top="42" width="130" height="27"/>
+        </Layout>
+      </Layouts>
+    </Preset>
+  </Category>
+  <Category id="상세영역">
+    <Preset id="Div_상세영역(1단)" classname="nexacro.Div" text="Div00" width="1003" height="71">
+      <Layouts>
+        <Layout>
+          <Static text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00" left="0" top="0" taborder="0"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="854" id="Static01" left="149" top="0" taborder="1"/>
+          <Edit id="Edit00" taborder="2" left="154" top="5" width="844" height="26"/>
+          <Static text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00" left="0" top="35" taborder="3"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="854" id="Static01_00" left="149" top="35" taborder="4"/>
+          <Edit id="Edit00_00" taborder="5" left="154" top="40" width="844" height="26"/>
+        </Layout>
+      </Layouts>
+    </Preset>
+    <Preset id="Div_상세영역(2단)" classname="nexacro.Div" text="Div00" width="1003" height="71">
+      <Layouts>
+        <Layout>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00" left="0" top="0" taborder="0"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01" left="149" top="0" taborder="1"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_04" left="501" top="0" taborder="2"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01_00" left="650" top="0" taborder="3"/>
+          <Edit id="Edit00" taborder="4" left="154" top="5" width="343" height="26"/>
+          <Edit id="Edit00_00" taborder="5" left="655" top="5" width="343" height="26"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00" left="0" top="35" taborder="6"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01_01" left="149" top="35" taborder="7"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_04_00" left="501" top="35" taborder="8"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01_00_00" left="650" top="35" taborder="9"/>
+          <Edit id="Edit00_01" taborder="10" left="154" top="40" width="343" height="26"/>
+          <Edit id="Edit00_00_00" taborder="11" left="655" top="40" width="343" height="26"/>
+        </Layout>
+      </Layouts>
+    </Preset>
+    <Preset id="Div_상세영역(3단)" classname="nexacro.Div" text="Div01" width="1003" height="71">
+      <Layouts>
+        <Layout>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00" left="0" top="0" taborder="0"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01" left="149" top="0" taborder="1"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00" left="334" top="0" taborder="2"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00" left="483" top="0" taborder="3"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00_00" left="817" top="0" taborder="4"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00_00" left="668" top="0" taborder="5"/>
+          <Edit id="Edit00" taborder="6" left="154" top="5" width="176" height="26"/>
+          <Edit id="Edit00_00" taborder="7" left="822" top="5" width="176" height="26"/>
+          <Edit id="Edit00_01" taborder="8" left="488" top="5" width="176" height="26"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_01" left="0" top="35" taborder="9"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_01" left="149" top="35" taborder="10"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00_01" left="334" top="35" taborder="11"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00_01" left="483" top="35" taborder="12"/>
+          <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00_00_00" left="817" top="35" taborder="13"/>
+          <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00_00_00" left="668" top="35" taborder="14"/>
+          <Edit id="Edit00_02" taborder="15" left="154" top="40" width="176" height="26"/>
+          <Edit id="Edit00_00_00" taborder="16" left="822" top="40" width="176" height="26"/>
+          <Edit id="Edit00_01_00" taborder="17" left="488" top="40" width="176" height="26"/>
+        </Layout>
+      </Layouts>
+    </Preset>
+  </Category>
+  <Category id="Grid">
+    <Preset id="Grid_emp(전체정보)" classname="nexacro.Grid" binddataset="ds_emp" onheadclick="grd_emp_onheadclick" autofittype="col" width="1003" height="232">
+      <Formats>
+        <Format id="default">
+          <Columns>
+            <Column size="48"/>
+            <Column size="90"/>
+            <Column size="80"/>
+            <Column size="150"/>
+            <Column size="150"/>
+            <Column size="120"/>
+            <Column size="80"/>
+            <Column size="60"/>
+            <Column size="70"/>
+            <Column size="150"/>
+          </Columns>
+          <Rows>
+            <Row size="30" band="head"/>
+            <Row size="30"/>
+            <Row size="24" band="summ"/>
+          </Rows>
+          <Band id="head">
+            <Cell text="No"/>
+            <Cell col="1" text="Name"/>
+            <Cell col="2" text="Emp ID"/>
+            <Cell col="3" text="Department"/>
+            <Cell col="4" text="Position Grade"/>
+            <Cell col="5" text="Hire Date"/>
+            <Cell col="6" text="Salary"/>
+            <Cell col="7" text="Gender"/>
+            <Cell col="8" text="Married"/>
+            <Cell col="9" text="Skill"/>
+          </Band>
+          <Band id="body">
+            <Cell text="expr:currow + 1" displaytype="text"/>
+            <Cell col="1" text="bind:EMP_NAME" edittype="normal"/>
+            <Cell col="2" text="bind:EMP_ID" displaytype="mask" edittype="mask" maskedittype="string" maskeditformat="AA-###"/>
+            <Cell col="3" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+            <Cell col="4" text="bind:POSITION" displaytype="combocontrol" edittype="combo" combodataset="ds_pos" combocodecol="CODE" combodatacol="NAME"/>
+            <Cell col="5" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+            <Cell col="6" text="bind:SALARY" displaytype="mask" edittype="mask" maskeditformat="#,#"/>
+            <Cell col="7" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;" displaytype="text"/>
+            <Cell col="8" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+            <Cell col="9" text="bind:SKILL" displaytype="multicombocontrol" edittype="multicombo" multicombodataset="ds_skill" multicombocodecol="CODE" multicombodatacol="NAME"/>
+          </Band>
+          <Band id="summary">
+            <Cell/>
+            <Cell col="1"/>
+            <Cell col="2"/>
+            <Cell col="3"/>
+            <Cell col="4"/>
+            <Cell col="5" text="Avg."/>
+            <Cell col="6" text="expr:nexacro.round(dataset.getAvg(&quot;SALARY&quot;), 2)" displaytype="number" maskeditformat="#,#.00"/>
+            <Cell col="7"/>
+            <Cell col="8"/>
+            <Cell col="9"/>
+          </Band>
+        </Format>
+      </Formats>
+    </Preset>
+  </Category>
+  <Category id="Component">
+    <Preset id="Calendar_monthonly" classname="nexacro.Calendar" width="200" height="220" type="monthonly" cssclass="cal_WF_Month"/>
+    <Preset id="Calendar_btn type" classname="nexacro.Calendar" width="200" height="220" type="monthonly" cssclass="cal_WF_Month" datepickerchangetype="button"/>
+    <Preset id="TextField_email" classname="nexacro.TextField" labeltext="E-Mail" width="300" height="70" usehelpertext="true" helpertext="이메일을 입력하세요" inputtype="email" usetrailingbutton="true"/>
+    <Preset id="Tab_btngap" classname="nexacro.Tab" tabindex="0" width="618" height="132" tabbuttongap="2" showextrabutton="true" showtabbuttonicon="true" tabbuttoniconsize="30">
+      <Tabpages>
+        <Tabpage id="Tabpage1" text="Tabpage1"/>
+        <Tabpage id="Tabpage2" text="Tabpage2"/>
+      </Tabpages>
+    </Preset>
+    <Preset id="DateRangePicker_minmax" classname="nexacro.DateRangePicker" width="410" height="315" innerdataset="innerdataset" backgroundcolumn="backgroundcolumn" bordercolumn="bordercolumn" datecolumn="datecolumn" hintingcolumn="hintingcolumn" readonlycolumn="readonlycolumn" textcolorcolumn="textcolorcolumn" mindate="20250915" maxdate="20251025">
+      <Dataset id="innerdataset">
+        <ColumnInfo>
+          <Column id="backgroundcolumn" size="256"/>
+          <Column id="bordercolumn" size="256"/>
+          <Column id="datecolumn" size="256"/>
+          <Column id="hintingcolumn" size="256"/>
+          <Column id="readonlycolumn" size="256"/>
+          <Column id="textcolorcolumn" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="datecolumn">20251021</Col>
+            <Col id="backgroundcolumn">cornflowerblue</Col>
+            <Col id="readonlycolumn">true</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Preset>
+    <Preset id="DateRangePicker_startend" classname="nexacro.DateRangePicker" width="410" height="315" startdate="20250910" enddate="20251002"/>
+  </Category>
+</ComponentPreset>

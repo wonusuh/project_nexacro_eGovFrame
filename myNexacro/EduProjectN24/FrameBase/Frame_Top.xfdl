@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Top" width="1278" height="50" titletext="Frame_Top">
+    <Layouts>
+      <Layout width="1278" height="50" screenid="Desktop_screen">
+        <Static id="Static00" taborder="1" left="0" top="0" height="50" right="0" cssclass="sta_TF_Bg"/>
+        <Button id="Button00" taborder="3" text="Logout" top="5" cssclass="btn_TF_Logout" width="67" height="18" right="10"/>
+        <Static id="Static02" taborder="4" text="&lt;fc v=&quot;#2f59bf&quot;&gt;TOBESOFT Education&lt;/fc&gt;" top="5" cssclass="sta_TF_Welcome" usedecorate="true" bottom="27" width="135" right="77"/>
+        <Menu id="mnu_top" taborder="0" left="251" top="12" innerdataset="gds_menu" idcolumn="MENU_ID" iconcolumn="MENU_ICON" hotkeycolumn="HOTKEY" enablecolumn="MENU_ENABLE" captioncolumn="MENU_NAME" levelcolumn="MENU_LEVEL" onmenuclick="mnu_top_onmenuclick" cssclass="mnu_TF_Menu" userdatacolumn="MENU_ID" bottom="11" right="362"/>
+        <Button id="Button01" taborder="2" left="0" top="0" width="45" height="50" cssclass="btn_TF_LogoIcon"/>
+        <ImageViewer id="ImageViewer00" taborder="5" left="71" top="16" width="148" height="19" image="url('theme::theme_edu/images/sta_TF_NexacroN.png')" stretch="fixaspectratio" border="0px none"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.mnu_top_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+//	var sID       = e.id;		    //메뉴ID Key
+	var sID       = e.userdata;		    //메뉴ID Key
+	var sName  = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "MENU_NAME");	//메뉴 명
+	var sURL     = nexacro.getApplication().gds_menu.lookup("MENU_ID", sID, "FORM_URL");	    //화면 URL	
+	
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.LeftFrame.form.fn_openForm(sID, sName, sURL);
+};
+]]></Script>
+  </Form>
+</FDL>

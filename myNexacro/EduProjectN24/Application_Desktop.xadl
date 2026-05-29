@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="Application_Desktop" screenid="Desktop_screen" onload="Application_onload">
+    <Layout>
+      <MainFrame id="mainframe" showtitlebar="true" left="0" top="0" width="1290" height="840" titletext="Nexacro Education Project">
+        <VFrameSet id="VFrameSet00" separatesize="0,0,*">
+          <Frames>
+            <ChildFrame id="TopFrame" formurl="FrameBase::Frame_Top.xfdl" showtitlebar="false"/>
+            <HFrameSet id="HFrameSet00" separatesize="45,200,*">
+              <Frames>
+                <ChildFrame id="LeftBarFrame" formurl="FrameBase::Frame_LeftBar.xfdl" showtitlebar="false"/>
+                <ChildFrame id="LeftFrame" formurl="FrameBase::Frame_Left.xfdl" showtitlebar="false"/>
+                <VFrameSet id="VFrameSet00" separatesize="35,*">
+                  <Frames>
+                    <ChildFrame id="MdiFrame" formurl="FrameBase::Frame_Mdi.xfdl" showtitlebar="false"/>
+                    <FrameSet id="WorkFrame">
+                      <Frames>
+                        <ChildFrame id="ChildFrame00" formurl="FrameBase::Frame_Main.xfdl" showtitlebar="false" openstatus="maximize" onsyscommand="afn_onsyscommand" showcascadetitletext="false" titletext="Main" titlebarheight="30"/>
+                      </Frames>
+                    </FrameSet>
+                  </Frames>
+                </VFrameSet>
+              </Frames>
+            </HFrameSet>
+            <ChildFrame id="LoginFrame" formurl="FrameBase::Frame_Login.xfdl" showtitlebar="false"/>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <Style url="xcssrc::css_edu.xcss"/>
+  </Application>
+  <Script type="xscript5.1"><![CDATA[this.av_WorkFrame = "";
+this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
+{
+	this.gds_menu.filter("MENU_FLAG == '1'");
+	this.av_WorkFrame = this.mainframe.VFrameSet00.HFrameSet00.VFrameSet00.WorkFrame;	
+};
+
+
+
+this.afn_script = function()
+{
+	alert("Call Script - Application Desktop");
+}
+
+this.afn_onsyscommand = function(obj:nexacro.ChildFrame,e:nexacro.SysCommandEventInfo)
+{
+	var arrChild = this.av_WorkFrame.all;
+	//타이틀바 더블클릭 최대화
+	if(e.systemcommand == "maximize"){
+		for(var i=0; i<arrChild.length; i++){
+			arrChild[i].showtitlebar = false;
+			arrChild[i].border = "0px none";
+		}		
+	}
+	else if(e.systemcommand == "restore"){
+		for(var i=0; i<arrChild.length; i++){
+			arrChild[i].showtitlebar = true;
+			arrChild[i].titlebar.closebutton.enable = false;
+			//arrChild[i].openstatus = "normal";
+			arrChild[i].border = "1px solid #B4B4B4";	
+		}		
+	}
+
+};
+]]></Script>
+</ADL>

@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Sample_GridSum" width="1020" height="700" titletext="Sample_GridSum">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="GridSum" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Tab id="Tab00" taborder="1" tabindex="0" left="20" top="60" width="980" height="565" onchanged="Tab00_onchanged">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Grid Sum">
+              <Layouts>
+                <Layout>
+                  <Grid id="grd_sum" taborder="0" left="10" top="10" width="700" height="493" positionstep="0" binddataset="ds_sum">
+                    <Formats>
+                      <Format id="default">
+                        <Columns>
+                          <Column size="150"/>
+                          <Column size="150"/>
+                          <Column size="80"/>
+                          <Column size="80"/>
+                          <Column size="80"/>
+                          <Column size="80"/>
+                          <Column size="48"/>
+                        </Columns>
+                        <Rows>
+                          <Row size="26" band="head"/>
+                          <Row size="26"/>
+                          <Row size="24" band="summ"/>
+                        </Rows>
+                        <Band id="head">
+                          <Cell text="Corporation"/>
+                          <Cell col="1" text="Department"/>
+                          <Cell col="2" text="ID"/>
+                          <Cell col="3" text="Name"/>
+                          <Cell col="4" text="Salary"/>
+                          <Cell col="5" text="Bonus"/>
+                          <Cell col="6" text="Level"/>
+                        </Band>
+                        <Band id="body">
+                          <Cell text="bind:CORP_NAME"/>
+                          <Cell col="1" text="bind:DEPT_NAME"/>
+                          <Cell col="2" text="bind:EMP_ID"/>
+                          <Cell col="3" text="bind:EMP_NAME" displaytype="expr:dataset.getRowLevel(currow) &gt; 0 ? &quot;number&quot; : &quot;normal&quot;"/>
+                          <Cell col="4" text="bind:SALARY"/>
+                          <Cell col="5" text="bind:BONUS"/>
+                          <Cell col="6" text="expr:dataset.getRowLevel(currow)" displaytype="text"/>
+                        </Band>
+                        <Band id="summary">
+                          <Cell/>
+                          <Cell col="1"/>
+                          <Cell col="2"/>
+                          <Cell col="3"/>
+                          <Cell col="4" expr="dataset.getSum(&quot;SALARY&quot;)" displaytype="number" textAlign="right"/>
+                          <Cell col="5"/>
+                          <Cell col="6"/>
+                        </Band>
+                      </Format>
+                    </Formats>
+                  </Grid>
+                  <Button id="Button01" taborder="1" text="2) subsumtext" left="722" top="42" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button01_onclick"/>
+                  <Button id="Button00" taborder="2" text="1) group - corp, dept" left="722" top="11" width="170" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button00_onclick"/>
+                  <Button id="Button03" taborder="3" text="average" left="722" top="124" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button03_onclick"/>
+                  <Button id="Button02" taborder="4" text="3) suppress" left="722" top="73" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button02_onclick"/>
+                  <Button id="Button04" taborder="5" text="reverse" left="722" top="155" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button04_onclick"/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="Group Range">
+              <Layouts>
+                <Layout>
+                  <Grid id="grd_sum" taborder="0" left="10" top="10" width="760" height="493" positionstep="0" binddataset="ds_sum" autofittype="col">
+                    <Formats>
+                      <Format id="default">
+                        <Columns>
+                          <Column size="150"/>
+                          <Column size="150"/>
+                          <Column size="80"/>
+                          <Column size="80"/>
+                          <Column size="120"/>
+                          <Column size="120"/>
+                          <Column size="48"/>
+                        </Columns>
+                        <Rows>
+                          <Row size="26" band="head"/>
+                          <Row size="26"/>
+                          <Row size="24" band="summ"/>
+                        </Rows>
+                        <Band id="head">
+                          <Cell text="Corporation"/>
+                          <Cell col="1" text="Department"/>
+                          <Cell col="2" text="ID"/>
+                          <Cell col="3" text="Name"/>
+                          <Cell col="4" text="GroupRangeStart"/>
+                          <Cell col="5" text="GroupRangeCount"/>
+                          <Cell col="6" text="Level"/>
+                        </Band>
+                        <Band id="body">
+                          <Cell text="bind:CORP_NAME"/>
+                          <Cell col="1" text="bind:DEPT_NAME"/>
+                          <Cell col="2" text="bind:EMP_ID"/>
+                          <Cell col="3" text="bind:EMP_NAME"/>
+                          <Cell col="4" expr="dataset.getGroupRangeStart(currow)"/>
+                          <Cell col="5" expr="dataset.getGroupRangeCount(currow)"/>
+                          <Cell col="6" text="expr:dataset.getRowLevel(currow)" displaytype="text"/>
+                        </Band>
+                        <Band id="summary">
+                          <Cell/>
+                          <Cell col="1"/>
+                          <Cell col="2"/>
+                          <Cell col="3"/>
+                          <Cell col="4" expr="dataset.getSum(&quot;SALARY&quot;)" displaytype="number" textAlign="right"/>
+                          <Cell col="5"/>
+                          <Cell col="6"/>
+                        </Band>
+                      </Format>
+                    </Formats>
+                  </Grid>
+                  <Button id="Button05" taborder="1" text="GroupRange" left="792" top="11" width="170" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="Button05_onclick"/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+          </Tabpages>
+        </Tab>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_sum.keystring = "G:-CORP_NAME,+DEPT_NAME";
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sExpr = 'expr:dataset.getRowLevel(currow) == 2 ? CORP_NAME + " Sum" : CORP_NAME';
+	
+	this.Tab00.Tabpage1.form.grd_sum.setCellProperty("body", 0, "subsumtext", sExpr);
+	
+	sExpr = 'expr:dataset.getRowLevel(currow) == 0 ? DEPT_NAME : (dataset.getRowLevel(currow) == 1 ? DEPT_NAME + " Sum" : "")';
+	this.Tab00.Tabpage1.form.grd_sum.setCellProperty("body", 1, "subsumtext", sExpr);
+
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Tab00.Tabpage1.form.grd_sum.setCellProperty("body", 0, "suppress", "1");
+	this.Tab00.Tabpage1.form.grd_sum.setCellProperty("body", 1, "suppress", "2");
+	this.Tab00.Tabpage1.form.grd_sum.setCellProperty("body", 1, "suppressalign", "middle");
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objColumnInfo = this.ds_sum.getColumnInfo("SALARY");
+	objColumnInfo.prop = "AVG";
+	this.ds_sum.updateSortGroup();	
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_sum.reversesubsum = true;
+	this.Tab00.Tabpage1.form.grd_sum.summarytype = "top";	
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//group
+	this.ds_sum.keystring = "G:-CORP_NAME,+DEPT_NAME";
+
+	//subsumtext
+	var sExpr = 'expr:DEPT_NAME + " Count: " + dataset.getGroupRangeCount(currow)';
+	this.Tab00.Tabpage2.form.grd_sum.setCellProperty("body", 1, "subsumtext", sExpr);
+
+	//getSum, getGroupRangeStart, getGroupRangeCount
+	sExpr = 'dataset.getRowLevel(currow) > 0 ? dataset.getSum("SALARY", dataset.getGroupRangeStart(currow), dataset.getGroupRangeStart(currow)+dataset.getGroupRangeCount(currow)) : EMP_NAME';
+	this.Tab00.Tabpage2.form.grd_sum.setCellProperty("body", 3, "expr", sExpr);
+	
+	//displaytype
+	sExpr = 'expr:dataset.getRowLevel(currow) > 0 ? "number" : "normal"';
+	this.Tab00.Tabpage2.form.grd_sum.setCellProperty("body", 3, "displaytype", sExpr);
+	
+	//suppress
+	this.Tab00.Tabpage2.form.grd_sum.setCellProperty("body", 0, "suppress", "1");
+	this.Tab00.Tabpage2.form.grd_sum.setCellProperty("body", 1, "suppress", "2");
+};
+
+this.Tab00_onchanged = function(obj:nexacro.Tab,e:nexacro.TabIndexChangeEventInfo)
+{
+	//init
+	this.ds_sum.keystring = "";
+	this.ds_sum.reversesubsum = false;
+	this.Tab00.Tabpage1.form.grd_sum.summarytype = "default";
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_sum">
+        <ColumnInfo>
+          <Column id="CORP_NAME" type="STRING" size="256"/>
+          <Column id="EMP_ID" type="STRING" size="256"/>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="SALARY" type="INT" size="256"/>
+          <Column id="BONUS" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">5000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">1200</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">2000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="EMP_NAME">Dennis?</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="BONUS">800</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">900</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="BONUS">4000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR140</Col>
+            <Col id="EMP_NAME">Kate</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">7300</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="EMP_NAME">Max</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">3500</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP020</Col>
+            <Col id="EMP_NAME">Ted</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">6800</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR030</Col>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">8600</Col>
+            <Col id="BONUS">2000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR230</Col>
+            <Col id="EMP_NAME">Belle</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">7700</Col>
+            <Col id="BONUS">5000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP040</Col>
+            <Col id="EMP_NAME">Lexy</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">2000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP050</Col>
+            <Col id="EMP_NAME">Lucy</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR110</Col>
+            <Col id="EMP_NAME">Kein</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">1200</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP110</Col>
+            <Col id="EMP_NAME">Juliana</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">800</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR130</Col>
+            <Col id="EMP_NAME">Kara</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="BONUS">900</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP030</Col>
+            <Col id="EMP_NAME">Maria</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="BONUS">4000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP010</Col>
+            <Col id="EMP_NAME">Eddy</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP120</Col>
+            <Col id="EMP_NAME">Sarah</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">5000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR120</Col>
+            <Col id="EMP_NAME">Ivy</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">Korea corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US030</Col>
+            <Col id="EMP_NAME">Noel</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">7300</Col>
+            <Col id="BONUS">400</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US240</Col>
+            <Col id="EMP_NAME">Arnold</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">5600</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US230</Col>
+            <Col id="EMP_NAME">Alex</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">3500</Col>
+            <Col id="BONUS">1200</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US580</Col>
+            <Col id="EMP_NAME">John</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="BONUS">800</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="EMP_NAME">Steven</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="BONUS">900</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP140</Col>
+            <Col id="EMP_NAME">Donald</Col>
+            <Col id="DEPT_NAME">Education Team</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="BONUS">1000</Col>
+            <Col id="CORP_NAME">Japan corporation</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US040</Col>
+            <Col id="EMP_NAME">Ray</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="BONUS">3000</Col>
+            <Col id="CORP_NAME">America corporation</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

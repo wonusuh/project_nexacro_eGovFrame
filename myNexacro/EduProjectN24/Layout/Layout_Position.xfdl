@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Layout_Position" width="1000" height="700" titletext="Layout_Position" ondragmove="form_ondragmove" onbindingvaluechanged="form_onbindingvaluechanged" onload="form_onload" onsize="form_onsize">
+    <Layouts>
+      <Layout height="700" width="1000" stepcount="2">
+        <Div id="div_position" taborder="0" text="Div00" left="20" top="95" height="250" width="400" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Component" left="100.00" top="75" width="200" height="100" cssclass="btn_WF_FillBlue"/>
+              <Static id="Static00" taborder="1" left="2.00" top="91" width="94" height="10" cssclass="sta_WF_GLineH"/>
+              <Static id="Static01" taborder="2" left="301.00" top="155" width="94" height="10" cssclass="sta_WF_GLineH"/>
+              <Static id="Static02" taborder="3" left="276.00" top="176" width="10" height="69" cssclass="sta_WF_GLineV"/>
+              <Static id="Static03" taborder="4" text="left" left="26.00" top="72" width="52" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static04" taborder="5" text="top" left="114.00" top="28" width="52" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static05" taborder="6" text="right" left="318.00" top="135" width="61" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static06" taborder="7" text="bottom" left="274" top="198" width="78" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static07" taborder="8" left="116.00" top="1" width="10" height="73" cssclass="sta_WF_GLineV"/>
+              <Static id="Static08" taborder="9" left="101" top="67" width="199" height="10" cssclass="sta_WF_GLineH"/>
+              <Static id="Static09" taborder="10" text="width" left="251" top="47" width="66" height="25" cssclass="sta_WF_Label"/>
+              <Static id="Static10" taborder="11" left="92" top="76" width="10" height="98" cssclass="sta_WF_GLineV"/>
+              <Static id="Static11" taborder="12" text="height" left="42" top="138" width="71" height="25" cssclass="sta_WF_Label"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="st_title" taborder="1" text="Position" left="20" top="0" width="148" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="2" text="Component Position" left="20" top="60" width="250" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="div_base" taborder="3" text="Div00" left="510" top="95" height="250" width="400" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Button id="btn_base" taborder="0" text="Base Component&#13;&#10;&#13;&#10;(btn_base)" left="30" top="30" width="130" height="100" cssclass="btn_WF_FillBlue"/>
+              <Static id="Static00" taborder="1" left="162.00" top="77" width="67" height="10" cssclass="sta_WF_GLineH"/>
+              <Button id="Button00" taborder="2" text="Button&#13;&#10;&#13;&#10;left='btn_base:70'" left="btn_base:70.00" top="50" width="130" height="60" cssclass="btn_WF_LineBlue"/>
+              <Static id="Static03" taborder="3" text="left" left="173" top="58" width="52" height="26" cssclass="sta_WF_Label"/>
+              <Button id="Button01" taborder="4" text="Button&#13;&#10;&#13;&#10;top='btn_base:40'" left="30" top="btn_base:40" width="130" height="60" cssclass="btn_WF_LineBlue"/>
+              <Static id="Static03_00" taborder="5" text="top" left="91" top="137" width="52" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static02" taborder="6" left="91.00" top="131" width="10" height="38" cssclass="sta_WF_GLineV"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static08" taborder="4" text="Fit To Contents" left="20" top="364" width="250" height="36" cssclass="sta_WF_GuideTitle2" positionstep="1"/>
+        <Button id="btn_name" taborder="5" text="name" left="20" top="401" width="58" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Button id="btn_gender" taborder="6" text="gender" left="btn_name:10" top="401" width="67" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Button id="btn_date" taborder="7" text="birth date" left="btn_gender:10" top="401" width="83" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Grid id="Grid00" taborder="8" left="20" top="438" width="612" height="152" positionstep="1" binddataset="ds_language" autosizingtype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="30"/>
+              </Rows>
+              <Band id="body">
+                <Cell expr="currow == dataset.rowposition ? &quot;▶&quot; : &quot;&quot;" background="#eff1f7"/>
+                <Cell col="1" text="bind:col_lang" background="#eff1f7" font="normal 600 13px/normal &quot;Segoe UI,Malgun Gothic&quot;" displaytype="text"/>
+                <Cell col="2" text="bind:col_name"/>
+                <Cell col="3" text="bind:col_gender"/>
+                <Cell col="4" text="bind:col_date"/>
+                <Cell col="5" text="bind:col_email"/>
+                <Cell col="6" text="bind:col_telno"/>
+                <Cell col="7" text="bind:col_address"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_email" taborder="9" text="e-mail" left="btn_date:10" top="401" width="63" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Button id="btn_telno" taborder="10" text="phone number" left="btn_email:10" top="400" width="112" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Button id="btn_address" taborder="11" text="address" left="btn_telno:10" top="401" width="71" height="30" positionstep="1" cssclass="btn_WF_FillBlue"/>
+        <Static id="Static00_01" taborder="12" text="Component Base Position" left="510" top="60" width="250" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <ImageViewer id="img_resize_grip" taborder="13" left="415" top="657" width="12" height="11" image="url('theme://images/icon_SB_Grip.png')" ondrag="obj_ondrag" onlbuttondown="obj_onlbuttondown" cursor="nw-resize" positionstep="0"/>
+        <Div id="div_resize" taborder="14" text="Div00" left="20" top="405" right="img_resize_grip:-6" bottom="img_resize_grip:-6" positionstep="0" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="120px * 30px" left="10" top="10" width="120" height="30" background="#e8f5e9" border="1px solid #388e3c,0px none,0px none,1px solid #388e3c" textAlign="center"/>
+              <Static id="Static01" taborder="1" text="null * 40px" left="10" top="50" height="40" background="#fff9c4" border="1px solid #f57f17,1px solid #f57f17,0px none" right="10" textAlign="center"/>
+              <Static id="Static02" taborder="2" text="120px * null" left="10" top="100" width="120" background="#fff59d" border="1px solid #e65100,0px none,1px solid #e65100,1px solid #e65100" bottom="10" textAlign="center"/>
+              <Static id="Static03" taborder="3" text="null * null" left="140" top="100" background="#efebe9" border="1px solid #8d6e63" right="10" bottom="50" textAlign="center"/>
+              <Static id="Static04" taborder="4" text="90px * 30px" top="10" width="90" height="30" background="#e1f5fe" border="1px solid #1565c0,1px solid #1565c0,0px none,0px none" right="96" textAlign="center"/>
+              <Static id="Static05" taborder="5" text="90px * 30px" top="10" width="80" height="30" background="#e1f5fe" border="1px solid #1565c0,1px solid #1565c0,0px none,0px none" right="10" textAlign="center"/>
+              <Static id="Static06" taborder="7" text="30% * 30px" width="30.150753768844222%" height="30" background="#fce4ec" border="0px none,0px none,1px solid #ad1457,1px solid #ad1457" bottom="10" left="140" textAlign="center"/>
+              <Static id="Static07" taborder="6" text="null * 30px" height="30" background="#fce4ec" border="0px none,0px none,1px solid #ad1457,1px solid #ad1457" bottom="10" left="Static06:10" right="10" textAlign="center"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="15" text="Move &amp; Resize" left="20" top="370" width="250" height="35" positionstep="0" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static02" taborder="16" text="Unit em, rem" left="20" top="50" width="250" height="35" cssclass="sta_WF_GuideTitle2" positionstep="1"/>
+        <Static id="Static03_00" taborder="17" text="Move &amp; Resize" left="2010" top="-270" width="250" height="28" positionstep="0" cssclass="sta_WF_SubTitle"/>
+        <Static id="Static13" taborder="18" text="Component Base Position" left="520" top="-260" width="250" height="28" cssclass="sta_WF_SubTitle" positionstep="1"/>
+        <Button id="Button02" taborder="30" text="Button02" left="20" top="210" width="15.30%" height="11.00%" onclick="Button02_onclick" cssclass="btn_WF_Main" positionstep="1"/>
+        <Static id="Static06" taborder="31" text="static" left="Button02:70" top="210" width="15.30%" height="11.00%" cssclass="sta_WF_GArea" textAlign="center" positionstep="1"/>
+        <ListBox id="ListBox00" taborder="32" left="Static06:70" top="210" width="17.60%" height="12.86%" innerdataset="ds_font" codecolumn="codecolumn" datacolumn="datacolumn" text="" index="-1" positionstep="1"/>
+        <Static id="Stati11" taborder="19" text="" left="20" top="155" height="36" cssclass="sta_WF_DetailArea" positionstep="1" right="20"/>
+        <Static id="Static05" taborder="20" text="" left="20" top="120" height="36" cssclass="sta_WF_DetailArea" positionstep="1" right="20"/>
+        <Static id="Static01" taborder="21" left="20" top="85" height="36" cssclass="sta_WF_DetailArea" positionstep="1" text="" right="20"/>
+        <Static id="Static04" taborder="22" text="set font" left="34" top="89" width="130" height="26" cssclass="sta_WF_LabelC" textAlign="right" positionstep="1"/>
+        <Radio id="absolute_size_rdo" taborder="23" left="160" top="88" height="30" innerdataset="ds_font" codecolumn="codecolumn" datacolumn="datacolumn" columncount="5" index="-1" text="" value="" right="35.60%" padding="0px 10px" onitemchanged="absolute_size_rdo_onitemchanged" positionstep="1"/>
+        <Static id="Static10" taborder="24" text="width change unit" left="34" top="125" width="130" height="26" cssclass="sta_WF_LabelC" textAlign="right" positionstep="1"/>
+        <Radio id="change_width_rdo" taborder="25" left="160" top="123" height="30" columncount="3" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="-1" text="" value="" padding="0px 10px" onitemchanged="change_width_rdo_onitemchanged" width="28.40%" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">120px</Col>
+                <Col id="datacolumn">120px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">20em</Col>
+                <Col id="datacolumn">20em</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">20rem</Col>
+                <Col id="datacolumn">20rem</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static09" left="454" top="125" width="150" height="26" cssclass="sta_WF_LabelC" text="height change unit" taborder="26" positionstep="1"/>
+        <Radio id="change_height_rdo" taborder="27" left="604" top="123" height="30" columncount="3" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="-1" text="" value="" width="28.40%" padding="0px 10px" onitemchanged="change_height_rdo_onitemchanged" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">50px</Col>
+                <Col id="datacolumn">50px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6em</Col>
+                <Col id="datacolumn">6em</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">6rem</Col>
+                <Col id="datacolumn">6rem</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="change_font_rdo" taborder="28" left="160" top="158" height="30" columncount="4" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="-1" text="" value="" right="4.10%" padding="0px 10px" onitemchanged="change_font_rdo_onitemchanged" positionstep="1">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">12px</Col>
+                <Col id="datacolumn">12px</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2em</Col>
+                <Col id="datacolumn">2em</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2rem</Col>
+                <Col id="datacolumn">2rem</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static11" taborder="29" text="font change unit" left="34" top="159" width="130" height="26" cssclass="sta_WF_LabelC" textAlign="right" positionstep="1"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this._split_num = 29;
+
+this.obj_ondrag = function(obj:nexacro.Button,e:nexacro.DragEventInfo)
+{
+	return true;
+};
+
+this.obj_onlbuttondown = function(obj:nexacro.Button,e:nexacro.MouseEventInfo)
+{
+	obj.nX = e.clientx;
+	obj.nY = e.clienty;	
+};
+
+this.form_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
+{
+	e.sourceobject.move(e.clientx-e.sourceobject.nX, e.clienty-e.sourceobject.nY);	
+	this.resetScroll();
+//	this.div_resize.form.resetScroll();
+};
+
+this.ds_language_onrowposchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSRowPosChangeEventInfo)
+{
+	this.btn_name.fittocontents = "width";
+	this.btn_gender.fittocontents = "width";
+	this.btn_date.fittocontents = "width";
+	this.btn_email.fittocontents = "width";
+	this.btn_telno.fittocontents = "width";
+	this.btn_address.fittocontents = "width";
+};
+
+
+this.form_onbindingvaluechanged = function(obj:nexacro.Form,e:nexacro.BindingValueChangedEventInfo)
+{
+	this.resetScroll();
+};
+
+this.btn_name00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	obj.font = 'normal 600 18px/normal "Segoe UI,Malgun Gothic"';
+	this.resetScroll();
+};
+
+this.Button08_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+//	this.div_unit.form.Button02.font = 'normal 600 20px/normal "Segoe UI,Malgun Gothic"';
+	this.div_unit.form.font = 'normal 600 20px/normal "Segoe UI,Malgun Gothic"';
+	this.div_unit.form.resetScroll();
+
+}
+
+
+this.absolute_size_rdo_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	var comp = this.components;
+	for (var i = 0; i < comp.length ; i++)
+	{
+		if (comp[i] && comp[i].taborder > this._split_num)
+		{
+			comp[i].set_font(this.absolute_size_rdo.value);
+			comp[i].set_text(this.absolute_size_rdo.value);
+			
+		}
+	}
+};
+
+this.change_width_rdo_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	// change width test
+	var comp = this.components;
+	if (comp && comp.length)
+	{
+		for (var i = 0; i < comp.length ; i++)
+		{
+			if (comp[i] && comp[i].taborder > this._split_num)
+			{
+				width = this.change_width_rdo.value;
+				comp[i].set_width(width);
+				comp[i].set_text(width);
+			}
+		}
+	}
+};
+
+this.change_height_rdo_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	// change height test
+	var comp = this.components;
+	if (comp && comp.length)
+	{
+		for (var i = 0; i < comp.length ; i++)
+		{
+			if (comp[i] && comp[i].taborder > this._split_num)
+			{
+				height = this.change_height_rdo.value;
+				comp[i].set_height(height);
+				comp[i].set_text(height);
+			}
+		}
+	}
+};
+
+this.change_font_rdo_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+// change font test
+	var comp = this.components;
+
+	if (comp && comp.length)
+	{
+		var font = this.change_font_rdo.value;
+		font += " Malgun Gothic";
+		
+		for (var i = 0; i < comp.length ; i++)
+		{			
+			if (comp[i] && comp[i].taborder > this._split_num)
+			{
+				//trace(comp[i].taborder);
+				comp[i].set_font(font);
+				comp[i].set_text(font);
+					
+			}
+		}
+		
+		
+	}
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_language" onrowposchanged="ds_language_onrowposchanged">
+        <ColumnInfo>
+          <Column id="col_lang" type="STRING" size="256"/>
+          <Column id="col_name" type="STRING" size="256"/>
+          <Column id="col_gender" type="STRING" size="256"/>
+          <Column id="col_date" type="STRING" size="256"/>
+          <Column id="col_email" type="STRING" size="256"/>
+          <Column id="col_telno" type="STRING" size="256"/>
+          <Column id="col_address" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="col_name">name</Col>
+            <Col id="col_gender">gender</Col>
+            <Col id="col_date">birth date</Col>
+            <Col id="col_email">e-mail</Col>
+            <Col id="col_telno">phone number</Col>
+            <Col id="col_address">address</Col>
+            <Col id="col_lang">English</Col>
+          </Row>
+          <Row>
+            <Col id="col_name">성명</Col>
+            <Col id="col_gender">성별</Col>
+            <Col id="col_date">생일</Col>
+            <Col id="col_email">전자우편</Col>
+            <Col id="col_telno">전화번호</Col>
+            <Col id="col_address">주소</Col>
+            <Col id="col_lang">Korean</Col>
+          </Row>
+          <Row>
+            <Col id="col_name">なまえ</Col>
+            <Col id="col_gender">せいべつ</Col>
+            <Col id="col_date">たんじょうび</Col>
+            <Col id="col_email">イーメール</Col>
+            <Col id="col_telno">でんわばんごう</Col>
+            <Col id="col_address">じゅうしょ</Col>
+            <Col id="col_lang">Japanese</Col>
+          </Row>
+          <Row>
+            <Col id="col_date">cumpleaños</Col>
+            <Col id="col_email">correo electrónico</Col>
+            <Col id="col_telno">número de teléfono</Col>
+            <Col id="col_address">domicilio</Col>
+            <Col id="col_name">nombre</Col>
+            <Col id="col_gender">sexo</Col>
+            <Col id="col_lang">Spanish</Col>
+          </Row>
+          <Row>
+            <Col id="col_name">danh hiệu</Col>
+            <Col id="col_gender">giới tính</Col>
+            <Col id="col_date">sinh nhật</Col>
+            <Col id="col_email">thư điện tử</Col>
+            <Col id="col_telno">số điện thoại</Col>
+            <Col id="col_address">địa chỉ</Col>
+            <Col id="col_lang">Vietnamese</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_font">
+        <ColumnInfo>
+          <Column id="codecolumn" size="256"/>
+          <Column id="datacolumn" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="codecolumn">10px Dotum</Col>
+            <Col id="datacolumn">10px Dotum</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">15px Dotum</Col>
+            <Col id="datacolumn">15px Dotum</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">20px Dotum</Col>
+            <Col id="datacolumn">20px Dotum</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="btn_name" propid="text" datasetid="ds_language" columnid="col_name"/>
+      <BindItem id="item1" compid="btn_gender" propid="text" datasetid="ds_language" columnid="col_gender"/>
+      <BindItem id="item2" compid="btn_date" propid="text" datasetid="ds_language" columnid="col_date"/>
+      <BindItem id="item3" compid="btn_email" propid="text" datasetid="ds_language" columnid="col_email"/>
+      <BindItem id="item4" compid="btn_telno" propid="text" datasetid="ds_language" columnid="col_telno"/>
+      <BindItem id="item5" compid="btn_address" propid="text" datasetid="ds_language" columnid="col_address"/>
+      <BindItem id="item6" compid="Static02" propid="acceptvaluetype" datasetid="ds_font" columnid="codecolumn"/>
+    </Bind>
+  </Form>
+</FDL>

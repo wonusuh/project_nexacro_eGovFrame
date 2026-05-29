@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppVariables version="2.0">
+  <Datasets>
+    <Dataset id="gds_menu">
+      <ColumnInfo>
+        <Column id="MENU_ID" type="STRING" size="256"/>
+        <Column id="MENU_NAME" type="STRING" size="256"/>
+        <Column id="MENU_LEVEL" type="STRING" size="256"/>
+        <Column id="FORM_URL" type="STRING" size="256"/>
+        <Column id="MENU_ICON" type="STRING" size="256"/>
+        <Column id="MENU_ENABLE" type="STRING" size="256"/>
+        <Column id="HOTKEY" type="STRING" size="256"/>
+        <Column id="MENU_FLAG" type="STRING" size="256"/>
+        <Column id="TREE_STATUS" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="MENU_ID">10</Col>
+          <Col id="MENU_NAME">Form</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="FORM_URL"/>
+          <Col id="TREE_STATUS">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1010</Col>
+          <Col id="MENU_NAME">Hello World</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Base::Hello.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1020</Col>
+          <Col id="MENU_NAME">Employees</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Form::Form_Emp.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY">Ctrl+E</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1030</Col>
+          <Col id="MENU_NAME">Employees List</Col>
+          <Col id="FORM_URL">Form::Form_EmpList.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1040</Col>
+          <Col id="MENU_NAME">Popup</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Popup::Popup_Base.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">20</Col>
+          <Col id="MENU_NAME">Application</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">2010</Col>
+          <Col id="MENU_NAME">Environment</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Application::App_Environment.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">2020</Col>
+          <Col id="MENU_NAME">Application</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Application::App_Application.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">30</Col>
+          <Col id="MENU_NAME">Object</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">3010</Col>
+          <Col id="MENU_NAME">Dataset</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Object::Obj_Dataset.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY">Ctrl+D</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="FORM_URL">Object::Obj_ExcelExportImport.xfdl</Col>
+          <Col id="MENU_NAME">Excel Export/Import</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="MENU_ID">3020</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_FLAG">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">3030</Col>
+          <Col id="MENU_NAME">File UpDown Transfer</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="FORM_URL">Object::Obj_FileUpDownTransfer.xfdl</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">40</Col>
+          <Col id="MENU_NAME">Component</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="FORM_URL"/>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">4010</Col>
+          <Col id="MENU_NAME">Base</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="FORM_URL">Comp::Comp_Base.xfdl</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">4020</Col>
+          <Col id="MENU_NAME">Component List</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL"/>
+          <Col id="MENU_ICON"/>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY"/>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402010</Col>
+          <Col id="MENU_NAME">Button</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Button.xfdl</Col>
+          <Col id="MENU_ICON">imagerc::img_comp_button.png</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="HOTKEY">Ctrl+B</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402020</Col>
+          <Col id="MENU_NAME">Calendar</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Calendar.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY"/>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_ICON">imagerc::img_comp_calendar.png</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402030</Col>
+          <Col id="MENU_NAME">CheckBox</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_CheckBox.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="HOTKEY">Ctrl+C</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402040</Col>
+          <Col id="MENU_NAME">CheckBoxSet</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_CheckBoxSet.xfdl</Col>
+          <Col id="MENU_ICON"/>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402050</Col>
+          <Col id="MENU_NAME">Combo</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Combo.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_ICON">imagerc::img_comp_combo.png</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402060</Col>
+          <Col id="MENU_NAME">DateField</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_DateField.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402070</Col>
+          <Col id="MENU_NAME">DateRangePicker</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_DateRangePicker.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY"/>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402080</Col>
+          <Col id="MENU_NAME">Div</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Div.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402090</Col>
+          <Col id="MENU_NAME">Edit</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Edit.xfdl</Col>
+          <Col id="MENU_ICON">imagerc::img_comp_edit.png</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY">Ctrl+E</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402100</Col>
+          <Col id="MENU_NAME">Grid</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_Grid.xfdl</Col>
+          <Col id="MENU_ICON">imagerc::img_comp_grid.png</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY">Ctrl+G</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402110</Col>
+          <Col id="MENU_NAME">Grid Cell</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_GridCell.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402120</Col>
+          <Col id="MENU_NAME">Grid Cell Expr</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_GridExpr.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402130</Col>
+          <Col id="MENU_NAME">ImageViewer</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_ImageViewer.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402140</Col>
+          <Col id="MENU_NAME">ListBox</Col>
+          <Col id="FORM_URL">Comp::Comp_ListBox.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402150</Col>
+          <Col id="MENU_NAME">ListView</Col>
+          <Col id="FORM_URL">Comp::Comp_ListView.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402160</Col>
+          <Col id="MENU_NAME">MaskEdit</Col>
+          <Col id="FORM_URL">Comp::Comp_MaskEdit.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402170</Col>
+          <Col id="MENU_NAME">MultiCombo</Col>
+          <Col id="FORM_URL">Comp::Comp_MultiCombo.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="HOTKEY">Ctrl+M</Col>
+          <Col id="MENU_FLAG">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402180</Col>
+          <Col id="MENU_NAME">MultiLineTextField</Col>
+          <Col id="FORM_URL">Comp::Comp_MultiLineTextField.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG"/>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402190</Col>
+          <Col id="MENU_NAME">PopupDateRangePicker</Col>
+          <Col id="FORM_URL">Comp::Comp_PopupDateRangePicker.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402200</Col>
+          <Col id="MENU_NAME">ProgressBar</Col>
+          <Col id="FORM_URL">Comp::Comp_ProgressBar.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402210</Col>
+          <Col id="MENU_NAME">Radio</Col>
+          <Col id="FORM_URL">Comp::Comp_Radio.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402220</Col>
+          <Col id="MENU_NAME">Sketch</Col>
+          <Col id="FORM_URL">Comp::Comp_Sketch.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402230</Col>
+          <Col id="MENU_NAME">Spin</Col>
+          <Col id="FORM_URL">Comp::Comp_Spin.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402240</Col>
+          <Col id="MENU_NAME">Static</Col>
+          <Col id="FORM_URL">Comp::Comp_Static.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402250</Col>
+          <Col id="MENU_NAME">Tab</Col>
+          <Col id="FORM_URL">Comp::Comp_Tab.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402260</Col>
+          <Col id="MENU_NAME">TextArea</Col>
+          <Col id="FORM_URL">Comp::Comp_TextArea.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402270</Col>
+          <Col id="MENU_NAME">TextField</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_TextField.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">402280</Col>
+          <Col id="MENU_NAME">WebView</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Comp::Comp_WebView.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">50</Col>
+          <Col id="MENU_NAME">Layout</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">5010</Col>
+          <Col id="MENU_NAME">Position</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Layout::Layout_Position.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY"/>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">5020</Col>
+          <Col id="MENU_NAME">Layout(Horizontal)</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Layout::Layout_Horizontal.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="HOTKEY"/>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">5030</Col>
+          <Col id="MENU_NAME">Layout(Vertical)</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Layout::Layout_Vertical.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">5040</Col>
+          <Col id="MENU_NAME">Layout(Table)</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Layout::Layout_Table.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">5050</Col>
+          <Col id="MENU_NAME">Panel</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Layout::Layout_Panel.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">60</Col>
+          <Col id="MENU_NAME">Sample</Col>
+          <Col id="MENU_LEVEL">0</Col>
+          <Col id="FORM_URL"></Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">6010</Col>
+          <Col id="MENU_NAME">Grid Sum</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Sample::Sample_GridSum.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">6020</Col>
+          <Col id="MENU_NAME">Multi Language</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Sample::Sample_MultiLang.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">6030</Col>
+          <Col id="MENU_NAME">Position Base</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Sample::Sample_PositionBase.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">6040</Col>
+          <Col id="MENU_NAME">Fluid Layout</Col>
+          <Col id="MENU_LEVEL">1</Col>
+          <Col id="FORM_URL">Sample::Sample_Fluid.xfdl</Col>
+          <Col id="MENU_ENABLE">1</Col>
+          <Col id="MENU_FLAG">1</Col>
+          <Col id="TREE_STATUS">3</Col>
+        </Row>
+      </Rows>
+    </Dataset>
+    <Dataset id="gds_openForm">
+      <ColumnInfo>
+        <Column id="FORM_ID" type="STRING" size="256"/>
+        <Column id="MENU_ID" type="STRING" size="256"/>
+        <Column id="MENU_NAME" type="STRING" size="256"/>
+        <Column id="FORM_URL" type="STRING" size="256"/>
+      </ColumnInfo>
+    </Dataset>
+    <Dataset id="Dataset0">
+      <ColumnInfo>
+        <Column id="DEPT_CODE" type="STRING" size="256"/>
+        <Column id="DEPT_NAME" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="DEPT_CODE">10</Col>
+          <Col id="DEPT_NAME">Human Resource Team</Col>
+        </Row>
+        <Row>
+          <Col id="DEPT_CODE">20</Col>
+          <Col id="DEPT_NAME">Marketing Team</Col>
+        </Row>
+        <Row>
+          <Col id="DEPT_CODE">30</Col>
+          <Col id="DEPT_NAME">Sales Team</Col>
+        </Row>
+      </Rows>
+    </Dataset>
+  </Datasets>
+  <Variables>
+    <Variable id="gv_userName" initval="Nexacro"/>
+    <Variable id="gv_var1" initval="App Variable Value1"/>
+  </Variables>
+  <DataObjects/>
+</AppVariables>

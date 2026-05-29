@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Work" width="1048" height="693" titletext="Form_Work" onactivate="Frame_Work_onactivate" onload="Frame_Work_onload">
+    <Layouts>
+      <Layout width="1048" height="693" screenid="Desktop_screen">
+        <Div id="div_work" taborder="0" text="Div00" left="10" top="10" right="10" bottom="10" cssclass="d"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fv_formID   = "";
+this.fv_menuID  = "";
+this.fv_menuNM = "";
+this.fv_formURL = "";
+this.Frame_Work_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objOwnerFrame = this.getOwnerFrame();
+
+	this.fv_formID  = objOwnerFrame.param.FORM_ID;
+	this.fv_menuID  = objOwnerFrame.param.MENU_ID;
+	this.fv_menuNM  = objOwnerFrame.param.MENU_NM;
+	this.fv_formURL = objOwnerFrame.param.FORM_URL;
+
+//	this.set_titletext(this.fv_menuNM + " [" + this.fv_menuID + "]");
+	
+	trace(this.fv_formURL);
+	this.div_work.set_url(this.fv_formURL);
+	this.div_work.form.resetScroll();
+	
+};
+
+
+// 화면 활성화 시킬 경우 해당 화면의 Tabpage 선택)
+this.Frame_Work_onactivate = function(obj:nexacro.Form,e:nexacro.ActivateEventInfo)
+{
+	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.VFrameSet00.MdiFrame.form.fn_tabControl(this.fv_formID, "SELECT");
+    this.div_work.form.resetScroll();
+	return;	
+};
+
+// 화면에서 직접 Close 시
+this.Form_Work_onclick = function(obj:nexacro.Form,e:nexacro.ClickEventInfo)
+{
+//	nexacro.getApplication().mainframe.VFrameSet00.HFrameSet00.VFrameSet00.MdiFrame.form.fn_tabControl(this.fv_formID, "DELETE");
+};
+
+
+{
+	
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	trace(this.div_work.getOffsetWidth() + " : " + this.div_work.getOffsetHeight());
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_CheckBox" width="1020" height="700" titletext="Comp_CheckBox">
+    <Layouts>
+      <Layout height="700" width="1020">
+        <Static id="sta_title" taborder="0" text="CheckBox" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static00" taborder="1" text="Basic Usage" left="20.00" top="60" height="35" cssclass="sta_WF_GuideTitle2" width="470"/>
+        <CheckBox id="CheckBox00" taborder="2" text="CheckBox &quot;true&quot;" left="20.00" top="95" width="130" height="26" value="true"/>
+        <CheckBox id="CheckBox01" taborder="3" text="CheckBox &quot;false&quot;" left="160.00" top="95" width="140" height="26"/>
+        <Static id="Static01" taborder="4" text="true, false value" left="20.00" top="171" height="35" cssclass="sta_WF_GuideTitle2" width="470"/>
+        <Static id="Static02" taborder="5" text="[Property] truevalue, falsevalue" left="20.00" top="206" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Grid id="Grid00" taborder="6" left="20.00" top="247" width="322" height="208" binddataset="ds_check">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="120"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="value"/>
+                <Cell col="1" text="default"/>
+                <Cell col="2" text="true &quot;Y&quot;, false &quot;N&quot;"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:value" displaytype="text"/>
+                <Cell col="1" text="bind:value" displaytype="checkboxcontrol"/>
+                <Cell col="2" text="bind:value" displaytype="checkboxcontrol" checkboxtruevalue="Y" checkboxfalsevalue="N"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <CheckBox id="CheckBox02" taborder="7" text="default" left="349.00" top="270" width="80" height="27" value="true"/>
+        <CheckBox id="CheckBox03" taborder="8" text="true &quot;Y&quot;, false &quot;N&quot;" left="439.00" top="270" width="140" height="27" truevalue="Y" falsevalue="N"/>
+        <Static id="Static04" taborder="9" text="Position" left="20.00" top="515" height="35" cssclass="sta_WF_GuideTitle2" right="530"/>
+        <Static id="Static05" taborder="10" text="[Property] iconPosition = &quot;left&quot; | &quot;top&quot; | &quot;right&quot; | &quot;bottom&quot;" left="20.00" top="550" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <CheckBox id="CheckBox04" taborder="11" text="position - left" left="20.00" top="591" width="120" height="36" value="true"/>
+        <CheckBox id="CheckBox05" taborder="12" text="position - top" left="150.00" top="591" width="120" height="36" value="true" iconPosition="top" textAlign="center"/>
+        <CheckBox id="CheckBox06" taborder="13" text="position - right" left="280.00" top="591" width="120" height="36" value="true" iconPosition="right"/>
+        <CheckBox id="CheckBox07" taborder="14" text="position - bottom" left="410.00" top="591" width="120" height="36" value="true" iconPosition="bottom" textAlign="center"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_check">
+        <ColumnInfo>
+          <Column id="value" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="value">1</Col>
+          </Row>
+          <Row>
+            <Col id="value">0</Col>
+          </Row>
+          <Row>
+            <Col id="value">true</Col>
+          </Row>
+          <Row>
+            <Col id="value">false</Col>
+          </Row>
+          <Row>
+            <Col id="value">Y</Col>
+          </Row>
+          <Row>
+            <Col id="value">N</Col>
+          </Row>
+          <Row>
+            <Col id="value">ABC</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="CheckBox02" propid="value" datasetid="ds_check" columnid="value"/>
+      <BindItem id="item2" compid="CheckBox03" propid="value" datasetid="ds_check" columnid="value"/>
+    </Bind>
+  </Form>
+</FDL>

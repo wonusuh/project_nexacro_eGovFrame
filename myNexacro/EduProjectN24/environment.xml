@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::theme_edu" datatyperule="2.0" scrollbarsize="10" userfontid="font::NotoSansKR.xfont" filesecurelevel="all">
+    <ScreenDefinition>
+      <Screen id="Desktop_screen" type="desktop" themeid="theme::theme_edu" usestringresource="true" locale="ko_KR"/>
+      <Screen id="Phone_screen" type="mobile_small" themeid="theme::theme_edu"/>
+    </ScreenDefinition>
+    <Variables>
+      <Variable id="env_userName" initval="Nexacro N24"/>
+      <Variable id="env_var1" initval="Variable Value1"/>
+      <Variable id="env_var2" initval="Variable Value1"/>
+    </Variables>
+    <Cookies>
+      <Cookie id="env_cookie1" secure="false" initval="Cookie Value1"/>
+      <Cookie id="env_cookie2" secure="true" initval="Cookie Value2"/>
+    </Cookies>
+    <httpheader>
+      <Variable id="env_header1" initval="HTTP Header Value1"/>
+      <Variable id="env_header2" initval="HTTP Header Value2"/>
+    </httpheader>
+  </Environment>
+  <Script type="xscript5.1"><![CDATA[
+this.efn_script = function()
+{
+	alert("Call Environment Script");
+}]]></Script>
+</ENV>

@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="frm_fluidLayout" width="950" height="710" titletext="New Form">
+    <Layouts>
+      <Layout height="710" horizontalgap="0" mobileorientation="landscape" tabletemplate="1* / 1*" verticalgap="0" width="950" stepcount="3">
+        <Static id="st_title" taborder="0" text="Fluid Layout" left="10.00" top="8" width="193" height="30" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static07" taborder="1" text="Form Layout 내 배치되는 컴포넌트의 위치를 고정하지 않고 설정된 규칙에 따라 자동으로 배치되도록 설정" left="10.00" top="40" width="930" height="30" cssclass="sta_WF_GStatus"/>
+        <Static id="Static08" taborder="2" text="동적으로 컴포넌트를 추가하는 기능을 구현하거나 화면 크기에 따라 컴포넌트 배치 방식을 자동으로 변경하고자 할 경우에 활용" left="10.00" top="70" width="930" height="30" cssclass="sta_WF_GStatus"/>
+        <Static id="Static09" taborder="3" text="Type :  horizontal" left="20.00" top="115" width="290" height="30" cssclass="sta_WF_GuideTitle2" positionstep="1"/>
+        <Div id="Div00" taborder="4" text="Div00" left="26.00" top="151" flexshrink="0" height="50" positionstep="1" cssclass="div_WF_Area" right="100">
+          <Layouts>
+            <Layout type="horizontal" horizontalgap="5" flexwrap="nowrap" flexcrossaxiswrapalign="start">
+              <Static id="Static10" taborder="0" text="Name" left="0" top="0" width="100" height="42" background="" padding="" onclick="div_detail_Static10_onclick" cssclass="sta_WF_DetailLabel"/>
+              <Edit id="edt_name" taborder="1" left="103" top="0" width="160" height="42" canchange="div_detail_edt_name_canchange" value="Hong Gil Dong" text="Hong Gil Dong"/>
+              <Static id="Static00" taborder="2" text="Emp ID" left="266" top="0" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_id" taborder="3" left="370" top="0" width="160" height="42" type="string" format="AA-###" value="AA001"/>
+              <Static id="Static12" taborder="4" text="Hire Date" left="533" top="0" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="5" left="561.00" top="0" width="160" height="42"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static10" taborder="5" text="Type :  horizontal &amp; flexwrap : wrap" left="20.00" top="211" width="324" height="30" cssclass="sta_WF_GuideTitle2" positionstep="1"/>
+        <Div id="Div01" taborder="7" text="Div00" left="26.00" top="255" flexshrink="0" fittocontents="height" height="50" positionstep="1" cssclass="div_WF_Area" right="100">
+          <Layouts>
+            <Layout type="horizontal" horizontalgap="5" flexwrap="wrap">
+              <Static id="Static10" taborder="0" text="Name" left="0" top="0" width="100" height="42" background="" padding="" onclick="div_detail_Static10_onclick" cssclass="sta_WF_DetailLabel"/>
+              <Edit id="edt_name" taborder="1" left="85.00" top="0" width="160" height="42" canchange="div_detail_edt_name_canchange" value="Hong Gil Dong" text="Hong Gil Dong"/>
+              <Static id="Static00" taborder="2" text="Emp ID" left="229.00" top="0" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_id" taborder="3" left="321.00" top="0" width="160" height="42" type="string" format="AA-###" value="AA001"/>
+              <Static id="Static12" taborder="4" text="Hire Date" left="839.00" top="191" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="5" left="561.00" top="0" width="160" height="42"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static11" taborder="6" text="Type :  horizontal &amp; flexwrap : wrap   /  Panel" left="20.00" top="Div01:11" width="788" height="30" cssclass="sta_WF_GuideTitle2" positionstep="1"/>
+        <Div id="Div03" taborder="8" text="Div00" left="26.00" top="Static11:7" bottom="307" flexshrink="0" fittocontents="height" positionstep="1" cssclass="div_WF_Area" right="100">
+          <Layouts>
+            <Layout type="horizontal" horizontalgap="5" flexwrap="wrap">
+              <Panel id="Panel02" taborder="8" left="1" top="1" width="260" height="42">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static10"/>
+                  <PanelItem id="PanelItem01" componentid="edt_name"/>
+                </Contents>
+              </Panel>
+              <Static id="Static10" taborder="0" text="Name" left="0" top="0" width="100" height="42" background="" padding="" onclick="div_detail_Static10_onclick" cssclass="sta_WF_DetailLabel"/>
+              <Edit id="edt_name" taborder="1" left="85.00" top="0" width="160" height="42" canchange="div_detail_edt_name_canchange" value="Hong Gil Dong" text="Hong Gil Dong"/>
+              <Panel id="Panel01" taborder="7" left="261" top="1" width="260" height="42">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static00"/>
+                  <PanelItem id="PanelItem01" componentid="msk_id"/>
+                </Contents>
+              </Panel>
+              <Static id="Static00" taborder="2" text="Emp ID" left="229.00" top="0" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_id" taborder="3" left="321.00" top="0" width="160" height="42" type="string" format="AA-###" value="AA001"/>
+              <Panel id="Panel00" taborder="6" left="521" top="1" width="260" height="42">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static12"/>
+                  <PanelItem id="PanelItem01" componentid="cal_date"/>
+                </Contents>
+              </Panel>
+              <Static id="Static12" taborder="4" text="Hire Date" left="839.00" top="191" width="100" height="42" background="" padding="" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="5" left="561.00" top="0" width="160" height="42"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="st_title00" taborder="9" text="Fluid Layout" left="10.00" top="8" width="193" height="30" cssclass="sta_WF_GuideTitle1" positionstep="1"/>
+        <Static id="Static13" taborder="10" text="Form Layout 내 배치되는 컴포넌트의 위치를 고정하지 않고 설정된 규칙에 따라 자동으로 배치되도록 설정" left="10.00" top="40" width="923" height="30" cssclass="sta_WF_GStatus" positionstep="1"/>
+        <Static id="Static19" taborder="11" text="동적으로 컴포넌트를 추가하는 기능을 구현하거나 화면 크기에 따라 컴포넌트 배치 방식을 자동으로 변경하고자 할 경우에 활용" left="10.00" top="70" width="923" height="30" cssclass="sta_WF_GStatus" positionstep="1"/>
+        <Static id="Static15" taborder="12" text="Type :  Vertical" left="40" top="115" width="290" height="30" cssclass="sta_WF_GuideTitle2" positionstep="0"/>
+        <Div id="Div5" taborder="13" text="Div00" left="35" flexshrink="0" width="30.00%" positionstep="0" flexgrow="0" cssclass="div_WF_Area" top="Static15:0" bottom="10">
+          <Layouts>
+            <Layout type="vertical" horizontalgap="0" flexwrap="nowrap" verticalgap="10" spacing="10px 10px 10px ">
+              <Static id="Static00" taborder="0" text="Department" left="0" top="0" width="119" height="78" cssclass="sta_WF_DetailLabel"/>
+              <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="50" width="119" height="78" innerdataset="ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME"/>
+              <Static id="Static01" taborder="2" text="Emp ID" left="0" top="0" width="119" height="78" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_id" taborder="3" left="0.00" top="180" width="119" height="78" type="string" format="AA-###" value="AA001"/>
+              <Static id="Static02" taborder="4" text="Hire Date" left="0" top="0" width="119" height="78" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="5" left="0.00" top="300" width="119" height="78"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static16" taborder="19" text="Vertical &amp; flexwrap : wrap" top="115" width="290" height="30" cssclass="sta_WF_GuideTitle2" positionstep="0" onclick="Static16_onclick" left="Div5:20"/>
+        <Div id="Div06" taborder="14" text="Div00" left="Div5:20" top="Static16:0" flexshrink="0" width="30.00%" positionstep="0" cssclass="div_WF_Area" bottom="10">
+          <Layouts>
+            <Layout type="vertical" horizontalgap="0" flexwrap="wrap" verticalgap="10" spacing="10px 10px 10px ">
+              <Static id="Static00" taborder="0" text="Department" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="50" width="119" height="80" innerdataset="ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME"/>
+              <Static id="Static01" taborder="2" text="Emp ID" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_id" taborder="3" left="0" top="180" width="119" height="80" type="string" format="AA-###" value="AA001"/>
+              <Static id="Static02" taborder="4" text="Hire Date" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="5" left="0" top="300" width="119" height="80"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="st_title01" taborder="15" text="Fluid Layout" left="10.00" top="8" width="193" height="30" cssclass="sta_WF_GuideTitle1" positionstep="2"/>
+        <Static id="Static14" taborder="16" text="Form Layout 내 배치되는 컴포넌트의 위치를 고정하지 않고 설정된 규칙에 따라 자동으로 배치되도록 설정" left="10.00" top="40" width="930" height="30" cssclass="sta_WF_GStatus" positionstep="2"/>
+        <Static id="Static20" taborder="17" text="동적으로 컴포넌트를 추가하는 기능을 구현하거나 화면 크기에 따라 컴포넌트 배치 방식을 자동으로 변경하고자 할 경우에 활용" left="10.00" top="70" width="930" height="30" cssclass="sta_WF_GStatus" positionstep="2"/>
+        <Static id="Static18" taborder="18" text="Type :  Table" left="25.00" top="115" width="290" height="30" cssclass="sta_WF_GuideTitle2" positionstep="2"/>
+        <Static id="Static17" taborder="21" text="Vertical &amp; flexwrap : wrap / Panel" top="115" width="290" height="30" cssclass="sta_WF_GuideTitle2" positionstep="0" onclick="Static09_00_00_00_onclick" left="Div06:20"/>
+        <Div id="Div07" taborder="20" text="Div00" left="Div06:20" top="Static17:1" flexshrink="0" width="30.00%" positionstep="0" flexgrow="0" cssclass="div_WF_Area" bottom="10">
+          <Layouts>
+            <Layout type="vertical" horizontalgap="0" flexwrap="wrap" verticalgap="10" spacing="10px 10px 20px 15px">
+              <Panel id="Panel00" taborder="4" left="1" top="1" width="120" height="160" type="vertical">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static00"/>
+                  <PanelItem id="PanelItem01" componentid="Combo00"/>
+                </Contents>
+              </Panel>
+              <Static id="Static00" taborder="0" text="Department" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <Combo id="Combo00" taborder="1" text="Combo00" left="0" top="50" width="119" height="80" innerdataset="ds_dept" codecolumn="DEPT_CD" datacolumn="DEPT_NAME"/>
+              <Panel id="Panel01" taborder="5" left="1" top="51" width="120" height="160" type="vertical">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static01"/>
+                  <PanelItem id="PanelItem02" componentid="msk_id"/>
+                </Contents>
+              </Panel>
+              <Static id="Static01" taborder="2" text="Emp ID" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <Panel id="Panel02" taborder="6" left="1" top="101" width="120" height="160" type="vertical">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Static02"/>
+                  <PanelItem id="PanelItem02" componentid="cal_date"/>
+                </Contents>
+              </Panel>
+              <Static id="Static02" taborder="3" text="Hire Date" left="0" top="0" width="119" height="80" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_date" taborder="7" left="0" top="300" width="119" height="80"/>
+              <MaskEdit id="msk_id" taborder="8" left="0" top="180" width="119" height="80" type="string" format="AA-###" value="AA001"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div09" taborder="22" text="Div01" left="12" top="162" width="36%" positionstep="2" cssclass="div_WF_Area" bottom="10">
+          <Layouts>
+            <Layout type="table" tabletemplate="9% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9% / 38% 62%" tabletemplatearea="&quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot; &quot;A B&quot;\" flexwrap="wrap">
+              <Button id="Button05" taborder="0" text="Button05" left="356" top="229" width="100%" height="100%" tablecellarea="1/2"/>
+              <Button id="Button08" taborder="1" text="Button08" left="414" top="370" width="100%" height="100%" tablecellarea="2/2"/>
+              <Button id="Button11" taborder="2" text="Button11" left="392" top="534" width="100%" height="100%" tablecellarea="3/2"/>
+              <Static id="Static00" taborder="3" text="Name" left="2" top="4" width="100%" height="100%" tablecellarea="0/0" cssclass="sta_WF_DetailLabel"/>
+              <Edit id="Edit00" taborder="4" left="204" top="24" width="100%" height="100%" tablecellarea="0/1"/>
+              <Static id="Static01" taborder="5" text="Emp ID" left="80" top="76" width="100%" height="100%" tablecellarea="1/0" cssclass="sta_WF_DetailLabel"/>
+              <Static id="Static02" taborder="6" text="Department" left="78" top="139" width="100%" height="100%" tablecellarea="2/0" cssclass="sta_WF_DetailLabel"/>
+              <Static id="Static03" taborder="7" text="Poistion" left="60" top="176" width="100%" height="100%" tablecellarea="3 5/0 0" cssclass="sta_WF_DetailLabel"/>
+              <Static id="Static04" taborder="8" text="Gender" left="73" top="341" width="100%" height="100%" tablecellarea="6/0" cssclass="sta_WF_DetailLabel"/>
+              <Static id="Static05" taborder="9" text="Hire Date" left="128" top="388" width="100%" height="100%" tablecellarea="7/0" cssclass="sta_WF_DetailLabel"/>
+              <Static id="Static06" taborder="10" text="Meno" left="50" top="428" width="100%" height="100%" tablecellarea="8 10/0 0" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="MaskEdit00" taborder="11" left="218" top="73" width="100%" height="100%" tablecellarea="1/1" format="AA-###" type="string"/>
+              <Combo id="Combo00" taborder="12" text="Combo00" left="276" top="130" width="100%" height="100%" tablecellarea="2/1" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME"/>
+              <ListBox id="ListBox00" taborder="13" left="250" top="182" width="100%" height="100%" tablecellarea="3 5/1 1" innerdataset="ds_pos" codecolumn="CODE" datacolumn="NAME"/>
+              <Radio id="Radio00" taborder="14" left="256" top="335" width="100%" height="100%" tablecellarea="6/1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" rowcount="0">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">남자</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">W</Col>
+                      <Col id="datacolumn">여자</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+              <Calendar id="Calendar00" taborder="15" left="281" top="386" width="100%" height="100%" tablecellarea="7/1"/>
+              <TextArea id="TextArea00" taborder="16" left="276" top="448" width="100%" height="100%" tablecellarea="8 10/1 1"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div10" taborder="23" text="Div00" left="Div09:16" positionstep="2" cssclass="div_WF_Area" top="164" width="60%" height="37%">
+          <Layouts>
+            <Layout type="table" tabletemplatearea="&quot;A B C D&quot; &quot;A B C D&quot; &quot;A B C D&quot; &quot;A B C D&quot; &quot;A B C D&quot; &quot;A B C D&quot; " flexwrap="wrap">
+              <Static id="Static00" taborder="0" text="Name" left="0" top="0" width="100%" height="100%" cssclass="sta_WF_DetailLabel"/>
+              <Edit id="edt_name" taborder="1" left="5" top="5" width="100%" height="100%" text=""/>
+              <Static id="Static02" taborder="2" text="Emp ID" left="50.09920634920635%" top="0" width="100%" height="100%" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="msk_empId" taborder="3" left="5" top="4" width="100%" height="100%" type="string" format="AA-###"/>
+              <Static id="Static04" taborder="4" text="Department" left="0" top="35" width="100%" height="100%" cssclass="sta_WF_DetailLabel"/>
+              <Combo id="cbo_dept" taborder="5" text="Combo00" left="5" top="40" width="100%" height="100%" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME"/>
+              <Static id="Static03" taborder="6" text="Salary" left="70" top="178" width="100%" height="100%" tablecellarea="4/0" cssclass="sta_WF_DetailLabel"/>
+              <MaskEdit id="MaskEdit00" taborder="7" left="208" top="180" width="100%" height="100%" tablecellarea="4/1" format="#,#"/>
+              <Static id="Static01" taborder="8" text="Position" left="12" top="92" width="100%" height="100%" tablecellarea="2 3/0 0" cssclass="sta_WF_DetailLabel"/>
+              <ListBox id="ListBox00" taborder="9" left="160" top="90" width="100%" height="100.00%" tablecellarea="2 3/1 1" innerdataset="ds_pos" codecolumn="CODE" datacolumn="NAME"/>
+              <Static id="Stati16" taborder="10" text="Skill" left="50.00%" top="40" width="100%" height="100%" cssclass="sta_WF_DetailLabel" tablecellarea="1 2/2 2"/>
+              <CheckBoxSet id="chks_skill" taborder="11" left="480.00" top="40" height="100%" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" rowcount="3" width="100%" tablecellarea="1 2/3 3"/>
+              <Static id="Static08" taborder="12" text="Hire Date" left="50.09920634920635%" top="35" width="100%" height="100%" cssclass="sta_WF_DetailLabel"/>
+              <Calendar id="cal_hireDate" taborder="13" left="5" top="40" width="100%" height="100%"/>
+              <Static id="Stati18" taborder="14" text="Hobby" left="330" top="160" width="100%" height="100%" cssclass="sta_WF_DetailLabel" tablecellarea="4 5/2 2"/>
+              <MultiCombo id="mcbo_hobby" taborder="15" text="MultiCombo00" left="480.00" top="160" height="100%" innerdataset="ds_hobby" codecolumn="CODE" datacolumn="NAME" buttonsize="28" width="100%" edittype="multitag" tablecellarea="4 5/3 3"/>
+              <Static id="Stati10" taborder="16" text="Gender " left="50.09920634920635%" top="70" width="100%" height="100%" cssclass="sta_WF_DetailLabel"/>
+              <Radio id="rdo_gender" taborder="17" left="5" top="75" width="100%" height="100%" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="-1" rowcount="-1">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">Male</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">F</Col>
+                      <Col id="datacolumn">Female</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="24" text="Template" top="118" height="38" positionstep="2" onclick="Button00_onclick" right="10" width="124"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div10.form.setFluidLayoutProperty("default", "tabletemplate", "16% 16% 16% 16% 16% 16% / 20% 30% 20% 30%"); 
+};
+
+
+this.Static16_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">silver</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">violet</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="string" size="255"/>
+          <Column id="DEPT_NAME" type="string" size="255"/>
+          <Column id="DEPT_EMP" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_hobby">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Climbing</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Running</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Cycling</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Swimming</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Yoga</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Golf</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">tennis</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Reading </Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Cooking</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Photography</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Painting</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Movie and Drama</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Game</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Sleeping</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Shopping</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Div09.form.Edit00" propid="value" datasetid="ds_emp" columnid="EMP_NAME"/>
+      <BindItem id="item1" compid="Div09.form.MaskEdit00" propid="value" datasetid="ds_emp" columnid="EMP_ID"/>
+      <BindItem id="item2" compid="Div09.form.Combo00" propid="value" datasetid="ds_emp" columnid="DEPT_CODE"/>
+      <BindItem id="item3" compid="Div09.form.ListBox00" propid="value" datasetid="ds_emp" columnid="POSITION"/>
+      <BindItem id="item4" compid="Div09.form.Radio00" propid="value" datasetid="ds_emp" columnid="GENDER"/>
+      <BindItem id="item5" compid="Div09.form.Calendar00" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+      <BindItem id="item6" compid="Div09.form.TextArea00" propid="value" datasetid="ds_emp" columnid="MEMO"/>
+      <BindItem id="item7" compid="Div10.form.edt_name" propid="value" datasetid="ds_emp" columnid="EMP_NAME"/>
+      <BindItem id="item8" compid="Div10.form.cbo_dept" propid="value" datasetid="ds_emp" columnid="DEPT_CODE"/>
+      <BindItem id="item9" compid="Div10.form.ListBox00" propid="value" datasetid="ds_emp" columnid="POSITION"/>
+      <BindItem id="item10" compid="Div10.form.MaskEdit00" propid="value" datasetid="ds_emp" columnid="SALARY"/>
+      <BindItem id="item11" compid="Div10.form.rdo_gender" propid="value" datasetid="ds_emp" columnid="GENDER"/>
+      <BindItem id="item12" compid="Div10.form.msk_empId" propid="value" datasetid="ds_emp" columnid="EMP_ID"/>
+      <BindItem id="item13" compid="Div10.form.chks_skill" propid="value" datasetid="ds_emp" columnid="SKILL"/>
+      <BindItem id="item14" compid="Div10.form.cal_hireDate" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+      <BindItem id="item15" compid="Div10.form.mcbo_hobby" propid="value" datasetid="ds_emp" columnid="HOBBY"/>
+    </Bind>
+  </Form>
+</FDL>

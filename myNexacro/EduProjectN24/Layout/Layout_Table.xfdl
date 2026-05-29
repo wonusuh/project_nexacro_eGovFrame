@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Layout_Table" width="1020" height="700" titletext="Layout_Table">
+    <Layouts>
+      <Layout height="700" width="1020" flexwrap="wrap" stepcount="3" stepindex="4">
+        <Static id="Static03" taborder="0" text="Type - Table" left="20" top="0" width="101" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static04" taborder="1" text="start/ start" left="20" top="96" width="7.75%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1" onclick="Static02_00_00_03_01_onclick"/>
+        <Div id="Div04" taborder="26" text="Div02" left="20" top="Static04:0" width="27.75%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="start start">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static05" taborder="2" text="start/ end" top="96" width="7.94%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1" left="Div04:40"/>
+        <Div id="Div03" taborder="3" text="Div02" left="Div04:36" top="Static05:0" width="27.75%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="start end">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static09" taborder="4" text="end/ start" top="96" width="7.84%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1" left="Div03:40"/>
+        <Div id="Div05" taborder="5" text="Div02" left="Div03:42" top="Static09:0" width="27.75%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="end">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static14" taborder="6" text="center/ start" left="20" top="Div04:20" width="8.24%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1"/>
+        <Div id="Div07" taborder="7" text="Div02" left="20" top="Static14:0" width="27.94%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="center start">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+              <Static id="Static03" taborder="4" text="flexcrossaxiswrapalign : start" left="27" top="99" width="24.93%" height="26" cssclass="sta_WF_SubTitle" positionstep="1"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static16" taborder="8" text="center/ center" top="Div03:20" width="8.73%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1" left="Div07:40"/>
+        <Div id="Div13" taborder="9" text="Div02" left="Div07:39" top="Static16:0" width="27.94%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="center center">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" font="14px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static18" taborder="10" text="center / end" top="Div05:20" width="7.75%" height="26" cssclass="sta_WF_GuideRefer" positionstep="1" left="Div13:40"/>
+        <Div id="Div12" taborder="11" text="Div02" left="Div13:39" top="Static18:0" width="27.94%" height="34.00%" positionstep="1" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* / 1* 1*" tablecellincompalign="center end">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static19" taborder="19" text="start/ start" left="20" top="96" width="7.53%" height="26" cssclass="sta_WF_GuideRefer" positionstep="0" onclick="Static02_00_00_03_01_onclick"/>
+        <Div id="Div14" taborder="12" text="Div02" left="20" top="Static19:0" width="27.94%" height="34.00%" positionstep="0" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tabledirection="horizontal">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static06" taborder="18" text="center/ center" top="96" width="8.90%" height="26" cssclass="sta_WF_GuideRefer" positionstep="0" left="Div14:27"/>
+        <Div id="Div10" taborder="13" text="Div02" left="Div14:15" top="Static06:0" width="27.75%" height="34.00%" positionstep="0" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tablecellalign="center center" tabledirection="horizontal">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" onclick="Div02_03_00_Button03_onclick" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static10" taborder="17" text="end / end" top="96" height="26" cssclass="sta_WF_GuideRefer" positionstep="0" onclick="Static02_00_00_03_01_01_00_onclick" width="60" left="Div10:30"/>
+        <Div id="Div11" taborder="14" text="Div02" top="Static10:0" height="34.00%" positionstep="0" cssclass="div_WF_Area" left="Div10:23" width="27.75%">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tablecellalign="end end">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static20" taborder="20" text="spacebetween/ start" left="20" top="Div14:20" width="12.32%" height="26" cssclass="sta_WF_GuideRefer" positionstep="0" onclick="Static02_00_00_03_01_onclick"/>
+        <Div id="Div09" taborder="15" text="Div02" left="20" top="Static20:0" width="27.75%" height="34.00%" positionstep="0" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tablecellalign="spacebetween start">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static08" taborder="21" text="spacearound / end" top="Div10:20" width="10.95%" cssclass="sta_WF_GuideRefer" positionstep="0" onclick="Static02_00_00_03_01_00_00_00_onclick" height="26" left="Div09:27"/>
+        <Div id="Div08" taborder="27" text="Div02" left="Div09:16" width="27.75%" height="34.00%" positionstep="0" top="Static08:0" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tablecellalign="spacearound end">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static11" taborder="22" text="spaceevenly / center" top="Div11:20" height="26" cssclass="sta_WF_GuideRefer" positionstep="0" onclick="Static02_00_00_03_01_01_00_onclick" width="131" left="Div08:34"/>
+        <Div id="Div06" taborder="16" text="Div02" top="Static11:0" height="34.00%" positionstep="0" cssclass="div_WF_Area" left="Div08:22" width="27.75%">
+          <Layouts>
+            <Layout type="table" tabletemplate="40% 40% / 40% 40%" tablecellalign="spaceevenly center">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="50%" height="60%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="138" top="0" width="50%" height="60%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="0" top="116" width="50%" height="60%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="138" top="116" width="50%" height="60%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="23" text="Div01" left="20" top="122" width="43.63%" height="74.86%" positionstep="2" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout type="table" tabletemplate="1* 1* 1* 1* / 1* 1* 1*">
+              <Button id="Button00" taborder="0" text="1" left="88" top="69" width="100%" height="100%" tablecellarea="0/0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="1" left="40" top="198" width="100%" height="100%" tablecellarea="1/0" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="1" left="93" top="321" width="100%" height="100%" tablecellarea="2/0" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="1" left="58" top="409" width="100%" height="100%" tablecellarea="3/0" cssclass="btn_WF_Status"/>
+              <Button id="Button04" taborder="4" text="2" left="262" top="60" width="100%" height="100%" tablecellarea="0/1" cssclass="btn_WF_Status"/>
+              <Button id="Button05" taborder="5" text="2" left="180" top="186" width="100%" height="100%" tablecellarea="1/1" cssclass="btn_WF_Status"/>
+              <Button id="Button06" taborder="6" text="5" left="371" top="164" width="100%" height="100%" tablecellarea="1/2" cssclass="btn_WF_Status"/>
+              <Button id="Button07" taborder="7" text="4" left="148" top="250" width="100%" height="50%" tablecellarea="2/1" cssclass="btn_WF_Status"/>
+              <Button id="Button08" taborder="8" text="4" left="296" top="250" width="100%" height="50%" tablecellarea="2/2" cssclass="btn_WF_Status"/>
+              <Button id="Button09" taborder="9" text="3" left="246" top="450" width="100%" height="100%" tablecellarea="3/1" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static12" taborder="24" text="No - tabletemplate" left="20" top="96" width="11.57%" height="26" cssclass="sta_WF_GuideRefer" positionstep="2"/>
+        <Static id="Static13" taborder="25" text="tabletemplate &amp; tabletemplatearea" top="96" width="21.27%" height="26" cssclass="sta_WF_GuideRefer" positionstep="2" onclick="Static02_00_00_03_01_01_01_00_onclick" left="Div01:59"/>
+        <Div id="Div02" taborder="28" text="Div01" left="Div01:56" top="Static13:0" height="74.00%" positionstep="2" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout type="table" tabletemplate="25% 25% 25% 25%/ 1* 1* 1*" tabletemplatearea="&quot;A B C&quot; &quot;A B C&quot; &quot;A B C&quot; &quot;A B C&quot;">
+              <Button id="Button00" taborder="0" text="1" left="0" top="0" width="100%" height="100%" tablecellarea="0 3/0 0" cssclass="btn_WF_Status"/>
+              <Button id="Button01" taborder="1" text="2" left="148.00" top="0" width="100%" height="100%" tablecellarea="0 1/1 1" cssclass="btn_WF_Status"/>
+              <Button id="Button02" taborder="2" text="3" left="146.00" top="402" width="100%" height="100%" tablecellarea="3/1" cssclass="btn_WF_Status"/>
+              <Button id="Button03" taborder="3" text="4" left="152.00" top="268" width="100%" height="50%" tablecellarea="2 2/1 2" cssclass="btn_WF_Status"/>
+              <Button id="Button04" taborder="4" text="5" left="159.00" top="0" width="100%" height="100%" tablecellarea="1/2" cssclass="btn_WF_Status"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static39" taborder="29" text="[Property] tablecellalign = &quot;start&quot; | &quot;end&quot; | &quot;center&quot; " left="20" top="60" height="36" cssclass="sta_WF_GuideScript" width="450" onclick="Static02_00_onclick" positionstep="1"/>
+        <Static id="Static37" taborder="30" text="[Property] tabletemplate , tabletemplatearea" left="20" top="60" height="36" cssclass="sta_WF_GuideScript" width="370" onclick="Static02_00_onclick" positionstep="2"/>
+        <Static id="Static40" taborder="31" text="[Property] tablecellalign = &quot;start&quot; | &quot;end&quot; | &quot;center&quot; | &quot;spacebetween&quot; | &quot;spaceround&quot; | &quot;spaceevenly&quot;" left="20" top="60" height="36" cssclass="sta_WF_GuideScript" width="800" onclick="Static02_00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Bind>
+      <BindItem id="item7" compid="Static04" propid="value" datasetid="ds_emp" columnid="DEPT_CODE"/>
+    </Bind>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">silver</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">violet</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="string" size="255"/>
+          <Column id="DEPT_NAME" type="string" size="255"/>
+          <Column id="DEPT_EMP" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_hobby">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Climbing</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Running</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Cycling</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Swimming</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Yoga</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Golf</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">tennis</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Reading </Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Cooking</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Photography</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Painting</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Movie and Drama</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Game</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Sleeping</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Shopping</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

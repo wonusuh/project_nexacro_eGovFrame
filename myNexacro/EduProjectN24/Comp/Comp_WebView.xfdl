@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_WebView" width="1020" height="700" titletext="Comp_WebView" onload="form_onload">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="WebView" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] url" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="url = &quot;https://www.tobesoft.com&quot;" left="20.00" top="131" width="211" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static06" taborder="4" text="html page" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static07" taborder="5" text="[Method] callScript(), [Event] onusernotify" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <WebView id="WebView00" taborder="6" left="20" top="157" width="470" height="350" url="https://www.tobesoft.com" border="1px solid #dedede"/>
+        <WebView id="WebView01" taborder="7" left="530" top="157" width="470" height="350" border="1px solid #dedede" onusernotify="WebView01_onusernotify" url=""/>
+        <Button id="Button00" taborder="8" text="get &quot;Name&quot;" left="530" top="514" width="95" height="26" onclick="fn_exec" cssclass="btn_WF_GuideExec"/>
+        <Button id="Button01" taborder="9" text="set &quot;Name&quot;" left="645" top="512" width="95" height="26" onclick="fn_exec" cssclass="btn_WF_GuideExec"/>
+        <Static id="sta_url" taborder="10" text="url = &quot;http://localhost&quot;" left="530" top="130" width="421" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="txt_desc1" taborder="11" left="530.00" top="545" width="480" height="120" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Edit id="Edit00" taborder="12" left="886" top="512" width="109" height="26" value="TOBESOFT" text="TOBESOFT"/>
+        <Button id="Button02" taborder="13" text="function call" left="760" top="512" width="116" height="26" onclick="fn_exec" cssclass="btn_WF_GuideExec"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.fn_loadHtml();
+};
+
+this.fn_loadHtml = function()
+{
+	var url = "";
+	if(system.navigatorname == "nexacro"){
+		url = "https://edu.tobesoft.com/edu/nexacroN24/Html_Form.html";
+	}
+	else{
+		url  = window.location.protocol + "//" + window.location.host;
+		url +="/File/Html_Form.html";
+	}
+	this.WebView01.url = url;
+	this.sta_url.text = 'url = "' + url + '"';
+};
+
+this.WebView01_onusernotify = function(obj:nexacro.WebView,e:nexacro.WebUserNotifyEventInfo)
+{
+	this.alert(e.userdata);
+
+	var strDesc = `this.WebView01_onusernotify = function(obj:nexacro.WebView,e:nexacro.WebUserNotifyEventInfo)
+	               {
+				        alert(e.userdata);
+				   }`;
+				   
+	this.txt_desc1.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');	
+};
+
+
+this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_result(obj, this.txt_desc1);		
+};
+
+
+this.fn_result = function(obj, objTxt)
+{
+	var strText = obj.text;
+	var strDesc = ``;
+	switch(strText) {
+		case 'get "Name"':
+			var rtn = this.WebView01.callScript("document.getElementById('name').value");
+			this.alert("Name:" + rtn);
+			strDesc += `var rtn = this.WebView01.callScript("document.getElementById('name').value")
+			            result: ${this.WebView01.callScript("document.getElementById('name').value")}`;
+			break;
+		case 'set "Name"':
+			this.WebView01.callScript("document.getElementById('name').value='" + this.Edit00.value + "'")
+			strDesc += `this.WebView01.callScript("document.getElementById('name').value='" + this.Edit00.value + "'")`;
+			break;
+		case 'function call':
+			this.WebView01.callScript("htmlFunction('" + this.Edit00.value + "')");
+			strDesc += `this.WebView01.callScript("htmlFunction('" + this.Edit00.value + "')")`;
+			break;
+		default:
+			break;
+	}
+
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

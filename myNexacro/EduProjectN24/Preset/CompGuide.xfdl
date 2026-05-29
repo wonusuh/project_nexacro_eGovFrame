@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide" width="1180" height="1420" titletext="컴포넌트 기준 가이드화면">
+    <Layouts>
+      <Layout height="1420" width="1180">
+        <Static id="Static01" taborder="1" left="149" top="29" height="356" cssclass="sta_WF_DetailArea" width="1019"/>
+        <Static id="Static00" taborder="0" text="Static" left="0" top="29" width="150" height="356" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static02" taborder="2" text="normal" left="159" top="39" width="96" height="26"/>
+        <Static id="Static03" taborder="3" text="Component" left="0" top="0" width="150" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static03_00" taborder="4" text="Style" left="149" top="0" width="1019" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static04" taborder="5" text="가나다라 123456 ABCDEF" left="159" top="75" width="171" height="26"/>
+        <Static id="sta00_01_00_01_01" taborder="6" left="370" top="75" width="9" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_02" taborder="7" text="H 26" left="381" top="81" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_00" taborder="8" text="&lt;fc v=&quot;#254edb&quot;&gt;화면 타이틀명 위치 top = 0px&lt;/fc&gt;" left="159" top="131" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="Static04_01" taborder="9" text="화면타이틀명" left="159" top="177" width="171" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="sta00_01_00_01_01_00" taborder="10" left="370" top="177" width="9" height="50" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_02_00" taborder="11" text="H 50" left="381" top="195" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_00_00_01" taborder="12" text="cssclass = sta_WF_GuideTitle1" left="430" top="189" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="Static04_01_00" taborder="13" text="서브타이틀" left="159" top="247" width="170" height="40" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="sta00_01_00_01_01_00_00" taborder="14" left="370" top="247" width="9" height="40" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_02_00_00" taborder="15" text="H 40" left="381" top="260" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_00_00_01_00" taborder="16" text="cssclass = sta_WF_GuideTitle2" left="430" top="254" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="Static04_01_00_00" taborder="17" text="라벨텍스트" left="159" top="307" width="115" height="26" cssclass="sta_WF_SchLabel"/>
+        <Static id="sta00_01_00_01_01_00_00_00" taborder="18" left="370" top="307" width="9" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_02_00_00_00" taborder="19" text="H 26" left="381" top="313" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_00_00_01_00_00" taborder="20" text="cssclass = sta_WF_SchLabel" left="430" top="307" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="Static04_00_00" taborder="21" text="&lt;fc v=&quot;#254edb&quot;&gt;width = fittocontents&lt;/fc&gt;" left="370" top="338" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="Static00_00" taborder="22" text="디테일라벨" left="696" top="184" width="150" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static01_00" taborder="23" left="696" top="302" height="36" cssclass="sta_WF_DetailArea" width="150" text="디테일영역"/>
+        <Static id="sta02_01_00_01" taborder="24" text="H 36" left="865" top="195" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_00" taborder="25" left="856" top="184" width="9" height="36" cssclass="sta_WF_GLineV"/>
+        <Static id="sta01_00_00_00_01" taborder="26" left="696" top="225" width="150" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta02_01_00_01_02" taborder="27" text="W 150" left="752" top="236" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_00_00_01_01" taborder="28" text="cssclass = sta_WF_DetailLabel" left="930" top="189" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="sta02_01_00_01_00" taborder="29" text="H 36" left="865" top="313" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_00_00" taborder="30" left="856" top="302" width="9" height="36" cssclass="sta_WF_GLineV"/>
+        <Static id="Static04_00_00_01_01_00" taborder="31" text="cssclass = sta_WF_DetailArea" left="930" top="302" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="Static00_01" taborder="32" text="Button" left="0" top="384" width="150" height="277" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static01_01" taborder="33" left="149" top="384" height="277" cssclass="sta_WF_DetailArea" width="1019" text=""/>
+        <Static id="Static02_00" taborder="34" text="normal" left="159" top="394" width="96" height="26"/>
+        <Button id="Button00" taborder="35" text="조회" left="159" top="430" width="52" height="26"/>
+        <Static id="Static04_02" taborder="36" text="가나다라 123456 ABCDEF" left="430" top="75" width="171" height="26" enable="false"/>
+        <Static id="Static02_01" taborder="37" text="disabled" left="430" top="39" width="96" height="26"/>
+        <Button id="Button00_00" taborder="38" text="조회" left="430" top="430" width="52" height="26" enable="false"/>
+        <Static id="Static02_00_00" taborder="39" text="disabled" left="430" top="394" width="96" height="26"/>
+        <Button id="Button00_01" taborder="40" text="가나" left="696" top="430" width="52" height="26"/>
+        <Button id="Button00_01_00" taborder="41" text="가나다" left="696" top="466" width="65" height="26"/>
+        <Button id="Button00_01_01" taborder="42" text="가나다라" left="696" top="502" width="78" height="26"/>
+        <Button id="Button00_01_02" taborder="43" text="가나다라마" left="696" top="538" width="91" height="26"/>
+        <Static id="Static02_00_00_00" taborder="44" text="&lt;fc v=&quot;#254edb&quot;&gt;width = fittocontents&lt;/fc&gt;" left="696" top="394" width="251" height="26" usedecorate="true"/>
+        <Button id="Button01" taborder="45" text="CRUD" left="159" top="502" width="80" height="30" cssclass="btn_WF_CRUD"/>
+        <Static id="Static04_00_00_01_00_00_00" taborder="46" text="cssclass = btn_WF_CRUD" left="430" top="504" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="sta02_01_00_02_00_00_00_00" taborder="47" text="H 30" left="253" top="510" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_01_00_00_00_00" taborder="48" left="244" top="502" width="9" height="30" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_01_02_00" taborder="49" text="W 80" left="180" top="546" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_00" taborder="50" left="159" top="537" width="80" height="9" cssclass="sta_WF_GLineH"/>
+        <Button id="Button02" taborder="51" left="186" top="580" width="26" height="26" cssclass="btn_WF_Find"/>
+        <Static id="Static04_00_00_01_00_00_00_00" taborder="52" text="cssclass = btn_WF_Find" left="430" top="584" width="220" height="26" usedecorate="true" cssclass="sta_WF_Label"/>
+        <Static id="sta02_01_00_02_00_00_00_00_00" taborder="53" text="H 26" left="253" top="586" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_01_00_00_00_00_00" taborder="54" left="244" top="580" width="9" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_01_02_00_00" taborder="55" text="W 26" left="184" top="626" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_00_00" taborder="56" left="186" top="617" width="26" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static00_01_00" taborder="63" text="검색영역" left="0" top="660" width="150" height="325" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static01_01_00" taborder="64" left="149" top="660" height="325" cssclass="sta_WF_DetailArea" width="1019" text=""/>
+        <Static id="Static05" taborder="65" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 기본 높이 44px - 검색 영역 1줄 늘어날 때마다 높이 34px 증가&#13;&#10;※ 라벨 너비는 fittocontents 적용&lt;/fc&gt;" left="159" top="670" width="598" height="50" cssclass="sta_WF_Contents" usedecorate="true"/>
+        <Div id="div_search" taborder="57" text="Div00" left="159" top="776" height="44" cssclass="div_WF_Search" formscrollbartype="none none" maxwidth="" width="1003">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="검색라벨" left="0" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_deptCode" taborder="1" left="102" top="8" width="90" height="26" text=""/>
+              <Button id="btn_findDept" taborder="2" left="166" top="8" width="26" height="26" cssclass="btn_WF_Find" onclick="div_search_btn_findDept_onclick"/>
+              <Edit id="edt_deptName" taborder="3" left="191" top="8" width="170" height="26" readonly="true" text=""/>
+              <Static id="Static02" taborder="4" text="검색라벨" left="663" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Static id="Static01" taborder="5" text="검색라벨" left="361" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_empName" taborder="6" left="463" top="8" width="200" height="26"/>
+              <Calendar id="Calendar00" taborder="7" left="765" top="8" width="130" height="26"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static04_00_00_00" taborder="66" text="&lt;fc v=&quot;#254edb&quot;&gt;1줄 일때&lt;/fc&gt;" left="159" top="740" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Div id="Div00" taborder="62" text="Div00" left="159" top="886" width="1003" height="78" cssclass="div_WF_Search">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="검색라벨" left="0" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Static id="Static00_00" taborder="1" text="라벨" left="0" top="42" width="76" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_deptCode00" taborder="2" left="102" top="42" width="259" height="26" text=""/>
+              <Edit id="edt_deptCode01" taborder="3" left="102" top="8" width="90" height="26" text=""/>
+              <Button id="btn_findDept" taborder="4" left="166" top="8" width="26" height="26" cssclass="btn_WF_Find" onclick="div_search_btn_findDept_onclick"/>
+              <Edit id="edt_deptName" taborder="5" left="191" top="8" width="170" height="26" readonly="true" text=""/>
+              <Static id="Static01_02" taborder="6" text="라벨" left="361" top="8" width="76" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_empName" taborder="7" left="463" top="8" width="200" height="26"/>
+              <Edit id="edt_empName00" taborder="8" left="463" top="42" width="200" height="26"/>
+              <Static id="Static01_02_00" taborder="9" text="검색라벨" left="663" top="42" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Static id="Static01_02_01" taborder="10" text="검색라벨" left="361" top="42" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Static id="Static01_02_00_00" taborder="11" text="검색라벨" left="663" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Calendar id="Calendar00" taborder="12" left="765" top="8" width="130" height="28"/>
+              <Combo id="Combo00" taborder="13" text="Combo00" left="765" top="42" width="130" height="26"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static04_00_00_00_00" taborder="67" text="&lt;fc v=&quot;#254edb&quot;&gt;2줄 일때&lt;/fc&gt;" left="159" top="850" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="sta02_01_00_01_00_00" taborder="60" text="H 44" left="1108" top="792" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_00_00_00" taborder="61" left="1096" top="776" width="9" height="44" cssclass="sta_WF_GLineV"/>
+        <Static id="sta00_01_00_01_00_00_01" taborder="58" left="510" top="777" width="9" height="8" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_01_00_01" taborder="59" text="H 8" left="500" top="763" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta02_01_00_01_00_00_00" taborder="68" text="H 78" left="1108" top="918" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta00_01_00_01_00_00_00_00" taborder="69" left="1096" top="886" width="9" height="78" cssclass="sta_WF_GLineV"/>
+        <Static id="sta00_01_00_01_00_00_01_00" taborder="70" left="510" top="921" width="9" height="8" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_01_00_01_00" taborder="71" text="H 8" left="522" top="917" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="Static00_01_00_00" taborder="82" text="검색영역" left="0" top="984" width="150" height="403" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static01_01_00_00" taborder="83" left="149" top="984" height="403" cssclass="sta_WF_DetailArea" width="1019" text="" onclick="Static01_01_00_00_onclick"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="854" id="Static01_04" left="308" top="1100" taborder="84"/>
+        <Edit id="Edit00" taborder="85" left="313" top="1105" width="844" height="26"/>
+        <Static text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_05" left="159" top="1100" taborder="86"/>
+        <Static id="Static04_00_00_00_00_00" taborder="87" text="&lt;fc v=&quot;#254edb&quot;&gt;1단&lt;/fc&gt;" left="159" top="1064" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="sta02_01_00_01_02_01" taborder="88" text="W 854" left="716" top="1148" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_02" taborder="89" left="308" top="1141" width="854" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta00_01_00_01_00_00_01_00_00" taborder="90" left="520" top="1101" width="9" height="4" cssclass="sta_WF_GLineV"/>
+        <Static id="sta02_01_00_01_00_01_00_00" taborder="91" text="H 4" left="514" top="1084" width="29" height="14" cssclass="sta_WF_GTxt"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01_00_00" left="809" top="1202" taborder="72"/>
+        <Static text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_04" left="660" top="1202" taborder="73"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="353" id="Static01_02" left="308" top="1202" taborder="74"/>
+        <Static text="디테일라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_02" left="159" top="1202" taborder="75"/>
+        <Static id="Static04_00_00_00_00_00_00" taborder="92" text="&lt;fc v=&quot;#254edb&quot;&gt;2단&lt;/fc&gt;" left="159" top="1166" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static id="Static04_00_00_00_00_00_00_00" taborder="93" text="&lt;fc v=&quot;#254edb&quot;&gt;3단&lt;/fc&gt;" left="159" top="1268" width="231" height="26" usedecorate="true" cssclass="sta_TF_Welcome"/>
+        <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_03" left="159" top="1304" taborder="76"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_03" left="308" top="1304" taborder="77"/>
+        <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00_00" left="493" top="1304" taborder="78"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00_01" left="642" top="1304" taborder="79"/>
+        <Static height="36" cssclass="sta_WF_DetailArea" width="186" id="Static01_00_00_00" left="976" top="1304" taborder="80"/>
+        <Static text="디테일 라벨" width="150" height="36" cssclass="sta_WF_DetailLabel" id="Static00_00_00_00" left="827" top="1304" taborder="81"/>
+        <Static id="sta01_00_00_00_01_02_00" taborder="94" left="308" top="1243" width="353" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta02_01_00_01_02_01_00" taborder="95" text="W 353" left="465" top="1250" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_02_00_00" taborder="96" left="809" top="1243" width="353" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta02_01_00_01_02_01_00_00" taborder="97" text="W 353" left="966" top="1250" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_02_00_01" taborder="98" left="308" top="1345" width="186" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta02_01_00_01_02_01_00_01" taborder="99" text="W 186" left="382" top="1352" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Static id="sta01_00_00_00_01_02_00_00_00" taborder="100" left="809" top="1343" width="353" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="sta02_01_00_01_02_01_00_00_00" taborder="101" text="W 353" left="966" top="1353" width="39" height="14" cssclass="sta_WF_GTxt"/>
+        <Edit id="Edit01" taborder="102" left="313" top="1207" width="343" height="26"/>
+        <Edit id="Edit01_00" taborder="103" left="814" top="1207" width="343" height="26"/>
+        <Edit id="Edit02" taborder="104" left="313" top="1309" width="176" height="26"/>
+        <Edit id="Edit02_00" taborder="105" left="647" top="1309" width="176" height="26"/>
+        <Edit id="Edit02_01" taborder="106" left="981" top="1309" width="176" height="26"/>
+        <Static id="Static05_00" taborder="107" text="&lt;fc v=&quot;#254edb&quot;&gt;※ 디테일 영역 안 컴포넌트 사방 여백 4px&#13;&#10;※ 영역 안 컴포넌트 width = 영역 크기 - 10px&lt;/fc&gt;" left="159" top="994" width="598" height="50" cssclass="sta_WF_Contents" usedecorate="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+]]></Script>
+  </Form>
+</FDL>

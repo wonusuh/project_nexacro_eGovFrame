@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_ProgressBar" width="1020" height="700" titletext="Comp_ProgressBar" onload="form_onload" ontimer="form_ontimer">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="ProgressBar" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] max, min, pos, step" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <ProgressBar id="ProgressBar00" taborder="3" max="100" min="0" text="ProgressBar00" left="20" top="157" width="470" height="26" pos="50"/>
+        <Static id="Static03" taborder="4" text="max = 100, min=0, pos = 50" left="20" top="131" width="172" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static01_00" taborder="5" text="[Property] direction = &quot;forward&quot; | &quot;backward&quot;, smooth" left="20.00" top="240" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static03_00" taborder="6" text="direction = &quot;forward&quot; , smooth = true" left="20" top="276" width="244" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ProgressBar id="ProgressBar01" taborder="7" max="100" min="0" left="20" top="302" width="470" height="26" pos="50" direction="backward" smooth="true"/>
+        <Button id="Button00" taborder="8" text="execute" left="214.00" top="131" width="73" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="9" text="execute" left="287.00" top="276" width="73" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.fn_exec();
+};
+
+this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar00.pos = 0;
+	this.setTimer(0,10);
+};
+
+
+this.form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 0 ){
+		if(this.ProgressBar00.pos == 100){
+			this.killTimer(0);
+		}
+		this.ProgressBar00.stepIt();
+	}
+	else if(e.timerid == 1 ){
+		if(this.ProgressBar01.pos == 100){
+			this.killTimer(1);
+		}
+		this.ProgressBar01.stepIt();
+	}
+};
+this.fn_exec2 = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar01.pos = 0;
+	this.setTimer(1,10);	
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

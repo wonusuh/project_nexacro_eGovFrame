@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="M_MLM_Main" width="480" height="768" titletext="MLM 메인화면">
+    <Layouts>
+      <Layout height="768" horizontalgap="0" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="480">
+        <Static id="Static00" taborder="0" left="0" top="0" height="72" cssclass="sta_MLM_Titlebg" right="0"/>
+        <Static id="Static01" taborder="3" left="0" top="21" width="100%" height="30" cssclass="sta_MLM_TOBECI" onclick="Static01_onclick"/>
+        <Button id="btn_mnu" taborder="1" left="16" top="12" width="48" height="48" cssclass="btn_MLM_Menu" onclick="btn_mnu_onclick"/>
+        <Button id="btn_home" taborder="2" top="12" width="48" height="48" right="16" cssclass="btn_MLM_Home" onclick="btn_home_onclick"/>
+        <Div id="Div00" taborder="4" left="0" top="72" bottom="0" right="0" url="Mobile::Mobile_MLM_sub.xfdl" text=""/>
+      </Layout>
+      <Layout height="480" mobileorientation="landscape" name="Layout0" type="default" width="768">
+        <Static id="Static00_00" left="0" top="72" right="0" bottom="0"/>
+        <Static id="Static01_00" left="30" top="197" width="420" height="338"/>
+        <Button id="Button00" left="0" width="120" height="90" bottom="20"/>
+        <Button id="Button00_00" left="119" width="123" height="90" bottom="20"/>
+        <Button id="Button00_01" left="241" width="120" height="90" bottom="20"/>
+        <Button id="Button00_02" left="360" width="120" height="90" bottom="20"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_Mnu">
+        <ColumnInfo>
+          <Column id="mnu_Img" type="STRING" size="256"/>
+          <Column id="mnu_Name" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu1</Col>
+          </Row>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu2</Col>
+          </Row>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu3</Col>
+          </Row>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu4</Col>
+          </Row>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu5</Col>
+          </Row>
+          <Row>
+            <Col id="mnu_Img">theme://mobile/icon_MB_mnuStar_yel.png</Col>
+            <Col id="mnu_Name">Menu6</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.objApp = nexacro.getApplication();
+
+this.btn_mnu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.objApp.av_WorkFrame.form.fn_action("Mobile::Mobile_Main_IconType_sub.xfdl" , "sub");
+};
+
+this.btn_home_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.objApp.av_WorkFrame.form.fn_action("Mobile::Mobile_Main_IconType_sub.xfdl" , "sub");
+};
+]]></Script>
+  </Form>
+</FDL>

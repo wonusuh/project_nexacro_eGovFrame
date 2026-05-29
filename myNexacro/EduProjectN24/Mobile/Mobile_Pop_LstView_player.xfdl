@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Pop_LstView_player" width="400" height="410" titletext="Player" onload="Pop_LstView_player_onload" cssclass="frm_MLM_Bg">
+    <Layouts>
+      <Layout height="410" mobileorientation="landscape" width="400">
+        <Static id="Static14" taborder="12" left="10" width="380" height="350" cssclass="sta_MLM_PopBg" top="50"/>
+        <Static id="Static15" taborder="13" text="Player Information" left="10" top="10" width="254" height="30" cssclass="sta_MLM_PopTitle"/>
+        <Button id="btn_close" taborder="14" left="360" top="10" width="30" height="30" onclick="btn_close_onclick" cssclass="btn_MLM_PopClose"/>
+        <ImageViewer id="ImageViewer00" taborder="0" left="20" top="60" width="96" height="120"/>
+        <Static id="sta_TeamName" taborder="1" left="183" top="107" width="197" height="36" cssclass="sta_MLM_TeamName"/>
+        <Static id="Static04" taborder="2" text="Name" left="20" top="198" width="155" height="30" cssclass="sta_MLM_Label"/>
+        <Static id="Static05" taborder="3" text="Position" left="20" top="238" width="155" height="30" cssclass="sta_MLM_Label"/>
+        <Static id="Static06" taborder="4" text="Height / Weight" left="20" top="278" width="155" height="30" cssclass="sta_MLM_Label"/>
+        <Static id="Static07" taborder="5" text="Uniform number" left="20" top="318" width="155" height="30" cssclass="sta_MLM_Label"/>
+        <Static id="Static08" taborder="6" text="Salary" left="20" top="358" width="155" height="30" cssclass="sta_MLM_Label"/>
+        <Static id="Static09" taborder="7" left="183" top="238" width="205" height="30" cssclass="sta_MLM_Detail"/>
+        <Static id="Static10" taborder="8" left="183" top="278" width="205" height="30" cssclass="sta_MLM_Detail"/>
+        <Static id="Static11" taborder="9" left="183" top="318" width="205" height="30" cssclass="sta_MLM_Detail"/>
+        <Static id="Static12" taborder="10" left="183" top="358" width="205" height="30" cssclass="sta_MLM_Detail" textAlign="left"/>
+        <Static id="Static13" taborder="11" left="183" top="198" width="205" height="30" cssclass="sta_MLM_Detail"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_Player1">
+        <ColumnInfo>
+          <Column id="Code" type="STRING" size="256"/>
+          <Column id="PlayerPhoto" type="STRING" size="256"/>
+          <Column id="PlayerName" type="STRING" size="256"/>
+          <Column id="PlayerPosition" type="STRING" size="256"/>
+          <Column id="PlayerHW" type="STRING" size="256"/>
+          <Column id="PlayerBackNO" type="STRING" size="256"/>
+          <Column id="PlayerSalary" type="STRING" size="256"/>
+          <Column id="Name" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_KBO">
+        <ColumnInfo>
+          <Column id="Code" type="STRING" size="256"/>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Foundyear" type="STRING" size="256"/>
+          <Column id="Hometown" type="STRING" size="256"/>
+          <Column id="KoreanSeriesTitles" type="STRING" size="256"/>
+          <Column id="emblem" type="STRING" size="256"/>
+          <Column id="TeamTel" type="STRING" size="256"/>
+          <Column id="TeamPostcode" type="STRING" size="256"/>
+          <Column id="TeamAddress" type="STRING" size="256"/>
+          <Column id="TeamDetailAdd" type="STRING" size="256"/>
+          <Column id="TeamHomepage" type="STRING" size="256"/>
+          <Column id="TeamOwner" type="STRING" size="256"/>
+          <Column id="TeamCoach" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">KIA Tigers</Col>
+            <Col id="Foundyear">2001</Col>
+            <Col id="Hometown">광주광역시</Col>
+            <Col id="KoreanSeriesTitles">11</Col>
+            <Col id="emblem">imagerc::emblem_KIA.png</Col>
+            <Col id="TeamTel">070) 7686-8000</Col>
+            <Col id="TeamAddress">광주광역시 북구 서림로 10</Col>
+            <Col id="TeamHomepage">www.kiatigers.co.kr</Col>
+            <Col id="TeamOwner">정몽구</Col>
+            <Col id="TeamPostcode">[61255]</Col>
+            <Col id="TeamDetailAdd">챔피언스필드 내 </Col>
+            <Col id="Code">B01</Col>
+            <Col id="TeamCoach">김기태</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Doosan Bears</Col>
+            <Col id="Foundyear">1982</Col>
+            <Col id="Hometown">서울특별시</Col>
+            <Col id="KoreanSeriesTitles">5</Col>
+            <Col id="emblem">imagerc::emblem_Doosan.png</Col>
+            <Col id="TeamTel">02) 2240-1777 </Col>
+            <Col id="TeamAddress">서울특별시 송파구 올림픽로 25 </Col>
+            <Col id="TeamHomepage">www.doosanbears.com</Col>
+            <Col id="TeamOwner">박정원</Col>
+            <Col id="TeamPostcode">[05500]</Col>
+            <Col id="TeamDetailAdd">잠실야구장 내</Col>
+            <Col id="Code">B02</Col>
+            <Col id="TeamCoach">김태형</Col>
+          </Row>
+          <Row>
+            <Col id="Name">LOTTE Giants</Col>
+            <Col id="Foundyear">1982</Col>
+            <Col id="Hometown">부산광역시</Col>
+            <Col id="KoreanSeriesTitles">2</Col>
+            <Col id="emblem">imagerc::emblem_LOTTE.png</Col>
+            <Col id="TeamAddress">부산광역시 동래구 사직로 45 </Col>
+            <Col id="TeamHomepage">www.giantsclub.com</Col>
+            <Col id="TeamTel">051) 590-9000</Col>
+            <Col id="TeamOwner">신격호</Col>
+            <Col id="TeamPostcode">[47874]</Col>
+            <Col id="TeamDetailAdd">사직야구장 내</Col>
+            <Col id="Code">B03</Col>
+            <Col id="TeamCoach">조원우</Col>
+          </Row>
+          <Row>
+            <Col id="Name">NC Dinos</Col>
+            <Col id="Foundyear">2011</Col>
+            <Col id="Hometown">경상남도 창원시</Col>
+            <Col id="emblem">imagerc::emblem_NC.png</Col>
+            <Col id="TeamHomepage">www.ncdinos.com</Col>
+            <Col id="TeamAddress">경상남도 창원시 마산회원구 삼호로 63 </Col>
+            <Col id="TeamTel">1644-9112</Col>
+            <Col id="TeamOwner">김택진</Col>
+            <Col id="TeamPostcode">[51323]</Col>
+            <Col id="TeamDetailAdd">마산야구장 내</Col>
+            <Col id="Code">B04</Col>
+            <Col id="TeamCoach">유영준</Col>
+          </Row>
+          <Row>
+            <Col id="Name">SK Wyverns</Col>
+            <Col id="Foundyear">2000</Col>
+            <Col id="Hometown">인천광역시</Col>
+            <Col id="KoreanSeriesTitles">4</Col>
+            <Col id="emblem">imagerc::emblem_SK.png</Col>
+            <Col id="TeamHomepage">www.skwyverns.com</Col>
+            <Col id="TeamAddress">인천광역시 남구 매소홀로 618 </Col>
+            <Col id="TeamOwner">최창원</Col>
+            <Col id="TeamTel">032) 455-2600</Col>
+            <Col id="TeamPostcode">[22234]</Col>
+            <Col id="TeamDetailAdd">주경기장 내</Col>
+            <Col id="Code">B05</Col>
+            <Col id="TeamCoach">염경엽</Col>
+          </Row>
+          <Row>
+            <Col id="Name">LG Twins</Col>
+            <Col id="Foundyear">1990</Col>
+            <Col id="Hometown">서울특별시</Col>
+            <Col id="KoreanSeriesTitles">2</Col>
+            <Col id="emblem">imagerc::emblem_LG.png</Col>
+            <Col id="TeamAddress">서울특별시 송파구 올림픽로 25 </Col>
+            <Col id="TeamHomepage">www.lgtwins.com</Col>
+            <Col id="TeamOwner">구본준</Col>
+            <Col id="TeamTel">-</Col>
+            <Col id="TeamPostcode">[05500]</Col>
+            <Col id="TeamDetailAdd">잠실야구장 내</Col>
+            <Col id="Code">B06</Col>
+            <Col id="TeamCoach">류중일</Col>
+          </Row>
+          <Row>
+            <Col id="Name">NEXEN Heroes</Col>
+            <Col id="Foundyear">2008</Col>
+            <Col id="Hometown">서울특별시</Col>
+            <Col id="emblem">imagerc::emblem_Nexen.png</Col>
+            <Col id="TeamAddress">서울특별시 구로구 경인로 430 </Col>
+            <Col id="TeamHomepage">www.heroesbaseball.co.kr</Col>
+            <Col id="TeamTel">02) 3660-1000</Col>
+            <Col id="TeamOwner">박세영</Col>
+            <Col id="TeamPostcode">[08223]</Col>
+            <Col id="TeamDetailAdd">고척스카이돔 내</Col>
+            <Col id="Code">B07</Col>
+            <Col id="TeamCoach">장정석</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Hanwha Eagles</Col>
+            <Col id="Foundyear">1986</Col>
+            <Col id="Hometown">대전광역시</Col>
+            <Col id="KoreanSeriesTitles">1</Col>
+            <Col id="emblem">imagerc::emblem_Hanwha.png</Col>
+            <Col id="TeamHomepage">www.hanwhaeagles.co.kr</Col>
+            <Col id="TeamOwner">김승연</Col>
+            <Col id="TeamAddress">대전광역시 중구 대종로 373 </Col>
+            <Col id="TeamTel">042) 630-8200</Col>
+            <Col id="TeamPostcode">[35021]</Col>
+            <Col id="TeamDetailAdd">한밭종합운동장 내</Col>
+            <Col id="Code">B08</Col>
+            <Col id="TeamCoach">한용덕</Col>
+          </Row>
+          <Row>
+            <Col id="Name">SAMSUNG Lions</Col>
+            <Col id="Foundyear">1982</Col>
+            <Col id="Hometown">대구광역시</Col>
+            <Col id="KoreanSeriesTitles">8</Col>
+            <Col id="emblem">imagerc::emblem_Samsung.png</Col>
+            <Col id="TeamHomepage">www.samsunglions.com</Col>
+            <Col id="TeamAddress">대구광역시 수성구 야구전설로 1 </Col>
+            <Col id="TeamTel">053) 780-3300</Col>
+            <Col id="TeamOwner">임대기</Col>
+            <Col id="TeamPostcode">[42250]</Col>
+            <Col id="TeamDetailAdd">삼성 라이온즈 파크 내</Col>
+            <Col id="Code">B09</Col>
+            <Col id="TeamCoach">김한수</Col>
+          </Row>
+          <Row>
+            <Col id="Name">KT Wiz</Col>
+            <Col id="Foundyear">2013</Col>
+            <Col id="Hometown">경기도 수원시</Col>
+            <Col id="emblem">imagerc::emblem_KT.png</Col>
+            <Col id="TeamHomepage">www.ktwiz.co.kr</Col>
+            <Col id="TeamAddress">경기도 수원시 장안구 경수대로 893 </Col>
+            <Col id="TeamTel">1899-5916</Col>
+            <Col id="TeamOwner">황창규</Col>
+            <Col id="TeamPostcode">[16308]</Col>
+            <Col id="TeamDetailAdd">케이티위즈 파크 내</Col>
+            <Col id="Code">B10</Col>
+            <Col id="TeamCoach">김진욱</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="ImageViewer00" propid="image" datasetid="ds_Player" columnid="PlayerPhoto"/>
+      <BindItem id="item2" compid="Static09" propid="text" datasetid="ds_Player" columnid="PlayerPosition"/>
+      <BindItem id="item3" compid="Static10" propid="text" datasetid="ds_Player" columnid="PlayerHW"/>
+      <BindItem id="item4" compid="Static11" propid="text" datasetid="ds_Player" columnid="PlayerBackNO"/>
+      <BindItem id="item5" compid="Static12" propid="text" datasetid="ds_Player" columnid="PlayerSalary"/>
+      <BindItem id="item6" compid="Static13" propid="text" datasetid="ds_Player" columnid="PlayerName"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.Pop_LstView_player_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+// 	var objDS = this.parent.param1;
+//     var nRow  = this.parent.param2;    
+// 
+// 	this.ds_Player.copyData(objDS);
+// 
+// 	this.sta_TeamName.text = this.ds_KBO.lookup("Code", this.ds_Player.getColumn(nRow,"Code"), "Name"); 
+//     this.ds_Player.rowposition = nRow;	
+
+};
+
+this.btn_close_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+
+]]></Script>
+  </Form>
+</FDL>

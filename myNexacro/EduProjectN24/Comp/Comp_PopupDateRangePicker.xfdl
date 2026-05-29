@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_PopupDateRangePicker" width="1020" height="700" titletext="Comp_PopupDateRangePicker" onload="form_onload">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="PopupDateRangePicker (reference DateRangePicker)" left="20.00" top="0" width="429" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Method] trackPopup(), trackPopupByComponent(), trackPopupCenter()&#13;&#10;[Property] useclosebutton = true | false" left="20.00" top="95" height="82" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button00" taborder="3" text="trackPopup()" left="20" top="182" width="109" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="4" text="trackPopupByComponent()" left="20" top="213" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <TextArea id="txt_desc1" taborder="5" left="20" top="275" width="470" height="150" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <PopupDateRangePicker id="PopupDateRangePicker00" left="540" top="220" width="390" height="350" useclosebutton="true" useheadline="true" closebuttonsize="60 30" oncloseup="PopupDateRangePicker00_oncloseup" displaytype="date"/>
+        <Button id="Button02" taborder="28" text="trackPopupCenter()" left="20" top="244" width="152" height="26" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <TextArea id="txt_desc2" taborder="29" left="20" top="430" width="470" height="70" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <DateField id="DateField00" taborder="14" labeltext="start date" left="540" top="95" width="210" height="50" ondropdown="DateField_ondropdown"/>
+        <DateField id="DateField01" taborder="15" labeltext="end date" left="770" top="95" width="210" height="50" ondropdown="DateField_ondropdown"/>
+        <Static id="Static02" taborder="16" text="date range calendar" left="530" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.DateRangePicker00.displaytype = this.Radio00.value;
+	this.DateRangePicker01.headlinedateformat = this.Radio01.value;
+	this.DateRangePicker01.headlinetimeformat = this.Radio02.value;
+};
+
+this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_result(obj, this.PopupDateRangePicker00, this.txt_desc1);		
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;	// index = "0,2
+	var strDesc = ``;
+	switch(strText) {
+		case 'trackPopup()':
+			var objApp = nexacro.getApplication();
+			var nLeft = (objApp.mainframe.width / 2); // - Math.round(objComp.width / 2);
+			var nTop  = (objApp.mainframe.height / 2) - Math.round(objComp.height / 2);		
+			objComp.trackPopup("start", nLeft, nTop); 
+			strDesc = `var objApp = nexacro.getApplication();
+					   var nLeft = (objApp.mainframe.width / 2);
+			           var nTop  = (objApp.mainframe.height / 2) - Math.round(this.PopupDateRangePicker00.height / 2);		
+			           this.PopupDateRangePicker00.trackPopup("start", nLeft, nTop);`;
+			break;
+		case 'trackPopupByComponent()':
+			objComp.trackPopupByComponent( "start", obj, 0, obj.height);
+			strDesc = `this.PopupDateRangePicker00.trackPopupByComponent("start", obj, 0, obj.height);`
+			break;
+
+		case 'trackPopupCenter()':
+			objComp.trackPopupCenter("start");
+			strDesc = `this.PopupDateRangePicker00.trackPopupCenter("start");`
+			break;
+		default:
+			break;
+	}
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}	
+
+this.PopupDateRangePicker00_oncloseup = function(obj:nexacro.PopupDateRangePicker,e:nexacro.EventInfo)
+{	
+	var strDesc = `start date: ${obj.startdate}
+	               end date: ${obj.enddate}`;
+	this.txt_desc2.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+	
+	this.DateField00.value = obj.startdate;
+	this.DateField01.value = obj.enddate;
+};
+
+this.DateField_ondropdown = function(obj:nexacro.DateField,e:nexacro.EventInfo)
+{
+	this.PopupDateRangePicker00.trackPopupByComponent("start", this.DateField00, 0, obj.height);
+	e.preventDefault();
+};
+
+
+this.fn_getDay = function(nDay, sType)
+{
+	if(typeof nDay != "number")	nDay = 0;
+	if(typeof sType == "undefined")	sType = "date";
+	var now = new Date();
+	now.setDate(now.getDate() + nDay);
+
+	var year = now.getFullYear();
+	var month = String(now.getMonth() + 1).padStart(2, '0');  // 월은 0부터 시작하므로 +1
+    var day = String(now.getDate()).padStart(2, '0');
+	var hours = String(now.getHours()).padStart(2, '0');
+	var minutes = String(now.getMinutes()).padStart(2, '0');
+	var seconds = String(now.getSeconds()).padStart(2, '0');
+	var strDate = `${year}${month}${day}`;
+	if(sType == "datetime")
+		strDate += `${hours}${minutes}${seconds}`;
+	else if(sType == "time")
+		strDate = `${hours}${minutes}${seconds}`;
+		
+	trace(strDate);
+	return strDate;
+}
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.DateField00.value = this.fn_getDay(2, "date");
+	this.DateField01.value = this.fn_getDay(10, "date");
+	this.PopupDateRangePicker00.startdate = this.fn_getDay(2, "date");
+	this.PopupDateRangePicker00.enddate = this.fn_getDay(10, "date");
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_day">
+        <ColumnInfo>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="text_color" type="STRING" size="256"/>
+          <Column id="bg_color" type="STRING" size="256"/>
+          <Column id="border_color" type="STRING" size="256"/>
+          <Column id="hint_text" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="date">20241003</Col>
+            <Col id="text_color">red</Col>
+            <Col id="bg_color">yellow</Col>
+            <Col id="border_color">1px solid red</Col>
+            <Col id="hint_text">meeting</Col>
+            <Col id="readonly">0</Col>
+          </Row>
+          <Row>
+            <Col id="date">20241015</Col>
+            <Col id="text_color">blue</Col>
+            <Col id="bg_color">yellow</Col>
+            <Col id="border_color">1px solid blue</Col>
+            <Col id="readonly">0</Col>
+            <Col id="hint_text">education</Col>
+          </Row>
+          <Row>
+            <Col id="date">20241016</Col>
+            <Col id="text_color">#7f7f7f</Col>
+            <Col id="bg_color">#e0e0e0</Col>
+            <Col id="border_color">1px solid #e0e0e0</Col>
+            <Col id="readonly">1</Col>
+            <Col id="hint_text"/>
+          </Row>
+          <Row>
+            <Col id="date">20241017</Col>
+            <Col id="text_color">#7f7f7f</Col>
+            <Col id="bg_color">#e0e0e0</Col>
+            <Col id="border_color">1px solid #e0e0e0</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

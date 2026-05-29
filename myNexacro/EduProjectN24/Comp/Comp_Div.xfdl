@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_Div" width="1020" height="700" titletext="Comp_Div" onload="form_onload">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="Div" left="20.00" top="0" width="57" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage - contents" left="20.00" top="60" width="259" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="div_contents" taborder="4" text="Div00" left="20" top="121" width="470" height="210" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="contents form" left="10.00" top="0" width="226" height="35" cssclass="sta_WF_GuideTitle2"/>
+              <Grid id="Grid00" taborder="1" left="10" top="35" height="104" binddataset="ds_emp" autofittype="col" right="10">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="26" band="head"/>
+                      <Row size="26"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="Hire Date"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:EMP_NAME"/>
+                      <Cell col="1" text="bind:EMP_ID"/>
+                      <Cell col="2" text="bind:HIRE_DATE"/>
+                      <Cell col="3" text="bind:SALARY"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Edit id="Edit00" taborder="2" left="10" top="165" width="130" height="26"/>
+              <Static id="Static03" taborder="3" text="edit id = &quot;Edit00&quot;" left="10" top="139" width="119" height="26" cssclass="sta_WF_GuideRefer"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="div_linked" taborder="13" text="Div01" left="530.00" top="121" width="470" height="390" cssclass="div_WF_Area" url="Comp::Comp_DivSub.xfdl"/>
+        <Static id="Static01" taborder="7" text="form → div object" left="20.00" top="447" width="178" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Button id="Button00" taborder="8" text="this.div_contents.form.Edit00.value" left="20.00" top="482" width="273" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="9" text="this.div_linked.form.Edit00.value" left="20.00" top="513" width="273" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Static id="Static02" taborder="11" text="basic usage2 - linked" left="530.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static04" taborder="3" text="div id = &quot;div_contents&quot;" left="20" top="95" width="152" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static05" taborder="12" text="div id = &quot;div_linked&quot;" left="530.00" top="95" width="139" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Edit id="Edit00" taborder="6" left="20" top="377" width="130" height="26" value="NEXACRO" text="NEXACRO"/>
+        <Static id="Static03" taborder="5" text="edit id = &quot;Edit00&quot;" left="20" top="351" width="119" height="26" cssclass="sta_WF_GuideRefer"/>
+        <TextArea id="txt_desc" taborder="10" left="20.00" top="544" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static06" taborder="2" text="form id = &quot;Comp_Div&quot;" left="345.00" top="70" width="132" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Static id="Static07" taborder="14" text="div structure" left="528.00" top="535" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="15" text="Div00" left="530" top="571" width="470" height="110" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Button id="btn_div" taborder="0" text="1. div color &gt; yellow" left="5" top="5" width="142" height="26" onclick="Div00_btn_div_onclick"/>
+              <Button id="btn_divform" taborder="1" text="2. div.form color &gt; pink" left="152.00" top="5" width="160" height="26" onclick="Div00_btn_divform_onclick"/>
+              <Button id="btn_size" taborder="2" text="3. div.form size" left="317.00" top="5" width="112" height="26" onclick="Div00_btn_size_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+};
+
+
+this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	var objTxt = this.txt_desc;
+	var strDesc;
+	
+	switch(obj.text) {
+		case 'this.div_contents.form.Edit00.value':
+			strDesc = `this.div_contents.form.Edit00.value:	${this.div_contents.form.Edit00.value}
+					   this.div_linked.form.Edit00.value:	${this.div_linked.form.Edit00.value}`
+			break;
+		case 'this.div_linked.form.Edit00.value':
+			strDesc = `this.div_contents.form.Edit00.value:	${this.div_contents.form.Edit00.value}
+					   this.div_linked.form.Edit00.value:	${this.div_linked.form.Edit00.value}`
+			break;
+	}
+	
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+	
+	
+};
+
+
+
+this.Div00_btn_div_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.background = "yellow";	
+};
+
+this.Div00_btn_divform_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.background = "pink";	
+};
+
+this.Div00_btn_size_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.width = 440;
+	this.Div00.form.height = 80;
+	
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">silver</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">violet</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item2" compid="div_contents.form.Edit00" propid="value" datasetid="ds_emp" columnid="EMP_NAME"/>
+    </Bind>
+  </Form>
+</FDL>

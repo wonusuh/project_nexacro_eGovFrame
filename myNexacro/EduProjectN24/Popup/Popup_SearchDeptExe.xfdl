@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Popup_SearchDeptExe" width="360" height="440" titletext="Popup_SearchDeptExe" onload="Form_onload">
+    <Layouts>
+      <Layout height="440" width="360">
+        <Grid id="grd_dept" taborder="0" left="20" top="60" binddataset="ds_dept" autofittype="col" height="310" width="320">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="60"/>
+                <Column size="180"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Code"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Manager"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CODE" displaytype="text"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+                <Cell col="2" text="bind:DEPT_EMP"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="st_title" taborder="1" left="0" top="0" height="40" cssclass="sta_POP_Title" right="0" text="Department List"/>
+        <Button id="btn_close" taborder="2" top="5" height="30" cssclass="btn_POP_Close" onclick="btn_close_onclick" width="30" right="10"/>
+        <Button id="btn_ok" taborder="3" text="Ok" left="97" top="392" width="80" height="32" onclick="fn_ok" cssclass="btn_WF_FillGray"/>
+        <Button id="btn_cancel" taborder="4" text="Cancel" left="183" top="392" width="80" height="32" onclick="fn_cancel" cssclass="btn_WF_FillRed"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="string" size="255"/>
+          <Column id="DEPT_NAME" type="string" size="255"/>
+          <Column id="DEPT_EMP" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

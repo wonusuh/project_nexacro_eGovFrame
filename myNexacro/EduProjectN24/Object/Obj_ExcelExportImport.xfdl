@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Obj_ExcelExportImport" width="1020" height="700" titletext="Obj_ExcelExportImport" onload="form_onload">
+    <Layouts>
+      <Layout height="700" horizontalgap="0" mobileorientation="landscape" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="1020">
+        <Static id="st_title" taborder="0" text="Excel Export/Import" left="20" top="0" width="171" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Button id="btn_import" taborder="2" text="Import" top="60" width="80" height="26" onclick="btn_import_onclick" left="920" cssclass="btn_WF_LineRed"/>
+        <Button id="btn_export" taborder="1" text="Export" top="60" width="80" height="26" onclick="btn_export_onclick" left="835" cssclass="btn_WF_LineBlue"/>
+        <Radio id="Radio00" taborder="6" left="20" top="60" width="670" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" rowcount="-1" columncount="-1" index="0" text="Excel 97~2003" value="EXCEL97" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">Excel 97~2003</Col>
+                <Col id="codecolumn">EXCEL97</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Excel  2007</Col>
+                <Col id="codecolumn">EXCEL2007</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Hancell  2010</Col>
+                <Col id="codecolumn">HANCELL2010</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">Hancell 2014</Col>
+                <Col id="codecolumn">HANCELL2014</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">CSV</Col>
+                <Col id="datacolumn">CSV</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Grid id="grd_emp" taborder="5" left="20" top="Radio00:5" onheadclick="grd_emp_onheadclick" height="320" width="980" binddataset="ds_emp" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="60"/>
+                <Column size="80"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="120"/>
+                <Column size="80"/>
+                <Column size="60"/>
+                <Column size="60"/>
+                <Column size="80"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="40" band="head"/>
+                <Row size="30"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="ID"/>
+                <Cell col="2" text="Name"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Position"/>
+                <Cell col="5" text="Hire Date"/>
+                <Cell col="6" text="Salary"/>
+                <Cell col="7" text="Gender"/>
+                <Cell col="8" text="Marital&#13;&#10;Status"/>
+                <Cell col="9" text="Hobby"/>
+                <Cell col="10" text="Memo"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:currow + 1" displaytype="text"/>
+                <Cell col="1" text="bind:EMP_ID" displaytype="mask" edittype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="2" text="bind:EMP_NAME" displaytype="normal" edittype="text"/>
+                <Cell col="3" text="bind:DEPT_CODE" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME" displaytype="combotext" edittype="combo"/>
+                <Cell col="4" text="bind:POSITION" displaytype="combocontrol" edittype="combo" combodataset="ds_pos" combocodecol="CODE" combodatacol="NAME"/>
+                <Cell col="5" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+                <Cell col="6" text="bind:SALARY" displaytype="number" edittype="mask" maskeditformat="#,###"/>
+                <Cell col="7" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;"/>
+                <Cell col="8" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="9" text="bind:HOBBY"/>
+                <Cell col="10" text="bind:MEMO" displaytype="normal" edittype="textarea"/>
+              </Band>
+              <Band id="summary">
+                <Cell/>
+                <Cell col="1" text="expr:comp.parent.ds_emp.rowcount"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+                <Cell col="4"/>
+                <Cell col="5"/>
+                <Cell col="6" text="expr:dataset.getSum(&quot;SALARY&quot;)" displaytype="number"/>
+                <Cell col="7"/>
+                <Cell col="8"/>
+                <Cell col="9"/>
+                <Cell col="10"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="grd_dept" taborder="3" left="20" top="415" width="485" binddataset="ds_dept" height="255">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="97"/>
+                <Column size="147"/>
+                <Column size="147"/>
+              </Columns>
+              <Rows>
+                <Row size="28" band="head"/>
+                <Row size="28"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Code"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Manager"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CODE"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+                <Cell col="2" text="bind:DEPT_EMP"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="grd_skill" taborder="4" left="510" top="415" width="490" height="255" binddataset="ds_skill">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="215"/>
+              </Columns>
+              <Rows>
+                <Row size="28" band="head"/>
+                <Row size="28"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Code"/>
+                <Cell col="1" text="Skill"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">01,05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01,06</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">09,11</Col>
+            <Col id="HOBBY">07,06,05</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,13</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">07,06,06</Col>
+            <Col id="HOBBY">09,14</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">11,03,13</Col>
+            <Col id="HOBBY">09,15</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">silver</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">violet</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="255"/>
+          <Column id="DEPT_NAME" type="STRING" size="255"/>
+          <Column id="DEPT_EMP" type="STRING" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <ExcelExportObject id="ExcelExportObject00" onprogress="ExcelExportObject00_onprogress" onerror="ExcelExportObject00_onerror" onsuccess="ExcelExportObject00_onsuccess"/>
+      <ExcelImportObject id="ExcelImportObject00" onsuccess="ExcelImportObject00_onsuccess" onerror="ExcelImportObject00_onerror"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_export_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(system.navigatorname != "nexacro"){
+		alert("It can be run in the NRE(Nexacro Runtime Environment)");
+		return;
+	}
+		
+	if(this.Radio00.value == "EXCEL97"){
+		this.ExcelExportObject00.exporttype = nexacro.ExportTypes.EXCEL97;
+	}
+	else if(this.Radio00.value == "EXCEL2007"){
+		this.ExcelExportObject00.exporttype = nexacro.ExportTypes.EXCEL2007;
+	}
+	else if(this.Radio00.value == "HANCELL2010"){
+		this.ExcelExportObject00.exporttype = nexacro.ExportTypes.HANCELL2010;
+	}
+	else if(this.Radio00.value == "HANCELL2014"){
+		this.ExcelExportObject00.exporttype = nexacro.ExportTypes.HANCELL2014;
+	}
+	else if(this.Radio00.value == "CSV"){
+		this.ExcelExportObject00.exporttype = nexacro.ExportTypes.CSV;
+	}
+	
+	this.ExcelExportObject00.exportfilename = "Nexacro_Excel_Export";
+	this.ExcelExportObject00.exportactivemode = "active";
+	this.ExcelExportObject00.exporteventtype = "itemrecord";
+	this.ExcelExportObject00.exportuitype = "exportprogress";
+	this.ExcelExportObject00.exportmessageprocess = "%d [ %d / %d ]";
+//	this.ExcelExportObject00.commdataformat = "xml";
+	
+	
+	
+//    this.ExcelExportObject00.exporturl = "http://localhost:8090/nexacro-xeni-java/XExportImport";   
+    this.ExcelExportObject00.exporturl = "http://demo.nexacro.com/nexacroN24-xeni/XExportImport";   
+	
+    this.ExcelExportObject00.addExportItem(nexacro.ExportItemTypes.GRID, this.grd_emp, "Sheet1!A1", "nosumm");
+    this.ExcelExportObject00.addExportItem(nexacro.ExportItemTypes.GRID, this.grd_dept, "Sheet2!A1");
+    this.ExcelExportObject00.addExportItem(nexacro.ExportItemTypes.GRID, this.grd_skill, "Sheet2!A8");
+	
+    this.ExcelExportObject00.exportData();
+};
+
+this.btn_import_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(system.navigatorname != "nexacro"){
+		alert("It can be run in the NRE(Nexacro Runtime Environment)");
+		return;
+	}
+
+//	this.ExcelImportObject00.importurl = "http://localhost:8090/nexacro-xeni-java/XExportImport";
+	this.ExcelImportObject00.importurl = "https://edu.tobesoft.com/nexacroN-xeni/XExportImport";
+	
+	
+	this.ExcelImportObject00.importtype = nexacro.ImportTypes.EXCEL97;	
+	
+	var strRange  = "";
+	strRange += "[Command='getsheetdata'; Output=out_emp; Head=Sheet1!B1:G1; Body=Sheet1!B2:G5]";
+	strRange += "[Head=Sheet2!A1:B1; Body=Sheet2!A2:B6]";
+	strRange += "[Head=Sheet2!A8:B8;Body=Sheet2!A9:B12]";
+	
+	var strDataset = "ds_emp=out_emp ds_dept=output1 ds_skill=output2";
+	this.ExcelImportObject00.importData("",strRange, strDataset);
+};
+
+this.ExcelImportObject00_onsuccess = function(obj:nexacro.ExcelImportObject,e:nexacro.ExcelImportEventInfo)
+{
+	trace(e.importid + " : " + e.url);
+	trace(this.ds_emp.saveXML());
+	trace(this.ds_dept.saveXML());
+	trace(this.ds_skill.saveXML());
+	
+	this.grd_emp.createFormat();
+	this.grd_dept.createFormat();
+	this.grd_skill.createFormat();
+	
+};
+
+this.ExcelImportObject00_onerror = function(obj:nexacro.ExcelImportObject,e:nexacro.ExcelImportErrorEventInfo)
+{
+	trace(e.errormsg);
+};
+
+this.ExcelExportObject00_onprogress = function(obj:nexacro.ExcelExportObject,e:nexacro.ExcelExportProgressEventInfo)
+{
+//	trace(e.itemindex + " : " + e.recordindex + " : " + e.itemtype)
+};
+
+
+this.ExcelExportObject00_onerror = function(obj:nexacro.ExcelExportObject,e:nexacro.ExcelExportErrorEventInfo)
+{
+	trace(e.errortype + " : " + e.errormsg); 
+};]]></Script>
+  </Form>
+</FDL>

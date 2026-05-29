@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Layout_Panel" width="1023" height="673" titletext="New Form">
+    <Layouts>
+      <Layout height="673" width="1023">
+        <Div id="div00" taborder="0" text="div00" top="10" height="210" right="10" fittocontents="height" cssclass="div_WF_Search" left="10">
+          <Layouts>
+            <Layout type="horizontal" flexwrap="wrap" horizontalgap="5" flexmainaxisalign="end" verticalgap="5" spacing="10px 10px 10px 10px">
+              <Panel id="Panel07" taborder="6" left="0" top="0" width="100%" height="32" flexwrap="wrap" fittocontents="height" horizontalgap="10" verticalgap="10">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Panel06"/>
+                  <PanelItem id="PanelItem01" componentid="Panel05"/>
+                </Contents>
+              </Panel>
+              <Panel id="Panel06" taborder="5" left="0" top="300" width="400" height="32" flexgrow="1" flexwrap="wrap" fittocontents="height" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta04"/>
+                  <PanelItem id="PanelItem01" componentid="Panel04"/>
+                </Contents>
+              </Panel>
+              <Panel id="Panel05" taborder="4" left="0" top="300" width="400" height="32" flexgrow="1" flexwrap="wrap" fittocontents="height" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta03"/>
+                  <PanelItem id="PanelItem01" componentid="Calendar00"/>
+                </Contents>
+              </Panel>
+              <Static id="sta03" taborder="1" text="Hire Date" left="75" top="45" width="110" height="26" cssclass="sta_WF_Label"/>
+              <Static id="sta04" taborder="2" left="75" top="45" width="110" height="26" text="Corp Name" cssclass="sta_WF_Label"/>
+              <Edit id="edt02" taborder="3" left="120.00" top="0" width="50%" height="26" flexgrow="1" text=""/>
+              <Edit id="Edit05" taborder="0" left="612" top="20" width="50%" height="26" flexgrow="1" text=""/>
+              <Panel id="Panel04" taborder="7" left="402" top="0" width="275" height="32" flexgrow="2" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Edit05"/>
+                  <PanelItem id="PanelItem01" componentid="edt02"/>
+                </Contents>
+              </Panel>
+              <Calendar id="Calendar00" taborder="8" left="884" top="30" width="275" height="26" flexgrow="2" value="20241025"/>
+              <Static id="sta02" taborder="9" left="75" top="45" width="110" height="26" text="Emp ID" cssclass="sta_WF_Label"/>
+              <Edit id="edt04" taborder="10" left="120.00" top="60" width="275" height="26" text="" flexgrow="2"/>
+              <Panel id="Panel02" taborder="11" left="0" top="120" width="400" height="32" flexgrow="1" flexwrap="wrap" fittocontents="height" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta02"/>
+                  <PanelItem id="PanelItem01" componentid="edt04"/>
+                </Contents>
+              </Panel>
+              <Static id="sta01" taborder="12" text="Gender" left="75" top="45" width="110" height="26" onclick="div00_sta00_00_onclick" cssclass="sta_WF_Label"/>
+              <Radio id="Radio00" taborder="13" left="951" top="76" width="275" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="3" index="0" text="All" value="A" flexgrow="2">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">A</Col>
+                      <Col id="datacolumn">All</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">Male</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">F</Col>
+                      <Col id="datacolumn">Female</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+              <Panel id="Panel01" taborder="14" left="0" top="60" width="400" height="32" flexgrow="1" fittocontents="height" flexwrap="wrap" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta01"/>
+                  <PanelItem id="PanelItem01" componentid="Radio00"/>
+                </Contents>
+              </Panel>
+              <Panel id="Panel03" taborder="15" left="0" top="0" width="100%" height="32" flexwrap="wrap" fittocontents="height" horizontalgap="10" verticalgap="10">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Panel02"/>
+                  <PanelItem id="PanelItem01" componentid="Panel01"/>
+                </Contents>
+              </Panel>
+              <Static id="sta02_00" taborder="16" left="75" top="45" width="110" height="26" text="Department" cssclass="sta_WF_Label"/>
+              <Combo id="Combo00" taborder="17" left="132" top="112" width="275" height="26" flexgrow="2" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME" value="10" index="0" text="Accounting Team"/>
+              <Panel id="Panel02_00" taborder="18" left="0" top="120" width="400" height="38" flexgrow="1" flexwrap="wrap" fittocontents="height" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta02_00"/>
+                  <PanelItem id="PanelItem02" componentid="Combo00"/>
+                </Contents>
+              </Panel>
+              <Static id="sta01_00" taborder="19" text="Position" left="75" top="45" width="110" height="26" onclick="div00_sta00_00_onclick" cssclass="sta_WF_Label"/>
+              <Combo id="Combo02" taborder="20" left="898" top="124" width="275" height="26" flexgrow="2" innerdataset="ds_pos" codecolumn="CODE" datacolumn="NAME" index="1" text="Director" value="20"/>
+              <Panel id="Panel01_00" taborder="21" left="0" top="60" width="400" height="32" flexgrow="1" fittocontents="height" flexwrap="wrap" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta01_00"/>
+                  <PanelItem id="PanelItem01" componentid="Combo02"/>
+                </Contents>
+              </Panel>
+              <Panel id="Panel03_00" taborder="22" left="0" top="0" width="100%" height="32" flexwrap="wrap" fittocontents="height" horizontalgap="10" verticalgap="10">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Panel02_00"/>
+                  <PanelItem id="PanelItem01" componentid="Panel01_00"/>
+                </Contents>
+              </Panel>
+              <Static id="sta00" taborder="23" text="Address" left="75" top="45" width="110" height="26" cssclass="sta_WF_Label"/>
+              <Combo id="Combo01" taborder="24" left="1257" top="138" width="120" height="26" flexgrow="1" value="0" index="0" text="서울특별시" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">0</Col>
+                      <Col id="datacolumn">서울특별시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">1</Col>
+                      <Col id="datacolumn">경기도</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">2</Col>
+                      <Col id="datacolumn">부산광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">4</Col>
+                      <Col id="datacolumn">인천광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">5</Col>
+                      <Col id="datacolumn">대구광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">6</Col>
+                      <Col id="datacolumn">광주광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">7</Col>
+                      <Col id="datacolumn">대전광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">8</Col>
+                      <Col id="datacolumn">울산광역시</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">9</Col>
+                      <Col id="datacolumn">강원도</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">10</Col>
+                      <Col id="datacolumn">제주도</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Edit id="edt00" taborder="25" left="120" top="0" width="270" height="26" flexgrow="2" text=""/>
+              <Panel id="Panel14" taborder="26" left="125" top="0" width="400" height="32" flexgrow="2" horizontalgap="5">
+                <Contents>
+                  <PanelItem id="PanelItem02" componentid="Combo01"/>
+                  <PanelItem id="PanelItem00" componentid="edt00"/>
+                </Contents>
+              </Panel>
+              <Panel id="Panel00" taborder="27" left="0" top="0" width="100%" height="32" flexwrap="wrap" fittocontents="height" horizontalgap="5" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta00"/>
+                  <PanelItem id="PanelItem01" componentid="Panel14"/>
+                </Contents>
+              </Panel>
+              <Button id="Button01" taborder="28" text="  상세검색" left="1294.00" top="255" width="130" height="32" onclick="Div02_Button00_onclick" cssclass="btn_WF_CRUD" color="ivory"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div00" taborder="1" text="Div00" left="10" top="div00:0" height="90" fittocontents="height" right="10">
+          <Layouts>
+            <Layout flexwrap="wrap" type="horizontal" horizontalgap="3" spacing="10px px 5px px">
+              <Static id="sta05" taborder="0" text="Position" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo01" taborder="1" text="거래처" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="ds_pos" codecolumn="CODE" datacolumn="NAME"/>
+              <Panel id="Panel01" taborder="2" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta05"/>
+                  <PanelItem id="PanelItem01" componentid="Combo01"/>
+                </Contents>
+              </Panel>
+              <Static id="sta06" taborder="3" text="Hobby" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo02" taborder="4" text="서울" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="ds_hobby" codecolumn="CODE" datacolumn="NAME"/>
+              <Panel id="Panel02" taborder="5" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta06"/>
+                  <PanelItem id="PanelItem01" componentid="Combo02"/>
+                </Contents>
+              </Panel>
+              <Static id="sta08" taborder="6" text="Skill" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo03" taborder="7" text="소프트웨어" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME"/>
+              <Panel id="Panel03" taborder="8" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta08"/>
+                  <PanelItem id="PanelItem01" componentid="Combo03"/>
+                </Contents>
+              </Panel>
+              <Static id="sta09" taborder="9" text="Gender" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo04" taborder="10" text="사업그룹" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">A</Col>
+                      <Col id="datacolumn">All</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">M</Col>
+                      <Col id="datacolumn">Male</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">F</Col>
+                      <Col id="datacolumn">Female</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Panel id="Panel04" taborder="11" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta09"/>
+                  <PanelItem id="PanelItem01" componentid="Combo04"/>
+                </Contents>
+              </Panel>
+              <Static id="sta10" taborder="12" text="Dept" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo05" taborder="13" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="ds_dept" codecolumn="DEPT_CODE" datacolumn="DEPT_NAME"/>
+              <Panel id="Panel07" taborder="14" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta10"/>
+                  <PanelItem id="PanelItem01" componentid="Combo05"/>
+                </Contents>
+              </Panel>
+              <Static id="sta11" taborder="15" text="Salary" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo06" taborder="16" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">5000</Col>
+                      <Col id="datacolumn">5000 </Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">6000</Col>
+                      <Col id="datacolumn">6000</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">6500</Col>
+                      <Col id="datacolumn">6500</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">7000</Col>
+                      <Col id="datacolumn">7000</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">7500</Col>
+                      <Col id="datacolumn">7500</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">8000</Col>
+                      <Col id="datacolumn">8000</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">8500</Col>
+                      <Col id="datacolumn">8500</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">9000</Col>
+                      <Col id="datacolumn">9000</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Panel id="Panel05" taborder="17" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta11"/>
+                  <PanelItem id="PanelItem01" componentid="Combo06"/>
+                </Contents>
+              </Panel>
+              <Static id="sta12" taborder="18" text="Married" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo07" taborder="19" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Div00_Combo07_onitemchanged">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">false</Col>
+                      <Col id="datacolumn">N</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">true</Col>
+                      <Col id="datacolumn">Y</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Combo>
+              <Panel id="Panel06" taborder="20" left="0" top="0" width="110" height="70" type="vertical" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta12"/>
+                  <PanelItem id="PanelItem01" componentid="Combo07"/>
+                </Contents>
+              </Panel>
+              <Static id="sta14" taborder="21" text="Total" left="0" top="0" width="100%" height="50%" cssclass="sta_WF_DetailLabel" flexgrow="1"/>
+              <Combo id="Combo09" taborder="22" text="72,500" left="0" top="60" width="100%" height="50%" flexgrow="1" value="" index="-1"/>
+              <Panel id="Panel09" taborder="23" left="0" top="0" width="110" height="70" type="vertical" fittocontents="height" flexgrow="1">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="sta14"/>
+                  <PanelItem id="PanelItem01" componentid="Combo09"/>
+                </Contents>
+              </Panel>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="2" text="Div01" left="11" tablecellarea="0/0" width="97.95%" top="Div00:0%" bottom="8">
+          <Layouts>
+            <Layout type="table" tabletemplate="4*/ 8* 1*" horizontalgap="0">
+              <Div id="Div03" taborder="0" text="Div03" left="896" top="0" width="91%" height="98.13%" tablecellarea="0/1" flexgrow="0" flexshrink="0">
+                <Layouts>
+                  <Layout type="vertical" flexwrap="wrap" verticalgap="5">
+                    <Panel id="Panel00" taborder="8" left="0" top="0" width="100%" height="97.15%" type="vertical" verticalgap="5">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Button00"/>
+                        <PanelItem id="PanelItem01" componentid="Button02"/>
+                        <PanelItem id="PanelItem02" componentid="Button03"/>
+                        <PanelItem id="PanelItem03" componentid="Button04"/>
+                        <PanelItem id="PanelItem04" componentid="Button05"/>
+                        <PanelItem id="PanelItem05" componentid="Button06"/>
+                        <PanelItem id="PanelItem06" componentid="Button07"/>
+                        <PanelItem id="PanelItem07" componentid="Button08"/>
+                      </Contents>
+                    </Panel>
+                    <Button id="Button00" taborder="0" text="Name" left="0" top="0" width="100.00%" height="30" cssclass="btn_WF_Status"/>
+                    <Button id="Button02" taborder="1" left="0" top="0" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status" text="Emp ID"/>
+                    <Button id="Button03" taborder="2" text="Department" left="0" top="0" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status"/>
+                    <Button id="Button04" taborder="3" text="Position" left="0" top="0" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status"/>
+                    <Button id="Button05" taborder="4" text="Hire Date" left="0" top="0" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status"/>
+                    <Button id="Button06" taborder="5" left="0" top="150" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status" text="Salary"/>
+                    <Button id="Button07" taborder="6" text="Gender" left="0" top="180" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status"/>
+                    <Button id="Button08" taborder="7" text="Married" left="0" top="0" width="100%" height="30" onclick="Div03_Button00_00_onclick" cssclass="btn_WF_Status"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Grid id="grd_emp" taborder="1" left="0" top="-10" binddataset="ds_emp" onheadclick="grd_emp_onheadclick" autofittype="col" width="98.80%" height="98.81%" tablecellarea="0/0">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="48"/>
+                      <Column size="90"/>
+                      <Column size="80"/>
+                      <Column size="150"/>
+                      <Column size="150"/>
+                      <Column size="120"/>
+                      <Column size="80"/>
+                      <Column size="60"/>
+                      <Column size="70"/>
+                      <Column size="150"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                      <Row size="24" band="summ"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="No"/>
+                      <Cell col="1" text="Name"/>
+                      <Cell col="2" text="Emp ID"/>
+                      <Cell col="3" text="Department"/>
+                      <Cell col="4" text="Position Grade"/>
+                      <Cell col="5" text="Hire Date"/>
+                      <Cell col="6" text="Salary"/>
+                      <Cell col="7" text="Gender"/>
+                      <Cell col="8" text="Married"/>
+                      <Cell col="9" text="Skill"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="expr:currow + 1" displaytype="text"/>
+                      <Cell col="1" text="bind:EMP_NAME" edittype="normal"/>
+                      <Cell col="2" text="bind:EMP_ID" displaytype="mask" edittype="mask" maskedittype="string" maskeditformat="AA-###"/>
+                      <Cell col="3" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                      <Cell col="4" text="bind:POSITION" displaytype="combocontrol" edittype="combo" combodataset="ds_pos" combocodecol="CODE" combodatacol="NAME"/>
+                      <Cell col="5" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+                      <Cell col="6" text="bind:SALARY" displaytype="mask" edittype="mask" maskeditformat="#,#"/>
+                      <Cell col="7" text="expr:GENDER == &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;" displaytype="text"/>
+                      <Cell col="8" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+                      <Cell col="9" text="bind:SKILL" displaytype="multicombocontrol" edittype="multicombo" multicombodataset="ds_skill" multicombocodecol="CODE" multicombodatacol="NAME"/>
+                    </Band>
+                    <Band id="summary">
+                      <Cell/>
+                      <Cell col="1"/>
+                      <Cell col="2"/>
+                      <Cell col="3"/>
+                      <Cell col="4"/>
+                      <Cell col="5" text="Avg."/>
+                      <Cell col="6" text="expr:nexacro.round(dataset.getAvg(&quot;SALARY&quot;), 2)" displaytype="number" maskeditformat="#,#.00"/>
+                      <Cell col="7"/>
+                      <Cell col="8"/>
+                      <Cell col="9"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1* 1* 1* 1* 1* 1* 1* 1* 1* 1*/ 100px 1* </Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1* 1*/1* </Col>
+          </Row>
+          <Row>
+            <Col id="Column0">28px 30px 30px 30px 30px / 100px 1* 100px 1* 100px 1*</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">28px 30px 30px 30px 30px / 100px 1* 100px 1* 100px 1* 100px 1*</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="No" type="STRING" size="256"/>
+          <Column id="지금유형" type="STRING" size="256"/>
+          <Column id="내역서식" type="STRING" size="256"/>
+          <Column id="예산비목" type="STRING" size="256"/>
+          <Column id="지급처구분" type="STRING" size="256"/>
+          <Column id="지급처" type="STRING" size="256"/>
+          <Column id="증빙금액" type="STRING" size="256"/>
+          <Column id="사용일자" type="STRING" size="256"/>
+          <Column id="전송여부" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">1</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">분짜 토마토점</Col>
+            <Col id="증빙금액">65,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+            <Col id="전송여부">true</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">2</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">신선해수산물시장</Col>
+            <Col id="증빙금액">200,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">3</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">(주) 스타락스 도쿄</Col>
+            <Col id="증빙금액">47,800</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">4</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">개미골</Col>
+            <Col id="증빙금액">170,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">5</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">(주) 소담 추어탕본점</Col>
+            <Col id="증빙금액">45,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">6</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">분짜 토마토점</Col>
+            <Col id="증빙금액">70,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">7</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">할머니 냉면</Col>
+            <Col id="증빙금액">114,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">1</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">분짜 토마토점</Col>
+            <Col id="증빙금액">65,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+            <Col id="전송여부">true</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">8</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">신선해수산물시장</Col>
+            <Col id="증빙금액">200,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">9</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">(주) 스타락스 도쿄</Col>
+            <Col id="증빙금액">47,800</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">10</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">개미골</Col>
+            <Col id="증빙금액">170,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">11</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">(주) 소담 추어탕본점</Col>
+            <Col id="증빙금액">45,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">12</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">분짜 토마토점</Col>
+            <Col id="증빙금액">70,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">false</Col>
+            <Col id="No">13</Col>
+            <Col id="전송여부">true</Col>
+            <Col id="지금유형">RND카드</Col>
+            <Col id="내역서식">회의비</Col>
+            <Col id="예산비목">회의비</Col>
+            <Col id="지급처구분">거래처</Col>
+            <Col id="지급처">할머니 냉면</Col>
+            <Col id="증빙금액">114,000</Col>
+            <Col id="사용일자">2018-03-06</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="POSITION">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">02</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="MEMO">aqua</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">03</Col>
+            <Col id="HOBBY">14</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="MEMO">gold</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">01</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Dennis </Col>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">05</Col>
+            <Col id="HOBBY">07</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">khaki</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">06</Col>
+            <Col id="HOBBY">09</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jungkook</Col>
+            <Col id="EMP_ID">KR200</Col>
+            <Col id="POSITION">60</Col>
+            <Col id="HIRE_DATE">20120304</Col>
+            <Col id="SALARY">7000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">03</Col>
+            <Col id="HOBBY">09</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="MEMO">orange</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="EMP_ID">JP230</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20110928</Col>
+            <Col id="SALARY">8000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="SKILL">02</Col>
+            <Col id="HOBBY">09</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="MEMO">silver</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="SKILL">04</Col>
+            <Col id="HOBBY">05</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="MEMO">violet</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="string" size="255"/>
+          <Column id="DEPT_NAME" type="string" size="255"/>
+          <Column id="DEPT_EMP" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">Accounting Team</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">Finances Team</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">Human Resource Team</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">Support Team</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">Sales Team</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Director</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">50</Col>
+            <Col id="NAME">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">60</Col>
+            <Col id="NAME">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_hobby">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">Climbing</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">Running</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">Cycling</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">Swimming</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">Yoga</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Golf</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="NAME">tennis</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="NAME">Reading </Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="NAME">Cooking</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Photography</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="NAME">Painting</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="NAME">Movie and Drama</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">13</Col>
+            <Col id="NAME">Game</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">14</Col>
+            <Col id="NAME">Sleeping</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">15</Col>
+            <Col id="NAME">Shopping</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Div00.form.Combo01" propid="value" datasetid="ds_emp" columnid="POSITION"/>
+      <BindItem id="item1" compid="Div00.form.Combo04" propid="value" datasetid="ds_emp" columnid="GENDER"/>
+      <BindItem id="item2" compid="Div00.form.Combo03" propid="value" datasetid="ds_emp" columnid="SKILL"/>
+      <BindItem id="item3" compid="Div00.form.Combo02" propid="value" datasetid="ds_emp" columnid="HOBBY"/>
+      <BindItem id="item4" compid="Div00.form.Combo05" propid="value" datasetid="ds_emp" columnid="DEPT_CODE"/>
+      <BindItem id="item5" compid="Div00.form.Combo07" propid="value" datasetid="ds_emp" columnid="MARRIED"/>
+      <BindItem id="item6" compid="Div00.form.Combo06" propid="value" datasetid="ds_emp" columnid="SALARY"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_ListBox" width="1020" height="700" titletext="Comp_ListBox">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="ListBox" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] innerdataset, codecolumn, datacolumn" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="innerdataset - ds_code" left="20" top="131" width="145" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ListBox id="ListBox00" taborder="4" left="20" top="157" width="180" height="110" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME"/>
+        <Static id="Static03" taborder="5" text="innerdataset - set code, data" left="259.00" top="131" width="191" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ListBox id="ListBox01" taborder="6" left="259.00" top="157" width="180" height="110" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">SUN</Col>
+                <Col id="datacolumn">Sunday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">MON</Col>
+                <Col id="datacolumn">Monday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">TUE</Col>
+                <Col id="datacolumn">Tuesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">WED</Col>
+                <Col id="datacolumn">Wednesday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">THU</Col>
+                <Col id="datacolumn">Thursday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">FRI</Col>
+                <Col id="datacolumn">Friday</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">STA</Col>
+                <Col id="datacolumn">Saturday</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ListBox>
+        <Static id="Static04" taborder="7" text="※ ds_code" left="20" top="287" width="63" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid00" taborder="8" left="20.00" top="313" width="230" height="106" binddataset="ds_code" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="68"/>
+                <Column size="144"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="text"/>
+                <Cell col="1" text="bind:NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static05" taborder="9" text="※ data bind - ds_data" left="259.00" top="287" width="142" height="26" cssclass="sta_WF_GuideRefer"/>
+        <Grid id="Grid01" taborder="10" left="260.00" top="313" width="230" height="106" binddataset="ds_data" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="85"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="26" band="head"/>
+                <Row size="26"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="CODE"/>
+                <Cell col="2" text="DAY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DAY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static08" taborder="11" text="multi select" left="21.00" top="458" width="478" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static09" taborder="12" text="[Property] multiselect = &quot;true&quot; | &quot;false&quot;" left="21.00" top="493" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static10" taborder="13" text="multiselect = &quot;true&quot;" left="21" top="529" width="175" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ListBox id="ListBox2" taborder="14" left="21.00" top="555" width="180" height="110" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME" multiselect="true" index="1" text="CSS" value="02"/>
+        <Static id="Static11" taborder="15" text="index, value, text" left="530.00" top="60" width="332" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static12" taborder="16" text=" [Property] index, value, text" left="530.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button00" taborder="17" text="index = 0" left="530.00" top="136" width="166" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button01" taborder="18" text="index = -1" left="530.00" top="167" width="173" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button02" taborder="19" text="value = &quot;03&quot;" left="530.00" top="198" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Button id="Button04" taborder="20" text="text" left="530.00" top="229" width="188" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec"/>
+        <Static id="Static20" taborder="21" text="id = ListBox1" left="800.00" top="131" width="195" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ListBox id="ListBox1" taborder="22" left="798" top="157" width="180" height="110" innerdataset="ds_code" codecolumn="CODE" datacolumn="NAME"/>
+        <TextArea id="txt_desc1" taborder="23" left="530.00" top="274" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+        <Static id="Static13" taborder="24" text="selected item" left="530.00" top="458" width="448" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static14" taborder="25" text="[Method] getSelectedCount(), getSelectedItems()" left="530.00" top="493" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Button id="Button09" taborder="26" text="getSelectedCount()" left="530.00" top="534" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2"/>
+        <Button id="Button10" taborder="27" text="getSelectedItems()" left="530.00" top="565" width="152" height="26" positionstep="0" cssclass="btn_WF_GuideExec" onclick="fn_exec2" font="13px/normal consolas"/>
+        <TextArea id="txt_desc2" taborder="28" left="530.00" top="596" width="470" height="80" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fn_exec = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.fn_result(obj, this.ListBox1, this.txt_desc1);	
+};
+
+this.fn_exec2 = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fn_result(obj, this.ListBox2, this.txt_desc2);	
+};
+
+this.fn_result = function(obj, objComp, objTxt)
+{
+	var strText = obj.text;	
+	var strDesc = ``
+	strDesc = `this.${objComp.name}.${strText}`;
+	switch(strText) {
+		case 'index = 0':
+			objComp.index = 0 ;
+			break;
+		case 'index = -1':
+			objComp.index = -1;
+			break;
+		case 'value = "03"':
+			objComp.value = "03";
+			break;
+		case 'text':
+			strDesc += `\n//Result
+			            ${objComp.text}`
+			break;
+		case 'getSelectedCount()':
+			objComp.getSelectedCount();
+			strDesc += `\n//Result
+			           ${objComp.getSelectedCount()}`
+			break;
+		case 'getSelectedItems()':
+			objComp.getSelectedItems();
+			strDesc += `\n//Result
+			           ${objComp.getSelectedItems()}`
+			break;						
+		default:
+			break;
+	}
+	objTxt.value = strDesc.split('\n').map(line => line.trimStart()).join('\n');
+}]]></Script>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DAY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DAY">SUN</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DAY">MON</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="CODE">05</Col>
+            <Col id="DAY">FRI</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_code">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+          <Column id="READONLY" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+            <Col id="READONLY">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="ListBox00" propid="value" datasetid="ds_data" columnid="CODE"/>
+      <BindItem id="item1" compid="ListBox01" propid="value" datasetid="ds_data" columnid="DAY"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="App_Application" width="1020" height="700" titletext="Application">
+    <Layouts>
+      <Layout height="700" width="1020">
+        <Static id="sta_title" taborder="0" text="Applications" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static00" taborder="1" text="getApplication" left="20.00" top="60" width="131" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Button id="btn_getVariable" taborder="3" text="Get Variable" left="19" top="190" width="100" height="26" cssclass="btn_WF_GuideExec" onclick="btn_getVariable_onclick"/>
+        <Static id="sta_variable" taborder="4" left="btn_getVariable:5" top="190" width="250" height="26" cssclass="sta_WF_GuideResult"/>
+        <Static id="Static04" taborder="2" text="Variable (Application Variables &gt; Variables)" left="20.00" top="95" width="367" height="30" cssclass="sta_WF_GuideTitle3"/>
+        <Static id="Static11" taborder="5" text="Dataset (Application Variables &gt; Datasets)" left="530" top="95" width="403" height="30" cssclass="sta_WF_GuideTitle3"/>
+        <Static id="Static14" taborder="6" text="Object (Applications &gt; Application_Desktop &gt; mainframe)" left="20.00" top="292" width="463" height="30" cssclass="sta_WF_GuideTitle3"/>
+        <Static id="Static14_00" taborder="7" text="Script (Applications &gt; Application_Desktop &gt; Script)" left="530" top="292" width="584" height="30" cssclass="sta_WF_GuideTitle3"/>
+        <Button id="btn_callScript" taborder="8" text="Call Script" left="530" top="387" width="100" height="26" cssclass="btn_WF_GuideExec" onclick="btn_callScript_onclick"/>
+        <TextArea id="txt_desc1" taborder="9" left="20.00" top="125" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var objApp = nexacro.getApplication();&#10;var strValue = objApp.gv_var1"/>
+        <TextArea id="txt_desc2" taborder="10" left="530" top="125" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var objApp = nexacro.getApplication();&#10;var nCount = objApp.gds_data.rowcount;"/>
+        <TextArea id="txt_desc4" taborder="11" left="530" top="322" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var objApp = nexacro.getApplication();&#10;objApp.afn_script()"/>
+        <TextArea id="txt_desc3" taborder="12" left="20" top="322" width="470" height="60" positionstep="0" cssclass="txt_WF_GuideDesc" readonly="true" value="var objApp = nexacro.getApplication();&#10;var nWidth = objApp.mainframe.width"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.btn_getVariable_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+	var strValue = objApp.gv_var1
+	this.sta_variable.text = strValue;
+};
+
+this.btn_callScript_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objApp = nexacro.getApplication();
+	objApp.afn_script()		
+};
+]]></Script>
+  </Form>
+</FDL>

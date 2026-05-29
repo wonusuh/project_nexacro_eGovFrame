@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="mainTest" width="1043" height="723" titletext="New Form" scrolltype="vertical" scrollbartype="none none" onload="Main_onload" onsize="Main_onsize" background="#f3f5f6">
+    <Layouts>
+      <Layout height="723" mobileorientation="landscape" width="1043">
+        <Div id="divAll" taborder="0" text="Div00" left="0" top="0" cssclass="div_WF_AllBg" right="0" bottom="0">
+          <Layouts>
+            <Layout flexwrap="wrap">
+              <Static id="Static00" taborder="1" text="GLOBAL IT LEADING COMPANY" left="15" top="0" width="580" height="50" cssclass="sta_WF_MainTitle"/>
+              <Static id="Static01" taborder="0" text="Korea's leading software company providing the most optimized business UX and AI convergence services     " left="15" top="50" height="30" cssclass="sta_WF_MainDes" fittocontents="height" right="130" maxwidth=""/>
+              <Div id="divMarket" taborder="2" text="Div02" left="609" top="130" width="160" height="92" layoutorder="3" formscrollbartype="none none">
+                <Layouts>
+                  <Layout>
+                    <Static id="Static09_00" taborder="0" text="st" left="92" top="10" width="17" height="40" cssclass="sta_WF_MainTitleSub" color="#007bff"/>
+                    <Static id="Static10_00" taborder="1" text="In Market Share" left="0" top="50" width="160" height="40" cssclass="sta_WF_Share"/>
+                    <Static id="Static08_00" taborder="2" text="1" left="70" top="0" width="20" height="50" cssclass="sta_WF_ShareTxt"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="divBuild" taborder="3" text="Div01" left="379" top="130" width="160" height="92" layoutorder="2" formscrolltype="none">
+                <Layouts>
+                  <Layout>
+                    <Static id="staBuild" taborder="0" text="7,000" left="30" top="0" width="100" height="50" cssclass="sta_WF_BuildRefTxt"/>
+                    <Static id="Static06_00" taborder="1" text="+" left="130" top="0" width="20" height="50" color="#28a745" cssclass="sta_WF_MainTitleSub"/>
+                    <Static id="Static07_00" taborder="2" text="Build Reference" left="0" top="50" width="160" height="40" cssclass="sta_WF_BuildRef"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Div id="divKey" taborder="4" text="Div00" left="170" top="130" width="139" height="92" layoutorder="1">
+                <Layouts>
+                  <Layout>
+                    <Static id="staKey" taborder="0" text="2,600" left="15" top="0" width="100" height="50" cssclass="sta_WF_KeyClientTxt"/>
+                    <Static id="Static03_00" taborder="1" text="+" left="115" top="0" width="20" height="50" cssclass="sta_WF_MainTitleSub" color="#17a2b8"/>
+                    <Static id="Static04_00" taborder="2" text="Key Clients" left="0" top="50" width="130" height="40" cssclass="sta_WF_KeyClient"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Panel id="panAni" taborder="5" left="15" top="Static01:20" flexwrap="wrap" flexcrossaxiswrapalign="center" horizontalgap="50" flexmainaxisalign="center" verticalgap="10" right="15" height="112" fittocontents="height">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="divKey"/>
+                  <PanelItem id="PanelItem01" componentid="divBuild"/>
+                  <PanelItem id="PanelItem02" componentid="divMarket"/>
+                </Contents>
+              </Panel>
+              <Static id="Static02" taborder="6" text="| TOBESOFT PRODUCT" left="15" top="panAni:15" width="305" height="30" cssclass="sta_WF_MainTitleSub"/>
+              <Div id="divProduct" taborder="7" text="Div00" left="15" top="Static02:10" height="130" fittocontents="height" right="15" formscrolltype="both">
+                <Layouts>
+                  <Layout type="horizontal" flexwrap="wrap" flexcrossaxiswrapalign="center" horizontalgap="18" verticalgap="8" spacing="0px 8px 0px 8px">
+                    <Static id="Static00_05" taborder="0" text="Pro-Series" left="13" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_05" taborder="1" text="development environment provisioning service" left="24" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panPro" taborder="2" left="3" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_05"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_05"/>
+                      </Contents>
+                    </Panel>
+                    <Static id="Static00_04" taborder="3" text="X-AGENT" left="181" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_04" taborder="4" text="External module integration solution" left="192" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panAgent" taborder="5" left="171" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_04"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_04"/>
+                      </Contents>
+                    </Panel>
+                    <Static id="Static00_03" taborder="6" text="X-PUSH" left="349" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_03" taborder="7" text="Real-time message transmission push solution" left="360" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panPush" taborder="8" left="339" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_03"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_03"/>
+                      </Contents>
+                    </Panel>
+                    <Static id="Static00_02" taborder="9" text="TobeDevOps" left="517" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_02" taborder="10" text="Beyond DevOps Engineering Solution" left="528" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panDev" taborder="11" left="507" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_02"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_02"/>
+                      </Contents>
+                    </Panel>
+                    <Static id="Static00_01" taborder="12" text="NEXACRO" left="685" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_01" taborder="13" text="rapid &amp; optimal &#13;&#10;UI development platform" left="696" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panNexa" taborder="14" left="675" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_01"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_01"/>
+                      </Contents>
+                    </Panel>
+                    <Static id="Static00_00" taborder="15" text="NexaAssist" left="853" top="310" width="138" height="30" font="bold 24px/normal &quot;Segoe UI&quot;,&quot;Malgun Gothic&quot;" textAlign="center" letterSpacing="-2px"/>
+                    <Static id="Static01_00" taborder="16" text="AI-based code recommendation search service" left="864" top="360" width="138" height="50" textAlign="center" wordWrap="english"/>
+                    <Panel id="panAssist" taborder="17" left="843" top="10" width="150" height="110" type="vertical" cssclass="pan_WF_NoticeBg" flexcrossaxisalign="center" flexmainaxisalign="center">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static00_00"/>
+                        <PanelItem id="PanelItem01" componentid="Static01_00"/>
+                      </Contents>
+                    </Panel>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Static id="Static03" taborder="8" text="| Nexacro Training Course" left="15" top="divProduct:15" width="305" height="30" cssclass="sta_WF_MainTitleSub"/>
+              <Button id="Button00" taborder="9" text="TOBESOFT Homepage" left="30" top="768" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Button id="Button00_00" taborder="10" text="Support Center" left="163" top="0" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Button id="Button00_01" taborder="11" text="Nexacro Community" left="321" top="0" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Button id="Button00_02" taborder="12" text="YouTube Education" left="479" top="0" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Button id="Button00_03" taborder="13" text="Nexacro Manual" left="637" top="0" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Button id="Button00_04" taborder="14" text="Nexacro Deom Site" left="795" top="0" width="150" height="40" cssclass="btn_WF_FillGray"/>
+              <Div id="divTraining" taborder="17" text="Div00" left="15" top="Static03:2" height="180" right="15" fittocontents="height" formscrolltype="both">
+                <Layouts>
+                  <Layout type="horizontal" flexwrap="wrap" flexmainaxisalign="start" flexcrossaxiswrapalign="center" horizontalgap="28" spacing="0px 10px 0px 10px" verticalgap="10">
+                    <Static id="Static00" taborder="1" text="Publishing" left="513" top="16" width="172" height="35" cssclass="sta_WF_MainTitleSub"/>
+                    <Static id="Static01" taborder="1" text="Development" left="20" top="16" width="172" height="35" cssclass="sta_WF_MainTitleSub"/>
+                    <Grid id="Grid00" taborder="2" left="10" top="35" width="95.57114620213298%" height="125" cssclass="grd_WF_Main" binddataset="ds_dev" autofittype="col">
+                      <Formats>
+                        <Format id="default">
+                          <Columns>
+                            <Column size="60"/>
+                            <Column size="190"/>
+                            <Column size="110"/>
+                          </Columns>
+                          <Rows>
+                            <Row size="40"/>
+                          </Rows>
+                          <Band id="body">
+                            <Cell text="bind:Column0" displaytype="imagecontrol"/>
+                            <Cell col="1" text="bind:Column1"/>
+                            <Cell col="2" text="bind:Column2" cssclass="cell_WF_Right"/>
+                          </Band>
+                        </Format>
+                      </Formats>
+                    </Grid>
+                    <Grid id="Grid01" taborder="3" left="10" top="35" width="95.57114620213298%" height="125" cssclass="grd_WF_Main" binddataset="ds_publ" layoutorder="1" autofittype="col">
+                      <Formats>
+                        <Format id="default">
+                          <Columns>
+                            <Column size="60"/>
+                            <Column size="190"/>
+                            <Column size="110"/>
+                          </Columns>
+                          <Rows>
+                            <Row size="40"/>
+                          </Rows>
+                          <Band id="body">
+                            <Cell text="bind:Column0" displaytype="imagecontrol"/>
+                            <Cell col="1" text="bind:Column1"/>
+                            <Cell col="2" text="bind:Column2" cssclass="cell_WF_Right"/>
+                          </Band>
+                        </Format>
+                      </Formats>
+                    </Grid>
+                    <Panel id="panDevel" taborder="4" left="10" top="10" width="49%" height="160" type="vertical" cssclass="pan_WF_NoticeBg" spacing="0px 0px 0px 10px" minwidth="360" maxwidth="">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Static01"/>
+                        <PanelItem id="PanelItem01" componentid="Grid00"/>
+                      </Contents>
+                    </Panel>
+                    <Panel id="panPubl" taborder="5" left="485" top="10" width="48%" height="160" type="vertical" cssclass="pan_WF_NoticeBg" spacing="0px 0px 0px 10px" minwidth="360" maxwidth="">
+                      <Contents>
+                        <PanelItem id="PanelItem00" componentid="Grid01"/>
+                        <PanelItem id="PanelItem01" componentid="Static00"/>
+                      </Contents>
+                    </Panel>
+                  </Layout>
+                </Layouts>
+              </Div>
+              <Static id="Static04" taborder="15" text="| Family Site" left="15" top="divTraining:15" width="213" height="30" cssclass="sta_WF_MainTitleSub" onclick="divAll_Static04_onclick"/>
+              <Panel id="panSite" taborder="16" left="15" top="Static04:10" flexwrap="wrap" horizontalgap="15" verticalgap="8" right="15" fittocontents="height" spacing="0px 10px 0px 10px" height="40">
+                <Contents>
+                  <PanelItem id="PanelItem00" componentid="Button00"/>
+                  <PanelItem id="PanelItem01" componentid="Button00_00"/>
+                  <PanelItem id="PanelItem02" componentid="Button00_01"/>
+                  <PanelItem id="PanelItem03" componentid="Button00_02"/>
+                  <PanelItem id="PanelItem04" componentid="Button00_03"/>
+                  <PanelItem id="PanelItem05" componentid="Button00_04"/>
+                </Contents>
+              </Panel>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dev">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="DATE" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column1">Basic Course</Col>
+            <Col id="Column2">20250107</Col>
+            <Col id="Column0">theme://images/icon_Close.png</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">Component Usage Course</Col>
+            <Col id="Column2">20250108</Col>
+            <Col id="Column0">theme://images/icon_Ing.png</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">Practical Course</Col>
+            <Col id="Column2">20250109</Col>
+            <Col id="Column0">theme://images/icon_Close.png</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_publ">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="DATE" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column1">Basic Course</Col>
+            <Col id="Column2">20250114</Col>
+            <Col id="Column0">theme://images/icon_Close.png</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">Advanced Course</Col>
+            <Col id="Column2">20250115</Col>
+            <Col id="Column0">theme://images/icon_Ing.png</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">Advanced Course</Col>
+            <Col id="Column2">20250116</Col>
+            <Col id="Column0">theme://images/icon_Close.png</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Main_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.aniObj = new nexacro.Animation("Ani00", this);
+    this.addChild("Ani00", this.aniObj);
+    
+    this.Ani00.easing = "linear";
+	this.Ani00.duration = "1000";
+	
+    // 초기 값과 최종 값을 설정
+    this.aniObj.addTarget("AniItem01", this.divAll.form.divKey.form.staKey, "text:2600");
+	this.aniObj.addTarget("AniItem02", this.divAll.form.divBuild.form.staBuild, "text:7000");
+	
+	// Animation 실행 중 onrun 이벤트 핸들러 연결
+    this.aniObj.setEventHandler("onrun", this.Ani00_onrun, this);
+
+    // Animation 실행
+    this.aniObj.play();
+	
+	this.Main_onsize();	
+};
+
+this.Main_onsize = function(obj:nexacro.Form,e:nexacro.SizeEventInfo)
+{
+	if(this.width < 1040){
+		this.divAll.right = 0;
+		this.divAll.bottom = 0;
+		this.divAll.width = null;
+		this.divAll.height = null;
+	}
+	else{
+		this.divAll.right = null;
+		this.divAll.bottom = null;
+		this.divAll.width = 1040;
+		this.divAll.height = 723;
+	}
+
+	var nLeft = (this.width / 2) - (this.divAll.getOffsetWidth() / 2);
+	var nTop = (this.height / 2) - (this.divAll.getOffsetHeight() / 2); 
+
+	this.divAll.left = nLeft;
+//	this.divAll.top = nTop ;	
+//	this.divAll.form.resetScroll();
+	this.resetScroll();	
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comp_ImageViewer" width="1020" height="700" titletext="Comp_ImageViewer">
+    <Layouts>
+      <Layout height="700" width="1020" stepcount="0">
+        <Static id="sta_title" taborder="0" text="ImageViewer" left="20.00" top="0" width="300" height="60" cssclass="sta_WF_GuideTitle1" positionstep="-1"/>
+        <Static id="Static00" taborder="1" text="basic usage" left="20.00" top="60" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static01" taborder="2" text="[Property] image" left="20.00" top="95" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Static id="Static02" taborder="3" text="image = &quot;theme://images/sta_LOGIN_Tobe.png&quot;" left="20" top="131" width="317" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ImageViewer id="ImageViewer00" taborder="4" left="20" top="157" width="170" height="50" image="url('theme://images/sta_LOGIN_Tobe.png')"/>
+        <Static id="Static03" taborder="5" text="imege = &quot;imagerc::img_nexacro.png&quot;" left="309" top="131" width="317" height="26" cssclass="sta_WF_GuideRefer"/>
+        <ImageViewer id="ImageViewer01" taborder="6" left="309" top="157" width="250" height="79" image="url('imagerc::img_nexacro.png')"/>
+        <Static id="Static04" taborder="7" text="stretch" left="20.00" top="290" width="462" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Static id="Static05" taborder="8" text="[Property] stretch = &quot;none&quot; | &quot;fit&quot; | &quot;fixaspectratio&quot;" left="20.00" top="325" height="36" cssclass="sta_WF_GuideScript" width="470"/>
+        <Radio id="Radio00" taborder="9" left="36.00" top="370" width="248" height="26" codecolumn="codecolumn" datacolumn="datacolumn" columncount="-1" value="none" onitemchanged="Radio00_onitemchanged" rowcount="-1" innerdataset="innerdataset" index="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">fit</Col>
+                <Col id="datacolumn">fit</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">fixaspectratio</Col>
+                <Col id="datacolumn">fixaspectratio</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <ImageViewer id="ImageViewer02" taborder="10" left="624" top="157" width="250" height="79" image="url('https://www.tobesoft.com/assets/images/sub/bg/logoType_tobesoft_mo.png')" stretch="fixaspectratio"/>
+        <Static id="Static06" taborder="11" text="imege = &quot;https://www.tobesoft.com/...&quot;" left="624" top="131" width="251" height="26" cssclass="sta_WF_GuideRefer"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.ImageViewer01.stretch = e.postvalue;
+};
+]]></Script>
+    <Objects/>
+  </Form>
+</FDL>

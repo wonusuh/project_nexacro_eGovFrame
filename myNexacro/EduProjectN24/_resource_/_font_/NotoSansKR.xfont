@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XFONT version="1.0"><![CDATA[
+
+@font-face {
+  font-family : 'NotoSansKR-Regular';
+  font-style : normal;
+  font-weight : 400;
+  src : local("NotoSansKR-Regular");
+  src : url(./_resource_/_font_/NotoSansKR-Regular.woff2) format('woff2'),
+        url(./_resource_/_font_/NotoSansKR-Regular.woff) format('woff'),
+        url(./_resource_/_font_/NotoSansKR-Regular.ttf) format('truetype');    
+}
+@font-face {
+  font-family : 'NotoSansKR-Bold';
+  font-style : normal;
+  font-weight : 800;
+  src : local("NotoSansKR-Bold");
+  src : url(./_resource_/_font_/NotoSansKR-Bold.woff2) format('woff2'),
+        url(./_resource_/_font_/NotoSansKR-Bold.woff) format('woff'),
+        url(./_resource_/_font_/NotoSansKR-Bold.ttf) format('truetype');
+}]]></XFONT>
