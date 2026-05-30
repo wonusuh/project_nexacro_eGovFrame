@@ -2,7 +2,7 @@
 <FDL version="2.1">
   <Form id="Exe_Chap1_Dataset" width="1000" height="700" titletext="Exe_Chap1_Dataset" cssclass="sta_WF_SchLabel">
     <Layouts>
-      <Layout height="700" width="1000" stepcount="3">
+      <Layout height="700" width="1000" stepcount="3" stepindex="1">
         <Grid id="Grid1" taborder="1" left="10" top="70" height="210" binddataset="Dataset1" right="10" autofittype="col">
           <Formats>
             <Format id="default">
@@ -415,11 +415,10 @@ this.btn_Exe1_1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
     
 	this.txtRtn1.value = "Col Count=" + nColCount + " : Row Count=" + nRowCount;
 	
-	// 	for(var i=0; i<nColCount; i++){
-	// 		var sColID = this.Dataset1.getColID(i);
-	// 		trace("Col ID=" + sColID);
-	//       
-	// 	}    
+	for(var i=0; i<nColCount; i++){
+		var sColID = this.Dataset1.getColID(i);
+		trace("Col ID=" + sColID);
+	}
 };
 
 // Exe 1-2
