@@ -9,6 +9,127 @@
       <Script rule_version="1.02"/>
       <GeneratorInfo rule_version="1.3"/>
     </Rule>
-    <Info project="C:\dev_wonuSuh\project_nexacro_eGovFrame\myNexacro\EduProjectN24\" generated="C:\Users\wonwo\OneDrive\Documents\TOBESOFT\Nexacro N\outputs\EduProjectN24\"><File url="environment.xml" checksum="20260527153944" errormsg=""/><File url="typedefinition.xml" checksum="20260527153944" errormsg=""/><File url="appvariables.xml" checksum="20260527153944" errormsg=""/><File url="_resource_\_theme_\theme_edu\theme.xcss" checksum="20260527153946" errormsg=""/><File url="_resource_\_stringrc_\stringresource.xstring" checksum="20260527153946" errormsg=""/><File url="_resource_\_xcss_\css_edu.xcss" checksum="20260527153948" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260306094100" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20260306094100" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20260306094056" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ComComp.json" checksum="20260306094056" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Grid.json" checksum="20260306094058" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260306094102" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260306094056" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260306094102" errormsg=""/><File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Graphics.json" checksum="20260306094058" errormsg=""/><File url="Application_Desktop.xadl" checksum="20260527153944" errormsg=""/><File url="Application_Phone.xadl" checksum="20260527153944" errormsg=""/><File url="_resource_\_font_\NotoSansKR.xfont" checksum="20260527153944" errormsg=""/><File url="_resource_\_stringrc_\_stringresource.xstring" checksum="20260527153946" errormsg=""/><File url="FrameBase\Frame_Left.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_LeftBar.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_Login.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_Main.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_Mdi.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_Top.xfdl" checksum="20260527153949" errormsg=""/><File url="FrameBase\Frame_Work.xfdl" checksum="20260527153949" errormsg=""/><File url="Base\Hello.xfdl" checksum="20260527153948" errormsg=""/><File url="Base\NexacroStudio.xfdl" checksum="20260528193459" errormsg=""/><File url="Base\ScriptAnnotation.xfdl" checksum="20260527153948" errormsg=""/><File url="Form\Form_Emp.xfdl" checksum="20260527153949" errormsg=""/><File url="Form\Form_EmpDetail.xfdl" checksum="20260527153949" errormsg=""/><File url="Form\Form_EmpExe.xfdl" checksum="20260529204827" errormsg=""/><File url="Form\Form_EmpList.xfdl" checksum="20260527153949" errormsg=""/><File url="Form\Form_EmpSample.xfdl" checksum="20260527153949" errormsg=""/><File url="Popup\Popup_Base.xfdl" checksum="20260527153949" errormsg=""/><File url="Popup\Popup_BaseSub.xfdl" checksum="20260527153949" errormsg=""/><File url="Popup\Popup_SearchDept.xfdl" checksum="20260527153949" errormsg=""/><File url="Popup\Popup_SearchDeptExe.xfdl" checksum="20260527153949" errormsg=""/><File url="Application\App_Application.xfdl" checksum="20260527153948" errormsg=""/><File url="Application\App_Environment.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Base.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_BaseSub.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Button.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Calendar.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_CheckBox.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_CheckBoxSet.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Combo.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_DateField.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_DateRangePicker.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Div.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_DivSub.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Edit.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Grid.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_GridCell.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_GridExpr.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_ImageViewer.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_ListBox.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_ListView.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_MaskEdit.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_MultiCombo.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_MultiLineTextField.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_PopupDateRangePicker.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_ProgressBar.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Radio.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Sketch.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Spin.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Static.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_Tab.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_TabSub.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_TextArea.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_TextField.xfdl" checksum="20260527153948" errormsg=""/><File url="Comp\Comp_WebView.xfdl" checksum="20260527153948" errormsg=""/><File url="Object\Obj_Dataset.xfdl" checksum="20260527153949" errormsg=""/><File url="Object\Obj_ExcelExportImport.xfdl" checksum="20260527153949" errormsg=""/><File url="Object\Obj_FileUpDownTransfer.xfdl" checksum="20260527153949" errormsg=""/><File url="Layout\Layout_Horizontal.xfdl" checksum="20260527153949" errormsg=""/><File url="Layout\Layout_Panel.xfdl" checksum="20260527153949" errormsg=""/><File url="Layout\Layout_Position.xfdl" checksum="20260527153949" errormsg=""/><File url="Layout\Layout_Table.xfdl" checksum="20260527153949" errormsg=""/><File url="Layout\Layout_Vertical.xfdl" checksum="20260527153949" errormsg=""/><File url="Sample\Sample_Fluid.xfdl" checksum="20260527153949" errormsg=""/><File url="Sample\Sample_GridSum.xfdl" checksum="20260527153949" errormsg=""/><File url="Sample\Sample_MultiLang.xfdl" checksum="20260527153949" errormsg=""/><File url="Sample\Sample_MultiLangPopup.xfdl" checksum="20260527153949" errormsg=""/><File url="Sample\Sample_PositionBase.xfdl" checksum="20260527153949" errormsg=""/><File url="Preset\CompGuide.xfdl" checksum="20260527153949" errormsg=""/><File url="Preset\CompGuide_Preset.xfdl" checksum="20260527153949" errormsg=""/><File url="Preset\CompGuide_Preset02.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Camera.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_CompGuide01.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_CompGuide02.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Component.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_ListView.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_ListView_Employees.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Login.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Main_IconType.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Main_IconType_sub.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Menu.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_MLM.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_MLMvsPhone.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_MLM_sub.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_PlayerIntro.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Pop_LstView_player.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Step.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_Sub_Slide.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Mobile_TOBESOFT.xfdl" checksum="20260527153949" errormsg=""/><File url="Mobile\Moibile_Pop_Confirm.xfdl" checksum="20260527153949" errormsg=""/><File url="Lib\Lib_Common.xjs" checksum="20260527153949" errormsg=""/><File url="Exe\Exe_Chap1_Dataset.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap2_Grid.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap3_Div_PopupDiv.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap3_Div_PopupDiv_Sub.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap4_Form.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap4_Form_Popup.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Chap5_Common.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_fluidLayout.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Sample.xfdl" checksum="20260527153948" errormsg=""/><File url="Exe\Exe_Sample_Detail.xfdl" checksum="20260527153949" errormsg=""/><File url="Exe\Exe_Sample_Popup.xfdl" checksum="20260527153949" errormsg=""/><File url="File\Comp_GuideBase.xfdl" checksum="20260527153949" errormsg=""/></Info>
+    <Info project="C:\dev_wonuSuh\project_nexacro_eGovFrame\myNexacro\EduProjectN24\" generated="C:\Users\wonwo\OneDrive\Documents\TOBESOFT\Nexacro N\outputs\EduProjectN24\">
+      <File url="environment.xml" checksum="20260529210336" errormsg=""/>
+      <File url="typedefinition.xml" checksum="20260529210336" errormsg=""/>
+      <File url="appvariables.xml" checksum="20260529210336" errormsg=""/>
+      <File url="_resource_\_theme_\theme_edu\theme.xcss" checksum="20260529210336" errormsg=""/>
+      <File url="_resource_\_stringrc_\stringresource.xstring" checksum="20260529210336" errormsg=""/>
+      <File url="_resource_\_xcss_\css_edu.xcss" checksum="20260529210336" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\framework\Framework.json" checksum="20260306094100" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\resources\Resource.json" checksum="20260306094100" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\CompBase.json" checksum="20260306094056" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ComComp.json" checksum="20260306094056" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Grid.json" checksum="20260306094058" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\ListView.json" checksum="20260306094102" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\DeviceAPI.json" checksum="20260306094056" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\MobileComp.json" checksum="20260306094102" errormsg=""/>
+      <File url="C:\Program Files (x86)\TOBESOFT\Nexacro N\SDK\24.0.0\nexacrolib\component\Graphics.json" checksum="20260306094058" errormsg=""/>
+      <File url="Application_Desktop.xadl" checksum="20260529210335" errormsg=""/>
+      <File url="Application_Phone.xadl" checksum="20260529210335" errormsg=""/>
+      <File url="_resource_\_font_\NotoSansKR.xfont" checksum="20260529210336" errormsg=""/>
+      <File url="_resource_\_stringrc_\_stringresource.xstring" checksum="20260529210336" errormsg=""/>
+      <File url="FrameBase\Frame_Left.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_LeftBar.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_Login.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_Main.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_Mdi.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_Top.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="FrameBase\Frame_Work.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Base\Hello.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Base\NexacroStudio.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Base\ScriptAnnotation.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Form\Form_Emp.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Form\Form_EmpDetail.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Form\Form_EmpExe.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Form\Form_EmpList.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Form\Form_EmpSample.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Popup\Popup_Base.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Popup\Popup_BaseSub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Popup\Popup_SearchDept.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Popup\Popup_SearchDeptExe.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Application\App_Application.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Application\App_Environment.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Base.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_BaseSub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Button.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Calendar.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_CheckBox.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_CheckBoxSet.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Combo.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_DateField.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_DateRangePicker.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Div.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_DivSub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Edit.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Grid.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_GridCell.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_GridExpr.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_ImageViewer.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_ListBox.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_ListView.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_MaskEdit.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_MultiCombo.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_MultiLineTextField.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_PopupDateRangePicker.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_ProgressBar.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Radio.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Sketch.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Spin.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Static.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_Tab.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_TabSub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_TextArea.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_TextField.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Comp\Comp_WebView.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Object\Obj_Dataset.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Object\Obj_ExcelExportImport.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Object\Obj_FileUpDownTransfer.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Layout\Layout_Horizontal.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Layout\Layout_Panel.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Layout\Layout_Position.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Layout\Layout_Table.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Layout\Layout_Vertical.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Sample\Sample_Fluid.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Sample\Sample_GridSum.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Sample\Sample_MultiLang.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Sample\Sample_MultiLangPopup.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Sample\Sample_PositionBase.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Preset\CompGuide.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Preset\CompGuide_Preset.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Preset\CompGuide_Preset02.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Camera.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_CompGuide01.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_CompGuide02.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Component.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_ListView.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_ListView_Employees.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Login.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Main_IconType.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Main_IconType_sub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Menu.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_MLM.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_MLMvsPhone.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_MLM_sub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_PlayerIntro.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Pop_LstView_player.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Step.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_Sub_Slide.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Mobile_TOBESOFT.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Mobile\Moibile_Pop_Confirm.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Lib\Lib_Common.xjs" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap1_Dataset.xfdl" checksum="20260530135514" errormsg=""/>
+      <File url="Exe\Exe_Chap2_Grid.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap3_Div_PopupDiv.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap3_Div_PopupDiv_Sub.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap4_Form.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap4_Form_Popup.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Chap5_Common.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_fluidLayout.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Sample.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Sample_Detail.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="Exe\Exe_Sample_Popup.xfdl" checksum="20260529210335" errormsg=""/>
+      <File url="File\Comp_GuideBase.xfdl" checksum="20260529210335" errormsg=""/>
+    </Info>
   </GenInfo>
 </root>
