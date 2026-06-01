@@ -1,17 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Script version="1.0" type="xscript5.1"><![CDATA[
+<Script version="1.0" type="xscript5.1"><![CDATA[//
+this.lfn_getMsg = async (sMsgId) => {
+	const objApp = nexacro.getApplication();
+	const nRow = objApp.gds_message.findRow("MSG_ID", sMsgId);
+	const sMsg = objApp.gds_message.getClumn(nRow, 'MSG_TEXT');
+	
+	return sMsg;
+}
+
 /**
- * 값이 존재하는지 여부 체크
- */
+* 값이 존재하는지 여부 체크
+*/
 this.lfn_isNull = function(sValue)
 {
     if (new String(sValue).valueOf() == "undefined") return true;
     if (sValue == null) return true;
     
     var ChkStr = new String(sValue);
-
+	
     if (ChkStr == null) return true;
     if (ChkStr.toString().length == 0 ) return true;
+	
+	// falsy 값 체크
+	if (!sValue) {
+		return true;
+	}
+	
+	// 모든 정합성을 통과함
     return false;
 };
 
@@ -20,7 +35,7 @@ this.lfn_transaction = function(sId, sUrl, inData, outData, sArg, sCallBack, isA
 	if (this.lfn_isNull(sCallBack)) sCallBack = "fn_callback";
 	
 	if ((isAsync != true) && (isAsync != false)) isAsync = true;	
-
+	
     var sSvcId  = sId + ":" + sCallBack;
 	var sSvcUrl = sUrl;
 	
@@ -47,7 +62,7 @@ this.lfn_callback = function(svcID, errorCode, errorMsg)
 		this.alert("error");
         return;
 	}
-
+	
 	// form에 callback 함수가 있을때
 	if (this[sCallback]) {
         this.lookupFunc(sCallback).call(sSvcId, errorCode, errorMsg);
@@ -68,12 +83,12 @@ this.lfn_openPopup = function(sPopupType, sPopupId, nLeft, nTop, nWidth, nHeight
     else if(sPopupType == "modeless"){
         var sOpenStyle= "showtitlebar=true showstatusbar=false showontaskbar=true showcascadetitletext=false resizable=true autosize=true titletext=modeless";
         var objApp = nexacro.getApplication();
-
+		
         nLeft = (objApp.mainframe.width  / 2) - Math.round(nWidth / 2);
         nTop  = (objApp.mainframe.height / 2) - Math.round(nHeight / 2) ;		
         nLeft = system.clientToScreenX(this, nLeft);
         nTop  = system.clientToScreenY(this, nTop);
-
+		
 		var arrPopFrame = nexacro.getPopupFrames();
 		if (arrPopFrame[sPopupId]) {	
 			if (system.navigatorname == "nexacro") {

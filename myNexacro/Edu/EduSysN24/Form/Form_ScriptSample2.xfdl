@@ -309,7 +309,8 @@
         </ColumnInfo>
       </Dataset>
     </Objects>
-    <Script type="xscript5.1"><![CDATA[
+    <Script type="xscript5.1"><![CDATA[include 'Lib::Lib_Comm.xjs';
+
 this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
 	// 초기값 설정 
@@ -403,7 +404,12 @@ this.btn_add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 // Delete Button
 this.btn_delete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-    if(this.confirm("선택된 자료를 삭제 하시겠습니까?")){
+	//     if(this.confirm("선택된 자료를 삭제 하시겠습니까?")){
+	//         this.ds_emp.deleteRow(this.ds_emp.rowposition);
+	//     }
+	
+	const sMsg = lfn_getMsg('confirm.before.delete');
+	if(this.confirm(sMsg)){
         this.ds_emp.deleteRow(this.ds_emp.rowposition);
     }
 };
