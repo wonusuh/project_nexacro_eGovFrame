@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Mdi" width="1048" height="35" titletext="Frame_Mdi" onload="form_onload" onclose="formi_onclose">
+    <Layouts>
+      <Layout width="1048" height="35" screenid="Desktop_screen">
+        <Static id="Static00" taborder="6" top="0" height="35" left="0" right="0" cssclass="sta_MDI_Bg" background="#f4f6fd"/>
+        <Button id="btn_closeAll" taborder="1" top="8" width="19" height="19" cssclass="btn_MDI_AllX" right="10" onclick="fn_arrange"/>
+        <Button id="btn_vertical" taborder="2" top="8" width="19" height="19" cssclass="btn_MDI_Horz" right="30" onclick="fn_arrange"/>
+        <Button id="btn_horizontal" taborder="3" top="8" width="19" height="19" cssclass="btn_MDI_Verti" right="50" onclick="fn_arrange"/>
+        <Button id="btn_cascade" taborder="4" top="8" width="19" height="19" cssclass="btn_MDI_Min" right="70" onclick="fn_arrange"/>
+        <Button id="btn_maximize" taborder="5" top="8" width="19" height="19" cssclass="btn_MDI_Max" right="90" onclick="fn_arrange"/>
+        <Tab id="tab_mdi" taborder="0" tabindex="0" left="0" onchanged="tab_mdi_onchanged" onextrabuttonclick="tab_mdi_onextrabuttonclick" showextrabutton="true" top="4" right="120" height="31" onlbuttondown="tab_mdi_onlbuttondown" tabbuttongap="5" cssclass="tab_MDI_Tab" tabbuttonstartgap="20">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1">
+              <Layouts>
+                <Layout/>
+              </Layouts>
+            </Tabpage>
+          </Tabpages>
+        </Tab>
+        <Button id="btn_closeMenu" taborder="7" left="0" top="0" width="20" height="35" cssclass="btn_MDI_Close" onclick="btn_closeMenu_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fv_objApp = this.gfn_getApplication();
+
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	//기본 tabpage delete
+	this.tab_mdi.removeTabpage(0);	
+};
+
+// 탭 추가
+this.fn_addTab = function(sFormId, sMenuNm)
+{
+	this.tab_mdi.insertTabpage(sFormId, -1, "", sMenuNm);
+	this.fv_objApp.av_VFrameSet1.separatesize = "35,0,*,30";	
+}
+
+this.tab_mdi_onchanged = function(obj:nexacro.Tab,e:nexacro.TabIndexChangeEventInfo)
+{
+	var sFormID = obj.tabpages[e.postindex].name;	
+	
+	trace("tab_mdi_onchanged "  + sFormID);
+	this.fv_objApp.av_WorkFrame[sFormID].form.setFocus();
+	this.fv_objApp.av_VFrameSet1.separatesize = "35,0,*,30";	
+};
+
+this.tab_mdi_onextrabuttonclick = function(obj:nexacro.Tab,e:nexacro.TabMouseEventInfo)
+{
+	var sFormID = obj.tabpages[e.index].name;	
+	obj.removeTabpage(e.index);	
+	this.fv_objApp.av_WorkFrame[sFormID].form.close();
+    
+    var nRow = this.fv_objApp.gds_openForm.findRow("FORM_ID", sFormID);
+    this.fv_objApp.gds_openForm.deleteRow(nRow);
+    if(obj.getTabpageCount() < 1){
+        this.fv_objApp.av_VFrameSet1.separatesize = "35,*,0,30";	
+    }
+    
+};
+
+this.fn_arrange = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var strType = obj.name.replace("btn_", "");    
+	var arrObj = this.fv_objApp.av_WorkFrame.all;
+	
+	switch(strType)
+	{
+		case "maximize" :
+			for(var i=0; i<arrObj.length; i++) 
+			{
+				this.fv_objApp.av_WorkFrame.frames[i].openstatus = "maximize";			
+				this.fv_objApp.av_WorkFrame.frames[i].showtitlebar = false;                
+				this.fv_objApp.av_WorkFrame.frames[i].border = "0px none";
+			}
+		break;
+		case "closeAll" :
+ 			for(var i=arrObj.length-1; i>=0; i--) 
+			{
+				trace(arrObj[i].form.name);
+ 				arrObj[i].form.close();
+ 				this.tab_mdi.removeTabpage(i);
+			}
+            this.fv_objApp.gds_openForm.clearData();			
+            this.fv_objApp.av_VFrameSet1.separatesize = "35,*,0,30";	
+		break;
+	    default :
+			for(var i=0; i<arrObj.length; i++) 
+			{
+				this.fv_objApp.av_WorkFrame.frames[i].openstatus = "normal";			
+				this.fv_objApp.av_WorkFrame.frames[i].showtitlebar = true;                
+				this.fv_objApp.av_WorkFrame.frames[i].border = "1px solid #5d6468";
+				this.fv_objApp.av_WorkFrame.frames[i].titlebar.closebutton.enable = false;
+			}            
+			this.fv_objApp.av_WorkFrame.arrange(strType);
+	    break;
+	}
+	
+};
+
+this.btn_home_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fv_objApp.av_VFrameSet1.separatesize = "35,*,0,30";
+};
+
+this.tab_mdi_onlbuttondown = function(obj:nexacro.Tab,e:nexacro.MouseEventInfo)
+{
+	if(obj.getTabpageCount() > 0){
+        this.fv_objApp.av_VFrameSet1.separatesize = "35,0,*,30";
+    }
+};
+
+this.btn_closeMenu_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+	if(obj.cssclass == "btn_MDI_Open"){
+		this.fv_objApp.av_HFrameSet.separatesize = "45,200,*,30";
+		obj.cssclass = "btn_MDI_Close";
+	}
+	else{
+		this.fv_objApp.av_HFrameSet.separatesize = "45,0,*,30";
+		obj.cssclass = "btn_MDI_Open";
+	}
+	
+};]]></Script>
+  </Form>
+</FDL>

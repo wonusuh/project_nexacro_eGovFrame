@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::theme_edu" scrollbarsize="8" usestringresource="true">
+    <ScreenDefinition>
+      <Screen id="Desktop_screen" type="desktop" themeid="theme::theme_edu"/>
+    </ScreenDefinition>
+    <Variables>
+      <Variable id="ev_runMode" initval="0"/>
+      <Variable id="ev_messagePopup" initval="true"/>
+      <Variable id="ev_userID"/>
+      <Variable id="ev_userName"/>
+      <Variable id="evLanguageChange" initval="KR"/>
+    </Variables>
+    <Cookies/>
+    <httpheader/>
+  </Environment>
+</ENV>

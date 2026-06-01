@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Sample_Calendar" width="1020" height="650" titletext="월/기간 달력" onload="Form_onload">
+    <Layouts>
+      <Layout height="650" mobileorientation="landscape" width="1020">
+        <Static id="sta_title" taborder="0" text="기간 달력 / 월 달력" left="20" top="0" width="166" height="60" cssclass="sta_WF_Title1"/>
+        <Static id="Static09" taborder="1" text="기간 달력" left="20" top="60" width="190" height="30" cssclass="sta_WF_Title2"/>
+        <Static id="Static02" taborder="2" text="Div Link - Calendar" left="20" top="90" width="190" height="30" cssclass="sta_WF_Title3"/>
+        <Div id="div_calFromTo" taborder="3" text="Div00" left="20" top="120" width="317" height="26" url="Comm::Comm_CalendarFromTo.xfdl" maxwidth="" callbackfunc="fn_calCallback"/>
+        <Button id="btn_enable" taborder="4" text="enable" left="20" top="162" width="78" height="26" onclick="btn_enable_onclick" cssclass="btn_WF_LineBlue"/>
+        <Button id="btn_readonly" taborder="5" text="readonly" left="103" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_readonly_onclick"/>
+        <Button id="btn_essential" taborder="6" text="essential" left="186" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_essential_onclick"/>
+        <Button id="btn_init" taborder="7" text="init" left="269" top="162" width="78" height="26" onclick="btn_init_onclick" cssclass="btn_WF_LineBlue"/>
+        <Button id="btn_getFromDate" taborder="8" text="Get From Date" left="20" top="212" width="112" height="26" onclick="btn_getFromDate_onclick" cssclass="btn_WF_FillGray"/>
+        <Edit id="edit_fromDate" taborder="9" left="137" top="212" width="92" height="26" readonly="true"/>
+        <Button id="btn_getToDate" taborder="10" text="Get To Date" left="244" top="212" width="112" height="26" onclick="btn_getToDate_onclick" cssclass="btn_WF_FillGray"/>
+        <Edit id="edit_toDate" taborder="11" left="361" top="212" width="92" height="26" readonly="true"/>
+        <Button id="btn_setFromDate" taborder="12" text="Set From Date" left="20" top="243" width="112" height="26" onclick="btn_setFromDate_onclick" cssclass="btn_WF_LineGray"/>
+        <Edit id="edt_setFrom" taborder="13" left="137" top="243" width="92" height="26" maxlength="8" value="20250501" text="20250501"/>
+        <Button id="btn_setToDate" taborder="14" text="Set To Date" left="244" top="243" width="112" height="26" onclick="btn_setToDate_onclick" cssclass="btn_WF_LineGray"/>
+        <Edit id="edt_setTo" taborder="15" left="361" top="243" width="92" height="26" maxlength="8" value="20250515" text="20250515"/>
+        <TextArea id="txt_desc1" taborder="16" left="20" top="275" width="470" height="60" positionstep="0" cssclass="txt_WF_Desc" readonly="true"/>
+        <Static id="Static09_00_00" taborder="17" text="Div Link - PopupDateRangePicker" left="20" top="359" width="220" height="30" cssclass="sta_WF_Title3"/>
+        <Div id="div_dateRange" taborder="18" text="Div00" left="20" top="389" width="317" height="26" url="Comm::Comm_DateRange.xfdl" maxwidth="" callbackfunc="fn_calCallback"/>
+        <Static id="Static09_01" taborder="19" text="월 달력" left="530" top="60" width="190" height="30" cssclass="sta_WF_Title2"/>
+        <Static id="Static10" taborder="20" text="Div Link" left="530" top="90" width="191" height="30" cssclass="sta_WF_Title3"/>
+        <Div id="div_calMonth" taborder="21" text="Div00" left="530" top="120" width="118" height="26" url="Comm::Comm_CalendarMonth.xfdl" callbackfunc="fn_calMMCallback"/>
+        <Button id="btn_enableM" taborder="22" text="enable" left="530" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_enableM_onclick" visible="true"/>
+        <Button id="btn_readonlyM" taborder="23" text="readonly" left="613" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_readonlyM_onclick" visible="true"/>
+        <Button id="btn_essentialM" taborder="24" text="essential" left="696" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_essentialM_onclick" visible="true"/>
+        <Button id="btn_initM" taborder="25" text="init" left="779" top="162" width="78" height="26" cssclass="btn_WF_LineBlue" onclick="btn_initM_onclick" visible="true"/>
+        <Button id="btn_getMonth" taborder="26" text="Get Month" left="530" top="212" width="112" height="26" onclick="btn_getMonth_onclick" visible="true" cssclass="btn_WF_FillGray"/>
+        <Edit id="edt_getMonth" taborder="27" left="647" top="212" width="92" height="26" readonly="true" visible="true"/>
+        <Button id="btn_setMonth" taborder="28" text="Set Month" left="530" top="243" width="112" height="26" onclick="btn_setMonth_onclick" visible="true" cssclass="btn_WF_LineGray"/>
+        <Edit id="edt_setMonth" taborder="29" left="647" top="243" width="92" height="26" maxlength="6" value="202505" text="202505" visible="true"/>
+        <Static id="Static01" taborder="30" text="User Property" left="530" top="359" width="241" height="30" cssclass="sta_WF_Title3" visible="true"/>
+        <Calendar id="cal_month" taborder="31" left="530" top="389" width="120" height="26" uCalType="MM" dateformat="yyyy-MM" editformat="yyyy-MM" popuptype="none" uCallbackfunc="fn_calMonthCallback" onchanged="cal_month_onchanged" value="20250501"/>
+        <Div id="Div00" taborder="32" text="Div00" left="670" top="388" width="315" height="172" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Calendar id="cal_month" taborder="0" left="10" top="10" width="120" height="26" uCalType="MM" dateformat="yyyy-MM" editformat="yyyy-MM" popuptype="none" uCallbackfunc="fn_calMonthCallback" onchanged="cal_month_onchanged" value="20250501"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+ *  교육 샘플 프로젝트
+ *  @MenuPath	Sample > 월/기간 달력
+ *  @FileName	Sample_Calendar.xfdl
+ *  @Creator	education
+ *  @CreateDate	2025.04.01
+ *  @Desction   월/기간 달력
+ ************** 소스 수정 이력 ***********************************************
+ *  date          	Modifier                Description
+ *******************************************************************************
+ *  2025.04.01     	education 	            최초 생성
+ *******************************************************************************
+ */ 
+ 
+this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfn_formOnLoad(this);
+
+	var fromDate = this.gfn_getDate("date");
+	var toDate   = this.gfn_addDate(fromDate, 15);
+	
+	this.div_calFromTo.form.fn_setFromDate(fromDate);
+	this.div_calFromTo.form.fn_setToDate(toDate);
+	this.div_dateRange.form.fn_setFromDate(fromDate);
+	this.div_dateRange.form.fn_setToDate(toDate);
+};
+
+/**
+ * 기간 달력 Enable 처리
+ * fn_setEnable() 함수 호출
+ * @example: this.div_cal.form.fn_setEnable(false)
+*/
+this.fv_enable = true;
+this.btn_enable_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.fv_enable = (this.fv_enable ? false: true);
+    this.div_calFromTo.form.fn_setEnable(this.fv_enable);
+    this.div_dateRange.form.fn_setEnable(this.fv_enable);
+	
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_setEnable(${this.fv_enable})`;
+};
+
+/*
+* 기간 달력 Readonly 처리
+* fn_setReadonly() 함수 호출
+* @example: this.div_cal.form.fn_setReadonly(false)
+*/
+this.fv_readonly = false;
+this.btn_readonly_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.fv_readonly = (this.fv_readonly ? false: true);
+    this.div_calFromTo.form.fn_setReadonly(this.fv_readonly);
+    this.div_dateRange.form.fn_setReadonly(this.fv_readonly);
+
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_setReadonly(${this.fv_readonly})`;
+};
+
+/*
+* 기간 달력 필수 표시
+* fn_setEssential() 함수 호출
+* @example: this.div_cal.form.fn_setEssential(false)
+*/
+this.fv_essential = false;
+this.btn_essential_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.fv_essential = (this.fv_essential ? false: true);
+    this.div_calFromTo.form.fn_setEssential(this.fv_essential);	
+
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_setEssential(${this.fv_essential})`;
+};
+
+/*
+* 기간 달력 초기화
+* fn_init() 함수 호출
+* @example: this.div_cal.form.fn_init()
+*/
+this.btn_init_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_calFromTo.form.fn_init();
+	
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_init()`;
+}	
+
+/*
+* 기간 달력 시작일자 가져오기
+* fn_getFromDate() 함수 호출
+* @example: this.div_cal.form.fn_getFromDate()
+*/
+this.btn_getFromDate_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sDate = this.div_calFromTo.form.fn_getFromDate();    
+    this.edit_fromDate.value = sDate;	
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_getFromDate()    //${sDate}`;
+};
+
+/*
+* 기간 달력 종료일자 가져오기
+* fn_getToDate() 함수 호출
+* @example: this.div_cal.form.fn_getToDate()
+*/
+this.btn_getToDate_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sDate = this.div_calFromTo.form.fn_getToDate(); 
+    this.edit_toDate.value = sDate;	
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_getToDate()    //${sDate}`;
+};
+
+/*
+* 기간 달력 시작일자 설정하기
+* fn_setFromDate() 함수 호출
+* @example: this.div_cal.form.fn_setFromDate("20190101")
+*/
+this.btn_setFromDate_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sDate   = this.edt_setFrom.value;
+    this.div_calFromTo.form.fn_setFromDate(sDate);
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_setFromDate(${sDate})`;
+};
+
+/*
+* 기간 달력 종료일자 설정하기
+* fn_setToDate() 함수 호출
+* @example: this.div_cal.form.fn_setToDate("20190102")
+*/
+this.btn_setToDate_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sDate   = this.edt_setTo.value;
+    this.div_calFromTo.form.fn_setToDate(sDate);	
+	this.txt_desc1.value = `this.div_calFromTo.form.fn_setToDate(${sDate})`;
+};
+
+/*
+* 기간 달력 콜백함수
+* Div User Prop : callbackfunc
+*/
+this.fn_calCallback = function(objId, sFromValue, sToValue)
+{
+    trace(objId + " : "  + sFromValue + " : "  + sToValue);
+}
+
+
+/*
+* 월 달력 Enable 처리
+* fn_setEnable() 함수 호출
+* @example: this.div_calMonth.form.fn_setEnable(false)
+*/
+this.fv_enableM = true;
+this.btn_enableM_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.fv_enableM = (this.fv_enableM ? false: true);
+    this.div_calMonth.form.fn_setEnable(this.fv_enableM);
+
+};
+
+/*
+* 월 달력 Readonly 처리
+* fn_setReadonly() 함수 호출
+* @example: this.div_calMonth.form.fn_setReadonly(false)
+*/
+this.fv_readonlyM = false;
+this.btn_readonlyM_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.fv_readonlyM = (this.fv_readonlyM ? false: true);
+    this.div_calMonth.form.fn_setReadonly(this.fv_readonlyM);
+};
+
+/*
+* 월 달력 필수 표시
+* fn_setEssential() 함수 호출
+* @example: this.div_calMonth.form.fn_setEssential(false)
+*/
+this.fv_essentialM = false;
+this.btn_essentialM_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.fv_essentialM = (this.fv_essentialM ? false: true);
+    this.div_calMonth.form.fn_setEssential(this.fv_essentialM);	
+};
+
+/*
+* 월 달력 초기화
+* fn_init() 함수 호출
+* @example: this.div_calMonth.form.fn_init()
+*/
+this.btn_initM_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.div_calMonth.form.fn_init();
+	
+};
+
+/*
+* 월 달력 월 Get
+* fn_getValue() 함수 호출
+* @example: this.div_calMonth.form.fn_getValue()
+*/
+this.btn_getMonth_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var	sDate = this.div_calMonth.form.fn_getValue();    
+    this.edt_getMonth.value = sDate;	
+};
+
+/*
+* 월 달력 월 Set
+* fn_getFromDate() 함수 호출
+* @example: this.div_calMonth.form.fn_setValue()
+*/
+this.btn_setMonth_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var	sDate = this.edt_setMonth.value;
+	this.div_calMonth.form.fn_setValue(sDate);	
+};
+
+/*
+* 월력 콜백함수: Div로 적용시
+* Div User Prop : callbackfunc
+*/
+this.fn_calMMCallback = function(objId, sMonth)
+{
+    trace(objId + " : "  + sMonth);
+}
+
+/*
+* 월력 콜백함수: Calendar User Prop로 적용시
+* Calendar User Prop : callbackfunc
+*/
+this.fn_calMonthCallback = function(objId, sMonth)
+{
+    trace(objId + " : " + sMonth);
+}
+
+
+]]></Script>
+    <Objects/>
+    <Bind>
+      <BindItem id="item0" compid="div_calFromTo.form.calFrom" propid="value" datasetid="dsList" columnid="dtFrom"/>
+      <BindItem id="item1" compid="div_calFromTo.form.calTo" propid="value" datasetid="dsList" columnid="dtTo"/>
+      <BindItem id="item4" compid="div_calMonth.form.calYM" propid="value" datasetid="dsList" columnid="dtMonth"/>
+    </Bind>
+  </Form>
+</FDL>

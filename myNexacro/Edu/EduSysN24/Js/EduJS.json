@@ -1,0 +1,17 @@
+{
+	"name": "EduJS",
+	"version": "2.0.0.0",
+	"description": "Library for Nexacro N",
+	"license": "",
+	"scripts": [
+        "EduJS/EduComp.js",
+        "EduJS/EduFrame.js",
+        "EduJS/EduUtil.js",
+        "EduJS/EduTransaction.js",
+        "EduJS/EduValidation.js",
+        "EduJS/EduPopup.js",
+        "EduJS/EduMessage.js",
+        "EduJS/EduGrid.js",
+        "EduJS/EduExcel.js"
+	]
+}

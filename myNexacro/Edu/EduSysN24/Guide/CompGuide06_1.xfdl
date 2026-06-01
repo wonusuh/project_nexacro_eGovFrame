@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide01" width="1020" height="1380" titletext="Gridcellclass, Expr, Selection">
+    <Layouts>
+      <Layout height="1380" width="1020">
+        <Static id="Static00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01" taborder="1" text="Grid" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="85" height="1275" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="2" left="20" top="50" width="805" height="154" binddataset="grdCellclass" useselcolor="false" autofittype="col">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="200"/>
+                      <Column size="200"/>
+                      <Column size="200"/>
+                      <Column size="200"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell colspan="2" text="Button"/>
+                      <Cell col="2" colspan="2" text="Input"/>
+                      <Cell row="1" text="Upload"/>
+                      <Cell row="1" col="1" text="Download"/>
+                      <Cell row="1" col="2" text="Default"/>
+                      <Cell row="1" col="3" text="Essential"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Column0" displaytype="buttoncontrol" edittype="button" cssclass="cell_WF_UploadBtn"/>
+                      <Cell col="1" text="bind:Column1" displaytype="buttoncontrol" edittype="button" cssclass="cell_WF_DnloadBtn"/>
+                      <Cell col="2" text="bind:Column2" displaytype="editcontrol" edittype="text"/>
+                      <Cell col="3" text="bind:Column3" displaytype="editcontrol" edittype="text" cssclass="cell_WF_EdtEssential"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static01" taborder="0" text="※ Expression" left="20" top="Grid00:20" width="445" height="30" cssclass="sta_WF_GDes"/>
+              <Grid id="Grid01" taborder="3" left="20" top="Static01:10" width="805" height="180" binddataset="ds_grd" autofittype="col">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="HDate"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Name" cssclass="expr:Gender == &quot;1&quot; ? &quot;cell_WF_ExprF&quot; : &quot;cell_WF_ExprM&quot;"/>
+                      <Cell col="1" text="bind:ID"/>
+                      <Cell col="2" text="bind:HDate"/>
+                      <Cell col="3" text="bind:Salary"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static02" taborder="1" text="※ Action &gt; selecttype - cell / Appearance &gt; showselection - ture" left="20" top="Grid01:20" width="391" height="30" cssclass="sta_WF_GDes"/>
+              <Static id="Static00" taborder="11" text="※ GridCellClass" left="20" top="10" width="445" height="30" cssclass="sta_WF_GDes"/>
+              <Grid id="Grid02" taborder="7" left="20" top="Static02:10" width="805" height="150" binddataset="ds_grd" autofittype="col" selecttype="cell" showselection="true">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="HDate"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Name"/>
+                      <Cell col="1" text="bind:ID"/>
+                      <Cell col="2" text="bind:HDate"/>
+                      <Cell col="3" text="bind:Salary"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static03" taborder="4" text="※ Action &gt; selecttype - row / Appearance &gt; showselection - ture" left="20" top="Grid02:20" width="394" height="30" cssclass="sta_WF_GDes"/>
+              <Grid id="Grid03" taborder="8" left="20" top="Static03:10" width="805" height="150" binddataset="ds_grd" autofittype="col" selecttype="row" showselection="true">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="HDate"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Name"/>
+                      <Cell col="1" text="bind:ID"/>
+                      <Cell col="2" text="bind:HDate"/>
+                      <Cell col="3" text="bind:Salary"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static04" taborder="5" text="※ Appearance &gt; showcellselection - ture             실행하여 cell 선택 시 확인 할 수 있습니다." left="20" top="Grid03:20" width="785" height="30" cssclass="sta_WF_GDes"/>
+              <Grid id="Grid04" taborder="9" left="20" top="Static04:10" width="805" height="150" binddataset="ds_grd" autofittype="col" showcellselection="true">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="HDate"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Name"/>
+                      <Cell col="1" text="bind:ID"/>
+                      <Cell col="2" text="bind:HDate"/>
+                      <Cell col="3" text="bind:Salary"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static05" taborder="6" text="※  Appearance &gt; showselection - ture / Appearance &gt; showcellselection - ture" left="20" top="Grid04:20" width="476" height="30" cssclass="sta_WF_GDes"/>
+              <Grid id="Grid05" taborder="10" left="20" top="Static05:10" width="805" height="120" binddataset="ds_grd" autofittype="col" showcellselection="true" showselection="true">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                      <Column size="120"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="30" band="head"/>
+                      <Row size="30"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="Name"/>
+                      <Cell col="1" text="ID"/>
+                      <Cell col="2" text="HDate"/>
+                      <Cell col="3" text="Salary"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:Name"/>
+                      <Cell col="1" text="bind:ID"/>
+                      <Cell col="2" text="bind:HDate"/>
+                      <Cell col="3" text="bind:Salary"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="grdCellclass">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">Upload</Col>
+            <Col id="Column1">Download</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Upload</Col>
+            <Col id="Column1">Download</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Upload</Col>
+            <Col id="Column1">Download</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Upload</Col>
+            <Col id="Column1">Download</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_grd">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="ID" type="STRING" size="256"/>
+          <Column id="Dept" type="STRING" size="256"/>
+          <Column id="Memo" type="STRING" size="256"/>
+          <Column id="Gender" type="STRING" size="256"/>
+          <Column id="Married" type="STRING" size="256"/>
+          <Column id="HDate" type="STRING" size="256"/>
+          <Column id="Salary" type="STRING" size="256"/>
+          <Column id="Position" type="STRING" size="256"/>
+          <Column id="Hobby" type="STRING" size="256"/>
+          <Column id="Skill" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">Kate</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Active</Col>
+            <Col id="Hobby">1,3</Col>
+            <Col id="Skill">1,3,5</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Dennis </Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Affectionnate</Col>
+            <Col id="Hobby">2,5,6</Col>
+            <Col id="Skill">2,4</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Max </Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married"/>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Aggressive</Col>
+            <Col id="Hobby">3,5,8,9</Col>
+            <Col id="Skill">3,5,9</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ted </Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married"/>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Altruistic</Col>
+            <Col id="Hobby">4,5,8</Col>
+            <Col id="Skill">5,10,11</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Adam</Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Ambitious</Col>
+            <Col id="Hobby">5,11,12</Col>
+            <Col id="Skill">5,6,9</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Belle</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Arrogant</Col>
+            <Col id="Hobby">6,8,9</Col>
+            <Col id="Skill">10,11,12</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lexy</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Astute</Col>
+            <Col id="Hobby">2,4,8</Col>
+            <Col id="Skill">1,2,3</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lucy</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Attractive</Col>
+            <Col id="Hobby">13,14</Col>
+            <Col id="Skill">10,13</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Kein</Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Avaricious</Col>
+            <Col id="Hobby">2,6,8</Col>
+            <Col id="Skill">1,3,5</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Juliana</Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Benevolent</Col>
+            <Col id="Hobby">11,12,13</Col>
+            <Col id="Skill">3,6,9</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Kara</Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Boastiful</Col>
+            <Col id="Hobby">2,3,5</Col>
+            <Col id="Skill">2,4,8</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Andrew</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Bossy</Col>
+            <Col id="Hobby">3,5,7,9</Col>
+            <Col id="Skill">2,5,10</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Maria</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Brutal</Col>
+            <Col id="Hobby">1,3,12</Col>
+            <Col id="Skill">2,6,12</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Eddy</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Candid</Col>
+            <Col id="Hobby">1,5,13</Col>
+            <Col id="Skill">3,4,12</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Sarah</Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Calm</Col>
+            <Col id="Hobby">5,6,8</Col>
+            <Col id="Skill">3,6,9</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ivy</Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Careful</Col>
+            <Col id="Skill">10,11,12,13</Col>
+            <Col id="Hobby">5,7,9,11</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Noel </Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Careless</Col>
+            <Col id="Skill">2,4,10</Col>
+            <Col id="Hobby">2,5,6,15</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Arnold</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Caring</Col>
+            <Col id="Skill">7,8,9</Col>
+            <Col id="Hobby">8,10,12</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Alex </Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Cheerful</Col>
+            <Col id="Skill">1</Col>
+            <Col id="Hobby">11,13,14</Col>
+          </Row>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Confident</Col>
+            <Col id="Hobby">2,4,8</Col>
+            <Col id="Skill">1,2,3,4,5</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Steven </Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Conservative</Col>
+            <Col id="Hobby">4,6,8</Col>
+            <Col id="Skill">2,5,7</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald </Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Cunning</Col>
+            <Col id="Hobby">5,11,12</Col>
+            <Col id="Skill">8,9,10,11</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ray </Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Earnest</Col>
+            <Col id="Hobby">9,10,11</Col>
+            <Col id="Skill">1,3,5,7,9</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Young</Col>
+            <Col id="ID">TOBE0713</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Extrovert</Col>
+            <Col id="Hobby">8</Col>
+            <Col id="Skill">12,13</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+]]></Script>
+  </Form>
+</FDL>

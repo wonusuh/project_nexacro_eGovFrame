@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide03" width="1020" height="920" titletext="rdo, lst, cbo, mcbo">
+    <Layouts>
+      <Layout height="920" width="1020">
+        <Static id="Static00_00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01_00" taborder="1" text="Radio" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="85" height="100" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="240" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[selected]" left="460" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="[disabled][selected]" left="680" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Radio id="Radio01" taborder="4" left="240" top="50" width="140" height="26" innerdataset="ds_rdo" codecolumn="code" datacolumn="data" direction="vertical" enable="false"/>
+              <Radio id="Radio02" taborder="5" left="460" top="50" width="140" height="26" innerdataset="ds_rdo" codecolumn="code" datacolumn="data" direction="vertical" index="0" text="Item01" value="1"/>
+              <Radio id="Radio03" taborder="6" left="680" top="50" width="140" height="26" innerdataset="ds_rdo" codecolumn="code" datacolumn="data" direction="vertical" index="0" text="Item01" value="1" enable="false"/>
+              <Radio id="Radio00" taborder="7" left="20" top="50" width="140" height="26" innerdataset="ds_rdo" codecolumn="code" datacolumn="data" direction="vertical"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="3" text="ListBox" left="20" top="Div00:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="4" text="Div00" left="20" top="Static02:0" height="210" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="240" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[selected]" left="460" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <ListBox id="ListBox01" taborder="3" left="240" top="50" width="170" height="141" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" enable="false"/>
+              <ListBox id="ListBox02" taborder="4" left="460" top="50" width="170" height="141" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" index="2" text="Technocal Support" value="3"/>
+              <ListBox id="ListBox00" taborder="5" left="20" top="50" width="170" height="141" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="5" text="Combo" left="20" top="Div00:270" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div02" taborder="6" text="Div00" left="20" top="Static02:260" height="100" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="240" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[readonly]" left="460" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="class = cbo_WF_Essential" left="680" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Combo id="Combo01" taborder="4" text="Combo00" left="240" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" enable="false"/>
+              <Combo id="Combo02" taborder="5" text="Combo00" left="460" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" readonly="true"/>
+              <Combo id="Combo03" taborder="6" text="Combo00" left="680" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" cssclass="cbo_WF_Essential"/>
+              <Combo id="Combo00" taborder="7" left="20" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" value="" index="-1"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static04" taborder="8" text="MultiCombo" left="20" top="Div02:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div03" taborder="7" text="Div00" left="20" top="Static04:0" height="270" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="type=filter" left="240" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="showselectallcheckbox=true" left="460" top="10" width="170" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="edittype=count" left="680" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <MultiCombo id="MultiCombo03" taborder="4" text="HTML,JavaScript" left="680" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" type="filter" showselectallcheckbox="true" edittype="count" value="01,03" index="0,2"/>
+              <MultiCombo id="MultiCombo02" taborder="5" text="HTML,JavaScript" left="460" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" type="filter" showselectallcheckbox="true" value="01,03" index="0,2"/>
+              <MultiCombo id="MultiCombo01" taborder="6" text="HTML,JavaScript" left="240" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" type="filter" value="01,03" index="0,2"/>
+              <MultiCombo id="MultiCombo00" taborder="7" text="HTML,JavaScript" left="20" top="50" width="170" height="26" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" value="01,03" index="0,2"/>
+              <Static id="Static04" taborder="8" text="edittype=multitag" left="20" top="MultiCombo00:30" width="285" height="20" cssclass="sta_WF_GStatus"/>
+              <Static id="Static05" taborder="9" text="edittype=multitag / type=filter" left="460" top="106" width="405" height="20" cssclass="sta_WF_GStatus" onclick="Static05_01_00_00_00_00_00_onclick"/>
+              <MultiCombo id="MultiCombo05" taborder="10" text="HTML,JavaScript" left="460" top="136" width="405" height="120" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" showselectallcheckbox="true" edittype="multitag" buttonsize="26" type="filter" value="01,03" index="0,2"/>
+              <MultiCombo id="MultiCombo04" taborder="11" text="HTML,JavaScript" left="20" top="136" width="405" height="120" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" showselectallcheckbox="true" edittype="multitag" buttonsize="26" type="dropdown" value="01,03" index="0,2"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_rdo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">Item01</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Item02</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

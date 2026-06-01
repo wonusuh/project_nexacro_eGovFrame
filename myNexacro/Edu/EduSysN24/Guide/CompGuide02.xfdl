@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide02" width="1020" height="690" titletext="btn, spn, chk, chks">
+    <Layouts>
+      <Layout height="690" width="1020">
+        <Static id="Static00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01" taborder="1" text="Button" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="85" height="100" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="1" text="[disabled]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Button id="Button00" taborder="2" text="Button" left="20" top="50" width="60" height="26"/>
+              <Button id="Button01" taborder="3" text="Education" left="85" top="50" width="74" height="26"/>
+              <Button id="Button02" taborder="4" text="Nexacro N24" left="164" top="50" width="101" height="26"/>
+              <Button id="Button03" taborder="5" text="Button" left="400" top="50" width="65" height="26" enable="false"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="3" text="Spin" left="20" top="Div00:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="4" text="Div01" left="20" top="Static02:0" width="980" height="100" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="210" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[readonly]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static04" taborder="3" text="class = edt_WF_Essential" left="780" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Spin id="Spin03" taborder="4" left="780" top="50" width="140" height="26" cssclass="spn_WF_Essential" value="123"/>
+              <Spin id="Spin02" taborder="5" left="400" top="50" width="140" height="26" value="123" readonly="true"/>
+              <Spin id="Spin01" taborder="6" left="210" top="50" width="140" height="26" value="123" enable="false"/>
+              <Spin id="Spin00" taborder="7" left="20" top="50" width="140" height="26" value="123"/>
+              <Static id="Static03" taborder="8" text="[nulltext]" left="590" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Spin id="Spin04" taborder="9" left="590" top="50" width="140" height="26" displaynulltext="Null Text"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="6" text="CheckBox" left="20" top="Div01:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div02" taborder="5" text="Div01" left="20" top="Static03:0" width="980" height="100" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="210" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[selected]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="[disabled][selected]" left="590" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <CheckBox id="CheckBox01" taborder="4" text="Check" left="210" top="49" width="150" height="26" enable="false"/>
+              <CheckBox id="CheckBox02" taborder="5" text="Check" left="400" top="49" width="150" height="26" value="true"/>
+              <CheckBox id="CheckBox03" taborder="6" text="Check" left="590" top="49" width="80" height="26" value="true" enable="false"/>
+              <CheckBox id="CheckBox00" taborder="7" text="Check" left="20" top="49" width="80" height="26"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02_01_00_00" taborder="8" text="CheckBoxSet" left="20" top="Div02:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div03" taborder="7" text="Div01" left="20" top="Static02_01_00_00:0" width="980" height="150" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="1" text="[selected]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <CheckBoxSet id="CheckBoxSet01" taborder="2" left="400" top="50" width="220" height="81" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" rowcount="3" text="HTML,JavaScript,Python" value="01,03,06" index="0,2,5"/>
+              <CheckBoxSet id="CheckBoxSet00" taborder="3" left="20" top="50" width="220" height="81" innerdataset="ds_skill" codecolumn="CODE" datacolumn="NAME" rowcount="3" text="" value=""/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="255"/>
+          <Column id="NAME" type="string" size="255"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="NAME">HTML</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="NAME">CSS</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="NAME">JavaScript</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="NAME">JAVA</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="NAME">C/C++</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="NAME">Python</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

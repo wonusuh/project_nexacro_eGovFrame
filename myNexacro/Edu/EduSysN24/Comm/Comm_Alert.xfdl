@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comm_Alert" width="360" height="200" titletext="알림창" onload="form_onload">
+    <Layouts>
+      <Layout height="200" width="360">
+        <Static id="Static00" taborder="2" left="0" top="40" cssclass="sta_POP_Bg" right="0" bottom="0" text=""/>
+        <TextArea id="txt_msg" taborder="1" left="0" top="20" cssclass="txt_POP_Message" value="해당 row의 위치를 이동하면 변경된 데이터가 사라집니다. \n계속 진행 하시겠습니까?" readonly="true" height="125" width="360"/>
+        <Button id="btn_ok" taborder="3" text="확인" width="70" height="34" cssclass="btn_WF_FillBlue" onclick="btn_ok_onclick" right="15" bottom="9"/>
+        <Static id="sta_icon" taborder="0" left="15" top="40" width="50" height="50" cssclass="sta_POP_Info"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+
+/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+
+/***********************************************************************************************
+* FORM EVENT 영역(onload)
+/***********************************************************************************************/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfn_formOnLoad(this);	    
+	var sContents = this.getOwnerFrame().paramContents;
+	var sIcon = this.getOwnerFrame().paramMsgIcon;
+	this.fn_msgSet(sContents, sIcon);
+};
+
+ /************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+/**
+* @description 메세지설정
+*/
+this.fn_msgSet = function (sMsgContent, sIcon)
+{
+	this.txt_msg.value = sMsgContent;
+	
+	switch(sIcon){
+		case "ERR":
+			this.sta_icon.cssclass = "sta_POP_Error";
+			this.btn_ok.cssclass = "btn_WF_FillRed";
+			break;
+		case "WAN":
+			this.sta_icon.cssclass = "sta_POP_Warning"; 
+			this.btn_ok.cssclass = "btn_WF_FillYellow";
+			break;
+	}	
+	this.btn_ok.setFocus();
+};
+ 
+
+/************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+/**
+* @description OK버튼이벤트
+*/
+this.btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(true);
+};
+]]></Script>
+  </Form>
+</FDL>

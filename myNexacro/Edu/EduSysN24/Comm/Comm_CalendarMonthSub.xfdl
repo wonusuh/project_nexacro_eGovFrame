@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comm_CalendarMonthSub" width="174" height="215" titletext="월 달력" onload="form_onload">
+    <Layouts>
+      <Layout height="215" width="174">
+        <Static id="sta_bg" taborder="14" left="0" top="0" right="0" cssclass="sta_WF_MonthBg" text="" bottom="0"/>
+        <Button id="btn01" taborder="2" text="1" left="10" top="45" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn02" taborder="3" text="2" left="btn01:5" top="45" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn03" taborder="4" text="3" top="45" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth" width="48" left="116"/>
+        <Button id="btn04" taborder="5" text="4" left="10" top="86" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn05" taborder="6" text="5" left="63" top="86" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn06" taborder="7" text="6" left="116" top="86" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn07" taborder="8" text="7" left="10" top="127" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn08" taborder="9" text="8" left="63" top="127" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn09" taborder="10" text="9" left="116" top="127" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn10" taborder="11" text="10" left="10" top="168" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn11" taborder="12" text="11" left="63" top="168" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Button id="btn12" taborder="13" text="12" left="116" top="168" width="48" height="36" onclick="pdvCal_btn1_onclick" cssclass="btn_WF_CalMonth"/>
+        <Static id="sta_year" taborder="16" text="9999" left="0" top="10" height="26" right="0" onclick="sta_year_onclick" cssclass="sta_WF_Cal"/>
+        <Button id="btn_prev" taborder="0" left="10" top="14" width="21" height="18" onclick="pdvCal_btn_prev_onclick" cssclass="btn_WF_CalMonthPrev"/>
+        <Button id="btn_next" taborder="1" top="14" width="21" height="18" right="10" onclick="pdvCal_btn_next_onclick" cssclass="btn_WF_CalMonthNext"/>
+        <Spin id="spn_year" taborder="15" left="53" top="10" width="75" height="26" value="2900" min="1900" max="2900" visible="false" onchanged="spn_year_onchanged" onkillfocus="spn_year_onkillfocus" type="noneditable"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+*  @MenuPath    Comm > Comm_CalendarMonthSub (공통 월달력 Popup Div link 사용)
+*  @FileName 	Comm_CalendarMonthSub.xfdl 
+*  @CreateDate 	2025.04.01
+*  @Desction    월달력, 년도 수정 가능
+*/
+
+
+/***********************************************************************************************
+* FORM EVENT 영역(onload)
+/***********************************************************************************************/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{	
+	var sDate = this.parent.calObj.value;
+
+    if(this.gfn_isNull(sDate)) sDate = this.gfn_getDate(); // 오늘 날자 세팅
+    this.sta_year.text = (sDate.substr(0,4));
+};
+
+ /************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+/**
+* @description   월달력 popDiv컴포넌트 닫기
+*/    
+this.pdvCal_btnPdvCancle_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.parent.closePopup();
+};
+
+/**
+* @description   이전 년도 버튼 클릭
+*/   
+this.pdvCal_btn_prev_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sDate = nexacro.toNumber(this.sta_year.text);
+	this.sta_year.text = (sDate - 1 );
+	
+};
+
+/**
+* @description  다음년도 버튼 클릭
+*/    
+this.pdvCal_btn_next_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sDate = nexacro.toNumber(this.sta_year.text);
+	this.sta_year.text = (sDate + 1 );
+};
+
+/**
+* @description  월 버튼 클릭
+*/     
+this.pdvCal_btn1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var rtn = this.sta_year.text + obj.name.substr(3);  //btn01, btn02...
+	this.parent.calObj.value = rtn;
+	this.parent.closePopup();
+};
+this.sta_year_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+    this.spn_year.value = obj.text;
+	obj.visible = false;
+    this.spn_year.visible = true;
+};
+
+this.spn_year_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
+{
+    this.sta_year.text = e.postvalue;
+	obj.visible = false;
+    this.sta_year.visible = true;	
+};]]></Script>
+  </Form>
+</FDL>

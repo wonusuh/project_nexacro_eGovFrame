@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Comm_Confirm" width="360" height="200" titletext="Confirm" onload="form_onload">
+    <Layouts>
+      <Layout height="200" width="360">
+        <Static id="Static00" taborder="2" left="0" top="75" width="360" height="125" cssclass="sta_POP_Bg"/>
+        <TextArea id="txt_msg" taborder="1" left="0" top="20" width="360" height="125" cssclass="txt_POP_Message" value="해당 row의 위치를 이동하면 변경된 데이터가 사라집니다. \n계속 진행 하시겠습니까?" readonly="true"/>
+        <Button id="btn_cancel" taborder="3" text="취소" width="70" cssclass="btn_WF_FillGray" onclick="btn_cancel_onclick" bottom="10" right="90" height="34"/>
+        <Button id="btn_ok" taborder="4" text="확인" cssclass="btn_WF_FillTeal" onclick="btn_ok_onclick" right="15" bottom="10" width="70" height="34"/>
+        <Static id="Static01_00" taborder="0" left="15" top="40" width="50" height="50" cssclass="sta_POP_Confirm"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/**
+*  공통메세지
+*/
+
+/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+
+/***********************************************************************************************
+* FORM EVENT 영역(onload)
+/***********************************************************************************************/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfn_formOnLoad(this); //초기화[필수]
+	
+	var sContents = this.getOwnerFrame().paramContents;
+	this.fn_msgSet(sContents);
+};
+
+/************************************************************************************************
+ * 사용자 FUNCTION 영역
+ ************************************************************************************************/
+/**
+* @description 메세지설정
+*/
+this.fn_msgSet = function (sMsgContent)
+{
+	this.txt_msg.value = sMsgContent;
+	this.btn_ok.setFocus();
+};
+ 
+ /************************************************************************************************
+ * 각 COMPONENT 별 EVENT 영역
+ ************************************************************************************************/
+/**
+* @description 확인버튼
+*/
+this.btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(true);
+};
+
+/**
+* @description 취소버튼
+*/
+this.btn_cancel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close(false);
+};]]></Script>
+  </Form>
+</FDL>

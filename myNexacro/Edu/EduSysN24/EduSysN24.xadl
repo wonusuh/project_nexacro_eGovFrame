@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="EduSysN24" screenid="Desktop_screen" onload="Application_onload" onerror="Application_onerror">
+    <Layout>
+      <MainFrame id="mainframe" showtitlebar="true" showstatusbar="false" width="1290" height="840" titletext="EduSysN24" showcascadetitletext="false" titlebarheight="28" statusbarheight="25" titlebarbuttongap="4" titlebarbuttonsize="19 19">
+        <VFrameSet id="VFrameSet" separatesize="*,0,0,0">
+          <Frames>
+            <ChildFrame id="LoginFrame" formurl="FrameBase::Frame_Login.xfdl" showtitlebar="false" dragmovetype="none" showtitleicon="false"/>
+            <ChildFrame id="TopFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Frame_Top.xfdl" showtitleicon="false"/>
+            <HFrameSet id="HFrameSet" separatesize="45,200,*">
+              <Frames>
+                <ChildFrame id="LeftBarFrame" formurl="FrameBase::Frame_LeftBar.xfdl" showtitlebar="false"/>
+                <ChildFrame id="LeftFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Frame_Left.xfdl" dragmovetype="none" showtitleicon="false"/>
+                <VFrameSet id="VFrameSet1" separatesize="35,*,0,30">
+                  <Frames>
+                    <ChildFrame id="MdiFrame" formurl="FrameBase::Frame_Mdi.xfdl" showtitlebar="false" dragmovetype="none" showtitleicon="false"/>
+                    <ChildFrame id="MainFrame" showtitlebar="false" showtitleicon="false" dragmovetype="none" onactivate="mainframe_VFrameSet_HFrameSet_VFrameSet1_MainFrame_onactivate"/>
+                    <FrameSet id="WorkFrame" showtitlebar="false" showtitleicon="false">
+                      <Frames/>
+                    </FrameSet>
+                    <ChildFrame id="BottomFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Frame_Bottom.xfdl" dragmovetype="none" showtitleicon="false"/>
+                  </Frames>
+                </VFrameSet>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+    <Style url="xcssrc::css_edu.xcss"/>
+  </Application>
+  <Script type="xscript5.1"><![CDATA[/**
+*  실무활용교육 샘플 프로젝트
+*  @MenuPath    
+*  @FileName 	
+*  @Creator 	Education
+*  @CreateDate 	2024.12.01
+*  @Desction    
+************** 소스 수정 이력 ***********************************************
+*  date          		Modifier                Description
+*******************************************************************************
+*  2024.12.01     	    Education 	           최초 생성 
+*******************************************************************************
+*/
+
+/************************************************************************************************
+ * application 변수 선언 영역
+************************************************************************************************/
+this.av_VFrameSet  = "";
+this.av_HFrameSet  = "";
+this.av_VFrameSet1 = "";
+this.av_WorkFrame  = "";
+
+this.av_LoginFrame = "";
+this.av_TopFrame   = "";
+this.av_LeftBarFrame  = "";
+this.av_LeftFrame  = "";
+this.av_MainFrame  = "";
+this.av_MdiFrame   = "";
+
+this.av_MenuColumns = {
+	menuId : "MENU_ID",    //  MENU ID
+	menuNm : "MENU_NAME",
+	menuUrl : "FORM_URL",
+	groupId : "MENU_GROUP",
+	menuLevel : "LEVEL"    //메뉴레벨	
+};
+
+this.av_MaxForm = 15;     //열린 메뉴 최대 갯수
+this.av_MultiOpen = true  //동일화면 여러게 오픈true, 하나만 오픈false
+
+/***********************************************************************************************
+* Application EVENT 영역(onload, onbeforeclose)
+/***********************************************************************************************/
+
+/**
+ * @description Applicaton onload시 처리내역
+*/
+this.Application_onload = function(obj:nexacro.Application,e:nexacro.LoadEventInfo)
+{
+	// Frame 변수 저장
+	this.av_VFrameSet  = this.mainframe.VFrameSet;                                			// VFrameSet	
+	this.av_HFrameSet  = this.mainframe.VFrameSet.HFrameSet;                      			// HFrameSet
+	this.av_VFrameSet1 = this.mainframe.VFrameSet.HFrameSet.VFrameSet1;           			// VFrameSet1
+	this.av_WorkFrame  = this.mainframe.VFrameSet.HFrameSet.VFrameSet1.WorkFrame;           // WorkForm
+	
+	this.av_LoginFrame    = this.mainframe.VFrameSet.LoginFrame; 				   			// LoginFrame
+	this.av_TopFrame      = this.mainframe.VFrameSet.TopFrame;  							// TopFrame
+	this.av_LeftBarFrame  = this.mainframe.VFrameSet.HFrameSet.LeftBarFrame;            	// LeftBarFrame
+	this.av_LeftFrame     = this.mainframe.VFrameSet.HFrameSet.LeftFrame;            		// leftFrame
+	this.av_MainFrame     = this.mainframe.VFrameSet.HFrameSet.VFrameSet1.MainFrame;  		// Mainform
+	this.av_MdiFrame      = this.mainframe.VFrameSet.HFrameSet.VFrameSet1.MdiFrame;  		// mdi frame
+	this.av_BottomFrame   = this.mainframe.VFrameSet.HFrameSet.VFrameSet1.BottomFrame;      // Bottom frame
+	
+    var nRunMode = 0;
+	
+	//Local NexacroBrowser
+	if (system.navigatorname == "nexacro") {
+	    nRunMode = "0";
+		this.mainframe.titletext = "Local NexacroBrowser - " + this.mainframe.titletext;
+	}
+	// WebBrowser
+	else {
+		var urlPath = window.location.protocol + "//" + window.location.host;   
+        // http://172.0.0.1:8080 or http://localhost:8080
+
+        // service URL 설정
+		var objSrv = nexacro.getEnvironment().services["SvcUrl"];
+		//Local WebBrowser
+	    if (objSrv.url.indexOf("localhost") > -1 || objSrv.url.indexOf("127.0.0.1") > -1 ) {
+			nRunMode = "1";
+			this.mainframe.titletext = "Local WebBrowser - " + this.mainframe.titletext;
+		}
+		//운영
+		else {
+		    nRunMode = "2";
+		}
+	}	
+	nexacro.setEnvironmentVariable("ev_runMode", nRunMode);	
+
+};
+
+/**
+ * @description ESC 통신중단 방지
+*/
+this.Application_onerror = function(obj:nexacro.Application,e:nexacro.ErrorEventInfo)
+{
+	trace("Application_onerror");
+	trace("e.statuscode : " + e.statuscode);
+	trace("e.errormsg : " + e.errormsg);
+	
+	// 사용자가 ESC키를 눌렀을 경우 ESC통신 중단 방지처리
+	if (e.errorcode == -2147418039) {
+		//return true;
+	}
+};
+]]></Script>
+</ADL>

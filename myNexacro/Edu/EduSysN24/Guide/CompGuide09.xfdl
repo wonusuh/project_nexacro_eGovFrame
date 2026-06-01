@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide09" width="1020" height="1310" titletext="txtf,mtxtf, dtf" ontimer="Form_ontimer">
+    <Layouts>
+      <Layout height="1310" width="1020">
+        <Static id="Static00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01" taborder="1" text="TextField" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="85" height="400" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="480" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <TextField id="TextField01" taborder="2" left="480" top="44" width="250" height="70" helpertext="Hepler Text" labeltext="Label Text" enable="false" usehelpertext="true" usecharcount="true"/>
+              <TextField id="TextField00" taborder="3" left="20" top="40" width="250" height="70" helpertext="Hepler Text" labeltext="Label Text" usehelpertext="true" usecharcount="true"/>
+              <Static id="Static03" taborder="4" text="※ Action &gt; displaynulltext = Null Text" left="472" top="150" width="276" height="30" cssclass="sta_WF_GDes"/>
+              <TextField id="TextField03" taborder="5" left="472" top="180" width="250" height="70" helpertext="Hepler Text" displaynulltext="Null Text" labeltext="Label Text" usehelpertext="true" usecharcount="true"/>
+              <TextField id="TextField02" taborder="6" left="22" top="180" width="250" height="70" helpertext="Hepler Text" prefixtext="http://" labeltext="Label Text" usehelpertext="true" usecharcount="true"/>
+              <Static id="Static04" taborder="7" text="※ Misc. &gt; usetrailingbutton = true(invalid)" left="22" top="TextField02:30" width="312" height="30" cssclass="sta_WF_GDes"/>
+              <Static id="Static05" taborder="8" text="※ Misc. &gt; usetrailingbutton = true(valid)" left="472" top="280" width="298" height="30" cssclass="sta_WF_GDes"/>
+              <TextField id="TextField05" taborder="9" left="472" top="310" width="250" height="70" helpertext="Hepler Text" labeltext="Label Text" inputtype="email" value="a@to.com" usetrailingbutton="true" usehelpertext="true" usecharcount="true"/>
+              <TextField id="TextField04" taborder="10" left="22" top="Static04:0" width="250" height="70" helpertext="Hepler Text" labeltext="Label Text" inputtype="email" value="wdrfsf" usetrailingbutton="true" usehelpertext="true" usecharcount="true"/>
+              <Static id="Static02" taborder="11" text="※ Action &gt; prefixtext =http://" left="22" top="TextField00:30" width="275" height="30" cssclass="sta_WF_GDes"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="4" text="MultiLineTextField" left="20" top="Div00:20" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="3" text="Div00" left="20" top="Static02:0" height="270" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="480" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <MultiLineTextField id="MultiLineTextField01" taborder="2" left="470" top="40" width="250" height="199" value="MultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextField" helpertext="Hepler Text" labeltext="Label" enable="false" usehelpertext="true" usecharcount="true"/>
+              <MultiLineTextField id="MultiLineTextField00" taborder="3" left="20" top="40" width="250" height="199" value="MultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextFieldMultiLineTextField" helpertext="Hepler Text" labeltext="Label" usehelpertext="true" usecharcount="true"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="6" text="DateField" left="20" top="Div01:20" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div02" taborder="5" text="Div00" left="20" top="Static03:0" height="430" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="480" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <DateField id="DateField00" taborder="11" left="20" top="Static00:0" width="250" height="80" helpertext="Hepler Text" labeltext="Label Text" usehelpertext="true"/>
+              <Static id="Static02" taborder="2" text="※ Action &gt; value(invalid)" left="20" top="DateField00:30" width="355" height="30" cssclass="sta_WF_GDes"/>
+              <DateField id="DateField02" taborder="3" left="20" top="Static02:0" width="250" height="80" helpertext="헬퍼 TEXT" labeltext="Label Text" value="한글" usehelpertext="true"/>
+              <DateField id="DateField01" taborder="4" left="480" top="40" width="250" height="80" helpertext="Hepler Text" labeltext="Label Text" inputtype="datetime" enable="false" usehelpertext="true"/>
+              <Static id="Static03" taborder="5" text="※ Action &gt; value(valid)" left="480" top="150" width="355" height="30" cssclass="sta_WF_GDes"/>
+              <DateField id="DateField03" taborder="6" left="480" top="180" width="250" height="80" helpertext="Hepler Text" labeltext="Label Text" value="20240701" usehelpertext="true"/>
+              <Static id="Static04" taborder="8" text="※ Misc. &gt; inputtype = time" left="20" top="DateField02:30" width="355" height="30" cssclass="sta_WF_GDes"/>
+              <DateField id="DateField04" taborder="7" left="20" top="Static04:0" width="250" height="80" helpertext="Hepler Text" labeltext="Label Text" inputtype="time" usehelpertext="true"/>
+              <DateField id="DateField05" taborder="9" left="480" top="320" width="250" height="80" helpertext="Hepler Text" labeltext="Label Text" inputtype="datetime" usehelpertext="true"/>
+              <Static id="Static05" taborder="10" text="※ Misc. &gt; inputtype = datetime" left="480" top="290" width="355" height="30" cssclass="sta_WF_GDes"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

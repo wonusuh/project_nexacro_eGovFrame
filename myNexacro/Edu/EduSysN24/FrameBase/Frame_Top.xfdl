@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Top" width="1278" height="50" titletext="Frame_Top" onload="form_onload">
+    <Layouts>
+      <Layout width="1278" height="50" screenid="Desktop_screen">
+        <Static id="Static00" taborder="0" left="0" top="0" height="50" right="0" cssclass="sta_TF_Bg"/>
+        <Button id="Button01" taborder="1" left="0" top="0" width="45" height="50" cssclass="btn_TF_LogoIcon" background="#475a9e"/>
+        <ImageViewer id="ImageViewer00" taborder="2" left="61" top="17" width="138" height="17" image="url('theme::theme_edu/images/sta_TF_NexacroN.png')" stretch="fixaspectratio" border="0px none"/>
+        <Div id="div_top" taborder="3" left="274" top="5" width="742" bottom="5">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+        <Static id="sta_deptNm" taborder="4" text="tobesoft education JiYoung" top="7" width="162" height="15" cssclass="sta_TF_Welcome" usedecorate="true" right="92"/>
+        <Button id="btn_logout" taborder="5" text="로그아웃" top="7" width="77" height="15" cssclass="btn_TF_Logout" onclick="btn_logout_onclick" right="6"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/************************************************************************************************
+ * FORM 변수 선언 영역
+ ************************************************************************************************/
+this.fv_objApp = nexacro.getApplication();
+this.fv_prefix = "TOP_";
+
+/***********************************************************************************************
+* FORM EVENT 영역(onload)
+/***********************************************************************************************/
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+
+};
+
+
+/* Top Menu Set */
+this.fn_setTopMenu = function ()
+{
+    this.fv_objApp.gds_menu.filter("LEVEL == '0'");
+    this.ds_menu.copyData(this.fv_objApp.gds_menu, true);
+    this.fv_objApp.gds_menu.filter("");
+	trace(this.ds_menu.saveXML());
+	
+	var objBtn, objTextSize;
+	var nGap = 50;
+	var nLeft = 0, nTop = 0, nWidth = 100, nHeight = "100%";
+
+	for(var i=0; i<this.ds_menu.rowcount; i++){
+		var sId   = this.ds_menu.getColumn(i, "MENU_ID");
+		var sName = this.ds_menu.getColumn(i, "MENU_NAME");
+		var sImg  = this.ds_menu.getColumn(i, "MENU_IMG");
+		
+		objBtn = new Button(this.fv_prefix + sId, nLeft, nTop, nWidth, nHeight);
+		this.div_top.addChild(objBtn.name, objBtn);
+		objBtn.text = sName;		
+		objBtn.fittocontents = "width"
+		
+		objBtn.menuid = sId;	//user variable
+		objBtn.cssclass = "btn_TF_Menu";
+		objBtn.setEventHandler("onclick", this.fn_menuClick, this);	
+		objBtn.show();
+		
+		nLeft += (objBtn.getOffsetWidth() + nGap);
+		
+		if(i == 0){	
+			this.objfocusMenu = objBtn;
+			objBtn.setSelectStatus(true);
+			this.fn_menuClick(objBtn);
+		}
+	}
+};
+
+this.objfocusMenu = "";
+this.fn_menuClick = function (obj:Button, e:ClickEventInfo)
+{
+    //메뉴 클릭시 선택된 모양으로 적용
+    if(obj.id.substr(0,4) == "TOP_"){
+        if(this.objfocusMenu.id != obj.id){
+            this.objfocusMenu.setSelectStatus(false);
+            obj.setSelectStatus(true);
+            this.objfocusMenu = obj;
+			this.fv_objApp.av_LeftFrame.form.fn_changeMenu(obj.menuid);
+        };
+    }
+};  
+
+
+
+this.btn_logout_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(system.navigatorname == "nexacro")
+	{		
+		var sMsgId = "confirm.logout";
+		var arrArg = "";
+		var sPopId = sMsgId;
+		var sMsgCallback = "fn_msgCallback";
+		
+		// 변경된 내역을 저장 하시겠습니까?
+		this.gfn_alert(sMsgId, arrArg, sPopId, sMsgCallback);	
+	}
+	else
+	{
+		window.top.location.reload(true);
+	}		
+};
+
+this.fn_msgCallback = function (strId, strVal)
+{
+	if(strId == "confirm.logout"){
+		if(strVal)
+		{
+		    this.fv_objApp.exit();
+		}
+	}
+};
+
+this.st_logo_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+    this.fv_objApp.av_VFrameSet1.separatesize = "32,*,0,30";	
+};
+
+]]></Script>
+    <Objects>
+      <Dataset id="ds_menu"/>
+    </Objects>
+  </Form>
+</FDL>
