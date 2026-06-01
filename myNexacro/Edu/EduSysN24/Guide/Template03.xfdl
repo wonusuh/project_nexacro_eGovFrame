@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Template01" width="1043" height="693" titletext="Tab">
+    <Layouts>
+      <Layout height="693" horizontalgap="0" mobileorientation="landscape" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="1043">
+        <Static id="Static01" taborder="0" text="EMPLOYEES" left="15.00" top="10" width="120" height="26" cssclass="sta_WF_Title"/>
+        <Button id="Button00_02" taborder="1" text="Save" top="10" width="53" height="26" cssclass="btn_WF_CRUD" right="15"/>
+        <Button id="Button00" taborder="2" text="Retrieve" top="10" width="73" height="26" cssclass="btn_WF_CRUD" right="124"/>
+        <Button id="Button00_00" taborder="3" text="Add" top="10" width="50" height="26" cssclass="btn_WF_CRUD" right="71"/>
+        <Div id="Div00" taborder="4" text="Div00" left="15" top="46" height="44" cssclass="div_WF_Search" right="15">
+          <Layouts>
+            <Layout>
+              <Static id="Static02" taborder="0" text="Search Classification" left="0" top="8" width="159" height="26" cssclass="sta_WF_Label"/>
+              <Static id="Static00" taborder="1" text="Search Condition" left="389.00" top="8" width="139" height="26" cssclass="sta_WF_Label"/>
+              <Combo id="Combo00" taborder="2" text="Combo00" left="159" top="8" width="150" height="26"/>
+              <Button id="Button00" taborder="3" left="691" top="8" width="26" height="26" cssclass="btn_WF_Find"/>
+              <Edit id="Edit00" taborder="4" left="541" top="8" width="150" height="26"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="5" text="Basic Information    " left="15.00" top="90" width="216" height="35" cssclass="sta_WF_SubTitle"/>
+        <Static id="Static02_00" taborder="6" text="Detail Information " left="15.00" top="336" width="216" height="35" cssclass="sta_WF_SubTitle"/>
+        <Static id="Static04_02" taborder="7" text="" left="15.00" top="125" width="149" height="211" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02" taborder="8" text="ID" left="163.00" top="125" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03" taborder="9" text="" left="287.00" top="125" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00" taborder="10" text="Name" left="451.00" top="125" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00" taborder="11" text="" left="575.00" top="125" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_00" taborder="12" text="Name(English)" left="739.00" top="125" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_00" taborder="13" text="" left="863.00" top="125" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <Static id="Static03_02_01" taborder="14" text="Company" left="163.00" top="160" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_01" taborder="15" text="" left="287.00" top="160" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_01" taborder="16" text="Department" left="451.00" top="160" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_01" taborder="17" text="" left="575.00" top="160" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_00_00" taborder="18" text="Position" left="739.00" top="160" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_00_00" taborder="19" text="" left="863.00" top="160" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <Static id="Static03_02_02" taborder="20" text="Employment Date" left="163.00" top="195" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_02" taborder="21" text="" left="287.00" top="195" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_02" taborder="22" text="Work State" left="451.00" top="195" width="125" height="36" cssclass="sta_WF_DetailLabel" onclick="Static03_02_00_02_onclick"/>
+        <Static id="Static04_03_00_02" taborder="23" text="" left="575.00" top="195" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_00_01" taborder="24" text="Resignation Date" left="739.00" top="195" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_00_01" taborder="25" text="" left="863.00" top="195" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <Static id="Static03_02_03" taborder="26" text="Bank" left="163.00" top="230" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_03" taborder="27" text="" left="287.00" top="230" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_03" taborder="28" text="Account" left="451.00" top="230" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_03" taborder="29" text="" left="575.00" top="230" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_00_02" taborder="30" text="Account Holder" left="739.00" top="230" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_00_02" taborder="31" text="" left="863.00" top="230" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <Static id="Static03_02_04" taborder="32" text="Cell Phone" left="163.00" top="265" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_04" taborder="33" text="" left="287.00" top="265" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_04" taborder="34" text="Telephone(Home)" left="451.00" top="265" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_04" taborder="35" text="" left="575.00" top="265" width="165" height="36" cssclass="sta_WF_DetailArea"/>
+        <Static id="Static03_02_00_00_03" taborder="36" text="Telephone(Comp)" left="739.00" top="265" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_00_00_03" taborder="37" text="" left="863.00" top="265" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <Static id="Static03_02_05" taborder="38" text="E-Mail" left="163.00" top="300" width="125" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static04_03_05" taborder="39" text="" left="287.00" top="300" height="36" cssclass="sta_WF_DetailArea" right="15"/>
+        <ImageViewer id="ImageViewer00" taborder="40" text="ImageViewer00" left="21.00" top="131" width="137" height="159"/>
+        <Button id="Button01" taborder="41" left="52.00" top="300" width="75" height="26" cssclass="btn_WF_AddPhoto" text="ADD"/>
+        <Radio id="Radio01" taborder="42" left="581.00" top="200" width="150" height="26" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Work</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">Resign</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Tab id="Tab00" taborder="43" tabindex="0" left="15" top="371" height="307" tabbuttongap="2" right="15">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Personal Data" url="Guide::Tabpage01.xfdl"/>
+            <Tabpage id="Tabpage2" text="Academic Ability" url="Guide::Tabpage02.xfdl"/>
+          </Tabpages>
+        </Tab>
+        <MaskEdit id="MaskEdit00" taborder="44" left="293" top="130" width="150" height="26"/>
+        <Edit id="Edit00" taborder="45" left="293" top="165" width="150" height="26"/>
+        <Calendar id="Calendar00" taborder="46" left="293" top="200" width="150" height="26"/>
+        <Edit id="Edit01" taborder="47" left="293" top="235" width="150" height="26"/>
+        <MaskEdit id="MaskEdit01" taborder="48" left="293" top="270" width="150" height="26"/>
+        <Edit id="Edit02" taborder="49" left="293" top="305" width="439" height="26"/>
+        <Edit id="Edit03" taborder="50" left="581" top="130" width="150" height="26"/>
+        <Combo id="Combo00" taborder="51" text="Combo00" left="581" top="165" width="150" height="26"/>
+        <MaskEdit id="MaskEdit02" taborder="52" left="581" top="235" width="150" height="26"/>
+        <MaskEdit id="MaskEdit03" taborder="53" left="581" top="270" width="150" height="26"/>
+        <Edit id="Edit04" taborder="54" left="869" top="130" width="150" height="26"/>
+        <Combo id="Combo01" taborder="55" text="Combo01" left="869" top="165" width="150" height="26"/>
+        <Calendar id="Calendar01" taborder="56" left="869" top="200" width="150" height="26"/>
+        <Edit id="Edit05" taborder="57" left="869" top="235" width="150" height="26"/>
+        <MaskEdit id="MaskEdit04" taborder="58" left="869" top="270" width="150" height="26"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_rdo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">All</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Female</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">Male</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">Financial Accounting Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Human Resource Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">Marketing Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">Education Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">Sales Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">Presales Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">7</Col>
+            <Col id="data">Technical Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">8</Col>
+            <Col id="data">Server Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">9</Col>
+            <Col id="data">Mobile Support Team</Col>
+          </Row>
+          <Row>
+            <Col id="code">10</Col>
+            <Col id="data">Architecture  Team</Col>
+          </Row>
+          <Row>
+            <Col id="data">Platform Team</Col>
+            <Col id="code">11</Col>
+          </Row>
+          <Row>
+            <Col id="data">Cloud Team</Col>
+            <Col id="code">12</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_position">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">CEO</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Director</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">General Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">Assistant Manager</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">Staff</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="ID" type="STRING" size="256"/>
+          <Column id="Dept" type="STRING" size="256"/>
+          <Column id="Memo" type="STRING" size="256"/>
+          <Column id="Gender" type="STRING" size="256"/>
+          <Column id="Married" type="STRING" size="256"/>
+          <Column id="HDate" type="STRING" size="256"/>
+          <Column id="Salary" type="STRING" size="256"/>
+          <Column id="Position" type="STRING" size="256"/>
+          <Column id="Hobby" type="STRING" size="256"/>
+          <Column id="Skill" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">Kate</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200701</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Active</Col>
+            <Col id="Hobby">1,3</Col>
+            <Col id="Skill">1,3,5</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Dennis </Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190802</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Affectionnate</Col>
+            <Col id="Hobby">2,5,6</Col>
+            <Col id="Skill">2,4</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Max </Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married"/>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Aggressive</Col>
+            <Col id="Hobby">3,5,8,9</Col>
+            <Col id="Skill">3,5,9</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ted </Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married"/>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Altruistic</Col>
+            <Col id="Hobby">4,5,8</Col>
+            <Col id="Skill">5,10,11</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Adam</Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Ambitious</Col>
+            <Col id="Hobby">5,11,12</Col>
+            <Col id="Skill">5,6,9</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Belle</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Arrogant</Col>
+            <Col id="Hobby">6,8,9</Col>
+            <Col id="Skill">10,11,12</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lexy</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Astute</Col>
+            <Col id="Hobby">2,4,8</Col>
+            <Col id="Skill">1,2,3</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lucy</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Attractive</Col>
+            <Col id="Hobby">13,14</Col>
+            <Col id="Skill">10,13</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Kein</Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Avaricious</Col>
+            <Col id="Hobby">2,6,8</Col>
+            <Col id="Skill">1,3,5</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Juliana</Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Benevolent</Col>
+            <Col id="Hobby">11,12,13</Col>
+            <Col id="Skill">3,6,9</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Kara</Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Boastiful</Col>
+            <Col id="Hobby">2,3,5</Col>
+            <Col id="Skill">2,4,8</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Andrew</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Bossy</Col>
+            <Col id="Hobby">3,5,7,9</Col>
+            <Col id="Skill">2,5,10</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Maria</Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Brutal</Col>
+            <Col id="Hobby">1,3,12</Col>
+            <Col id="Skill">2,6,12</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Eddy</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Candid</Col>
+            <Col id="Hobby">1,5,13</Col>
+            <Col id="Skill">3,4,12</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Sarah</Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Calm</Col>
+            <Col id="Hobby">5,6,8</Col>
+            <Col id="Skill">3,6,9</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ivy</Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Careful</Col>
+            <Col id="Skill">10,11,12,13</Col>
+            <Col id="Hobby">5,7,9,11</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Noel </Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Careless</Col>
+            <Col id="Skill">2,4,10</Col>
+            <Col id="Hobby">2,5,6,15</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Arnold</Col>
+            <Col id="ID">TOBE0621</Col>
+            <Col id="Dept">6</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Caring</Col>
+            <Col id="Skill">7,8,9</Col>
+            <Col id="Hobby">8,10,12</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Alex </Col>
+            <Col id="ID">TOBE0701</Col>
+            <Col id="Dept">1</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">50000000</Col>
+            <Col id="Position">1</Col>
+            <Col id="Memo">Cheerful</Col>
+            <Col id="Skill">1</Col>
+            <Col id="Hobby">11,13,14</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="ID">TOBE0802</Col>
+            <Col id="Dept">2</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="Married">1</Col>
+            <Col id="HDate">20190201</Col>
+            <Col id="Salary">60000000</Col>
+            <Col id="Position">2</Col>
+            <Col id="Memo">Confident</Col>
+            <Col id="Hobby">2,4,8</Col>
+            <Col id="Skill">1,2,3,4,5</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Steven </Col>
+            <Col id="ID">TOBE0903</Col>
+            <Col id="Dept">3</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">3</Col>
+            <Col id="Memo">Conservative</Col>
+            <Col id="Hobby">4,6,8</Col>
+            <Col id="Skill">2,5,7</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald </Col>
+            <Col id="ID">TOBE0101</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">4</Col>
+            <Col id="Memo">Cunning</Col>
+            <Col id="Hobby">5,11,12</Col>
+            <Col id="Skill">8,9,10,11</Col>
+            <Col id="Gender">2</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Ray </Col>
+            <Col id="ID">TOBE0204</Col>
+            <Col id="Dept">5</Col>
+            <Col id="Gendar">2</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">70000000</Col>
+            <Col id="Position">5</Col>
+            <Col id="Memo">Earnest</Col>
+            <Col id="Hobby">9,10,11</Col>
+            <Col id="Skill">1,3,5,7,9</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Young</Col>
+            <Col id="ID">TOBE0713</Col>
+            <Col id="Dept">4</Col>
+            <Col id="Gendar">1</Col>
+            <Col id="HDate">20200201</Col>
+            <Col id="Salary">40000000</Col>
+            <Col id="Position">6</Col>
+            <Col id="Memo">Extrovert</Col>
+            <Col id="Hobby">8</Col>
+            <Col id="Skill">12,13</Col>
+            <Col id="Gender">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_hobby">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="data">Climbing</Col>
+            <Col id="code">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Running</Col>
+            <Col id="code">2</Col>
+          </Row>
+          <Row>
+            <Col id="data">Cycling</Col>
+            <Col id="code">3</Col>
+          </Row>
+          <Row>
+            <Col id="data">Swimming</Col>
+            <Col id="code">4</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Yoga</Col>
+            <Col id="code">5</Col>
+          </Row>
+          <Row>
+            <Col id="data">Golf</Col>
+            <Col id="code">6</Col>
+          </Row>
+          <Row>
+            <Col id="data">Tennis</Col>
+            <Col id="code">7</Col>
+          </Row>
+          <Row>
+            <Col id="data">Reading </Col>
+            <Col id="code">8</Col>
+          </Row>
+          <Row>
+            <Col id="data">Cooking</Col>
+            <Col id="code">9</Col>
+          </Row>
+          <Row>
+            <Col id="data">Photography</Col>
+            <Col id="code">10</Col>
+          </Row>
+          <Row>
+            <Col id="data">Painting</Col>
+            <Col id="code">11</Col>
+          </Row>
+          <Row>
+            <Col id="data">Movie</Col>
+            <Col id="code">12</Col>
+          </Row>
+          <Row>
+            <Col id="data">Game</Col>
+            <Col id="code">13</Col>
+          </Row>
+          <Row>
+            <Col id="data">Sleeping</Col>
+            <Col id="code">14</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Shopping</Col>
+            <Col id="code">15</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_skill">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="data">HTML</Col>
+            <Col id="code">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">CSS</Col>
+            <Col id="code">2</Col>
+          </Row>
+          <Row>
+            <Col id="data">JavaScript</Col>
+            <Col id="code">3</Col>
+          </Row>
+          <Row>
+            <Col id="data">JAVA</Col>
+            <Col id="code">4</Col>
+          </Row>
+          <Row>
+            <Col id="data">C/C++</Col>
+            <Col id="code">5</Col>
+          </Row>
+          <Row>
+            <Col id="data">Python</Col>
+            <Col id="code">6</Col>
+          </Row>
+          <Row>
+            <Col id="data">PHP</Col>
+            <Col id="code">7</Col>
+          </Row>
+          <Row>
+            <Col id="data">React</Col>
+            <Col id="code">8</Col>
+          </Row>
+          <Row>
+            <Col id="data">Vue</Col>
+            <Col id="code">9</Col>
+          </Row>
+          <Row>
+            <Col id="data">Ruby</Col>
+            <Col id="code">10</Col>
+            <Col id="readonly">1</Col>
+          </Row>
+          <Row>
+            <Col id="data">Swift</Col>
+            <Col id="code">11</Col>
+          </Row>
+          <Row>
+            <Col id="data">Kotlin</Col>
+            <Col id="code">12</Col>
+          </Row>
+          <Row>
+            <Col id="data">SQL</Col>
+            <Col id="code">13</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_gender">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">Female</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">Male</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+  </Form>
+</FDL>

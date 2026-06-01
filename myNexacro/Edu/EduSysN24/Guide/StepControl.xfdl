@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="StepControl" width="480" height="693" titletext="Step">
+    <Layouts>
+      <Layout height="693" horizontalgap="0" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="480" stepcount="3">
+        <Static id="Static01" taborder="0" text="약관동의" left="15.00" top="10" width="120" height="26" cssclass="sta_WF_Title"/>
+        <Static id="Static00" taborder="1" left="10" top="50" width="460" height="80" cssclass="sta_WF_Agree"/>
+        <Static id="Static00_00" taborder="2" left="10.00" top="50" width="460" height="80" positionstep="1" cssclass="sta_WF_Info"/>
+        <Static id="Static01_00" taborder="3" text="회원정보 입력" left="15.00" top="10" width="120" height="26" cssclass="sta_WF_Title" positionstep="1"/>
+        <Static id="Static00_00_00" taborder="4" left="10.00" top="50" width="460" height="80" positionstep="2" cssclass="sta_WF_Finish"/>
+        <Static id="Static01_00_00" taborder="5" text="회원가입 확인" left="15.00" top="10" width="120" height="26" cssclass="sta_WF_Title" positionstep="2"/>
+        <CheckBox id="CheckBox00" taborder="6" text="약관에 동의합니다." left="10.00" top="590" width="440" height="26"/>
+        <TextArea id="TextArea00" taborder="7" left="10.00" top="150" width="460" height="425" value="(주)투비소프트 회원 이용약관&#10;&#10;[ 제 1 장 ] 총 칙&#10;&#10;제 1 조 목 적&#10;이 약관은 (주)투비소프트 (이하 &quot;회사&quot;라고 칭함) 가 제공하는 투비소프트 &#10;웹사이트 상의 서비스를 이용하는 회원(이하 &quot;회원&quot;이라 칭함) 들의 &#10;이용조건 및 절차에 관한 사항과 기타 필요한 사항을 규정하기 위한 것입니다.&#10;&#10;제 2 조 약관의 효력과 변경&#10;이 약관은 (주) 투비소프트의 회원으로 가입할 때 제공되며, 이에 동의하고 &#10;회원에 가입하시는 순간부터 효력을 발생합니다. &#10;회사는 회사의 사정 변경이나 영업상 중요한 사유가 발생하면 약관을 변경 &#10;할 수 있으며, 변경된 약관은 회사의 웹페이지에 변경에 관한 통지가 &#10;게시되는 순간부터 효력을 발생합니다.&#10;&#10;제 3 조 약관 외 준칙&#10;본 약관에 정하는 범위 이외의 이용자와 회사의 권리, 의무 및 책임사항에 &#10;관해서는 전기통신 사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 &#10;법률 및 기타 관련 법령의 규정에 따릅니다.&#10;&#10;[ 제 2 장 ] 회원가입&#10;&#10;제 1 조 이용약관의 성립&#10;이용약관은 회원이 이용약관에 동의한 후 이에 대해 회사가 이용을 승낙함에 의해 성립됩니다. 회원으로 가입하여 서비스를 이용하고자 하는 희망자는 &#10;회사에서 요청하는 개인 신상정보를 제공해야 합니다.&#10;&#10;제 2 조 기재사항의 변경&#10;회원은 이용신청 시 기재한 사항에 변동이 생길 경우, 온라인을 이용하여 &#10;내용의 변경을 신청하여야 합니다." onchanged="TextArea00_onchanged" scrolltype="both" enable="true" readonly="true"/>
+        <Button id="Button00" taborder="8" text="취소" left="158.00" width="80" height="30" cssclass="btn_WF_AgreeCancel" top="633"/>
+        <Button id="Button00_00" taborder="9" text="저장" left="243.00" width="80" height="30" cssclass="btn_WF_AgreeSave" top="633"/>
+        <Static id="Static02_01" taborder="10" text="회원 ID&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="150" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Static id="Static02" taborder="11" left="163.00" top="225" width="155" height="155" positionstep="2" cssclass="sta_WF_Welcome"/>
+        <Static id="Static02_01_00" taborder="12" text="회원가입 완료" left="185.00" top="400" width="110" height="26" cssclass="sta_WF_Label" positionstep="2" onclick="Static02_01_onclick"/>
+        <Static id="Static03" taborder="13" text="홍길동님의&#13;&#10;회원가입이 완료되었습니다." left="120.00" top="436" width="240" height="43" positionstep="2" cssclass="sta_WF_FinishGuide"/>
+        <Button id="btnLogin" taborder="14" text="LOGIN" left="115.00" top="623" width="250" height="40" onclick="btnLogin_onclick" cssclass="btn_LOGIN_Login" positionstep="2"/>
+        <Static id="Static02_01_01" taborder="15" text="성명&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="201" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Button id="Button00_01" taborder="16" text="취소" left="158.00" width="80" height="30" cssclass="btn_WF_AgreeCancel" top="633" positionstep="1"/>
+        <Button id="Button00_00_00" taborder="17" text="저장" left="243.00" width="80" height="30" cssclass="btn_WF_AgreeSave" top="633" positionstep="1"/>
+        <Static id="Static02_01_01_00" taborder="18" text="비밀번호&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="252" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Static id="Static02_01_01_01" taborder="19" text="비밀번호확인&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="303" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Static id="Static02_01_01_00_00" taborder="20" text="이메일&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="354" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Edit id="Edit00" taborder="21" left="140" top="150" width="190" height="26" positionstep="1"/>
+        <Edit id="Edit01" taborder="22" left="140" top="201" width="330" height="26" positionstep="1"/>
+        <Edit id="Edit02" taborder="23" left="140" top="252" width="330" height="26" positionstep="1" displaynulltext="6~12자리 영문, 숫자 특수문자조합"/>
+        <Edit id="Edit03" taborder="24" left="140" top="303" width="330" height="26" positionstep="1" displaynulltext="6~12자리 영문, 숫자 특수문자조합"/>
+        <Edit id="Edit04" taborder="25" left="140" top="354" width="330" height="26" positionstep="1" displaynulltext="example@example.co.kr"/>
+        <Static id="Static02_01_01_00_00_00" taborder="26" text="휴대전화번호&lt;fc v=&quot;#ff0000&quot;&gt;＊&lt;/fc&gt;" left="10.00" top="405" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick" usedecorate="true"/>
+        <Static id="Static02_01_01_00_00_01" taborder="27" text="회사명" left="10.00" top="456" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick"/>
+        <Edit id="Edit05" taborder="28" left="140" top="456" width="330" height="26" positionstep="1"/>
+        <Edit id="Edit05_00" taborder="29" left="140.00" top="558" width="330" height="26" positionstep="1"/>
+        <Static id="Static02_01_01_00_00_01_00" taborder="30" text="직위" left="10.00" top="558" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick"/>
+        <Static id="Static02_01_01_00_00_00_00" taborder="31" text="소속/부서" left="10.00" top="507" width="120" height="26" cssclass="sta_WF_Label" positionstep="1" onclick="Static02_01_onclick"/>
+        <Edit id="Edit06" taborder="32" left="140" top="405" width="330" height="26" positionstep="1" displaynulltext="숫자만 입력하세요."/>
+        <Button id="Button01" taborder="33" text="아이디 중복확인" top="150" width="135" height="26" positionstep="1" left="335"/>
+        <Edit id="Edit07" taborder="34" left="140" top="507" width="330" height="26" positionstep="1"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+]]></Script>
+  </Form>
+</FDL>

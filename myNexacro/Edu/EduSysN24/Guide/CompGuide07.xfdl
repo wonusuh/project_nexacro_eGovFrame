@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide01" width="1020" height="970" titletext="pgb,grb,img,div" ontimer="Form_ontimer">
+    <Layouts>
+      <Layout height="970" width="1020">
+        <Static id="Static00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01" taborder="1" text="ProgressBar" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="Static01:0" height="205" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="※ Appearance &gt; smooth = true / class = pgb_WF_Image" left="500" top="10" width="440" height="30" cssclass="sta_WF_GDes"/>
+              <ProgressBar id="Pgb01" taborder="3" max="100" min="0" text="50%" left="20" top="50" width="366" height="26" pos="50" smooth="true"/>
+              <Button id="btnColor" taborder="2" text="Color" left="Pgb01:5" top="50" width="80" height="26" onclick="btnColor_onclick"/>
+              <ProgressBar id="Pgb02" taborder="4" max="100" min="0" text="50%" left="500" top="50" width="366" height="26" pos="50" smooth="true" cssclass="pgb_WF_Image"/>
+              <Button id="btnImg" taborder="5" text="Image" left="Pgb02:5" top="50" width="80" height="26" onclick="btnImg_onclick"/>
+              <Static id="Static02" taborder="6" text="※ Appearance &gt; smooth = true / class = pgb_WF_Gradient" left="20" top="Pgb01:30" width="433" height="30" cssclass="sta_WF_GDes"/>
+              <ProgressBar id="Pgb03" taborder="7" max="100" min="0" text="50%" left="20" top="Static02:10" width="366" height="26" pos="50" smooth="true" cssclass="pgb_WF_Gradient"/>
+              <Button id="btnGra" taborder="8" text="Gradient" left="391" top="146" width="80" height="26" onclick="btnGra_onclick"/>
+              <Static id="Static03" taborder="9" text="※ Appearance &gt; smooth = false" left="500" top="106" width="425" height="30" cssclass="sta_WF_GDes"/>
+              <ProgressBar id="Pgb04" taborder="10" max="100" min="0" text="50%" left="500" top="146" width="366" height="26" pos="50"/>
+              <Button id="btnBlock" taborder="11" text="Block" left="870" top="146" width="80" height="26" onclick="btnBlock_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="3" text="GroupBox" left="20" top="Div00:20" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="4" text="Div00" left="20" top="Static02:0" height="165" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="500" top="10" width="440" height="30" cssclass="sta_WF_GStatus"/>
+              <GroupBox id="GroupBox01" taborder="2" text="GroupBox00" left="500" top="50" width="271" height="91" enable="false"/>
+              <GroupBox id="GroupBox00" taborder="3" text="GroupBox00" left="20" top="Static00:10" width="271" height="91"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="5" text="ImageViewer" left="20" top="Div01:20" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div02" taborder="6" text="Div00" left="20" top="Static03:0" height="165" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="500" top="10" width="440" height="30" cssclass="sta_WF_GStatus"/>
+              <ImageViewer id="ImageViewer01" taborder="2" text="ImageViewer00" left="500" top="50" width="271" height="91" enable="false"/>
+              <ImageViewer id="ImageViewer00" taborder="3" text="ImageViewer00" left="20" top="50" width="271" height="91"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static04" taborder="8" text="Div / PopupDiv" left="20" top="Div02:20" width="137" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div03" taborder="7" text="Div00" left="20" top="Static04:0" height="165" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Div id="Div00" taborder="1" text="Div00" left="20" top="50" width="271" height="91"/>
+              <Static id="Static01" taborder="2" text="※ Div/PopupDiv 의 일반적인 사용은 Form 을 로드해서 사용하거나&#13;&#10;컴포넌트를 직접 정렬하여 사용하는 경우가 대부분이다.&#13;&#10;공통 디자인은 설정하지 않으며,&#13;&#10;디자인 요소가 필요한 경우에는 Class 로 설정해서 사용한다." left="351" top="50" width="420" height="91" cssclass="sta_WF_GDes" onclick="Static05_02_00_00_01_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.btnColor_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.Pgb01.pos = 0;
+	this.setTimer(0,10);
+};
+
+this.btnImg_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.Pgb02.pos = 0;
+	this.setTimer(1,10);	
+};
+
+this.btnGra_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.Pgb03.pos = 0;
+	this.setTimer(2,10);	
+};
+
+this.btnBlock_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.Pgb04.pos = 0;
+	this.setTimer(3,10);	
+};
+
+
+
+this.Form_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if (e.timerid == 0 ){
+		if (this.Div00.form.Pgb01.pos == 100 ){
+			this.killTimer(0);
+		}
+		this.Div00.form.Pgb01.stepIt();
+	}
+	else if (e.timerid == 1 ){
+		if (this.Div00.form.Pgb02.pos == 100 ){
+			this.killTimer(1);
+		}
+		this.Div00.form.Pgb02.stepIt();
+	}
+    else if (e.timerid == 2 ){
+		if (this.Div00.form.Pgb03.pos == 100 ){
+			this.killTimer(2);
+		}
+		this.Div00.form.Pgb03.stepIt();
+	}
+    else if (e.timerid == 3 ){
+		if (this.Div00.form.Pgb04.pos == 100 ){
+			this.killTimer(3);
+		}
+		this.Div00.form.Pgb04.stepIt();
+	}
+};
+
+]]></Script>
+  </Form>
+</FDL>

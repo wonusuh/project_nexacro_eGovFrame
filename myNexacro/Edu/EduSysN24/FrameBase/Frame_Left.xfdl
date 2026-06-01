@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Left" width="200" height="728" titletext="Frame_Left" cssclass="frm_Bg" onload="form_onload">
+    <Layouts>
+      <Layout width="200" height="728" screenid="Desktop_screen">
+        <Static id="Static00" taborder="1" left="0" top="0" right="0" bottom="0" border="0px none,1px solid #e3e4e9,0px none,0px none"/>
+        <Grid id="grd_menu" taborder="0" left="0" top="10" binddataset="ds_menu" treeinitstatus="expand,null" treeusecheckbox="false" bottom="0" oncelldblclick="grd_menu_oncelldblclick" cssclass="grd_LF_Tree" treeuseline="false" treeuseimage="false" autofittype="col" right="0">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="191"/>
+              </Columns>
+              <Rows>
+                <Row size="29"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:LEVEL" cssclass="expr:comp.isTreeLeafRow(currow) == true ? &quot;grd_LF_TreeCell&quot; : &quot;&quot;"/>
+              </Band>
+            </Format>
+            <Format id="mymenu">
+              <Columns>
+                <Column size="20"/>
+                <Column size="182"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="32"/>
+              </Rows>
+              <Band id="head">
+                <Cell colspan="2" text="즐겨찾기"/>
+              </Band>
+              <Band id="body">
+                <Cell/>
+                <Cell col="1" text="bind:MENU_NAME"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fv_objApp = nexacro.getApplication();
+
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	 this.fn_changeMenu(this.fv_objApp.gds_menu.getColumn(0, "MENU_ID"));
+};
+
+// 상단 Top메뉴 변경시 하위메뉴 변경
+this.fn_changeMenu = function(sTopMenuId)
+{
+	this.fv_objApp.gds_menu.enableevent = false;
+	this.ds_menu.enableevent = false;
+	var sExpr = "MENU_GROUP == '" + sTopMenuId.substr(0,2) + "' && LEVEL != '0'";
+	this.fv_objApp.gds_menu.filter(sExpr);
+	this.ds_menu.copyData(this.fv_objApp.gds_menu, true);
+	this.fv_objApp.gds_menu.filter("");
+	this.fv_objApp.gds_menu.enableevent = true;
+	this.ds_menu.enableevent = true;
+};
+
+
+this.grd_menu_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	var objDs = obj.getBindDataset();
+    //var arrArg = [];
+    var arrArg = this.grd_menu.getTreePath(e.row).replace("."," > ");
+    
+	this.gfn_openForm(objDs, e.row, arrArg);
+};]]></Script>
+    <Objects>
+      <Dataset id="ds_menu">
+        <ColumnInfo>
+          <Column id="MENU_GROUP" type="STRING" size="256"/>
+          <Column id="MENU_ID" type="STRING" size="256"/>
+          <Column id="MENU_NAME" type="STRING" size="256"/>
+          <Column id="LEVEL" type="STRING" size="256"/>
+          <Column id="FORM_URL" type="STRING" size="256"/>
+          <Column id="ENABLE" type="STRING" size="256"/>
+          <Column id="MENU_AUTH" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1001</Col>
+            <Col id="MENU_NAME">템플릿</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1002</Col>
+            <Col id="MENU_NAME">컴포넌트</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1003</Col>
+            <Col id="MENU_NAME">공통 가이드</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Comp01.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+            <Col id="MENU_AUTH">111111</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1004</Col>
+            <Col id="MENU_NAME">버튼 가이드</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Comp02.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+            <Col id="MENU_AUTH">100100</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1005</Col>
+            <Col id="MENU_NAME">그리드 가이드</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Comp03.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+            <Col id="MENU_AUTH">010101</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1006</Col>
+            <Col id="MENU_NAME">조회영역</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Comp04.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+            <Col id="MENU_AUTH">001001</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1007</Col>
+            <Col id="MENU_NAME">상세영역</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Comp05.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+            <Col id="MENU_AUTH">111111</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1008</Col>
+            <Col id="MENU_NAME">화면 템플릿</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1009</Col>
+            <Col id="MENU_NAME">템플릿1</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form01.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1010</Col>
+            <Col id="MENU_NAME">템플릿2</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form02.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1011</Col>
+            <Col id="MENU_NAME">템플릿3</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form03.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1012</Col>
+            <Col id="MENU_NAME">템플릿4</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form04.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1013</Col>
+            <Col id="MENU_NAME">템플릿5</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form05.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1014</Col>
+            <Col id="MENU_NAME">템플릿6</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form06.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">10</Col>
+            <Col id="MENU_ID">1015</Col>
+            <Col id="MENU_NAME">템플릿7</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Guide::Guide_Form07.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2001</Col>
+            <Col id="MENU_NAME">샘플</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2002</Col>
+            <Col id="MENU_NAME">셈플1</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2003</Col>
+            <Col id="MENU_NAME">Calendar</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Calendar.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2004</Col>
+            <Col id="MENU_NAME">Grid</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Grid.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2005</Col>
+            <Col id="MENU_NAME">Message</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Message.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2006</Col>
+            <Col id="MENU_NAME">MultiCombo</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_MultiCombo.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2007</Col>
+            <Col id="MENU_NAME">샘플2</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2008</Col>
+            <Col id="MENU_NAME">Popup</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Popup.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2009</Col>
+            <Col id="MENU_NAME">Script</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Script.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2010</Col>
+            <Col id="MENU_NAME">Validation</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Validation.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2011</Col>
+            <Col id="MENU_NAME">샘플3</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2012</Col>
+            <Col id="MENU_NAME">트랜잭션</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_Transaction.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">20</Col>
+            <Col id="MENU_ID">2013</Col>
+            <Col id="MENU_NAME">트랜잭션(Spring)</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="FORM_URL">Sample::Sample_TransactionSpring.xfdl</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3001</Col>
+            <Col id="MENU_NAME">전자결재</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3002</Col>
+            <Col id="MENU_NAME">결재양식</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3003</Col>
+            <Col id="MENU_NAME">결재요청문서</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3004</Col>
+            <Col id="MENU_NAME">임시보관문서</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3005</Col>
+            <Col id="MENU_NAME">결재문서</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3006</Col>
+            <Col id="MENU_NAME">미결함</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3007</Col>
+            <Col id="MENU_NAME">기결함</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3008</Col>
+            <Col id="MENU_NAME">수신참조함</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3009</Col>
+            <Col id="MENU_NAME">반려함</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3010</Col>
+            <Col id="MENU_NAME">결재설정</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">30</Col>
+            <Col id="MENU_ID">3011</Col>
+            <Col id="MENU_NAME">결재라인설정</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4001</Col>
+            <Col id="MENU_NAME">전자우편</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4002</Col>
+            <Col id="MENU_NAME">전체편지함</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4003</Col>
+            <Col id="MENU_NAME">받은편지함</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4004</Col>
+            <Col id="MENU_NAME">보낸편지함</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4005</Col>
+            <Col id="MENU_NAME">임시보관함</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">40</Col>
+            <Col id="MENU_ID">4006</Col>
+            <Col id="MENU_NAME">지운편지함</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5001</Col>
+            <Col id="MENU_NAME">일정관리</Col>
+            <Col id="LEVEL">0</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5002</Col>
+            <Col id="MENU_NAME">개인일정</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5003</Col>
+            <Col id="MENU_NAME">일정</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5004</Col>
+            <Col id="MENU_NAME">메모</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5005</Col>
+            <Col id="MENU_NAME">할일</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5006</Col>
+            <Col id="MENU_NAME">공유일정</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5007</Col>
+            <Col id="MENU_NAME">통합일정검색</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5008</Col>
+            <Col id="MENU_NAME">주간일정</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5009</Col>
+            <Col id="MENU_NAME">월간일정</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5010</Col>
+            <Col id="MENU_NAME">업무보고</Col>
+            <Col id="LEVEL">1</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5011</Col>
+            <Col id="MENU_NAME">업무보고작성</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5012</Col>
+            <Col id="MENU_NAME">업무보고확인</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5013</Col>
+            <Col id="MENU_NAME">업무보고참조</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+          <Row>
+            <Col id="MENU_GROUP">50</Col>
+            <Col id="MENU_ID">5014</Col>
+            <Col id="MENU_NAME">주간업무보고</Col>
+            <Col id="LEVEL">2</Col>
+            <Col id="ENABLE">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

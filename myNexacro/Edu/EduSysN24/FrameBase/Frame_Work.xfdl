@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Frame_Work" width="1043" height="695" titletext="Form_Work" onactivate="form_onactivate" onload="form_onload" onsize="form_onsize">
+    <Layouts>
+      <Layout width="1043" height="695" screenid="Desktop_screen">
+        <Div id="div_title" taborder="0" left="5" top="0" right="10" url="FrameBase::Frame_WorkTitle.xfdl" height="40" text="" background="#ffffff"/>
+        <Div id="div_work" taborder="1" left="5" top="div_title:0" background="#ffffff" bottom="0" text="1028 * 655" right="10"/>
+        <Button id="Button00" taborder="2" text="Button00" left="950" top="10" width="80" height="20" onclick="Button00_onclick" visible="false"/>
+      </Layout>
+      <Layout name="Phone_screen" width="480" height="768" screenid="Phone_screen"/>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.fv_objApp = nexacro.getApplication();
+this.fv_formId  = "";
+this.fv_menuId  = "";
+this.fv_menuNm  = "";
+this.fv_formUrl = "";
+
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+    var objOwnerFrame = this.getOwnerFrame();
+    this.fv_formId  = objOwnerFrame.arguments["formId"];
+    this.fv_menuId  = objOwnerFrame.arguments["menuId"];
+    this.fv_menuNm  = objOwnerFrame.arguments["menuNm"];
+    this.fv_formUrl = objOwnerFrame.arguments["formUrl"];
+
+    this.div_work.url = this.fv_formUrl;    
+	this.div_title.form.st_title.text = (objOwnerFrame.arguments["arrArg"]);
+	
+    var strAuth = this.fv_objApp.gds_menu.lookup("MENU_ID", this.fv_menuId, "MENU_AUTH");
+    if(this.gfn_isNull(strAuth) || strAuth == "N"){
+		this.div_title.height = 0;
+    }
+	else{
+		// 공통 버튼 설정
+		this.div_title.form.fn_setAuthBtn(strAuth);
+	}
+	
+    this.form_onsize();
+};
+
+// 화면 활성화 시킬 경우 해당 화면의 Tabpage 선택
+this.form_onactivate = function(obj:nexacro.Form,e:nexacro.ActivateEventInfo)
+{
+    this.fn_tabActivateClose(this.fv_formId, "ACTIVATE");
+};
+
+// 화면에서 직접 Close 시 Tabpage 제거
+this.form_onclose = function(obj:nexacro.Form,e:nexacro.CloseEventInfo)
+{
+    //this.fn_tabActivateClose(this.fv_formId, "CLOSE");
+};
+
+this.fn_tabActivateClose = function(sFormId, sType)
+{
+    var objFrame = this.fv_objApp.av_MdiFrame;
+	var nCnt = objFrame.form.tab_mdi.getTabpageCount();	
+	for(var i=0; i<nCnt; i++)
+	{	
+		if(objFrame.form.tab_mdi.tabpages[i].name == sFormId)
+		{
+            if(sType == "ACTIVATE"){
+                objFrame.form.tab_mdi.tabindex = i; 
+            }
+            else if(sType == "CLOSE"){
+                objFrame.form.tab_mdi.removeTabpage(i); 
+                var nRow = this.fv_objApp.gds_openForm.findRow("FORM_ID", sFormId);
+                this.fv_objApp.gds_openForm.deleteRow(nRow);
+                if(nCnt == 1){
+                    this.fv_objApp.av_VFrameSet1.separatesize = "30,*,0,30";	
+                }
+            }
+            return;
+		}
+	}
+}
+
+this.form_onsize = function(obj:nexacro.Form,e:nexacro.SizeEventInfo)
+{
+	this.resetScroll();
+};
+
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	trace(this.getOffsetWidth() + " : " + this.getOffsetHeight());
+	trace(this.div_work.getOffsetWidth() + " : " + this.div_work.getOffsetHeight());
+};
+
+
+]]></Script>
+  </Form>
+</FDL>

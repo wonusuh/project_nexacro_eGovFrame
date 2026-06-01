@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide01" width="1020" height="1280" titletext="cal, dtrp, pdtrp">
+    <Layouts>
+      <Layout height="1280" width="1020">
+        <Static id="Static00_00" taborder="2" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01_00" taborder="3" text="Calendar" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="4" text="Div00" left="20" top="85" height="370" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="240" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[readonly]" left="460" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="class = cal_WF_Essential" left="680" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Calendar id="Calendar01" taborder="4" left="240" top="54" width="150" height="26" enable="false"/>
+              <Calendar id="Calendar02" taborder="5" left="460" top="54" width="150" height="26" readonly="true"/>
+              <Calendar id="Calendar03" taborder="6" left="680" top="54" width="150" height="26" cssclass="cal_WF_Essential"/>
+              <Calendar id="Calendar00" taborder="7" left="18" top="54" width="150" height="26"/>
+              <Static id="Static04" taborder="13" text="※ Appearance &gt; type = monthonly" left="14" top="Calendar00:20" width="252" height="30" cssclass="sta_WF_GDes"/>
+              <Calendar id="Calendar04" taborder="8" left="14" top="Static04:0" width="200" height="220" type="monthonly" cssclass="cal_WF_Month" usetrailingday="false"/>
+              <Static id="Static05" taborder="9" text="※ Appearance &gt; type = spin" left="334" top="100" width="204" height="30" cssclass="sta_WF_GDes"/>
+              <Calendar id="Calendar05" taborder="10" left="334" top="130" width="150" height="26" type="spin"/>
+              <Static id="Static06" taborder="11" text="※ Appearance &gt; datepickerchangetype = button" left="612" top="100" width="280" height="30" cssclass="sta_WF_GDes"/>
+              <Calendar id="Calendar06" taborder="12" left="612" top="130" width="200" height="220" type="monthonly" cssclass="cal_WF_Month" datepickerchangetype="button"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static01_00_00" taborder="1" text="DateRangePicker / PopupDateRangePicker" left="20" top="Div00:20" width="557" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="0" text="Div00" left="20" top="Static01_00_00:10" height="740" cssclass="div_WF_Area" width="980">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="※ Appearance &gt;displaytype = time" left="522" top="10" width="280" height="30" cssclass="sta_WF_GDes"/>
+              <DateRangePicker id="DateRangePicker00" taborder="2" left="18" top="54" width="400" height="300"/>
+              <DateRangePicker id="DateRangePicker01" taborder="3" left="522" top="50" width="400" height="300" displaytype="time"/>
+              <Button id="btnPdtrp" taborder="4" text="PopupDateRangePicker" left="522" top="376" width="161" height="26" onclick="btnPdtrp_onclick"/>
+              <PopupDateRangePicker id="PopupDateRangePicker00" left="522" top="414" width="400" height="300" displaytype="datetime"/>
+              <Static id="Static02" taborder="6" text="※ Appearance &gt;displaytype = datetime" left="18" top="DateRangePicker00:20" width="435" height="30" cssclass="sta_WF_GDes"/>
+              <DateRangePicker id="DateRangePicker03" taborder="5" left="18" top="Static02:10" width="400" height="300" displaytype="datetime"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.btnPdtrp_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div01.form.PopupDateRangePicker00.trackPopupByComponent("start", obj, 0, obj.height);
+};
+]]></Script>
+  </Form>
+</FDL>

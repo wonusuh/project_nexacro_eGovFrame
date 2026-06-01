@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Tabpage01" width="1011" height="272" titletext="Academic Ability">
+    <Layouts>
+      <Layout height="272" horizontalgap="0" mobileorientation="landscape" spacing="0px" tabletemplate="1* / 1*" verticalgap="0" width="1011">
+        <Button id="Button00" taborder="0" top="5" width="25" height="25" cssclass="btn_WF_Add" right="30"/>
+        <Button id="Button01" taborder="1" top="5" width="25" height="25" cssclass="btn_WF_Delete" right="5"/>
+        <Grid id="Grid00" taborder="2" left="5.00" top="35" height="232" binddataset="ds_grd" autofittype="col" right="5">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="143"/>
+                <Column size="213"/>
+                <Column size="194"/>
+                <Column size="80"/>
+                <Column size="248"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Graduation Date"/>
+                <Cell col="1" text="School Name"/>
+                <Cell col="2" text="Major"/>
+                <Cell col="3" text="Graduation"/>
+                <Cell col="4" text="Address"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+                <Cell col="3" text="bind:Column3" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="4" text="bind:Column4"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_grd">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column3" type="STRING" size="256"/>
+          <Column id="Column4" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">19930203</Col>
+            <Col id="Column1">TOBE High School</Col>
+            <Col id="Column2">Natural  Sciences</Col>
+            <Col id="Column4">Seoul</Col>
+            <Col id="Column3">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">20020205</Col>
+            <Col id="Column1">TOBE University</Col>
+            <Col id="Column4">Seoul</Col>
+            <Col id="Column2">Design Course</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

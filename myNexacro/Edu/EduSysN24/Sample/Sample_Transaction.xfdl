@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Sample_Transaction" width="1020" height="630" titletext="Sample_Transaction" onload="form_onload">
+    <Layouts>
+      <Layout height="630" mobileorientation="landscape" width="1020">
+        <Div id="div_search" taborder="0" left="10" top="50" height="78" text="" cssclass="div_WF_Search" right="10">
+          <Layouts>
+            <Layout>
+              <Calendar id="cal_to" taborder="3" left="676" top="42" height="26" ondropdown="cal_from_ondropdown" dateformat="yyyy-MM-dd" width="130"/>
+              <Radio id="rdo_status" taborder="0" left="102" top="8" width="314" height="26" codecolumn="CODE" datacolumn="CODE_NAME" index="0" innerdataset="ds_status" rowcount="-1" columncount="-1" onitemchanged="div_search_rdo_status_onitemchanged">
+                <Dataset id="innerdataset">
+                  <ColumnInfo>
+                    <Column id="codecolumn" size="256"/>
+                    <Column id="datacolumn" size="256"/>
+                  </ColumnInfo>
+                  <Rows>
+                    <Row>
+                      <Col id="codecolumn">전체</Col>
+                      <Col id="datacolumn">전체</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">재직</Col>
+                      <Col id="datacolumn">재직</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">휴직</Col>
+                      <Col id="datacolumn">휴직</Col>
+                    </Row>
+                    <Row>
+                      <Col id="codecolumn">퇴직</Col>
+                      <Col id="datacolumn">퇴직</Col>
+                    </Row>
+                  </Rows>
+                </Dataset>
+              </Radio>
+              <Calendar id="cal_from" taborder="1" left="520" top="42" width="130" height="26" ondropdown="cal_from_ondropdown" dateformat="yyyy-MM-dd"/>
+              <Static id="Static05" taborder="2" text="~" left="650" top="42" width="26" height="26" textAlign="center"/>
+              <Static id="Static00" taborder="4" text="입사일자" left="418" top="42" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+              <Static id="Static02" taborder="5" text="부서" left="222" top="42" width="76" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_dept" taborder="6" left="298" top="42" width="120" height="26"/>
+              <Static id="Static03" taborder="7" text="성명" left="26" top="42" width="76" height="26" cssclass="sta_WF_SchLabel"/>
+              <Edit id="edt_name" taborder="8" left="102" top="42" width="120" height="26"/>
+              <Static id="Static01" taborder="9" text="재직상태" left="0" top="8" width="102" height="26" cssclass="sta_WF_SchLabel"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static06" taborder="2" text="사원정보관리" left="10" top="0" width="160" height="50" cssclass="sta_WF_Title1"/>
+        <Static id="Static03" taborder="3" text="사원목록" left="12" top="div_search:0" width="97" height="35" cssclass="sta_WF_Title2"/>
+        <Grid id="grd_emp" taborder="1" left="10" top="Static03:0" binddataset="ds_emp" bottom="10" autofittype="col" onheadclick="grd_emp_onheadclick" oncellclick="grd_emp_oncellclick" right="10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="66"/>
+                <Column size="90"/>
+                <Column size="80"/>
+                <Column size="140"/>
+                <Column size="76"/>
+                <Column size="120"/>
+                <Column size="100"/>
+                <Column size="160"/>
+              </Columns>
+              <Rows>
+                <Row size="30" band="head"/>
+                <Row size="30"/>
+              </Rows>
+              <Band id="head">
+                <Cell displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="1" text="Status"/>
+                <Cell col="2" text="Name"/>
+                <Cell col="3" text="ID"/>
+                <Cell col="4" text="Department"/>
+                <Cell col="5" text="Position"/>
+                <Cell col="6" text="Hire Date"/>
+                <Cell col="7" text="Phone No"/>
+                <Cell col="8" text="E-Mail"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="checkboxcontrol" edittype="checkbox" text="bind:CHK"/>
+                <Cell col="1" text="bind:STATUS" expr="(STATUS == &quot;1&quot; ? &quot;재직&quot; : (STATUS == &quot;2&quot; ? &quot;휴직&quot; : &quot;퇴직&quot;))" displaytype="text"/>
+                <Cell col="2" text="bind:EMP_NAME" edittype="text" displaytype="text"/>
+                <Cell col="3" text="bind:EMP_ID" edittype="text" displaytype="text"/>
+                <Cell col="4" text="bind:DEPT_NAME"/>
+                <Cell col="5" text="bind:POSITION" combodataset="ds_pos" combocodecol="CODE" combodatacol="CODE_NAME" edittype="combo" displaytype="combotext"/>
+                <Cell col="6" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+                <Cell col="7" text="bind:PHONE_NO" edittype="text" displaytype="text"/>
+                <Cell col="8" text="bind:EMAIL" edittype="text"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_save" taborder="7" text="저장" top="10" width="60" height="26" right="10" visible="true" onclick="btn_save_onclick" cssclass="btn_WF_FillTeal"/>
+        <Button id="btn_delete" taborder="6" text="삭제" top="10" width="60" height="26" right="75" visible="true" onclick="btn_del_onclick" cssclass="btn_WF_FillTeal"/>
+        <Button id="btn_add" taborder="5" text="입력" top="10" width="60" height="26" right="140" visible="true" onclick="btn_add_onclick" cssclass="btn_WF_FillTeal"/>
+        <Button id="btn_search" taborder="4" text="조회" top="10" width="60" height="26" right="205" visible="true" cssclass="btn_WF_FillTeal" onclick="btn_search_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_emp" keystring="" onrowposchanged="ds_emp_onrowposchanged" onrowsetchanged="ds_emp_onrowsetchanged">
+        <ColumnInfo>
+          <Column id="EMP_ID" type="STRING" size="10" description="사원번호"/>
+          <Column id="EMP_NAME" type="STRING" size="50" description="성명"/>
+          <Column id="DEPT_CODE" type="STRING" size="10" description="부서코드"/>
+          <Column id="POSITION" type="STRING" size="10" description="직급코드"/>
+          <Column id="HIRE_DATE" type="DATE" size="10" description="입사일자"/>
+          <Column id="GENDER" type="STRING" size="10" description="성별"/>
+          <Column id="PHONE_NO" type="STRING" size="10" description="연락처"/>
+          <Column id="EMAIL" type="STRING" size="10" description="이메일"/>
+          <Column id="STATUS" type="STRING" size="10" description="상태"/>
+          <Column id="MEMO" type="STRING" size="256" description="특이사항"/>
+          <Column id="CHK" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_ID">TS0123</Col>
+            <Col id="EMP_NAME">Maria Kim</Col>
+            <Col id="DEPT_CODE">KR2010</Col>
+            <Col id="POSITION">06</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01723641258</Col>
+            <Col id="EMAIL">mariakim@tobe.com</Col>
+            <Col id="STATUS">1</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0105</Col>
+            <Col id="EMP_NAME">John Park</Col>
+            <Col id="DEPT_CODE">KR2010</Col>
+            <Col id="POSITION">04</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="PHONE_NO">01774212521</Col>
+            <Col id="EMAIL">johnpark@tobe.com</Col>
+            <Col id="STATUS">1</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0815</Col>
+            <Col id="EMP_NAME">Henry Hong</Col>
+            <Col id="DEPT_CODE">KR2010</Col>
+            <Col id="POSITION">05</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01755669913</Col>
+            <Col id="EMAIL">henryhong@tobe.com</Col>
+            <Col id="STATUS">9</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0717</Col>
+            <Col id="EMP_NAME">Serry Park</Col>
+            <Col id="DEPT_CODE">KR2010</Col>
+            <Col id="POSITION">05</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="PHONE_NO">01758998487</Col>
+            <Col id="EMAIL">serrypark@tobe.com</Col>
+            <Col id="STATUS">1</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS1001</Col>
+            <Col id="EMP_NAME">Dennis An</Col>
+            <Col id="DEPT_CODE">KR2020</Col>
+            <Col id="POSITION">06</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="PHONE_NO">01752563217</Col>
+            <Col id="EMAIL">dennisan@tobe.com</Col>
+            <Col id="STATUS">9</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS1225</Col>
+            <Col id="EMP_NAME">Jackson Yu</Col>
+            <Col id="DEPT_CODE">KR2020</Col>
+            <Col id="POSITION">07</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="PHONE_NO">01726532234</Col>
+            <Col id="EMAIL">jacksonyu@tobe.com</Col>
+            <Col id="STATUS">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="32"/>
+          <Column id="CODE_NAME" type="string" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_appoint">
+        <ColumnInfo>
+          <Column id="EMP_ID" type="STRING" size="256"/>
+          <Column id="APPOINT_DATE" type="DATE" size="256"/>
+          <Column id="APPOINT_TYPE" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+          <Column id="START_DATE" type="DATE" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_ID">TS0123</Col>
+            <Col id="APPOINT_DATE">20101003</Col>
+            <Col id="START_DATE">20101003</Col>
+            <Col id="MEMO">입사</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0105</Col>
+            <Col id="APPOINT_DATE">20051011</Col>
+            <Col id="START_DATE">20051011</Col>
+            <Col id="MEMO">입사</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0815</Col>
+            <Col id="APPOINT_DATE">20070206</Col>
+            <Col id="START_DATE">20070206</Col>
+            <Col id="MEMO">입사</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">TS0717</Col>
+            <Col id="APPOINT_DATE">20090512</Col>
+            <Col id="START_DATE">20090512</Col>
+            <Col id="MEMO">입사</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_status">
+        <ColumnInfo>
+          <Column id="CODE" type="string" size="32"/>
+          <Column id="CODE_NAME" type="string" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="32"/>
+          <Column id="DEPT_NAME" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">01</Col>
+            <Col id="DEPT_NAME">Accounting</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">02</Col>
+            <Col id="DEPT_NAME">HR</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">03</Col>
+            <Col id="DEPT_NAME">Sales</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">04</Col>
+            <Col id="DEPT_NAME">Design</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">05</Col>
+            <Col id="DEPT_NAME">Education</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_service">
+        <ColumnInfo>
+          <Column id="svcid" type="STRING" size="256"/>
+          <Column id="url" type="STRING" size="256"/>
+          <Column id="inds" type="STRING" size="256"/>
+          <Column id="outds" type="STRING" size="256"/>
+          <Column id="param" type="STRING" size="256"/>
+          <Column id="callback" type="STRING" size="256"/>
+          <Column id="sync" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="svcid">svcGetCode</Col>
+            <Col id="url">getCode.jsp</Col>
+            <Col id="outds">ds_pos=out_pos ds_status=out_status"</Col>
+            <Col id="callback">fn_callback</Col>
+          </Row>
+          <Row>
+            <Col id="svcid">svcGetEmpList</Col>
+            <Col id="url">getEmpList.jsp</Col>
+            <Col id="outds">ds_emp=out_emp</Col>
+            <Col id="callback">fn_callback</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.gfn_formOnLoad(this);	
+
+	// 코드 데이터 가져오기 - 직급, 재직상태	
+    var sSvcID    = "svcGetCode";
+    var sURL      = "SvcUrl::getCode.jsp";
+    var sInDs     = "";
+    var sOutDs    = "ds_pos=out_pos ds_status=out_status";
+    var sParam    = "";
+    var sCallBack = "fn_callback";
+	this.gfn_transaction(sSvcID, sURL, sInDs, sOutDs, sParam, sCallBack);
+
+};
+
+// Retrieve Button
+this.btn_search_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 사원정보 가져오기 
+    var sSvcID    = "svcGetEmpList";
+    var sURL      = "SvcUrl::getEmpList.jsp";
+    var sInDs     = "";
+    var sOutDs    = "ds_emp=out_emp";
+    var sParam    = "pStatus="    + this.div_search.form.rdo_status.value
+	              + " pName="     + nexacro.wrapQuote(this.div_search.form.edt_name.value)
+				  + " pDept="     + nexacro.wrapQuote(this.div_search.form.edt_dept.value)
+				  + " pDateFrom=" + this.div_search.form.cal_from.value
+				  + " pDateTo="   + this.div_search.form.cal_to.value;
+    var sCallBack = "fn_callback";
+	this.gfn_transaction(sSvcID, sURL, sInDs, sOutDs, sParam, sCallBack);	
+	
+/*    
+    var objParam = { sSvcID    : "svcGetEmpList",
+                     sURL      : "SvcUrl::getEmpList.jsp",
+                     sInDs     : "",
+                     sOutDs    : "ds_emp=out_emp",
+                     sParam    : "",
+                     sCallBack : "fn_callback" };
+                     
+	this.gfn_transaction(objParam);
+
+*/
+
+/* Dataset 이용 (ds_service)   
+
+	this.gfn_transaction("svcGetEmpList");
+
+*/	
+
+};
+
+// Add Button
+this.btn_add_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRow = this.ds_emp.addRow();
+};
+
+// Delete Button
+this.btn_del_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ds_emp.deleteRow(this.ds_emp.rowposition);
+};
+
+// Save Button
+this.btn_save_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.gfn_dsIsUpdated(this.ds_emp) == false) {
+		this.gfn_alert("msg.save.nochange");
+		return;
+	}
+
+    this.gfn_clearValidation(this.ds_emp);
+    this.gfn_setValidation(this.ds_emp, "EMP_NAME", "성명"  , "required");
+    this.gfn_setValidation(this.ds_emp, "EMP_ID"  , "아이디", "required,length:5");
+  	if(this.gfn_validation(this.ds_emp, "U") == false) return;
+
+    var sSvcID    = "svcSave";
+    var sURL      = "SvcUrl::saveEmp.jsp";
+    var sInDs     = "in_emp=ds_emp:u";
+    var sOutDs    = "";
+    var sParam    = "";    
+    var sCallBack = "fn_callback";
+	this.gfn_transaction(sSvcID, sURL, sInDs, sOutDs, sParam, sCallBack);    
+
+};
+
+this.fn_callback = function(svcID, errCD, errMSG)
+{
+    if(svcID == "svcSave"){
+		this.gfn_alert("msg.save.success");	
+	}
+}]]></Script>
+  </Form>
+</FDL>

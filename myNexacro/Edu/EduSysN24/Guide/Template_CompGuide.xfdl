@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="TempGuide01" width="1160" height="650" titletext="CompGuide">
+    <Layouts>
+      <Layout height="650" width="1160">
+        <Static id="Static03_00_01" taborder="29" left="199.00" top="29" width="941" height="201" cssclass="sta_WF_GArea"/>
+        <Static id="Static01" taborder="0" text="Style" left="199.00" top="0" width="941" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static00" taborder="1" text="Component" left="0" top="0" width="200" height="30" cssclass="sta_WF_GTitle"/>
+        <Static id="Static02" taborder="2" text="Static" left="0" top="29" width="200" height="201" cssclass="sta_WF_GLabel"/>
+        <Static id="Static02_00" taborder="3" text="Button" left="0" top="295" width="200" height="275" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00" taborder="4" left="199.00" top="295" width="941" height="275" cssclass="sta_WF_GArea" text=""/>
+        <Static id="Static04" taborder="5" left="1073.00" top="52" width="5" height="36" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07" taborder="6" text="36" left="1081.00" top="60" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Button id="Button00" taborder="7" text="Add" left="440.00" top="316" width="50" height="26" cssclass="btn_WF_CRUD"/>
+        <Static id="Static05" taborder="8" text="DetailLabel" left="940.00" top="50" width="130" height="36" cssclass="sta_WF_DetailLabel"/>
+        <Static id="Static08" taborder="9" text="DetailArea" left="940.00" top="142" width="130" height="36" cssclass="sta_WF_DetailArea"/>
+        <Button id="Button01" taborder="10" left="440.00" top="402" width="28" height="28" cssclass="btn_WF_Find"/>
+        <Static id="Static09" taborder="11" text="Title" left="440.00" top="50" width="72" height="26" cssclass="sta_WF_Title"/>
+        <Static id="Static09_00" taborder="12" text="Label" left="440.00" top="142" width="64" height="26" cssclass="sta_WF_Label"/>
+        <Static id="Static09_01" taborder="13" text="subtitle" left="440.00" top="96" width="72" height="35" cssclass="sta_WF_SubTitle"/>
+        <Static id="Static10" taborder="14" text="class = &lt;b v='true'&gt;sta_WF_Title&lt;/b&gt;" left="220" top="50" width="200" height="26" usedecorate="true"/>
+        <Static id="Static11" taborder="15" text="H 15" left="440.00" top="204" width="181" height="15" cssclass="sta_WF_GSize"/>
+        <Static id="Static04_04" taborder="16" left="525.00" top="50" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02" taborder="17" text="26" left="533.00" top="54" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static10_00" taborder="18" text="class = &lt;b v='true'&gt;sta_WF_SubTitle&lt;/b&gt;" left="220.00" top="96" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_01" taborder="19" text="class = &lt;b v='true'&gt;sta_WF_Label&lt;/b&gt;" left="220.00" top="142" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02" taborder="20" text="class = &lt;b v='true'&gt;sta_WF_GSize&lt;/b&gt;" left="220.00" top="198" width="200" height="26" usedecorate="true"/>
+        <Static id="Static04_04_00" taborder="21" left="525.00" top="96" width="5" height="35" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02_00" taborder="22" text="35" left="533.00" top="104" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static07_02_00_00" taborder="23" text="26" left="533.00" top="146" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_04_00_00" taborder="24" left="525.00" top="142" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static10_03" taborder="25" text="class = &lt;b v='true'&gt;sta_WF_DetailLabel&lt;/b&gt;" left="680.00" top="50" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_00_00" taborder="26" text="class = &lt;b v='true'&gt;sta_WF_DetailArea&lt;/b&gt;" left="680.00" top="142" width="200" height="26" usedecorate="true"/>
+        <Static id="Static04_05" taborder="27" left="940.00" top="91" width="130" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static07_03" taborder="28" text="130" left="994" top="95" width="22" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static03_00_01_00" taborder="30" left="199.00" top="229" width="941" height="67" cssclass="sta_WF_GArea"/>
+        <Static id="Static02_01" taborder="31" text="Edit / MaskEdit" left="0" top="229" width="200" height="67" cssclass="sta_WF_GLabel"/>
+        <Edit id="Edit00" taborder="32" left="440.00" top="250" width="160" height="26" cssclass="edt_WF_Essential"/>
+        <MaskEdit id="MaskEdit00" taborder="33" left="940.00" top="250" width="160" height="26" cssclass="msk_WF_Essential"/>
+        <Static id="Static10_02_00" taborder="34" text="class = &lt;b v='true'&gt;edt_WF_Essential&lt;/b&gt;" left="220.00" top="250" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02_00_00" taborder="35" text="class = &lt;b v='true'&gt;msk_WF_Essential&lt;/b&gt;" left="680.00" top="250" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02_00_01" taborder="36" text="class = &lt;b v='true'&gt;btn_WF_CRUD&lt;/b&gt;" left="220.00" top="316" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02_00_01_00" taborder="37" text="class = &lt;b v='true'&gt;btn_WF_Find&lt;/b&gt;" left="220.00" top="402" width="200" height="26" usedecorate="true"/>
+        <Static id="Static07_02_01" taborder="38" text="26" left="498.00" top="320" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_04_01" taborder="39" left="493.00" top="316" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02_01_00" taborder="40" text="26" left="610.00" top="254" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_04_01_00" taborder="41" left="602.00" top="250" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static04_04_01_00_00" taborder="42" left="471.00" top="402" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02_01_00_00" taborder="43" text="26" left="476.00" top="405" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_06" taborder="44" left="1073.00" top="142" width="5" height="36" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_04" taborder="45" text="36" left="1086.00" top="148" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static07_03_00" taborder="46" text="26" left="446.00" top="439" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00" taborder="47" left="440.00" top="433" width="26" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static02_00_00" taborder="48" text="Div" left="0" top="569" width="200" height="67" cssclass="sta_WF_GLabel"/>
+        <Static id="Static03_00_02" taborder="49" left="199.00" top="569" width="941" height="67" cssclass="sta_WF_GArea"/>
+        <Static id="Static10_02_00_01_00_00" taborder="50" text="class = &lt;b v='true'&gt;div_WF_Search&lt;/b&gt;" left="220.00" top="590" width="200" height="26" usedecorate="true"/>
+        <Div id="Div00" taborder="51" text="Div00" left="440" top="590" width="197" height="30" cssclass="div_WF_Search"/>
+        <Button id="Button02" taborder="52" left="780.00" top="326" width="25" height="25" cssclass="btn_WF_Add"/>
+        <Button id="Button02_00" taborder="53" left="810.00" top="326" width="25" height="25" cssclass="btn_WF_Delete"/>
+        <Button id="Button03" taborder="54" text="ADD" left="440.00" top="478" width="75" height="26" cssclass="btn_WF_AddPhoto"/>
+        <Static id="Static04_04_01_00_00_00" taborder="55" left="522.00" top="478" width="5" height="26" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02_01_00_00_00" taborder="56" text="26" left="531.00" top="482" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static07_03_00_00" taborder="57" text="75" left="470.00" top="509" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00_00" taborder="58" left="440.00" top="507" width="75" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static10_02_00_01_00_01" taborder="59" text="class = &lt;b v='true'&gt;btn_WF_AddPhoto&lt;/b&gt;" left="220.00" top="478" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02_00_01_00_02" taborder="60" text="class = &lt;b v='true'&gt;btn_WF_Delete&lt;/b&gt;" left="810.00" top="369" width="200" height="26" usedecorate="true"/>
+        <Static id="Static10_02_00_01_00_03" taborder="61" text="class = &lt;b v='true'&gt;btn_WF_Add&lt;/b&gt;" left="675.00" top="369" width="119" height="26" usedecorate="true"/>
+        <Static id="Static07_03_00_01" taborder="62" text="25" left="785.00" top="360" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00_01" taborder="63" left="780.00" top="355" width="25" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static04_04_01_00_00_01" taborder="64" left="770.00" top="326" width="5" height="25" cssclass="sta_WF_GLineV"/>
+        <Static id="Static07_02_01_00_00_01" taborder="65" text="25" left="753.00" top="331" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00_00_00" taborder="66" left="440.00" top="345" width="50" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static07_03_00_02" taborder="67" text="width는 fittocontents 사용" left="439.00" top="354" width="182" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00_01_00" taborder="68" left="804.00" top="325" width="5" height="9" cssclass="sta_WF_GLineH"/>
+        <Static id="Static07_03_00_01_00" taborder="69" text="5" left="802.00" top="310" width="15" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static07_03_00_02_00" taborder="70" text="width는 fittocontents 사용" left="440.00" top="174" width="182" height="18" cssclass="sta_WF_GTxt"/>
+        <Static id="Static04_05_00_00_00_00" taborder="71" left="440.00" top="167" width="64" height="9" cssclass="sta_WF_GLineH"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

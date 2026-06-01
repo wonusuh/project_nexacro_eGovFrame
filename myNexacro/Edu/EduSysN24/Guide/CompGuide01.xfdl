@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CompGuide01" width="1020" height="750" titletext="sta, edt, msk, txt">
+    <Layouts>
+      <Layout height="750" width="1020">
+        <Static id="Static00" taborder="0" text="Component Guide" left="20" top="0" width="160" height="50" cssclass="sta_WF_GuideTitle1"/>
+        <Static id="Static01" taborder="1" text="Static" left="20" top="50" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div00" taborder="2" text="Div00" left="20" top="Static01:0" height="120" cssclass="div_WF_Area" right="20">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="120" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="13px Malgun Gothic&#13;&#10;가나다라마바사아자차카타파하&#13;&#10;1234567890" left="20" top="50" width="245" height="55"/>
+              <Static id="Static03" taborder="2" text="13px Malgun Gothic&#13;&#10;가나다라마바사아자차카타파하&#13;&#10;1234567890" left="536" top="50" width="245" height="55" enable="false"/>
+              <Static id="Static02" taborder="3" text="[disabled]" left="536" top="10" width="120" height="30" cssclass="sta_WF_GStatus"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static02" taborder="3" text="Edit" left="20" top="Div00:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div01" taborder="4" text="Div01" left="20" top="Static02:0" width="980" height="100" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Edit id="Edit00" taborder="1" left="20" top="50" width="140" height="26" text="Nexacro N24" value="Nexacro N24"/>
+              <Edit id="Edit00_00" taborder="2" left="210" top="50" width="140" height="26" text="Nexacro N24" enable="false" value="Nexacro N24"/>
+              <Static id="Static01" taborder="3" text="[disabled]" left="210" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Edit id="Edit00_00_00" taborder="4" left="400" top="50" width="140" height="26" text="Nexacro N24" readonly="true" value="Nexacro N24"/>
+              <Static id="Static02" taborder="5" text="[readonly]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Edit id="Edit00_00_00_00" taborder="6" left="590" top="50" width="140" height="26" text="" displaynulltext="TOBESOFT"/>
+              <Static id="Static03" taborder="7" text="[nulltext]" left="590" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Edit id="Edit00_00_00_00_00" taborder="8" left="780" top="50" width="140" height="26" text="Nexacro N24" cssclass="edt_WF_Essential" value="Nexacro N24"/>
+              <Static id="Static05" taborder="9" left="163" top="50" width="5" height="26" cssclass="sta_WF_GLineV"/>
+              <Static id="Static07" taborder="10" text="26" left="174" top="50" width="15" height="26" cssclass="sta_WF_GTxt"/>
+              <Static id="Static04" taborder="11" text="class = edt_WF_Essential" left="780" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static03" taborder="5" text="MaskEdit" left="20" top="Div01:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div02" taborder="6" text="Div01" left="20" top="Static03:0" width="980" height="100" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="210" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[readonly]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="[invalidtext]" left="590" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static04" taborder="4" text="class = msk_WF_Essential" left="780" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <MaskEdit id="MaskEdit00" taborder="5" left="20" top="50" width="140" height="26" value="1357900" format="#,#"/>
+              <MaskEdit id="MaskEdit00_00" taborder="6" left="210" top="50" width="140" height="26" enable="false" value="1357900" format="#,#"/>
+              <MaskEdit id="MaskEdit00_00_00" taborder="7" left="400" top="50" width="140" height="26" readonly="true" value="1357900" format="#,#"/>
+              <MaskEdit id="MaskEdit00_00_00_00" taborder="8" left="590" top="50" width="140" height="26" type="string" format="AAAA-####" value="1357900"/>
+              <MaskEdit id="MaskEdit00_00_00_00_00" taborder="9" left="780" top="50" width="140" height="26" cssclass="msk_WF_Essential" value="1357900" format="#,#"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static04" taborder="8" text="TextArea" left="20" top="Div02:10" width="97" height="35" cssclass="sta_WF_GuideTitle2"/>
+        <Div id="Div03" taborder="7" text="Div01" left="20" top="Static04:0" width="980" height="190" cssclass="div_WF_Area">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="[enabled]" left="20" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static01" taborder="1" text="[disabled]" left="210" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static02" taborder="2" text="[readonly]" left="400" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static03" taborder="3" text="[nulltext]" left="590" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <Static id="Static04" taborder="4" text="class = txt_WF_Essential" left="780" top="10" width="160" height="30" cssclass="sta_WF_GStatus"/>
+              <TextArea id="TextArea00" taborder="5" left="20" top="50" width="160" height="120" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+              <TextArea id="TextArea02" taborder="6" left="400" top="50" width="160" height="120" readonly="true" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+              <TextArea id="TextArea01" taborder="7" left="210" top="49" width="160" height="120" enable="false" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+              <TextArea id="TextArea03" taborder="8" left="590" top="49" width="160" height="120" displaynulltext="REAL OSMU "/>
+              <TextArea id="TextArea04" taborder="9" left="780" top="49" width="160" height="120" cssclass="txt_WF_Essential" value="Digital transformation is the incorporation of computer-based technologies into an organization's products, processes and strategies."/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>
