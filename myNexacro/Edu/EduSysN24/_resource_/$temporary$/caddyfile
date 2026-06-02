@@ -1,0 +1,8 @@
+﻿{
+admin off
+}
+:4098
+{
+root "C:/Users/wonwo/OneDrive/Documents/TOBESOFT/Nexacro N/outputs/EduSysN24"
+file_server
+}
