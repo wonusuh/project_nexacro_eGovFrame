@@ -726,32 +726,32 @@
       </Dataset>
     </Objects>
     <Script type="xscript5.1"><![CDATA[/*
-    그리드기능
-    * 체크박스(checkbox), 순번(no), 상태(status), 정렬(sort), 
-     행고정(rowfix), 열고정(colfix), 필터(filter), 
-     찾기/바꾸기(replace), 컬럼숨기기/보이기(colhide)
-    엑셀내려받기(export), 엑셀올리기(import), 
-    그리드개인화(personal), 초기화(initial), 
-    유저헤더그리드(userheader) , 셀copy & paste(cellcopypaste)기능 제공.
+그리드기능
+* 체크박스(checkbox), 순번(no), 상태(status), 정렬(sort), 
+행고정(rowfix), 열고정(colfix), 필터(filter), 
+찾기/바꾸기(replace), 컬럼숨기기/보이기(colhide)
+엑셀내려받기(export), 엑셀올리기(import), 
+그리드개인화(personal), 초기화(initial), 
+유저헤더그리드(userheader) , 셀copy & paste(cellcopypaste)기능 제공.
 
-    * 그리드에 아무것도 설정하지 않을 시, [정렬, 행고정, 열고정, 필터, 초기화] 기능을 사용.
+* 그리드에 아무것도 설정하지 않을 시, [정렬, 행고정, 열고정, 필터, 초기화] 기능을 사용.
 
-    * 기본기능외 다른 기능을 추가 할 경우 그리드에 user property 추가하여 사용.
-    ※ 추가방법  
-    그리드 Properties창에서 마우스 우클릭 --> add properties 를 선택하여 user property를 추가
-    --> 사용할 기능을 콤마(,)로 구분하여 나열.
-    user property name  : griduserproperty
-    user property value : status,no,checkbox,colhide,personal
+* 기본기능외 다른 기능을 추가 할 경우 그리드에 user property 추가하여 사용.
+※ 추가방법  
+그리드 Properties창에서 마우스 우클릭 --> add properties 를 선택하여 user property를 추가
+--> 사용할 기능을 콤마(,)로 구분하여 나열.
+user property name  : griduserproperty
+user property value : status,no,checkbox,colhide,personal
 
-    * 기본 기능에서 사용하지 않을 기능에는 앞에 느낌표(!)를 붙여 명시.
-    예] !rowfix,!sort
+* 기본 기능에서 사용하지 않을 기능에는 앞에 느낌표(!)를 붙여 명시.
+예] !rowfix,!sort
 
-    * 그리드 헤더와 로우가 매칭이 되지않는 복잡한 그리드의 경우 
-    userheader 속성을 사용 하여 필터, 찾기/바꾸기, 소트 등을 이용 가능.
-    단 각 헤더정보에 기능을 이용할 바인딩 정보가 매칭되어야 하고 
-    헤더의 [calendarweekformat] 속성에 해당 기능을 매칭.
+* 그리드 헤더와 로우가 매칭이 되지않는 복잡한 그리드의 경우 
+userheader 속성을 사용 하여 필터, 찾기/바꾸기, 소트 등을 이용 가능.
+단 각 헤더정보에 기능을 이용할 바인딩 정보가 매칭되어야 하고 
+헤더의 [calendarweekformat] 속성에 해당 기능을 매칭.
 
-    * 체크박스, 순번, 상태, 소트의 기능을 제외한 기능은 마우스 우클릭시 나오는 팝업메뉴에서 제공.
+* 체크박스, 순번, 상태, 소트의 기능을 제외한 기능은 마우스 우클릭시 나오는 팝업메뉴에서 제공.
 */
 
 this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)

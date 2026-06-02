@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="test" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="Button00" taborder="0" text="Button00" left="101" top="55" width="266" height="157" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = async function (obj:nexacro.Button,e:nexacro.ClickEventInfo) {
+	let a = '';
+	let b = '';
+	let c = 'ccc';
+	let d = 'ddd';
+	
+	this.gfn_alert();
+};
+]]></Script>
+  </Form>
+</FDL>

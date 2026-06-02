@@ -8,6 +8,7 @@
     <Module url="DeviceAPI.json"/>
     <Module url="MobileComp.json"/>
     <Module url="Graphics.json"/>
+    <Module url="extlib::EduJS.json"/>
   </Modules>
   <Components>
     <Component type="JavaScript" id="Button" classname="nexacro.Button"/>
@@ -71,6 +72,7 @@
     <Service prefixid="SvcUrl" type="JSP" url="http://demo.nexacro.com/edu/edusysN24/" version="0" cachelevel="none" include_subdir="false" communicationversion="0"/>
     <Service prefixid="LocalUrl" type="JSP" url="http://localhost:8088/edusysN24/" version="0" cachelevel="none" include_subdir="false" communicationversion="0"/>
     <Service prefixid="XeniUrl" type="JSP" version="0" cachelevel="none" include_subdir="false" communicationversion="0" url="http://demo.nexacro.com/nexacroN24-xeni/"/>
+    <Service prefixid="EduJS" type="js" url="./_extlib_/EduJS/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
   </Services>
   <Protocols/>
   <DeviceAdaptors/>
