@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="div" left="0" top="0" width="1000" height="700" titletext="div_async" ontimer="Form_Emp_ontimer" onload="Form_Emp_onload">
+    <Layouts>
+      <Layout height="700" width="1000">
+        <Static id="st_title" taborder="0" text="Div" left="10" top="8" width="193" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_FrmTitle"/>
+        <Div id="Div00" taborder="1" text="Div00" left="13" top="72" width="800" height="700" async="false" background="" border="1px solid">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="2" text="url" left="862" top="173" width="120" height="37" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="3" text="async=true" left="860" top="72" width="124" height="39" onclick="Button01_onclick"/>
+        <Button id="Button01_00" taborder="4" text="async=false" left="860" top="119" width="124" height="39" onclick="Button01_00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.url = "Performance::Performance_div_async_sub.xfdl";
+    trace("main");        
+
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.text = "aync=true";
+	this.Div00.async = true;
+	this.Div00.url = "";
+};  
+
+this.Button01_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.text = "aync=false";
+	this.Div00.async = false;
+	this.Div00.url = "";
+};
+
+
+this.Form_Emp_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+//	trace("main load");
+};
+ ]]></Script>
+  </Form>
+</FDL>

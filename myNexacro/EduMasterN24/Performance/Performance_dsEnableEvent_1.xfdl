@@ -1,0 +1,3982 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="dsEnableEvent" width="1000" height="700" titletext="dsEnableEvent" onload="dsEnableEvent_onload">
+    <Layouts>
+      <Layout height="700" width="1000">
+        <Div id="divLayOut" taborder="0" text="Div00" left="10" top="50" height="640" right="10" border="1px solid darkgray">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="0" left="0" top="0" height="289" binddataset="Dataset00" fastvscrolltype="centerdisplay" right="0" autofittype="col">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="48" band="left"/>
+                      <Column size="228" band="left"/>
+                      <Column size="448"/>
+                    </Columns>
+                    <Rows>
+                      <Row size="24" band="head"/>
+                      <Row size="24"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="no"/>
+                      <Cell col="1" text="PlaceName"/>
+                      <Cell col="2" text="Website"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="expr:currow + 1" textAlign="center"/>
+                      <Cell col="1" text="bind:PlaceName"/>
+                      <Cell col="2" text="bind:Website"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+              <Static id="Static01" taborder="1" text="Time(Seconds)" left="10" top="307" width="120" height="32"/>
+              <MaskEdit id="mk_time" taborder="2" value="0" enable="false" left="140" top="307" width="89" height="32" color="red" format="#,##0.000" font="bold 14px/normal &quot;Verdana&quot;,&quot;Malgun Gothic&quot;"/>
+              <Button id="btnExecute" taborder="3" text="Execute" top="307" height="32" onclick="fnExecute" right="0" width="300"/>
+              <Tab id="Tab00" taborder="4" tabindex="0" left="0" top="347" right="0" bottom="0">
+                <Tabpages>
+                  <Tabpage id="Tabpage1" text="enableevent=true(default)">
+                    <Layouts>
+                      <Layout>
+                        <Grid id="Grid00_00" taborder="0" left="0" top="0" binddataset="Dataset01" autofittype="col" right="0" bottom="0">
+                          <Formats>
+                            <Format id="default">
+                              <Columns>
+                                <Column size="48"/>
+                                <Column size="228"/>
+                                <Column size="448"/>
+                              </Columns>
+                              <Rows>
+                                <Row size="24" band="head"/>
+                                <Row size="24"/>
+                              </Rows>
+                              <Band id="head">
+                                <Cell text="no"/>
+                                <Cell col="1" text="PlaceName"/>
+                                <Cell col="2" text="Website"/>
+                              </Band>
+                              <Band id="body">
+                                <Cell text="expr:currow + 1" textAlign="center"/>
+                                <Cell col="1" text="bind:PlaceName"/>
+                                <Cell col="2" text="bind:Website"/>
+                              </Band>
+                            </Format>
+                          </Formats>
+                        </Grid>
+                      </Layout>
+                    </Layouts>
+                  </Tabpage>
+                  <Tabpage id="Tabpage2" text="enableevent(false-&gt;true)">
+                    <Layouts>
+                      <Layout>
+                        <Grid id="Grid00_00_00" taborder="0" left="0" top="0" binddataset="Dataset02" autofittype="col" right="0" bottom="0">
+                          <Formats>
+                            <Format id="default">
+                              <Columns>
+                                <Column size="48"/>
+                                <Column size="228"/>
+                                <Column size="448"/>
+                              </Columns>
+                              <Rows>
+                                <Row size="24" band="head"/>
+                                <Row size="24"/>
+                              </Rows>
+                              <Band id="head">
+                                <Cell text="no"/>
+                                <Cell col="1" text="PlaceName"/>
+                                <Cell col="2" text="Website"/>
+                              </Band>
+                              <Band id="body">
+                                <Cell text="expr:currow + 1" textAlign="center"/>
+                                <Cell col="1" text="bind:PlaceName"/>
+                                <Cell col="2" text="bind:Website"/>
+                              </Band>
+                            </Format>
+                          </Formats>
+                        </Grid>
+                      </Layout>
+                    </Layouts>
+                  </Tabpage>
+                </Tabpages>
+              </Tab>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="st_title" taborder="1" text="Dataset enableevent properties" left="10" top="8" width="420" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_FrmTitle"/>
+        <Static id="stCnt" taborder="2" top="8" height="30" textAlign="right" right="10" width="290"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="PlaceName" type="STRING" size="32"/>
+          <Column id="Website" type="STRING" size="32"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">RMS Recycler la palette bois</Col>
+            <Col id="Website">http://www.rms-palettes.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">LMV</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Résidence Océane</Col>
+            <Col id="Website">http://www.hoteloceane.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">AXION</Col>
+            <Col id="Website">http://www.axion-clotures.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Powergun</Col>
+            <Col id="Website">https://www.powergun.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Archives Départementales</Col>
+            <Col id="Website">https://archives.essonne.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Jardin d'Italie</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Cheptainville proche ferme de la Doudou</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Loc'atous</Col>
+            <Col id="Website">http://www.locatous.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La Société Protectrice des Animaux (SPA) - refuge de Chamarande</Col>
+            <Col id="Website">https://www.la-spa.fr/chamarande</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étréchy</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Paris</Col>
+            <Col id="Website">http://www.paris.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Duo</Col>
+            <Col id="Website">http://www.duo-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Britannique Hotel - Paris Centre</Col>
+            <Col id="Website">https://hotel-britannique.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Les Halles Paris</Col>
+            <Col id="Website">https://www.discoverasr.com/en/citadines/france/citadines-les-halles-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=EU-google-gmb-alwayson-20210927-all-en-eu-fr-citadinesleshallesparis&amp;y_source=1_NTg1OTcwNzctNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Novotel Paris Les Halles</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=0785&amp;merchantid=seo-maps-FR-0785&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTg3MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Ducs de Bourgogne</Col>
+            <Col id="Website">https://www.bestwestern-bourgogne.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Citadines Saint-Germain-des-Prés Paris (Apart hotel Paris)</Col>
+            <Col id="Website">https://www.discoverasr.com/citadines/france/citadines-saint-germain-des-pres-paris?utm_source=google&amp;utm_medium=gmb&amp;utm_campaign=CitadinesSaintGermainDesPresParis&amp;y_source=1_NTg1OTcwNzUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Esmeralda</Col>
+            <Col id="Website">http://www.hotel-esmeralda.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Albe Hotel</Col>
+            <Col id="Website">http://www.hotelalbestmichel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Rives de Notre-Dame Hotel</Col>
+            <Col id="Website">http://www.rivesdenotredame.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel 4 étoiles Parc Saint-Séverin Paris 5ème - Esprit de France</Col>
+            <Col id="Website">https://www.esprit-de-france.com/hotels/hotel-parc-saint-severin</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hotel Henri IV Rive Gauche</Col>
+            <Col id="Website">http://www.henri4hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Beaubourg</Col>
+            <Col id="Website">http://www.beaubourg-paris-hotel.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Des Ducs D'Anjou</Col>
+            <Col id="Website">http://www.hotelducsdanjou.fr/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Maison Colbert member of Meliá Collection</Col>
+            <Col id="Website">https://www.melia.com/en/hotels/france/paris/hotel-maison-colbert-melia-collection?utm_medium=organic&amp;utm_source=directories&amp;utm_campaign=google&amp;utm_content=6708</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Home Latin</Col>
+            <Col id="Website">http://www.hotelhomelatinparis.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Les Degrés de Notre Dame</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Hôtel Du Lys</Col>
+            <Col id="Website">https://www.hoteldulys.com/francais.htm</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">L'Empire Paris</Col>
+            <Col id="Website">http://www.lempire-paris.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">5th arrondissement</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Étampes</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Domaine d'Euclide</Col>
+            <Col id="Website">https://www.ledomainedeuclide.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Le Feuilleret - B &amp; Bs Bed And Breakfast En Essonne</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">ibis Étampes</Col>
+            <Col id="Website">https://all.accor.com/lien_externe.svlt?goto=fiche_hotel&amp;code_hotel=7285&amp;merchantid=seo-maps-FR-7285&amp;sourceid=aw-cen&amp;utm_medium=seo+maps&amp;utm_source=google+Maps&amp;utm_campaign=seo+maps&amp;y_source=1_MTUzNTkzNzYtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">La ferme de Vintué</Col>
+            <Col id="Website">https://www.fermedevintue.com/</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-breuillet-id3000300849</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-etrechy-id3000300847</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">SG</Col>
+            <Col id="Website">https://agences.sg.fr/banque-assurance/particulier/agence-lardy-id3000300851</Col>
+          </Row>
+          <Row>
+            <Col id="PlaceName">Buffalo Grill Avrainville</Col>
+            <Col id="Website">https://www.buffalo-grill.fr/restaurant/avrainville?utm_source=G&amp;utm_medium=local&amp;utm_campaign=google-local</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="PlaceName" type="STRING" size="32"/>
+          <Column id="Website" type="STRING" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="Dataset02">
+        <ColumnInfo>
+          <Column id="PlaceName" type="STRING" size="32"/>
+          <Column id="Website" type="STRING" size="32"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="Dataset03"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[var sStartTime;
+this.fnExecute = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var objDate = new Date();  
+	sStartTime = objDate.getTime();   
+	
+	if(this.divLayOut.form.Tab00.tabindex == 0)
+	{
+		//Dataset enableevent=true(default)
+		var nRow;
+		var nRowCnt = this.Dataset00.rowcount;
+		var nColCnt = this.Dataset00.colcount;
+		
+		this.Dataset01.clearData();
+		for(var i=0;i<nRowCnt;i++)   
+		{
+			nRow = this.Dataset01.addRow();
+			for(var j=0;j<nColCnt;j++)
+			{
+				this.Dataset01.setColumn(nRow, j, this.Dataset00.getColumn(i, j));
+			}
+		}
+	} else {
+		var nRow;
+		var nRowCnt = this.Dataset00.rowcount;
+		var nColCnt = this.Dataset00.colcount;
+		
+		this.Dataset02.enableevent = false; /* enableevent=false */
+		
+		 this.Dataset02.clearData();
+		for(var i=0;i<nRowCnt;i++)
+		{
+			nRow = this.Dataset02.addRow();  
+			for(var j=0;j<nColCnt;j++)
+			{
+				this.Dataset02.setColumn(nRow, j, this.Dataset00.getColumn(i, j));
+			}
+		}		
+		this.Dataset02.enableevent = true; /* enableevent=true */    
+	}
+	objDate = new Date();		
+	this.divLayOut.form.mk_time.value = (objDate.getTime()-sStartTime)/1000;
+};  
+
+this.dsEnableEvent_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.stCnt.text = "Number of data : " + this.gfn_appendComma(this.Dataset00.rowcount);
+};]]></Script>
+  </Form>
+</FDL>

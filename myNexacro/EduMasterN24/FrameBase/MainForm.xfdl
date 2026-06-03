@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="MainForm" width="800" height="600" titletext="MainForm">
+    <Layouts>
+      <Layout width="800" height="600" screenid="Desktop_screen">
+        <Static id="Static00" taborder="0" left="10" top="19" width="775" height="563" cssclass="sta_WF_Main" text=""/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

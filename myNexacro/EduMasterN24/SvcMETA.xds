@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="http://www.tobesoft.com/platform/dataset" ver="5000">
+  <Parameters>
+    <Parameter id="ErrorCode" type="int">0</Parameter>
+    <Parameter id="ErrorMsg" type="string">success</Parameter>
+  </Parameters>
+  <Dataset id="test">
+    <ColumnInfo>
+      <Column id="DOMAIN" type="string" size="255"/>
+      <Column id="MODEL" type="string" size="255"/>
+      <Column id="DESCRIPTION" type="string" size="255"/>
+      <Column id="DATASOURCE" type="string" size="255"/>
+    </ColumnInfo>
+    <Rows>
+      <Row>
+        <Col id="DOMAIN">metadata</Col>
+        <Col id="MODEL">metadata</Col>
+        <Col id="DESCRIPTION">description</Col>
+        <Col id="DATASOURCE">DB</Col>
+        <DatasetLayout>
+          <Dataset id="output">
+            <ColumnInfo>
+              <Column id="NAME" type="string" size="255"/>
+              <Column id="TYPE" type="string" size="255"/>
+              <Column id="DESCRIPTION" type="string" size="255"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="NAME">metadata</Col>
+                <Col id="TYPE">dataset</Col>
+                <Col id="DESCRIPTION">DETAIL&amp;#32;DATA</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+          <Dataset id="metadata">
+            <ColumnInfo>
+              <Column id="ENG_NM" type="string" size="255"/>
+              <Column id="NM" type="string" size="255"/>
+              <Column id="COL_DESC" type="string" size="255"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="ENG_NM">APPOINT_DATE</Col>
+                <Col id="NM">APPOINT_DATE</Col>
+                <Col id="COL_DESC">APPOINT_DATE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">APPOINT_NO</Col>
+                <Col id="NM">APPOINT_NO</Col>
+                <Col id="COL_DESC">APPOINT_NO</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">APPOINT_TYPE</Col>
+                <Col id="NM">APPOINT_TYPE</Col>
+                <Col id="COL_DESC">APPOINT_TYPE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">BIRTH_DAY</Col>
+                <Col id="NM">BIRTH_DAY</Col>
+                <Col id="COL_DESC">BIRTH_DAY</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">BONUS</Col>
+                <Col id="NM">BONUS</Col>
+                <Col id="COL_DESC">BONUS</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">CODE</Col>
+                <Col id="NM">CODE</Col>
+                <Col id="COL_DESC">CODE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">CODE_NAME</Col>
+                <Col id="NM">CODE_NAME</Col>
+                <Col id="COL_DESC">CODE_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">CORP_CD</Col>
+                <Col id="NM">CORP_CD</Col>
+                <Col id="COL_DESC">CORP_CD</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DEPT_CD</Col>
+                <Col id="NM">부서코드</Col>
+                <Col id="COL_DESC">부서코드</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DEPT_CODE</Col>
+                <Col id="NM">DEPT_CODE</Col>
+                <Col id="COL_DESC">DEPT_CODE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DEPT_EMP</Col>
+                <Col id="NM">DEPT_EMP</Col>
+                <Col id="COL_DESC">DEPT_EMP</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DEPT_NAME</Col>
+                <Col id="NM">DEPT_NAME</Col>
+                <Col id="COL_DESC">DEPT_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DET_CODE</Col>
+                <Col id="NM">DET_CODE</Col>
+                <Col id="COL_DESC">DET_CODE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">DET_NAME</Col>
+                <Col id="NM">DET_NAME</Col>
+                <Col id="COL_DESC">DET_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">E_MAIL</Col>
+                <Col id="NM">E_MAIL</Col>
+                <Col id="COL_DESC">E_MAIL</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">EMAIL</Col>
+                <Col id="NM">EMAIL</Col>
+                <Col id="COL_DESC">EMAIL</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">EMP_ID</Col>
+                <Col id="NM">EMP_ID</Col>
+                <Col id="COL_DESC">EMP_ID</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">EMP_NAME</Col>
+                <Col id="NM">EMP_NAME</Col>
+                <Col id="COL_DESC">EMP_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">EMPL_ID</Col>
+                <Col id="NM">사번</Col>
+                <Col id="COL_DESC">사번</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">FULL_NAME</Col>
+                <Col id="NM">성명</Col>
+                <Col id="COL_DESC">성명</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">GENDER</Col>
+                <Col id="NM">성별</Col>
+                <Col id="COL_DESC">성별</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">GROUP_CODE</Col>
+                <Col id="NM">GROUP_CODE</Col>
+                <Col id="COL_DESC">GROUP_CODE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">GROUP_NAME</Col>
+                <Col id="NM">GROUP_NAME</Col>
+                <Col id="COL_DESC">GROUP_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">HIRE_DATE</Col>
+                <Col id="NM">입사일자</Col>
+                <Col id="COL_DESC">입사일자</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">HOBBY</Col>
+                <Col id="NM">HOBBY</Col>
+                <Col id="COL_DESC">HOBBY</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">MARRIED</Col>
+                <Col id="NM">결혼여부</Col>
+                <Col id="COL_DESC">결혼여부</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">MEMO</Col>
+                <Col id="NM">메모</Col>
+                <Col id="COL_DESC">메모</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">MST_CODE</Col>
+                <Col id="NM">MST_CODE</Col>
+                <Col id="COL_DESC">MST_CODE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">MST_NAME</Col>
+                <Col id="NM">MST_NAME</Col>
+                <Col id="COL_DESC">MST_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">PHONE_NO</Col>
+                <Col id="NM">PHONE_NO</Col>
+                <Col id="COL_DESC">PHONE_NO</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">POS_CD</Col>
+                <Col id="NM">직위코드</Col>
+                <Col id="COL_DESC">직위코드</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">POS_NAME</Col>
+                <Col id="NM">POS_NAME</Col>
+                <Col id="COL_DESC">POS_NAME</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">POSITION</Col>
+                <Col id="NM">POSITION</Col>
+                <Col id="COL_DESC">POSITION</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">PROFILE_IMG</Col>
+                <Col id="NM">PROFILE_IMG</Col>
+                <Col id="COL_DESC">PROFILE_IMG</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">SALARY</Col>
+                <Col id="NM">급여</Col>
+                <Col id="COL_DESC">급여</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">SKILL</Col>
+                <Col id="NM">SKILL</Col>
+                <Col id="COL_DESC">SKILL</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">START_DATE</Col>
+                <Col id="NM">START_DATE</Col>
+                <Col id="COL_DESC">START_DATE</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">STATUS</Col>
+                <Col id="NM">STATUS</Col>
+                <Col id="COL_DESC">STATUS</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">USE_FLAG</Col>
+                <Col id="NM">USE_FLAG</Col>
+                <Col id="COL_DESC">USE_FLAG</Col>
+              </Row>
+              <Row>
+                <Col id="ENG_NM">WEDD_DAY</Col>
+                <Col id="NM">WEDD_DAY</Col>
+                <Col id="COL_DESC">WEDD_DAY</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </DatasetLayout>
+      </Row>
+    </Rows>
+  </Dataset>
+</Root>

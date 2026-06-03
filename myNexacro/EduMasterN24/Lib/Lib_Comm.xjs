@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[
+this.lfn_getMessage = function(sMsgID, arrWord)
+{
+	var objApp = nexacro.getApplication();	
+	var sMsg = objApp.gds_message.lookup("MSG_ID",sMsgID,"MSG_TEXT_EN");
+	  
+	if(!this.lfn_isNull(arrWord))
+	{
+		for(var i=0;i<arrWord.length;i++)
+		{
+			var idx  = "{" + i.toString() + "}";
+			sMsg = sMsg.replace(idx,arrWord[i]);
+		}
+	}			
+	return sMsg;
+}
+
+
+this.lfn_alert = function(sMsgID, arrWord)
+{
+	var objApp = nexacro.getApplication();		
+	var sMsgType = objApp.gds_message.lookup("MSG_ID",sMsgID,"MSG_TYPE");
+	var sMsg = this.lfn_getMessage(sMsgID,arrWord);
+	if(sMsgType == "A")
+	{
+		this.alert(sMsg);	
+	} else {
+		return this.confirm(sMsg);
+	}
+}
+
+this.lfn_transaction = function(sId, sUrl, inData, outData, sArg, sCallBack, isAsync)
+{		
+	if ((isAsync != true) && (isAsync != false)) isAsync = true;	
+
+    var sSvcId  = sId + ":" + sCallBack;
+	var sSvcUrl = sUrl;
+	
+	if (this.lfn_isNull(sArg)) {
+		sArg = "";
+	}    
+    sArg += " pTitle="+nexacro.wrapQuote(this.titletext) + " pName="+this.name
+	var nDataType = 0;
+trace("lfn_transac");	   
+	this.transaction( sSvcId
+					, sSvcUrl
+					, inData
+					, outData
+					, sArg
+					, "lfn_callback"
+					, isAsync
+					, nDataType
+					, false);
+};
+
+
+this.lfn_callback = function(svcID, errorCode, errorMsg)
+{	
+trace(svcID);
+	var sID = svcID.split(":")[0];
+	var sCB = svcID.split(":")[1];
+	
+trace("lfn_callback=" + sID + "==" + sCB);
+	// 에러 공통 처리
+	if(errorCode != 0){
+		this.alert("error");
+        return;
+	}
+	this.lookupFunc(sCB).call(sID, errorCode, errorMsg);
+
+};
+
+this.lfn_openPopup = function(sPopupType, sPopupId, nLeft, nTop, nWidth, nHeight, nRight, nBottom, sUrl, oArg, sPopupCallback)
+{
+    if(sPopupType == "modal"){
+		newChild = new nexacro.ChildFrame;
+		newChild.init(sPopupId, nLeft, nTop, nWidth, nHeight, nRight, nBottom, sUrl);
+		
+		newChild.set_dragmovetype("all");
+		newChild.set_openalign("center middle");
+		newChild.set_overlaycolor("RGBA(0, 0, 0, 0.2)");
+		newChild.showModal(this.getOwnerFrame(), oArg, this, sPopupCallback);
+    }
+    else if(sPopupType == "modeless"){
+        var sOpenStyle= "showtitlebar=true showstatusbar=false showontaskbar=true showcascadetitletext=false resizable=true autosize=true titletext=modeless";
+        var objApp = nexacro.getApplication();
+
+        nLeft = (objApp.mainframe.width  / 2) - Math.round(nWidth / 2);
+        nTop  = (objApp.mainframe.height / 2) - Math.round(nHeight / 2) ;		
+        nLeft = system.clientToScreenX(this, nLeft);
+        nTop  = system.clientToScreenY(this, nTop);
+
+		var arrPopFrame = nexacro.getPopupFrames();
+		if (arrPopFrame[sPopupId]) {	
+			if (system.navigatorname == "nexacro") {
+				arrPopFrame[sPopupId].setFocus();
+			} 
+            else {	
+				arrPopFrame[sPopupId]._getWindowHandle().focus();
+			}
+		}
+		else {
+			nexacro.open(sPopupId, sUrl, this.getOwnerFrame(), oArg, sOpenStyle, nLeft, nTop, nWidth, nHeight, this);
+		}   
+    }
+};
+
+
+
+
+/**
+ * Dataset에 정의된 Rule을 Clear 한다.
+ */
+this.lfn_clearValidation = function(objDs)
+{
+	objDs.validationRuleSet = "";
+};
+
+/**
+ * Dataset의 Column별로 정합성체크 Rule을 등록한다.
+ */
+ this.lfn_setValidation = function(objDs, sColID, sColName, sRule)
+{
+	var arrObj = new Array();
+    if(!this.lfn_isNull(objDs.validationRuleSet)){   
+        arrObj = JSON.parse(objDs.validationRuleSet);
+    }
+    var objRule = 
+    {
+        colid   : sColID
+       ,colname : sColName
+       ,rule    : sRule
+       ,notnull : false
+    };
+    
+    if(sRule.indexOf("required") > -1){
+        objRule.notnull = true;
+    }
+    
+    arrObj.push(objRule);    
+    objDs.validationRuleSet = JSON.stringify(arrObj);    
+};
+
+this.lfn_validation = function(objDs, sRowType)
+{   
+    var arrObj = new Array();
+    arrObj = JSON.parse(objDs.validationRuleSet);
+    // [{"colid":"FULL_NAME","colname":"성명","rule":"required","notnull":true}
+    // ,{"colid":"EMPL_ID","colname":"아이디","rule":"required,length:5","notnull":true}]
+
+	for(var i=0; i<objDs.getRowCount(); i++)
+	{        
+        for(var k=0; k<arrObj.length; k++)
+        {
+            var sColID    = arrObj[k].colid;
+            var sColName  = arrObj[k].colname;
+            var arrRule   = arrObj[k].rule.split(","); //required,length:5
+            var bNull     = arrObj[k].notnull;        
+            var sColValue = objDs.getColumn(i, sColID);
+        
+            if(bNull == true){
+                if(this.lfn_isNull(sColValue)){
+                    objDs.set_rowposition(i);
+                    this.lfn_alert("msg.err.validator.required", [sColName]);
+                    return false;
+                }
+            }
+
+            if(!this.lfn_isNull(sColValue)){
+                for(var j=0; j<arrRule.length; j++) // Rule에 따른 정합성 체크
+                {
+                    var sValidRule = arrRule[j];
+                    if(sValidRule == "required")    continue;
+                    
+                    arrType = sValidRule.split(":");
+                    var sValidType = arrType[0].toLowerCase();                
+                    var sValidOpt1 = arrType[1];
+                    var sValidOpt2 = arrType[2];
+
+                    var sMsg = "";
+                    switch(sValidType)
+                    {
+                        case "length":  // size 크기 지정 : length:7
+                            if(sColValue.length != parseInt(sValidOpt1)){
+                                sMsg = this.lfn_getMessage("msg.err.validator.length",[sColName, sValidOpt1]);   // {0} 의 입력값은 {1} 자리이어야 합니다.
+                            }
+                            break;                    
+                        case "maxlength":   // 최대 size 크기: maxlength:7
+                            if(sColValue.length > parseInt(sValidOpt1)){                            
+                                sMsg = this.lfn_getMessage("msg.err.validator.maxlength",[sColName, sValidOpt1]);    // {0} 의 입력값의 길이는 최대 {1} 자리 입니다.
+                            }
+                            break;
+                        case "range":   // 사이의 값인지 비교 - range:40:100
+                            if (parseInt(sColValue) < parseInt(sValidOpt1) || parseInt(sColValue) > parseInt(sValidOpt2)){
+                                sMsg = this.lfn_getMessage("msg.err.validator.range",[sColName1, sValidOpt1, sValidOpt2]); // {0} 은(는) {1} 와(과) {2} 사이의 값입니다.
+                            }
+                            break;
+                        case "digits":	// 숫자 여부 : digits	
+                            if (!this.lookupFunc("lfn_isDigit").call(sColValue)){
+                                sMsg = this.lfn_getMessage("msg.err.validator.digits",[sColName]);    // {0} 은(는) 숫자만 입력 가능합니다.
+                            }
+                            break;                                                		
+                        case "date":    // 날짜 년월일 체크 : date
+                            if (!this.lookupFunc("lfn_isYMD").call(sColValue)){
+                                sMsg = this.lfn_getMessage("msg.err.validator.date",[sColName]);   // {0} 은(는) 유효하지 않은 날짜 형식입니다.
+                            }
+                            break;
+                        case "isssn":   // 주민등록번호 체크 - isssn
+                            if (!this.lookupFunc("lfn_isSSN").call(sColValue)){
+                                sMsg = this.lfn_getMessage("msg.err.validator.ssn",[sColName]);    // {0} 은(는) 올바른 주민번호가 아닙니다.                            
+                            }
+                            break;
+                        default:
+                            return "";
+                            break;                
+                    }
+
+                    // 에러시
+                    if (!this.lfn_isNull(sMsg)){
+                        objDs.set_rowposition(i);
+                        this.lfn_alert("msg.err.validator", [sMsg]);                    
+                        return false;
+                    }
+                }
+            }    
+        }    
+	}
+}
+]]></Script>

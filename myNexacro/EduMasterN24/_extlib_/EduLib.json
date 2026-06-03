@@ -1,0 +1,17 @@
+{
+  "name": "EduLib",
+  "version": "24.0.0.100",
+  "description": "Nexacro N Unified Framework Library",
+  "license": "",
+  "scripts": [
+		"EduLib/Comp.js",
+		"EduLib/Frame.js",
+		"EduLib/Util.js",
+		"EduLib/Transaction.js",
+		"EduLib/Validation.js",
+		"EduLib/Popup.js",
+		"EduLib/Message.js",
+		"EduLib/Grid.js",
+		"EduLib/Excel.js",
+  ]
+}

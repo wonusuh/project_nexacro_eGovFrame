@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[
+this.lfn_isNull = function(sValue)
+{
+    if(new String(sValue).valueOf() == "undefined") return true;
+    if(sValue == null) return true;
+    if(sValue.toString().length == 0 ) return true;    
+    return false;
+};
+
+
+// Today
+this.lfn_today = function()
+{
+	var objDate = new Date();
+	var sToday  = objDate.getFullYear().toString();
+	    sToday += (objDate.getMonth()+1).toString().padLeft(2, "0")
+	    sToday += objDate.getDate().toString().padLeft(2, "0"); 
+	return sToday;
+}
+
+
+
+
+// Sort Function Sample -  Grid Head Click
+this.CONST_NONE_MARK = "";
+this.CONST_ASC_MARK = "↑";
+this.CONST_DESC_MARK = "↓";
+this.nPrevCell = -1;
+this.lfn_gridSort = function (obj:Grid, e:GridClickEventInfo)
+{
+    if(obj.getCellProperty("head", e.cell, "displaytype") == "checkboxcontrol") return;
+    var objDs     = obj.getBindDataset();
+	var sColId    = obj.getCellProperty("body", e.cell, "text").split(":");
+	var sHeadText = obj.getCellText(-1, e.cell);
+
+	if(sHeadText.substr(sHeadText.length-1) == this.CONST_ASC_MARK){
+		obj.setCellProperty("head", e.cell, "text", sHeadText.substr(0, sHeadText.length - 1) + this.CONST_DESC_MARK);
+		objDs.set_keystring("S:-" + sColId[1]);	
+	}
+	else if(sHeadText.substr(sHeadText.length-1) == this.CONST_DESC_MARK){
+		obj.setCellProperty("head", e.cell, "text", sHeadText.substr(0, sHeadText.length - 1) + this.CONST_ASC_MARK);
+		objDs.set_keystring("S:+" + sColId[1]);
+	}
+	else{
+		obj.setCellProperty("head", e.cell, "text", sHeadText + this.CONST_ASC_MARK);
+		objDs.set_keystring("S:+" + sColId[1]);
+	}
+	
+	if(this.nPrevCell > -1 && this.nPrevCell != e.cell){
+		var sPrevText = obj.getCellText(-1, this.nPrevCell);
+		obj.setCellProperty("head", this.nPrevCell, "text", sPrevText.substr(0, sPrevText.length - 1));
+	}
+	this.nPrevCell = e.cell;
+}]]></Script>

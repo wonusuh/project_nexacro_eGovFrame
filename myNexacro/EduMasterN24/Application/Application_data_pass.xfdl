@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_standard" left="0" top="0" width="1000" height="700" titletext="값 전달" onload="Form_standard_onload">
+    <Layouts>
+      <Layout height="700" width="1000">
+        <Static id="st_title" taborder="0" text="ListDetail " left="10" top="8" width="400" height="30" leftbase="" topbase="" bottombase="" rightbase="" widthbase="" heightbase="" cssclass="sta_WF_FrmTitle"/>
+        <Div id="divBody" taborder="1" text="divBody" left="11" top="45" width="969" height="645" border="1px solid" url="Application::Application_data_list.xfdl"/>
+      </Layout>
+    </Layouts>
+    <Objects/>
+    <Script type="xscript5.1"><![CDATA[ 
+this.Form_standard_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+
+};
+]]></Script>
+  </Form>
+</FDL>
