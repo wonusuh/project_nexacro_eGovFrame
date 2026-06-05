@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
                 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
-                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+                http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<context:component-scan
 		base-package="egovframework">
@@ -77,7 +79,59 @@
 	</bean>
 	<!-- /For Pagination Tag -->
 
-	
+	<!-- /////////////////////////////////// 넥사크로N UIADAPTER 설정 시작 /////////////////////////////////// -->
+	<bean id="nexacroInterceptor"
+		class="com.nexacro.uiadapter.spring.core.servlet.NexacroInterceptor" />
+	<bean id="nexacroFileView"
+		class="com.nexacro.uiadapter.spring.core.view.NexacroFileView" />
+	<bean id="nexacroView"
+		class="com.nexacro.uiadapter.spring.core.view.NexacroView">
+		<property name="defaultContentType" value="PlatformXml" /><!-- 
+			PlatformXml, PlatformJson -->
+		<property name="defaultCharset" value="UTF-8" />
+	</bean>
+
+	<!-- trimParamDataSet, trimParamVariable = all 설정 사용 -->
+	<!-- @ParamDataSet, @ParamVariable 으로 들어오는 값 trim 적용. \n \t 도 제거됨 -->
+	<util:properties id="EtcProperty">
+		<prop key="uiAdapter.trimParamDataSet">all</prop>
+		<prop key="uiAdapter.trimParamVariable">all</prop>
+	</util:properties>
+
+	<!-- 넥사크로N RequestMappingHandlerAdapter 구현체 등록 -->
+	<bean
+		class="com.nexacro.uiadapter.spring.core.resolve.NexacroRequestMappingHandlerAdapter"
+		p:order="0">
+		<property name="customArgumentResolvers">
+			<list>
+				<bean
+					class="com.nexacro.uiadapter.spring.core.resolve.NexacroMethodArgumentResolver" />
+			</list>
+		</property>
+		<property name="customReturnValueHandlers">
+			<list>
+				<bean
+					class="com.nexacro.uiadapter.spring.core.resolve.NexacroHandlerMethodReturnValueHandler">
+					<property name="view" ref="nexacroView" />
+					<property name="fileView" ref="nexacroFileView" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 넥사크로N EXCEPTION-RESOLVER 등록 -->
+	<bean id="exceptionResolver"
+		class="com.nexacro.uiadapter.spring.core.resolve.NexacroMappingExceptionResolver"
+		p:order="1">
+		<property name="view" ref="nexacroView" />
+		<property name="shouldLogStackTrace" value="true" />
+		<property name="shouldSendStackTrace" value="true" />
+		<!-- shouldSendStackTrace 가 false 일 경우 nexacroN으로 전송되는 에러메시지 -->
+		<!-- <property name="defaultErrorMsg" value="An Error Occured. check the 
+			ErrorCode for detail of error infomation" /> -->
+		<property name="defaultErrorMsg" value="fail.common.msg" />
+		<property name="messageSource" ref="messageSource" />
+	</bean>
 
 	<mvc:view-controller path="/cmmn/validator.do"
 		view-name="cmmn/validator" />
