@@ -49,6 +49,10 @@
 			<url>file://${project.basedir}/src/main/webapp/WEB-INF/lib</url>
 		</repository>
 
+		<repository>
+			<id>tobesoft</id>
+			<url>https://mangosteen.tobesoft.co.kr/nexus/repository/maven-public/</url>
+		</repository>
 
 	</repositories>
 
@@ -120,8 +124,7 @@
 			<version>1.1.4</version>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -135,8 +138,7 @@
 			<version>1.18.34</version>
 			<scope>provided</scope>
 		</dependency>
-		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -150,6 +152,19 @@
 			<version>${spring.maven.artifact.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.nexacro</groupId>
+			<artifactId>uiadapter-spring-core</artifactId>
+			<version>1.4.17-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nexacro</groupId>
+			<artifactId>uiadapter-spring-dataaccess</artifactId>
+			<version>1.4.14-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
