@@ -8,7 +8,7 @@
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.btnSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	
+	abcd
 };
 ]]></Script>
   </Form>
