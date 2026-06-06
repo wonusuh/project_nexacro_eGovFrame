@@ -1,5 +1,8 @@
 package egovframework.example.sample.service;
 
-public interface EduNexaService {
+import java.util.List;
+import java.util.Map;
 
+public interface EduNexaService {
+    List<Map<String, Object>> getData();
 }

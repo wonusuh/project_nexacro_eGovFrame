@@ -2,4 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
 	namespace="egovframework.example.sample.service.impl.EduNexaMapper">
+
+	<select id="getData" resultType="map">
+		SELECT
+			ID,
+			NAME,
+			DESCRIPTION,
+			USE_YN,
+			REG_USER
+		FROM
+			SAMPLE
+		WHERE
+			1 = 1
+	</select>
+
 </mapper>
