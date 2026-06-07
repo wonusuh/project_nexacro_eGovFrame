@@ -4,15 +4,15 @@
     <Layouts>
       <Layout width="1280" height="720" screenid="Desktop_screen">
         <Button id="btnSearch" taborder="0" text="조회" left="25" top="25" width="75" height="25" onclick="btnSearch_onclick"/>
-        <Grid id="Grid00" taborder="1" left="25" top="75" width="500" height="200" binddataset="dsData">
+        <Grid id="Grid00" taborder="1" left="25" top="75" width="1000" height="200" binddataset="dsData">
           <Formats>
             <Format id="default">
               <Columns>
-                <Column size="80"/>
-                <Column size="80"/>
-                <Column size="80"/>
-                <Column size="80"/>
-                <Column size="80"/>
+                <Column size="150"/>
+                <Column size="150"/>
+                <Column size="150"/>
+                <Column size="150"/>
+                <Column size="150"/>
               </Columns>
               <Rows>
                 <Row size="24" band="head"/>
@@ -82,7 +82,7 @@ this.btnSave_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		// url
 		'http://localhost:8080/edu-egov/edu/saveData.do',
 		// 서버로 전달할 dataset
-		'dsSearch=dsSearch:u', // ":u" -> 수정된 데이터만 전달
+		'dsData=dsData:u', // ":u" -> 수정된 데이터만 전달
 		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
 		'',
 		// 서버로 전달할 파라미터
@@ -97,7 +97,8 @@ this.fnCallback = (svcId, errCd, errMsg) => {
 	if (errCd < 0) {
 		alert("에러 : ", errMsg);
 	}
-};]]></Script>
+};
+]]></Script>
     <Objects>
       <Dataset id="dsData">
         <ColumnInfo>

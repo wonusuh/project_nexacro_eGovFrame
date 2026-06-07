@@ -41,8 +41,11 @@ public class EduNexaController {
 	return result;
     }
 
-    @RequestMapping(value = "edu/savaData.do")
+    @RequestMapping(value = "edu/saveData.do")
     public NexacroResult saveData(@ParamDataSet(name = "dsData") List<Map<String, Object>> dataList) {
+
+	eduNexaService.saveData(dataList);
+
 	NexacroResult result = new NexacroResult();
 	return result;
     }

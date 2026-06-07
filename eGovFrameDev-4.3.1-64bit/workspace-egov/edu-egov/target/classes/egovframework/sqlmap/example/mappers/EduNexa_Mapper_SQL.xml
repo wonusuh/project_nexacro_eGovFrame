@@ -16,4 +16,35 @@
 			1 = 1
 	</select>
 
+	<insert id="insertData" parameterType="map">
+		INSERT INTO
+			SAMPLE
+		VALUES (
+			#{ID},
+			#{NAME},
+			#{DESCRIPTION},
+			#{USE_YN},
+			#{REG_USER}
+			)
+	</insert>
+
+	<update id="updateData" parameterType="map">
+		UPDATE
+			SAMPLE
+		SET
+			NAME = #{NAME},
+			DESCRIPTION = #{DESCRIPTION}
+		WHERE
+			1 = 1
+			AND ID = #{ID}
+	</update>
+
+	<delete id="deleteData" parameterType="map">
+		DELETE FROM
+			SAMPLE
+		WHERE
+			1 = 1
+			AND ID = #{ID}
+	</delete>
+
 </mapper>

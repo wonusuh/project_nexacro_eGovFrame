@@ -32,10 +32,10 @@
             obj.set_text("조회");
             this.addChild(obj.name, obj);
 
-            obj = new Grid("Grid00","25","75","500","200",null,null,null,null,null,null,this);
+            obj = new Grid("Grid00","25","75","1000","200",null,null,null,null,null,null,this);
             obj.set_taborder("1");
             obj.set_binddataset("dsData");
-            obj._setContents("<Formats><Format id=\"default\"><Columns><Column size=\"80\"/><Column size=\"80\"/><Column size=\"80\"/><Column size=\"80\"/><Column size=\"80\"/></Columns><Rows><Row size=\"24\" band=\"head\"/><Row size=\"24\"/></Rows><Band id=\"head\"><Cell text=\"ID\"/><Cell col=\"1\" text=\"NAME\"/><Cell col=\"2\" text=\"DESCRIPTION\"/><Cell col=\"3\" text=\"USE_YN\"/><Cell col=\"4\" text=\"REG_USER\"/></Band><Band id=\"body\"><Cell text=\"bind:ID\" edittype=\"normal\"/><Cell col=\"1\" text=\"bind:NAME\" edittype=\"normal\"/><Cell col=\"2\" text=\"bind:DESCRIPTION\" edittype=\"normal\"/><Cell col=\"3\" text=\"bind:USE_YN\" edittype=\"normal\"/><Cell col=\"4\" text=\"bind:REG_USER\" edittype=\"normal\"/></Band></Format></Formats>");
+            obj._setContents("<Formats><Format id=\"default\"><Columns><Column size=\"150\"/><Column size=\"150\"/><Column size=\"150\"/><Column size=\"150\"/><Column size=\"150\"/></Columns><Rows><Row size=\"24\" band=\"head\"/><Row size=\"24\"/></Rows><Band id=\"head\"><Cell text=\"ID\"/><Cell col=\"1\" text=\"NAME\"/><Cell col=\"2\" text=\"DESCRIPTION\"/><Cell col=\"3\" text=\"USE_YN\"/><Cell col=\"4\" text=\"REG_USER\"/></Band><Band id=\"body\"><Cell text=\"bind:ID\" edittype=\"normal\"/><Cell col=\"1\" text=\"bind:NAME\" edittype=\"normal\"/><Cell col=\"2\" text=\"bind:DESCRIPTION\" edittype=\"normal\"/><Cell col=\"3\" text=\"bind:USE_YN\" edittype=\"normal\"/><Cell col=\"4\" text=\"bind:REG_USER\" edittype=\"normal\"/></Band></Format></Formats>");
             this.addChild(obj.name, obj);
 
             obj = new Button("btnAdd","121","17","101","34",null,null,null,null,null,null,this);
@@ -113,7 +113,7 @@
         		// url
         		'http://localhost:8080/edu-egov/edu/saveData.do',
         		// 서버로 전달할 dataset
-        		'dsSearch=dsSearch:u', // ":u" -> 수정된 데이터만 전달
+        		'dsData=dsData:u', // ":u" -> 수정된 데이터만 전달
         		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
         		'',
         		// 서버로 전달할 파라미터
@@ -129,6 +129,7 @@
         		alert("에러 : ", errMsg);
         	}
         };
+
         });
         
         // Regist UI Components Event
