@@ -15,7 +15,7 @@
                 <Column size="80"/>
               </Columns>
               <Rows>
-                <Row band="head" size="24"/>
+                <Row size="24" band="head"/>
                 <Row size="24"/>
               </Rows>
               <Band id="head">
@@ -26,16 +26,18 @@
                 <Cell col="4" text="REG_USER"/>
               </Band>
               <Band id="body">
-                <Cell text="bind:ID"/>
-                <Cell col="1" text="bind:NAME"/>
-                <Cell col="2" text="bind:DESCRIPTION"/>
-                <Cell col="3" text="bind:USE_YN"/>
-                <Cell col="4" text="bind:REG_USER"/>
+                <Cell text="bind:ID" edittype="normal"/>
+                <Cell col="1" text="bind:NAME" edittype="normal"/>
+                <Cell col="2" text="bind:DESCRIPTION" edittype="normal"/>
+                <Cell col="3" text="bind:USE_YN" edittype="normal"/>
+                <Cell col="4" text="bind:REG_USER" edittype="normal"/>
               </Band>
             </Format>
           </Formats>
         </Grid>
-        <Button id="Button00" taborder="2" text="Button00" left="128" top="26" width="118" height="32" onclick="Button00_onclick"/>
+        <Button id="btnAdd" taborder="2" text="입력" left="121" top="17" width="101" height="34" onclick="btnAdd_onclick"/>
+        <Button id="btnDelete" taborder="3" text="삭제" left="239" top="17" width="101" height="34" onclick="btnDelete_onclick"/>
+        <Button id="btnSave" taborder="4" text="저장" left="349" top="17" width="101" height="34" onclick="btnSave_onclick"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.btnSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -56,12 +58,46 @@
 	);
 };
 
-this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+
+// "입력" 버튼 클릭이벤트
+this.btnAdd_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
-	trace('=====trace=====');
-	trace(this.dsData.saveXML());
+	this.dsData.insertRow(0);
 };
-]]></Script>
+
+
+// "삭제" 버튼 클릭이벤트
+this.btnDelete_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 현재 선택되어져있는 row 를 삭제
+	this.dsData.deleteRow(this.dsData.rowposition);
+};
+
+// "저장" 버튼 클릭이벤트
+this.btnSave_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.transaction(
+		// 트랜 아이디
+		'svcSaveData',
+		// url
+		'http://localhost:8080/edu-egov/edu/saveData.do',
+		// 서버로 전달할 dataset
+		'dsSearch=dsSearch:u', // ":u" -> 수정된 데이터만 전달
+		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
+		'',
+		// 서버로 전달할 파라미터
+		"",
+		// 콜백 함수
+		'fnCallback'
+	);
+};
+
+// 저장 트랜의 콜백함수
+this.fnCallback = (svcId, errCd, errMsg) => {
+	if (errCd < 0) {
+		alert("에러 : ", errMsg);
+	}
+};]]></Script>
     <Objects>
       <Dataset id="dsData">
         <ColumnInfo>
