@@ -40,4 +40,10 @@ public class EduNexaController {
 	result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
 	return result;
     }
+
+    @RequestMapping(value = "edu/savaData.do")
+    public NexacroResult saveData(@ParamDataSet(name = "dsData") List<Map<String, Object>> dataList) {
+	NexacroResult result = new NexacroResult();
+	return result;
+    }
 }
