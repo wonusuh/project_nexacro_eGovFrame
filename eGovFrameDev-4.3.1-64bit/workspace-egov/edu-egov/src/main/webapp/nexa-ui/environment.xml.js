@@ -60,7 +60,8 @@ if (nexacro.Environment)
         		{"id":"DateRangePicker", "classname":"nexacro.DateRangePicker", "type":"JavaScript"},
         		{"id":"PopupDateRangePicker", "classname":"nexacro.PopupDateRangePicker", "type":"JavaScript"},
         		{"id":"SpinField", "classname":"nexacro.SpinField", "type":"JavaScript"},
-        		{"id":"SelectField", "classname":"nexacro.SelectField", "type":"JavaScript"}
+        		{"id":"SelectField", "classname":"nexacro.SelectField", "type":"JavaScript"},
+        		{"id":"ExcelExportObject", "classname":"nexacro.ExcelExportObject", "type":"JavaScript"}
         ];
     	nexacro._addClasses(registerclass);
     };
