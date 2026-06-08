@@ -38,6 +38,7 @@
         <Button id="btnAdd" taborder="2" text="입력" left="121" top="17" width="101" height="34" onclick="btnAdd_onclick"/>
         <Button id="btnDelete" taborder="3" text="삭제" left="239" top="17" width="101" height="34" onclick="btnDelete_onclick"/>
         <Button id="btnSave" taborder="4" text="저장" left="349" top="17" width="101" height="34" onclick="btnSave_onclick"/>
+        <Button id="btnExcel" taborder="5" text="엑셀 내보내기" left="462" top="22" width="127" height="30" tabstop="true" onclick="btnExcel_onclick"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[this.btnSearch_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -46,7 +47,7 @@
 		// 트랜 아이디
 		'svcGetData',
 		// url
-		'http://localhost:8080/edu-egov/edu/getData.do',
+		'http://192.168.0.2:8080/edu-egov/edu/getData.do',
 		// 서버로 전달할 dataset
 		'dsSearch=dsSearch',
 		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
@@ -98,6 +99,16 @@ this.fnCallback = (svcId, errCd, errMsg) => {
 		alert("에러 : ", errMsg);
 	}
 };
+
+// "엑셀 내보내기" 버튼 클릭이벤트
+this.btnExcel_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ExcelExportObject00.exporturl = "http://192.168.0.2:8080/edu-egov/XExportImport.do";
+	this.ExcelExportObject00.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, 'Sheet1!A1');
+	this.ExcelExportObject00.exportfilename = 'Grid Excel Export';
+	this.ExcelExportObject00.exporttype = nexacro.ExportTypes.EXCEL2007;
+	this.ExcelExportObject00.exportData(); // export 실행
+};
 ]]></Script>
     <Objects>
       <Dataset id="dsData">
@@ -121,6 +132,7 @@ this.fnCallback = (svcId, errCd, errMsg) => {
           </Row>
         </Rows>
       </Dataset>
+      <ExcelExportObject id="ExcelExportObject00"/>
     </Objects>
   </Form>
 </FDL>

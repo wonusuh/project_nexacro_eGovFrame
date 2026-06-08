@@ -51,7 +51,8 @@
 
 		<repository>
 			<id>tobesoft</id>
-			<url>https://mangosteen.tobesoft.co.kr/nexus/repository/maven-public/</url>
+			<url>
+				https://mangosteen.tobesoft.co.kr/nexus/repository/maven-public/</url>
 		</repository>
 
 	</repositories>
@@ -124,7 +125,8 @@
 			<version>1.1.4</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<!--
+		https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
@@ -138,7 +140,8 @@
 			<version>1.18.34</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -163,6 +166,12 @@
 			<groupId>com.nexacro</groupId>
 			<artifactId>uiadapter-spring-dataaccess</artifactId>
 			<version>1.4.14-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nexacro</groupId>
+			<artifactId>uiadapter-spring-excel</artifactId>
+			<version>1.5.4-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>

@@ -25,6 +25,10 @@
             obj = new Dataset("dsSearch", this);
             obj._setContents({"ColumnInfo" : {"Column" : [ {"id" : "COL1","type" : "STRING","size" : "256"},{"id" : "COL2","type" : "STRING","size" : "256"}]},"Rows" : [{"COL1" : "NEXACRO","COL2" : "TOBESOFT"}]});
             this.addChild(obj.name, obj);
+
+
+            obj = new ExcelExportObject("ExcelExportObject00", this);
+            this.addChild(obj.name, obj);
             
             // UI Components Initialize
             obj = new Button("btnSearch","25","25","75","25",null,null,null,null,null,null,this);
@@ -52,6 +56,12 @@
             obj.set_taborder("4");
             obj.set_text("저장");
             this.addChild(obj.name, obj);
+
+            obj = new Button("btnExcel","462","22","127","30",null,null,null,null,null,null,this);
+            obj.set_taborder("5");
+            obj.set_text("엑셀 내보내기");
+            obj.set_tabstop("true");
+            this.addChild(obj.name, obj);
             // Layout Functions
             //-- Default Layout : this
             obj = new Layout("default","Desktop_screen",1280,720,this,function(p){});
@@ -77,7 +87,7 @@
         		// 트랜 아이디
         		'svcGetData',
         		// url
-        		'http://localhost:8080/edu-egov/edu/getData.do',
+        		'http://192.168.0.2:8080/edu-egov/edu/getData.do',
         		// 서버로 전달할 dataset
         		'dsSearch=dsSearch',
         		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋
@@ -130,6 +140,16 @@
         	}
         };
 
+        // "엑셀 내보내기" 버튼 클릭이벤트
+        this.btnExcel_onclick = function(obj,e)
+        {
+        	this.ExcelExportObject00.exporturl = "http://192.168.0.2:8080/edu-egov/XExportImport.do";
+        	this.ExcelExportObject00.addExportItem(nexacro.ExportItemTypes.GRID, this.Grid00, 'Sheet1!A1');
+        	this.ExcelExportObject00.exportfilename = 'Grid Excel Export';
+        	this.ExcelExportObject00.exporttype = nexacro.ExportTypes.EXCEL2007;
+        	this.ExcelExportObject00.exportData(); // export 실행
+        };
+
         });
         
         // Regist UI Components Event
@@ -139,6 +159,7 @@
             this.btnAdd.addEventHandler("onclick",this.btnAdd_onclick,this);
             this.btnDelete.addEventHandler("onclick",this.btnDelete_onclick,this);
             this.btnSave.addEventHandler("onclick",this.btnSave_onclick,this);
+            this.btnExcel.addEventHandler("onclick",this.btnExcel_onclick,this);
         };
         this.loadIncludeScript("Form_Work.xfdl");
         this.loadPreloadList();

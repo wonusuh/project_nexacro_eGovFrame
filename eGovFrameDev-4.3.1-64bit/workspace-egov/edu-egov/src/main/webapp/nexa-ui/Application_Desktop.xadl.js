@@ -22,6 +22,7 @@
             // properties
             this.set_id("Application_Desktop");
             this.set_screenid("Desktop_screen");
+            this.set_licenseurl("NexacroN_client_license.xml");
 
             if (this._is_attach_childframe)
             	return;
@@ -59,7 +60,7 @@
         
         // script Compiler
 
-        this.checkLicense("");
+        this.checkLicense("NexacroN_client_license.xml");
         
         this.loadPreloadList();
 

@@ -6,9 +6,9 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
-                http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
-                http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+						http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 	<context:component-scan
 		base-package="egovframework">
@@ -38,7 +38,8 @@
 
 	<bean id="localeResolver"
 		class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
-	<!-- 쿠키를 이용한 Locale 이용시 <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/> -->
+	<!-- 쿠키를 이용한 Locale 이용시 <bean id="localeResolver"
+	class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/> -->
 	<bean id="localeChangeInterceptor"
 		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
 		<property name="paramName" value="language" />
@@ -49,12 +50,16 @@
 		<property name="defaultErrorView" value="cmmn/egovError" />
 		<property name="exceptionMappings">
 			<props>
-				<prop key="org.springframework.dao.DataAccessException">cmmn/dataAccessFailure</prop>
+				<prop key="org.springframework.dao.DataAccessException">
+					cmmn/dataAccessFailure</prop>
 				<prop
-					key="org.springframework.transaction.TransactionException">cmmn/transactionFailure</prop>
+					key="org.springframework.transaction.TransactionException">
+					cmmn/transactionFailure</prop>
 				<prop
-					key="org.egovframe.rte.fdl.cmmn.exception.EgovBizException">cmmn/egovError</prop>
-				<prop key="org.springframework.security.AccessDeniedException">cmmn/egovError</prop>
+					key="org.egovframe.rte.fdl.cmmn.exception.EgovBizException">
+					cmmn/egovError</prop>
+				<prop key="org.springframework.security.AccessDeniedException">
+					cmmn/egovError</prop>
 			</props>
 		</property>
 	</bean>
@@ -79,7 +84,8 @@
 	</bean>
 	<!-- /For Pagination Tag -->
 
-	<!-- /////////////////////////////////// 넥사크로N UIADAPTER 설정 시작 /////////////////////////////////// -->
+	<!-- /////////////////////////////////// 넥사크로N UIADAPTER 설정 시작
+	/////////////////////////////////// -->
 	<bean id="nexacroInterceptor"
 		class="com.nexacro.uiadapter.spring.core.servlet.NexacroInterceptor" />
 	<bean id="nexacroFileView"
@@ -131,6 +137,37 @@
 			ErrorCode for detail of error infomation" /> -->
 		<property name="defaultErrorMsg" value="fail.common.msg" />
 		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<!-- XENI REQUEST-MAPPING-HANDLERADAPTER 등록 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+	<bean id="xeniUrlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
+		p:order="0">
+		<property name="mappings">
+			<props>
+				<prop key="/XExportImport.do">xeniWrappingController</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- XENI WRAPPINGCONTROLLER 설정. -->
+	<bean id="xeniWrappingController"
+		class="org.springframework.web.servlet.mvc.ServletWrappingController">
+		<property name="servletClass">
+			<value>com.nexacro.java.xeni.services.GridExportImportServlet</value>
+		</property>
+	</bean>
+	<!-- /////////////////////////////////// 넥사크로N UIADAPTER 설정 끝
+	/////////////////////////////////// -->
+
+	<!-- Multipart Resolver 최대 10메가 바이트(정확히 10메가는 아니지만)까지 업로드가 가능하도록 설정 -->
+	<!-- XENI를 이용한 엑셀 IMPORT시 필요(엑셀 이용시 반드시 정의해야 함) -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000000" />
+		<property name="maxInMemorySize" value="100000000" />
 	</bean>
 
 	<mvc:view-controller path="/cmmn/validator.do"
