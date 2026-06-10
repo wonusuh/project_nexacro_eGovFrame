@@ -4,7 +4,61 @@
     <ScreenDefinition>
       <Screen id="Desktop_screen" type="desktop"/>
     </ScreenDefinition>
-    <Variables/>
-    <Cookies/>
+    <Variables>
+      <Variable id="env_userName" initval="Nexaro N24"/>
+    </Variables>
+    <Cookies>
+      <Cookie id="env_cookie1" secure="false" initval="env cookie value 1"/>
+      <Cookie id="env_cookie2" secure="false" initval="env cookie value 2"/>
+    </Cookies>
+    <httpheader>
+      <Variable id="env_httpHeader1" initval="env http header value 1"/>
+      <Variable id="env_httpHeader2" initval="env http header value 2"/>
+    </httpheader>
   </Environment>
+  <Script type="xscript5.1"><![CDATA[// Variable 값 변환
+let sValue = nexacro.getEnvironmentVariable('env_userName');
+trace('sValue : ', sValue);
+
+// Variable 추가, 변경
+nexacro.setEnvironmentVariable('env_userName', 'Hello Nexacro');
+nexacro.setEnvironmentVariable('env_company', 'TOBESOFT');
+
+// Variable 제거
+nexacro.removeEnvironmentVariable('env_userName');
+
+// cookie 값 변환
+let envCookie = nexacro.getCookieVariable('env_cookie1');
+trace('envCookie', envCookie);
+
+// cookie 수정, 추가
+nexacro.setCookieVariable('env_cookie1', 'Cookie Nexacro N V24');
+nexacro.setCookieVariable('env_cookie3', 'Cookie Value 3');
+
+// cookie 제거
+nexacro.removeCookieVariable('env_cookie2');
+
+// HTTP header 값 반환
+const headerValue = nexacro.getHTTPHeaderVariable('env_httpHeader1');
+trace(headerValue);
+
+// HTTP header 추가, 변경
+nexacro.setHTTPHeaderVariable('env_httpHeader1', 'Nexacro N V24');
+nexacro.setHTTPHeaderVariable('env_httpHeader3', 'Header value 3');
+
+// http header 제거
+nexacro.removeHTTPHeaderVariable('env_httpHeader2');
+
+// this.efn_commFunction = async () => {
+// 	return 'Environment Function Call';
+// };
+
+this.efn_commFunction = function() {
+	return 'Environment Function Call';
+};
+
+// Environment Object 를 이용하여 접근
+const objEnv = nexacro.getEnvironment();
+objEnv.efn_commFunction();
+]]></Script>
 </ENV>
