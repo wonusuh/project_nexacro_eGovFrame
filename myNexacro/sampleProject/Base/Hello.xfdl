@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Hello" width="800" height="600" titletext="New Form">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Button id="Button00" taborder="0" text="Hello World" left="50" top="50" width="150" height="75" onclick="fn_click"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[// 버튼 클릭이벤트
+this.fn_click = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	// this.alert('Hello World');
+	// nexacro.getEnvironment().efn_commFunction();
+	
+	//
+	const objApp = nexacro.getApplication();
+	let nRowCount = objApp.gds_corp.getRowCount();
+	trace('nRowCount', nRowCount);
+	
+	//
+	objApp.afn_commFunction();
+};
+]]></Script>
+  </Form>
+</FDL>

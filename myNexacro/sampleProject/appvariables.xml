@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppVariables version="2.0">
+  <Datasets>
+    <Dataset id="gds_corp">
+      <ColumnInfo>
+        <ConstColumn id="DESC" type="STRING" size="30" value="Corporation List"/>
+        <ConstColumn id="ROW_CNT" type="INT" size="30" value="3"/>
+        <Column id="CODE" type="STRING" size="256"/>
+        <Column id="NAME" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="CODE">KR</Col>
+          <Col id="NAME">한국</Col>
+        </Row>
+        <Row>
+          <Col id="CODE">JP</Col>
+          <Col id="NAME">일본</Col>
+        </Row>
+        <Row>
+          <Col id="CODE">US</Col>
+          <Col id="NAME">미국</Col>
+        </Row>
+      </Rows>
+    </Dataset>
+  </Datasets>
+  <Variables/>
+  <DataObjects/>
+</AppVariables>
