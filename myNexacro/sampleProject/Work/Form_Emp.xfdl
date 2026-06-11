@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Emp" width="1000" height="670" titletext="New Form">
+    <Layouts>
+      <Layout height="670" mobileorientation="landscape" width="1000">
+        <Static id="st_title" taborder="0" text="Employees" left="10" top="10" width="150" height="20"/>
+        <Button id="btn_retrieve" taborder="1" text="Retrieve" left="300" top="10" width="100" height="20" onclick="btn_retrieve_onclick"/>
+        <Button id="btn_add" taborder="2" text="Add" left="410" top="10" width="100" height="20"/>
+        <Button id="btn_delete" taborder="3" text="Delete" left="520" top="10" width="100" height="20" onclick="Button00_00_00_onclick"/>
+        <Button id="btn_save" taborder="4" text="Save" left="630" top="10" width="100" height="20"/>
+        <Div id="div_search" taborder="5" text="Div00" left="10" top="40" width="850" height="30" border="1px solid #9c9c9c"/>
+        <Grid id="grd_emp" taborder="6" left="10" top="80" width="850" height="100"/>
+        <Div id="div_detail" taborder="7" text="Div00" left="10" top="190" width="850" height="450" border="1px solid #9c9c9c"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Objects>
+      <Dataset id="ds_emp">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="POSITION" type="STRING" size="10"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+          <Column id="GENDER" type="STRING" size="256"/>
+          <Column id="MARRIED" type="STRING" size="256"/>
+          <Column id="SKILL" type="STRING" size="256"/>
+          <Column id="HOBBY" type="STRING" size="256"/>
+          <Column id="MEMO" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_ID">AA001</Col>
+            <Col id="EMP_NAME">Olivia</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="POSITION">30</Col>
+            <Col id="HIRE_DATE">20101003</Col>
+            <Col id="SALARY">83000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">ivory</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">AA002</Col>
+            <Col id="EMP_NAME">John</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="POSITION">40</Col>
+            <Col id="HIRE_DATE">20051011</Col>
+            <Col id="SALARY">76000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">BB001</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="POSITION">30</Col>
+            <Col id="HIRE_DATE">20070206</Col>
+            <Col id="SALARY">95000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">aliceblue</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">BB002</Col>
+            <Col id="EMP_NAME">Maia</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="POSITION">20</Col>
+            <Col id="HIRE_DATE">20090512</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">W</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">ivory</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">CC001</Col>
+            <Col id="EMP_NAME">Adam</Col>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="POSITION">40</Col>
+            <Col id="HIRE_DATE">20010109</Col>
+            <Col id="SALARY">88000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">greenyellow</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">DD001</Col>
+            <Col id="EMP_NAME">Ray</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="POSITION">30</Col>
+            <Col id="HIRE_DATE">20160202</Col>
+            <Col id="SALARY">60000</Col>
+            <Col id="GENDER">M</Col>
+            <Col id="MARRIED">true</Col>
+            <Col id="MEMO">lightpink</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_NAME">JiYoung</Col>
+            <Col id="EMP_ID">KR080</Col>
+            <Col id="EMP_NAME">Ray</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="POSITION">50</Col>
+            <Col id="HIRE_DATE">20131120</Col>
+            <Col id="SALARY">8500</Col>
+            <Col id="GENDER">F</Col>
+            <Col id="MARRIED">false</Col>
+            <Col id="MEMO">lightpink</Col>
+            <Col id="SKILL">01,07</Col>
+            <Col id="HOBBY">05</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_EMP" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">회계</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">재무</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">인사</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">지원</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">영업</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="DEPT_NAME">IT</Col>
+            <Col id="DEPT_EMP">Wonu</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_pos"/>
+      <Dataset id="ds_skill"/>
+      <Dataset id="ds_hobby"/>
+    </Objects>
+  </Form>
+</FDL>
