@@ -43,7 +43,7 @@
             </Layout>
           </Layouts>
         </Div>
-        <Grid id="grd_emp" taborder="6" left="10" top="100" width="850" height="100">
+        <Grid id="grd_emp" taborder="6" left="10" top="100" width="850" height="100" binddataset="ds_emp">
           <Formats>
             <Format id="default">
               <Columns>
