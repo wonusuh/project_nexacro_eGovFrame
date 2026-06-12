@@ -6,4 +6,10 @@
   <AppInfos>
     <AppInfo url="Application_Desktop.xadl"/>
   </AppInfos>
+  <Options>
+    <QuickCode>
+      <FormTemplate disptype="true"/>
+    </QuickCode>
+    <Advanced useprefixid="false" codesnippetpath="C:\Users\wonwo\OneDrive\Documents\TOBESOFT\Nexacro N\templates\user\snippets\nexacro_snippet.xsnippet" componentpresetpath="C:\Users\wonwo\OneDrive\Documents\TOBESOFT\Nexacro N\settings\ProjectConfigure\_Cdev_wonuSuhproject_nexacro_eGovFramemyNexacrosampleProjectsampleProject\component_preset.xpreset"/>
+  </Options>
 </Project>
