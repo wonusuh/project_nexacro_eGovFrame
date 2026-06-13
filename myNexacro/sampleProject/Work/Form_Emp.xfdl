@@ -13,12 +13,12 @@
             <Layout>
               <Static id="Static00" taborder="0" text="Department" left="11" top="6" width="106" height="30"/>
               <Edit id="edt_deptCode" taborder="1" left="87" top="6" width="62" height="30" onchanged="div_search_edt_deptCode_onchanged"/>
-              <Button id="btn_findDept" taborder="2" text="Find" left="159" top="6" width="40" height="30"/>
-              <Edit id="det_deptName" taborder="3" left="208" top="6" width="107" height="33" readonly="true"/>
+              <Button id="btn_findDept" taborder="2" text="Find" left="159" top="6" width="40" height="30" onclick="fn_openPopupDept"/>
+              <Edit id="edt_deptName" taborder="3" left="208" top="6" width="107" height="33" readonly="true"/>
               <Static id="Static01" taborder="4" text="Name" left="365" top="6" width="55" height="30"/>
               <Edit id="edt_empName" taborder="5" left="419" top="6" width="90" height="30"/>
               <Static id="Static02" taborder="6" text="Gender" left="569" top="6" width="60" height="30"/>
-              <Radio id="rdo_gender" taborder="7" left="619" top="6" width="190" height="30" index="0" text="" value="" rowcount="1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+              <Radio id="rdo_gender" taborder="7" left="619" top="6" width="190" height="30" index="0" text="" value="" rowcount="1" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="onGenderChanged">
                 <Dataset id="innerdataset">
                   <ColumnInfo>
                     <Column id="codecolumn" size="256"/>
@@ -43,42 +43,74 @@
             </Layout>
           </Layouts>
         </Div>
-        <Grid id="grd_emp" taborder="6" left="10" top="100" width="850" height="100" binddataset="ds_emp">
+        <Grid id="grd_emp" taborder="6" left="10" top="100" width="850" height="200" binddataset="ds_emp">
           <Formats>
             <Format id="default">
               <Columns>
+                <Column size="25" band="left"/>
+                <Column size="75"/>
+                <Column size="75"/>
+                <Column size="75"/>
+                <Column size="75"/>
+                <Column size="75"/>
+                <Column size="75"/>
+                <Column size="75"/>
                 <Column size="75"/>
                 <Column size="75"/>
                 <Column size="75"/>
                 <Column size="75"/>
               </Columns>
               <Rows>
-                <Row size="24" band="head"/>
-                <Row size="24"/>
+                <Row size="35" band="head"/>
+                <Row size="25"/>
                 <Row size="24" band="summ"/>
               </Rows>
               <Band id="head">
-                <Cell text="Name"/>
+                <Cell text="No"/>
                 <Cell col="1" text="ID"/>
-                <Cell col="2" text="Department"/>
-                <Cell col="3" text="Position"/>
+                <Cell col="2" text="Name"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Position"/>
+                <Cell col="5" text="Hired Date"/>
+                <Cell col="6" text="Salary"/>
+                <Cell col="7" text="Gender"/>
+                <Cell col="8" text="Marital&#13;&#10;Status"/>
+                <Cell col="9" text="Skills"/>
+                <Cell col="10" text="Hobby"/>
+                <Cell col="11" text="Memo"/>
               </Band>
               <Band id="body">
-                <Cell/>
-                <Cell col="1"/>
-                <Cell col="2"/>
-                <Cell col="3"/>
+                <Cell text="expr:currow + 1"/>
+                <Cell col="1" text="bind:EMP_ID" displaytype="mask" edittype="mask" maskeditformat="AA-###" maskedittype="string"/>
+                <Cell col="2" text="bind:EMP_NAME" displaytype="normal" edittype="text"/>
+                <Cell col="3" text="bind:DEPT_CODE" displaytype="combotext" edittype="combo" combodataset="ds_dept" combocodecol="DEPT_CODE" combodatacol="DEPT_NAME"/>
+                <Cell col="4" text="bind:POSITION" displaytype="combotext" edittype="combo" combodataset="ds_pos" combocodecol="CODE" combodatacol="NAME"/>
+                <Cell col="5" text="bind:HIRE_DATE" displaytype="date" edittype="date"/>
+                <Cell col="6" text="bind:SALARY" displaytype="number" edittype="mask" maskeditformat="#,###"/>
+                <Cell col="7" text="expr:GENDER === &quot;M&quot; ? &quot;Male&quot; : &quot;Female&quot;"/>
+                <Cell col="8" text="bind:MARRIED" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="9" text="bind:SKILL" displaytype="multicombocontrol" edittype="multicombo" multicombodataset="ds_skill" multicombocodecol="CODE" multicombodatacol="NAME"/>
+                <Cell col="10" text="bind:HOBBY"/>
+                <Cell col="11" text="bind:MEMO" edittype="textarea"/>
               </Band>
               <Band id="summary">
                 <Cell/>
-                <Cell col="1"/>
+                <Cell col="1" text="expr:comp.parent.ds_emp.rowcount"/>
                 <Cell col="2"/>
                 <Cell col="3"/>
+                <Cell col="4"/>
+                <Cell col="5"/>
+                <Cell col="6" text="expr:dataset.getSum('SALARY')" displaytype="number"/>
+                <Cell col="7"/>
+                <Cell col="8"/>
+                <Cell col="9"/>
+                <Cell col="10"/>
+                <Cell col="11"/>
               </Band>
             </Format>
           </Formats>
         </Grid>
-        <Div id="div_detail" taborder="7" text="Div00" left="10" top="210" width="850" height="350" border="1px solid #9c9c9c">
+        <Div id="div_detail" taborder="7" text="Div00" left="10" top="310" width="850" height="350" border="1px solid #9c9c9c">
           <Layouts>
             <Layout>
               <Static id="Static00" taborder="0" text="Name" left="20" top="20" width="100" height="30"/>
@@ -128,7 +160,50 @@
         </Div>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[]]></Script>
+    <Script type="xscript5.1"><![CDATA[// 부서찾기 팝업
+this.fn_openPopupDept = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	const objChild = new ChildFrame('popupDept', 0, 0, 300, 400);
+	objChild.formurl = 'Work::Popup_Dept.xfdl';
+	objChild.openalign = 'center middle';
+	objChild.dragmovetype = 'all';
+	
+	objChild.showModal(
+		this.getOwnerFrame(),
+		{},
+		this,
+		'fn_callback_popup'
+	);
+};
+
+
+// 부서검색 팝업의 콜백함수
+this.fn_callback_popup = async (sPopupId, sReturn) => {
+	if(!sReturn){
+		sReturn = '';
+	}
+	
+	// 부서검색 팝업의 로직만 처리
+	if(sPopupId === 'popupDept'){
+		if(sReturn.length === 0){
+			return;
+		}
+		
+		const arrRtn = sReturn.split(':');
+		this.div_search.form.edt_deptCode.value = arrRtn[0]; // 부서코드
+		this.div_search.form.edt_deptName.value = arrRtn[1]; // 부서명
+	}
+};
+
+// 성별 라디오 변경이벤트
+this.onGenderChanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo) {
+	if(e.postvalue === 'A'){
+		this.ds_emp.filter('');
+	} else {
+		this.ds_emp.filter("GENDER === '" + e.postvalue + "'");
+	}
+};
+]]></Script>
     <Objects>
       <Dataset id="ds_emp">
         <ColumnInfo>
@@ -367,5 +442,19 @@
         </Rows>
       </Dataset>
     </Objects>
+    <Bind>
+      <BindItem id="item0" compid="div_detail.form.edt_name" propid="value" datasetid="ds_emp" columnid="EMP_NAME"/>
+      <BindItem id="item1" compid="div_detail.form.msk_empId" propid="value" datasetid="ds_emp" columnid="EMP_ID"/>
+      <BindItem id="item2" compid="div_detail.form.cbo_dept" propid="value" datasetid="ds_emp" columnid="DEPT_CODE"/>
+      <BindItem id="item3" compid="div_detail.form.cal_hireDate" propid="value" datasetid="ds_emp" columnid="HIRE_DATE"/>
+      <BindItem id="item4" compid="div_detail.form.msk_salary" propid="value" datasetid="ds_emp" columnid="SALARY"/>
+      <BindItem id="item5" compid="div_detail.form.rdo_gender" propid="value" datasetid="ds_emp" columnid="GENDER"/>
+      <BindItem id="item6" compid="div_detail.form.chk_married" propid="value" datasetid="ds_emp" columnid="MARRIED"/>
+      <BindItem id="item7" compid="div_detail.form.lst_pos" propid="value" datasetid="ds_emp" columnid="POSITION"/>
+      <BindItem id="item8" compid="div_detail.form.txt_memo" propid="value" datasetid="ds_emp" columnid="MEMO"/>
+      <BindItem id="item9" compid="div_detail.form.txt_memo" propid="background" datasetid="ds_emp" columnid="MEMO"/>
+      <BindItem id="item10" compid="div_detail.form.mcbo_hobby" propid="value" datasetid="ds_emp" columnid="HOBBY"/>
+      <BindItem id="item11" compid="div_detail.form.chsk_skill" propid="value" datasetid="ds_emp" columnid="SKILL"/>
+    </Bind>
   </Form>
 </FDL>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Popup_Dept" width="300" height="400" titletext="New Form">
+    <Layouts>
+      <Layout height="400" mobileorientation="landscape" width="300">
+        <Static id="Static00" taborder="0" text="Department List" left="10" top="10" width="100" height="27"/>
+        <Grid id="grd_dept" taborder="1" left="10" top="40" width="280" height="300" binddataset="ds_dept">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Code"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Manager"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:DEPT_CODE"/>
+                <Cell col="1" text="bind:DEPT_NAME"/>
+                <Cell col="2" text="bind:DEPT_EMP"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="btn_ok" taborder="2" text="OK" left="10" top="345" width="100" height="25" onclick="fn_ok"/>
+        <Button id="btn_cancel" taborder="3" text="Cancel" left="160" top="345" width="100" height="25" onclick="fn_cancel"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_dept">
+        <ColumnInfo>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="DEPT_NAME" type="STRING" size="256"/>
+          <Column id="DEPT_EMP" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="DEPT_NAME">회계</Col>
+            <Col id="DEPT_EMP">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="DEPT_NAME">재무</Col>
+            <Col id="DEPT_EMP">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="DEPT_NAME">인사</Col>
+            <Col id="DEPT_EMP">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="DEPT_NAME">지원</Col>
+            <Col id="DEPT_EMP">Jackson</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">50</Col>
+            <Col id="DEPT_NAME">영업</Col>
+            <Col id="DEPT_EMP">Belle</Col>
+          </Row>
+          <Row>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="DEPT_NAME">IT</Col>
+            <Col id="DEPT_EMP">Wonu</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// "OK" 버튼 클릭이벤트
+this.fn_ok = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 부서코드
+	const sDeptCode = this.ds_dept.getColumn(this.ds_dept.rowposition, 'DEPT_CODE');
+	
+	// 부서명
+	const sDeptName = this.ds_dept.getColumn(this.ds_dept.rowposition, 'DEPT_NAME');
+	
+	trace('sDeptCode', sDeptCode);
+	trace('sDeptName', sDeptName);
+	
+	// 모화면으로 전달할 파라미터
+	this.close(sDeptCode + ':' + sDeptName);
+};
+
+// 팝업 닫기
+this.fn_cancel = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.close();
+};
+]]></Script>
+  </Form>
+</FDL>
