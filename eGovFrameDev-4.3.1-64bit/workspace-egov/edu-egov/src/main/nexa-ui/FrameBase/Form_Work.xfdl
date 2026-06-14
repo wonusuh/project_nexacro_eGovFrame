@@ -47,7 +47,8 @@
 		// 트랜 아이디
 		'svcGetData',
 		// url
-		'http://192.168.0.2:8080/edu-egov/edu/getData.do',
+		// 'http://192.168.0.2:8080/edu-egov/edu/getData.do',
+		'http://localhost:8080/edu-egov/edu/getData.do',
 		// 서버로 전달할 dataset
 		'dsSearch=dsSearch',
 		// result.addDataSet("dsData", resultData); // Java -> 넥사크로 데이터셋

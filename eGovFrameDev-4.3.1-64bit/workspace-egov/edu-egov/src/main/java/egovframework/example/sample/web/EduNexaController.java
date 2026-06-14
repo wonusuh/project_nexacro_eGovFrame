@@ -49,4 +49,10 @@ public class EduNexaController {
 	NexacroResult result = new NexacroResult();
 	return result;
     }
+
+    @RequestMapping(value = "edu/getEmp.do")
+    public NexacroResult getEmp() {
+	log.debug("getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp ");
+	return null;
+    }
 }
