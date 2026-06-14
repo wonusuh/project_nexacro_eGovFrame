@@ -47,18 +47,18 @@
           <Formats>
             <Format id="default">
               <Columns>
-                <Column size="25" band="left"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
-                <Column size="75"/>
+                <Column size="30" band="left"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
+                <Column size="70"/>
               </Columns>
               <Rows>
                 <Row size="35" band="head"/>
@@ -202,6 +202,19 @@ this.onGenderChanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 	} else {
 		this.ds_emp.filter("GENDER === '" + e.postvalue + "'");
 	}
+};
+
+this.btn_retrieve_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.transaction(
+		'svcGetEmp',
+		'http://localhost:8080/edu-egov/edu/getEmp/do',
+		'',
+		'',
+		'',
+		''
+	);
+	trace('getData');
 };
 ]]></Script>
     <Objects>
