@@ -43,4 +43,9 @@ public class EduNexaServiceImpl implements EduNexaService {
 	    }
 	}
     }
+
+    @Override
+    public List<Map<String, Object>> getEmp() {
+	return eduNexaMapper.getEmp();
+    }
 }

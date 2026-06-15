@@ -53,11 +53,14 @@ public class EduNexaController {
     @RequestMapping(value = "edu/getEmp.do")
     public NexacroResult getEmp() {
 	System.out.println("★★★★★ getEmp 진입");
-
 	log.debug("DEBUG");
 	log.info("INFO");
 	log.error("ERROR");
 
-	return null;
+	List<Map<String, Object>> resultData = eduNexaService.getEmp();
+
+	NexacroResult result = new NexacroResult();
+	result.addDataSet("out_emp", resultData); // Java -> 넥사크로 데이터셋
+	return result;
     }
 }
