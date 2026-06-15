@@ -373,7 +373,7 @@
         {
         	this.transaction(
         		'svcGetEmp',
-        		'http://localhost:8080/edu-egov/edu/getEmp/do',
+        		'http://localhost:8080/edu-egov/edu/getEmp.do',
         		'',
         		'',
         		'',
