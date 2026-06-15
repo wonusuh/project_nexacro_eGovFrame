@@ -52,7 +52,12 @@ public class EduNexaController {
 
     @RequestMapping(value = "edu/getEmp.do")
     public NexacroResult getEmp() {
-	log.debug("getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp getEmp ");
+	System.out.println("★★★★★ getEmp 진입");
+
+	log.debug("DEBUG");
+	log.info("INFO");
+	log.error("ERROR");
+
 	return null;
     }
 }
