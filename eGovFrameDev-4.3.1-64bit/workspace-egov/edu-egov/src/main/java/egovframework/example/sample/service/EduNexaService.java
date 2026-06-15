@@ -7,4 +7,6 @@ public interface EduNexaService {
     List<Map<String, Object>> getData();
 
     void saveData(List<Map<String, Object>> dataList);
+
+    List<Map<String, Object>> getEmp();
 }

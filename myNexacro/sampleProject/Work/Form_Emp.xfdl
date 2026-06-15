@@ -4,7 +4,7 @@
     <Layouts>
       <Layout height="670" mobileorientation="landscape" width="1000">
         <Static id="st_title" taborder="0" text="Employees" left="10" top="10" width="150" height="20"/>
-        <Button id="btn_retrieve" taborder="1" text="Retrieve" left="300" top="10" width="100" height="20" onclick="btn_retrieve_onclick"/>
+        <Button id="btn_retrieve" taborder="1" text="Retrieve" left="300" top="10" width="100" height="20" onclick="fn_retrieve"/>
         <Button id="btn_add" taborder="2" text="Add" left="410" top="10" width="100" height="20"/>
         <Button id="btn_delete" taborder="3" text="Delete" left="520" top="10" width="100" height="20" onclick="Button00_00_00_onclick"/>
         <Button id="btn_save" taborder="4" text="Save" left="630" top="10" width="100" height="20"/>
@@ -204,17 +204,26 @@ this.onGenderChanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
 	}
 };
 
-this.btn_retrieve_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+// 조회 트랜 호출
+this.fn_retrieve = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
+	const sDeptCode = this.div_search.form.edt_deptCode.value;
+	const sEmpName = this.div_search.form.edt_empName.value;
+	
 	this.transaction(
-		'svcGetEmp',
+		'svcSelectEmp',
 		'http://localhost:8080/edu-egov/edu/getEmp.do',
 		'',
-		'',
-		'',
-		''
+		'ds_emp=out_emp',
+		"deptCode=" + sDeptCode + " empName" + nexacro.wrapQuote(sEmpName),
+		'fn_callback'
 	);
-	trace('getData');
+	trace('fn_retrieve');
+};
+
+// 조회트랜의 콜백함수
+this.fn_callback = async (svcId, errCd, errMsg) => {
+	//
 };
 ]]></Script>
     <Objects>
