@@ -16,4 +16,10 @@ public interface EduNexaMapper {
     void deleteData(Map<String, Object> rowData);
 
     List<Map<String, Object>> getEmp();
+
+    void insertEmp(Map<String, Object> row);
+
+    void updateEmp(Map<String, Object> row);
+
+    void deleteEmp(Map<String, Object> row);
 }

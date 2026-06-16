@@ -51,16 +51,21 @@ public class EduNexaController {
     }
 
     @RequestMapping(value = "edu/getEmp.do")
-    public NexacroResult getEmp() {
-	System.out.println("★★★★★ getEmp 진입");
-	log.debug("DEBUG");
-	log.info("INFO");
-	log.error("ERROR");
-
-	List<Map<String, Object>> resultData = eduNexaService.getEmp();
+    public NexacroResult getEmp(@ParamVariable(name = "deptCode") String deptCode,
+	    @ParamVariable(name = "empName") String empName) {
+	System.out.println("deptCode : " + deptCode);
+	System.out.println("empName : " + empName);
+	List<Map<String, Object>> resultData = eduNexaService.getEmp(deptCode, empName);
 
 	NexacroResult result = new NexacroResult();
 	result.addDataSet("out_emp", resultData); // Java -> 넥사크로 데이터셋
+	return result;
+    }
+
+    @RequestMapping(value = "edu/saveEmp.do")
+    public NexacroResult saveEmp(@ParamDataSet(name = "in_emp") List<Map<String, Object>> inEmp) {
+	eduNexaService.saveEmp(inEmp);
+	NexacroResult result = new NexacroResult();
 	return result;
     }
 }
