@@ -8,5 +8,7 @@ public interface EduNexaService {
 
     void saveData(List<Map<String, Object>> dataList);
 
-    List<Map<String, Object>> getEmp();
+    List<Map<String, Object>> getEmp(String deptCode, String empName);
+
+    void saveEmp(List<Map<String, Object>> inEmp);
 }

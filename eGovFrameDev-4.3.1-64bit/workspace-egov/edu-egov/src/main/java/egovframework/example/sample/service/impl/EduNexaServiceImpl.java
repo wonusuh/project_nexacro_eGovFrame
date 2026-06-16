@@ -1,5 +1,6 @@
 package egovframework.example.sample.service.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +46,30 @@ public class EduNexaServiceImpl implements EduNexaService {
     }
 
     @Override
-    public List<Map<String, Object>> getEmp() {
+    public List<Map<String, Object>> getEmp(String deptCode, String empName) {
+	Map<String, Object> param = new HashMap<>();
+	param.put("deptCode", "D001");
+	param.put("empName", "홍길동");
+
 	return eduNexaMapper.getEmp();
+    }
+
+    @Override
+    public void saveEmp(List<Map<String, Object>> inEmp) {
+	for (int i = 0; i < inEmp.size(); i += 1) {
+	    Map<String, Object> row = inEmp.get(i);
+	    int nRowType = (int) row.get("DataSetRowType");
+
+	    if (nRowType == DataSet.ROW_TYPE_INSERTED) {
+		// insert 쿼리 실행
+		eduNexaMapper.insertEmp(row);
+	    } else if (nRowType == DataSet.ROW_TYPE_UPDATED) {
+		// update 쿼리 실행
+		eduNexaMapper.updateEmp(row);
+	    } else if (nRowType == DataSet.ROW_TYPE_DELETED) {
+		// delete 쿼리 싫행
+		eduNexaMapper.deleteEmp(row);
+	    }
+	}
     }
 }

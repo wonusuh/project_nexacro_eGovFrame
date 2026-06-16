@@ -372,23 +372,70 @@
         // 조회 트랜 호출
         this.fn_retrieve = function(obj,e)
         {
-        	const sDeptCode = this.div_search.form.edt_deptCode.value;
-        	const sEmpName = this.div_search.form.edt_empName.value;
+        	let sDeptCode = this.div_search.form.edt_deptCode.value;
+        	let sEmpName = this.div_search.form.edt_empName.value;
+        	if(!sDeptCode) sDeptCode = '';
+        	if(!sEmpName) sEmpName = '';
 
         	this.transaction(
         		'svcSelectEmp',
         		'http://localhost:8080/edu-egov/edu/getEmp.do',
         		'',
         		'ds_emp=out_emp',
-        		"deptCode=" + sDeptCode + " empName" + nexacro.wrapQuote(sEmpName),
+        		"deptCode=" + sDeptCode + " empName=" + nexacro.wrapQuote(sEmpName),
         		'fn_callback'
         	);
         	trace('fn_retrieve');
         };
 
-        // 조회트랜의 콜백함수
-        this.fn_callback = async (svcId, errCd, errMsg) => {
-        	//
+        // 트랜의 콜백함수
+        this.fn_callback = (svcId, errCd, errMsg) => {
+        	// 서버에러 발생 시 여기서 함수종료
+        	if(errCd < 0){
+        		this.alert('Error : ' + errMsg);
+        		return;
+        	}
+
+        	if (svcId === 'svcSelectEmp'){
+        		trace('Success : Select Employees');
+        	} else if (svcId === 'svcSaveEmp') {
+        		trace('Success : Save Employees');
+        	}
+        };
+
+        // row 추가
+        this.fn_add = function(obj,e)
+        {
+        	const rowIdx = this.ds_emp.addRow();
+        	this.ds_emp.setColumn(rowIdx, "HIRE_DATE", this.fn_today());
+        };
+
+        // 오늘 날짜를 반환
+        this.fn_today = () => {
+        	const objDate = new Date();
+        	let sToday = objDate.getFullYear().toString();
+        	sToday += (objDate.getMonth() + 1).toString().padLeft(2, '0')
+        	sToday += objDate.getDate().toString().padLeft(2, '0');
+        	return sToday;
+        };
+
+        // row 삭제
+        this.fn_delete = function(obj,e)
+        {
+        	this.ds_emp.deleteRow(this.ds_emp.rowposition);
+        };
+
+        // 저장 트랜 호출
+        this.fn_save = function(obj,e)
+        {
+        	this.transaction(
+        		'svcSaveEmp',
+        		'http://localhost:8080/edu-egov/edu/saveEmp.do',
+        		'in_emp=ds_emp:u',
+        		'',
+        		'',
+        		'fn_callback'
+        	);
         };
 
         });
@@ -397,7 +444,9 @@
         this.on_initEvent = function()
         {
             this.btn_retrieve.addEventHandler("onclick",this.fn_retrieve,this);
-            this.btn_delete.addEventHandler("onclick",this.Button00_00_00_onclick,this);
+            this.btn_add.addEventHandler("onclick",this.fn_add,this);
+            this.btn_delete.addEventHandler("onclick",this.fn_delete,this);
+            this.btn_save.addEventHandler("onclick",this.fn_save,this);
             this.div_search.form.edt_deptCode.addEventHandler("onchanged",this.div_search_edt_deptCode_onchanged,this);
             this.div_search.form.btn_findDept.addEventHandler("onclick",this.fn_openPopupDept,this);
             this.div_search.form.rdo_gender.addEventHandler("onitemchanged",this.onGenderChanged,this);

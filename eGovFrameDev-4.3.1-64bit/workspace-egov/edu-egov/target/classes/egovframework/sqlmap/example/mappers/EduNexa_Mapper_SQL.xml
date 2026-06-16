@@ -52,7 +52,64 @@
 			*
 		FROM
 			TBL_EMPLOYEES
+		/*
+		WHERE 1 = 1
+			<if test="deptCode != null and deptCode != ''">
+				AND DEPT_CODE = #{deptCode}
+			</if>
+			<if test="empName != null and empName != ''">
+				AND EMP_NAME LIKE #{empName}
+			</if>
+		ORDER BY
+			DEPT_CODE,
+			EMP_NAME
+		*/
+	</select>
+
+	<insert id="insertEmp" parameterType="map">
+		INSERT INTO
+			TBL_EMPLOYEES
+		VALUES (
+			#{EMP_ID},
+			#{EMP_NAME},
+			#{DEPT_CODE},
+			#{POSITION},
+			#{HIRE_DATE},
+			#{SALARY},
+			#{GENDER},
+			#{MARRIED},
+			#{SKILL},
+			#{HOBBY},
+			#{MEMO}
+			)
+	</insert>
+
+	<update id="updateEmp" parameterType="map">
+		UPDATE
+			TBL_EMPLOYEES
+		SET
+			EMP_ID = #{EMP_ID},
+			EMP_NAME = #{EMP_NAME},
+			DEPT_CODE = #{DEPT_CODE},
+			POSITION = #{POSITION},
+			HIRE_DATE = #{HIRE_DATE},
+			SALARY = #{SALARY},
+			GENDER = #{GENDER},
+			MARRIED = #{MARRIED},
+			SKILL = #{SKILL},
+			HOBBY = #{HOBBY},
+			MEMO = #{MEMO}
 		WHERE
 			1 = 1
-	</select>
+			AND EMP_ID = #{EMP_ID}
+	</update>
+
+	<delete id="deleteEmp" parameterType="map">
+		DELETE FROM
+			TBL_EMPLOYEES
+		WHERE
+			1 = 1
+			AND EMP_ID = #{EMP_ID}
+	</delete>
+
 </mapper>
