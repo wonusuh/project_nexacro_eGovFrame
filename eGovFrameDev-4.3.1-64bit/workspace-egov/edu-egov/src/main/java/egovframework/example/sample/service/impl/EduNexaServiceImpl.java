@@ -72,4 +72,24 @@ public class EduNexaServiceImpl implements EduNexaService {
 	    }
 	}
     }
+
+    @Override
+    public List<Map<String, Object>> getDept() {
+	return eduNexaMapper.getDept();
+    }
+
+    @Override
+    public List<Map<String, Object>> getPosition() {
+	return eduNexaMapper.getPosition();
+    }
+
+    @Override
+    public List<Map<String, Object>> getHobby() {
+	return eduNexaMapper.getHobby();
+    }
+
+    @Override
+    public List<Map<String, Object>> getSkill() {
+	return eduNexaMapper.getSkill();
+    }
 }

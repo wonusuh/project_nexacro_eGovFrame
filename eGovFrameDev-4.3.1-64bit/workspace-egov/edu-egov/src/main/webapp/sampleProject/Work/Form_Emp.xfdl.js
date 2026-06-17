@@ -438,11 +438,24 @@
         	);
         };
 
+        // 화면이 모두 로딩된 후 발생하는 이벤트
+        this.form_onload = function(obj,e)
+        {
+        	this.transaction(
+        		'svcSelectCode',
+        		'http://localhost:8080/edu-egov/edu/getCode.do',
+        		'',
+        		'ds_dept=out_dept ds_pos=out_pos ds_skill=out_skill ds_hobby=out_hobby',
+        		'fn_callback'
+        	);
+        };
+
         });
         
         // Regist UI Components Event
         this.on_initEvent = function()
         {
+            this.addEventHandler("onload",this.form_onload,this);
             this.btn_retrieve.addEventHandler("onclick",this.fn_retrieve,this);
             this.btn_add.addEventHandler("onclick",this.fn_add,this);
             this.btn_delete.addEventHandler("onclick",this.fn_delete,this);
