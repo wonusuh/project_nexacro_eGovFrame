@@ -27,7 +27,7 @@
         ],
         "screen" :
         [    
-        {"id":"Desktop_screen","type":"desktop","themeid":"theme::blue"}
+        {"id":"Desktop_screen","type":"desktop","themeid":"theme::EDU","initvaluefileid":"initvalue::lst_item.xiv"}
         ],
         "xadl" :
         [

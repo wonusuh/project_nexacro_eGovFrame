@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalPropInitvalueDefinition version="1.0">
+  <nexacro.ListBox>
+    <initvalueid id="iv_ListBox0" itemheight="50"/>
+  </nexacro.ListBox>
+</GlobalPropInitvalueDefinition>
