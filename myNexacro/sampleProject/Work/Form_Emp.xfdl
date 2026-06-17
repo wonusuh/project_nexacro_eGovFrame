@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="Form_Emp" width="1000" height="670" titletext="New Form">
+  <Form id="Form_Emp" width="1000" height="670" titletext="New Form" onload="form_onload">
     <Layouts>
       <Layout height="670" mobileorientation="landscape" width="1000">
         <Static id="st_title" taborder="0" text="Employees" left="10" top="10" width="150" height="20"/>
@@ -269,6 +269,18 @@ this.fn_save = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 		'in_emp=ds_emp:u',
 		'',
 		'',
+		'fn_callback'
+	);
+};
+
+// 화면이 모두 로딩된 후 발생하는 이벤트 
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.transaction(
+		'svcSelectCode',
+		'http://localhost:8080/edu-egov/edu/getCode.do',
+		'',
+		'ds_dept=out_dept ds_pos=out_pos ds_skill=out_skill ds_hobby=out_hobby',
 		'fn_callback'
 	);
 };

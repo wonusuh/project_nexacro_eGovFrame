@@ -68,4 +68,32 @@ public class EduNexaController {
 	NexacroResult result = new NexacroResult();
 	return result;
     }
+
+    @RequestMapping(value = "edu/getCode.do")
+    public NexacroResult getCode() {
+	System.out.println("getCode getCode getCode ");
+	NexacroResult out = new NexacroResult();
+
+	// 부서 코드
+	List<Map<String, Object>> deptList = eduNexaService.getDept();
+	System.out.println("=====\n" + deptList.toString());
+	out.addDataSet("out_dept", deptList);
+
+	// 직위 코드
+	List<Map<String, Object>> positionList = eduNexaService.getPosition();
+	System.out.println("=====\n" + positionList.toString());
+	out.addDataSet("out_pos", positionList);
+
+	// 취미 코드
+	List<Map<String, Object>> hobbyList = eduNexaService.getHobby();
+	System.out.println("=====\n" + hobbyList.toString());
+	out.addDataSet("out_hobby", hobbyList);
+
+	// 보유기술 코드
+	List<Map<String, Object>> skillList = eduNexaService.getSkill();
+	System.out.println("=====\n" + skillList.toString());
+	out.addDataSet("out_skill", skillList);
+	
+	return out;
+    }
 }

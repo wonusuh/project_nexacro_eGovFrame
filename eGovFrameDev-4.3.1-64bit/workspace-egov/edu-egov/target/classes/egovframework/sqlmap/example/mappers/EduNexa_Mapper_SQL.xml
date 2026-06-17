@@ -112,4 +112,49 @@
 			AND EMP_ID = #{EMP_ID}
 	</delete>
 
+	<select id="getDept">
+		SELECT
+			DEPT_CODE,
+			DEPT_NAME,
+			DEPT_EMP
+		FROM
+			TBL_DEPARTMENT
+		WHERE
+			1 = 1
+	</select>
+
+	<select id="getPosition">
+		SELECT
+			DET_CODE AS CODE,
+			DET_NAME AS NAME
+		FROM
+			TBL_COMMON_CODE
+		WHERE
+			1 = 1
+			AND MST_CODE = 'POSITION'
+	</select>
+
+	<select id="getHobby">
+		SELECT
+			DET_CODE AS CODE,
+			DET_NAME AS NAME
+		FROM
+			TBL_COMMON_CODE
+		WHERE
+			1 = 1
+			AND MST_CODE = 'HOBBY'
+	</select>
+
+	<select id="getSkill">
+		SELECT
+			DET_CODE AS CODE,
+			DET_NAME AS NAME
+		FROM
+			TBL_COMMON_CODE
+		WHERE
+			1 = 1
+			AND MST_CODE = 'SKILL'
+			AND USE_FLAG IN ('1', '2');
+	</select>
+
 </mapper>

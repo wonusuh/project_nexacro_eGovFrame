@@ -22,4 +22,12 @@ public interface EduNexaMapper {
     void updateEmp(Map<String, Object> row);
 
     void deleteEmp(Map<String, Object> row);
+
+    List<Map<String, Object>> getDept();
+
+    List<Map<String, Object>> getPosition();
+
+    List<Map<String, Object>> getHobby();
+
+    List<Map<String, Object>> getSkill();
 }
