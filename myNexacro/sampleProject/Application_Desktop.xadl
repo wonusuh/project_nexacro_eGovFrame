@@ -6,6 +6,7 @@
         <ChildFrame id="WorkFrame" showtitlebar="false" showstatusbar="false" formurl="FrameBase::Form_Work.xfdl"/>
       </MainFrame>
     </Layout>
+    <Style url="xcssrc::EDU.xcss"/>
   </Application>
   <Script type="xscript5.1"><![CDATA[this.afn_commFunction = function() {
 	return 'Application Function Call';

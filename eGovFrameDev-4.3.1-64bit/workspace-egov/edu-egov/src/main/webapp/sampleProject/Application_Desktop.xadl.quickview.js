@@ -72,7 +72,7 @@
 		this.checkLicense("");
         
         this.loadPreloadList();
-
+        this.loadCss("xcssrc::EDU.xcss");
         this.loadIncludeScript("Application_Desktop.xadl");
     };
 }

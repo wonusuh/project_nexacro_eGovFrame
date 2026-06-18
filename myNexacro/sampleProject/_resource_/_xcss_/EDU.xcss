@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.1">
+  <CSSData><![CDATA[.Button
+{
+	-nexa-border : ;
+	-nexa-edge : ;
+	-nexa-icon : ;
+	-nexa-icon-position : ;
+	-nexa-padding : ;
+	-nexa-rtl-background-image : ;
+	-nexa-rtl-edge-image : ;
+	-nexa-rtl-icon : ;
+	-nexa-text-align : ;
+	-nexa-text-decoration : ;
+	-nexa-text-padding : ;
+	-nexa-vertical-align : ;
+	-nexa-word-wrap : ;
+	background : ;
+	border-radius : ;
+	box-shadow : ;
+	color : ;
+	cursor : ;
+	letter-spacing : ;
+	opacity : ;
+	word-spacing : ;
+	font : 10pt "Times New Roman";
+}
+]]></CSSData>
+  <CSSData type="desktop"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_large"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_small"><![CDATA[]]></CSSData>
+  <CSSData type="mobile_medium"><![CDATA[]]></CSSData>
+</XCSS>
