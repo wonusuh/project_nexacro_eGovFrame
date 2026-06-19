@@ -3,7 +3,7 @@
   <Form id="Form_Emp" width="1000" height="670" titletext="New Form" onload="form_onload">
     <Layouts>
       <Layout height="670" mobileorientation="landscape" width="1000">
-        <Static id="st_title" taborder="0" text="Employees" left="10" top="10" width="150" height="20"/>
+        <Static id="st_title" taborder="0" text="Employees" left="10" top="10" width="150" height="20" cssclass="sta_WF_Title"/>
         <Button id="btn_retrieve" taborder="1" text="Retrieve" left="300" top="10" width="100" height="20" onclick="fn_retrieve"/>
         <Button id="btn_add" taborder="2" text="Add" left="410" top="10" width="100" height="20" onclick="fn_add"/>
         <Button id="btn_delete" taborder="3" text="Delete" left="520" top="10" width="100" height="20" onclick="fn_delete"/>

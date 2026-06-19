@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_PopupSub" width="750" height="750" titletext="New Form" onload="form_onload">
+    <Layouts>
+      <Layout height="750" mobileorientation="landscape" width="750">
+        <MaskEdit id="msk_number" taborder="0" left="10" top="50" width="150" height="30"/>
+        <Grid id="Grid00" taborder="1" left="10" top="90" width="400" height="150" binddataset="ds_data">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="125"/>
+                <Column size="125"/>
+                <Column size="125"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+                <Cell col="2" text="MANAGER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE"/>
+                <Cell col="1" text="bind:NAME"/>
+                <Cell col="2" text="bind:MANAGER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Edit id="edt_string" taborder="2" left="10" top="10" width="150" height="30"/>
+        <Button id="Button00" taborder="3" text="Default" left="10" top="250" width="75" height="30"/>
+        <Button id="Button00_00" taborder="4" text="Separator" left="110" top="250" width="75" height="30" onclick="Button00_00_onclick"/>
+        <Button id="Button00_01" taborder="5" text="Json" left="213" top="250" width="75" height="30"/>
+        <Button id="Button00_02" taborder="6" text="Object" left="320" top="250" width="75" height="30"/>
+        <Button id="Button01" taborder="7" text="X" left="350" top="10" width="25" height="25" onclick="Button01_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[// 화면 최초 로딩
+this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	// this.st_title.text = this.parent.param_title;
+	this.edt_string.value = this.parent.param_string;
+	this.msk_number.value = this.parent.param_number;
+	this.ds_child.copyData(this.parent.param_object);
+};
+
+// 모달 닫기
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	// 	const rtn1 = this.edt_string.value;
+	// 	const rtn2 = this.msk_number.value;
+	// 	this.close(rtn1 + '||' + rtn2);
+	
+	// JSON
+	const objRtn = {
+		rtn1 : this.edt_string.value,
+		rtn2 : this.msk_number.value
+	};
+	this.close(JSON.stringify(objRtn));
+};
+]]></Script>
+    <Objects>
+      <Dataset id="ds_child"/>
+    </Objects>
+  </Form>
+</FDL>
