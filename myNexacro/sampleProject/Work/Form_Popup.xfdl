@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Popup" width="750" height="250" titletext="New Form">
+    <Layouts>
+      <Layout height="250" mobileorientation="landscape" width="750">
+        <Edit id="edt_string" taborder="0" left="10" top="10" width="150" height="30"/>
+        <MaskEdit id="msk_number" taborder="1" left="10" top="50" width="150" height="30"/>
+        <Grid id="Grid00" taborder="2" left="10" top="90" width="400" height="150" binddataset="ds_data">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="125"/>
+                <Column size="125"/>
+                <Column size="125"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+                <Cell col="1" text="NAME"/>
+                <Cell col="2" text="MANAGER"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE"/>
+                <Cell col="1" text="bind:NAME"/>
+                <Cell col="2" text="bind:MANAGER"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button00" taborder="3" text="Execute(basic)" left="444" top="22" width="191" height="43" onclick="Button00_onclick"/>
+        <Button id="Button00_00" taborder="4" text="Execute" left="460" top="87" width="191" height="43"/>
+        <Button id="Button00_00_00" taborder="5" text="Center" left="550" top="197" width="100" height="43"/>
+        <Button id="Button00_00_01" taborder="6" text="Component" left="430" top="197" width="100" height="43"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="NAME" type="STRING" size="256"/>
+          <Column id="MANAGER" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="NAME">Accounting Team</Col>
+            <Col id="MANAGER">Kate</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">20</Col>
+            <Col id="NAME">Finamces Team</Col>
+            <Col id="MANAGER">Dennis</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">30</Col>
+            <Col id="NAME">Human Resource Team</Col>
+            <Col id="MANAGER">Adam</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">40</Col>
+            <Col id="NAME">Support Team</Col>
+            <Col id="MANAGER">Jackson</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// 클릭 이벤트
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	const objChildFrame = new ChildFrame('popupModal', 0, 0, 480, 420);
+	objChildFrame.formurl = 'Work::Form_PopupSub.xfdl';
+	objChildFrame.dragmovetype = 'all';
+	objChildFrame.showtitlebar = false;
+	objChildFrame.openalign = 'center middle';
+	objChildFrame.overlaycolor = "RGBA(196,196,196,0.5)";
+	
+	// 전달할 파라미터
+	const objParam = {
+		param_title : 'Modal Popup',
+		param_string : this.edt_string.value,
+		param_number : this.msk_number.value,
+		param_object : this.ds_data
+	};
+	
+	// 모달 호출
+	objChildFrame.showModal(
+		this.getOwnerFrame(),
+		objParam,
+		this,
+		'fn_popupCallback'
+	);
+};
+
+// 팝업 모달의 콜백함수
+this.fn_popupCallback = (strPopupID, strReturn) => {
+	// 모달로부터 받아온 리턴이 없으면 함수 종료
+	if(!strReturn) {
+		return;
+	}
+	
+	// popupModal 만 처리
+	if(strPopupID === 'popupModal') {
+		// 		const rtn1 = strReturn.split('||')[0];
+		// 		const rtn2 = strReturn.split('||')[1];
+		
+		// JSON
+		const objJson = JSON.parse(strReturn);
+		const rtn1 = objJson.rtn1;
+		const rtn2 = objJson.rtn2;
+		this.alert('Return Value : ' + rtn1 + rtn2 + "JSON");
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

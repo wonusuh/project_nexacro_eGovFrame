@@ -45,6 +45,7 @@
             obj = new Static("st_title","10","10","150","20",null,null,null,null,null,null,this);
             obj.set_taborder("0");
             obj.set_text("Employees");
+            obj.set_cssclass("sta_WF_Title");
             this.addChild(obj.name, obj);
 
             obj = new Button("btn_retrieve","300","10","100","20",null,null,null,null,null,null,this);

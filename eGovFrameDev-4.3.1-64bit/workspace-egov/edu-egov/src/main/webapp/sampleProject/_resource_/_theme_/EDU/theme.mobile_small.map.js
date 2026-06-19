@@ -89,52 +89,33 @@
             				{
             					"enabled" :
             					{
-            						"border" : nexacro.BorderObject("1px solid #c2c2c2")
+            						"border" : nexacro.BorderObject("1px solid #406ff"),
+            						"color" : nexacro.ColorObject("#ffffff")
             					},
             					"mouseover" :
             					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            						"border" : nexacro.BorderObject("1px solid #243e91"),
+            						"color" : nexacro.ColorObject("#ffffff")
             					},
             					"focused" :
             					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            						"border" : nexacro.BorderObject("1px solid #243e91"),
+            						"color" : nexacro.ColorObject("#ffffff")
             					},
             					"pushed" :
             					{
+            						"border" : nexacro.BorderObject("1px solid #7b68ee"),
+            						"color" : nexacro.ColorObject("#ffffff")
             					},
             					"selected" :
             					{
+            						"border" : nexacro.BorderObject("1px solid #7b68ee"),
+            						"color" : nexacro.ColorObject("#ffffff")
             					},
             					"disabled" :
             					{
-            						"color" : nexacro.ColorObject("#bbbbbb"),
-            						"border" : nexacro.BorderObject("1px solid #d9d9d9")
-            					}
-            				}
-            			},
-            			"FileDownload" :
-            			{
-            				"self" :
-            				{
-            					"enabled" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #c2c2c2")
-            					},
-            					"mouseover" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            					},
-            					"focused" :
-            					{
-            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
-            					},
-            					"pushed" :
-            					{
-            					},
-            					"disabled" :
-            					{
-            						"color" : nexacro.ColorObject("#bbbbbb"),
-            						"border" : nexacro.BorderObject("1px solid #d9d9d9")
+            						"color" : nexacro.ColorObject("#a9a9a9"),
+            						"border" : nexacro.BorderObject("1px solid #e6e6e6")
             					}
             				}
             			},
@@ -203,6 +184,28 @@
             								}
             							}
             						}
+            					}
+            				}
+            			},
+            			"FileDownload" :
+            			{
+            				"self" :
+            				{
+            					"mouseover" :
+            					{
+            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            					},
+            					"focused" :
+            					{
+            						"border" : nexacro.BorderObject("1px solid #a0a0a0")
+            					},
+            					"pushed" :
+            					{
+            					},
+            					"disabled" :
+            					{
+            						"color" : nexacro.ColorObject("#bbbbbb"),
+            						"border" : nexacro.BorderObject("1px solid #d9d9d9")
             					}
             				}
             			},
@@ -300,11 +303,6 @@
             					{
             						"self" :
             						{
-            							"enabled" :
-            							{
-            								"padding" : nexacro.PaddingObject("1px 2px 0px 0px"),
-            								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop.png')")
-            							},
             							"mouseover" :
             							{
             								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop_O.png')")
@@ -323,6 +321,10 @@
             							},
             							"disabled" :
             							{
+            							},
+            							"enabled" :
+            							{
+            								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop.png')")
             							}
             						}
             					},
@@ -330,11 +332,6 @@
             					{
             						"self" :
             						{
-            							"enabled" :
-            							{
-            								"padding" : nexacro.PaddingObject("1px 2px 0px 0px"),
-            								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop.png')")
-            							},
             							"mouseover" :
             							{
             								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop_O.png')")
@@ -353,6 +350,10 @@
             							},
             							"disabled" :
             							{
+            							},
+            							"enabled" :
+            							{
+            								"icon" : nexacro.UrlObject("URL('theme://images/cmb_WF_Drop.png')")
             							}
             						}
             					},
@@ -3178,7 +3179,23 @@
             					{
             						"color" : nexacro.ColorObject("#999999")
             					}
-            				}
+            				},
+            				"class" :
+            				[
+            					{
+            						"sta_WF_Title" :
+            						{
+            							"self" :
+            							{
+            								"enabled" :
+            								{
+            									"font" : nexacro.FontObject("bold 16px \"Malgun Gothic\""),
+            									"color" : nexacro.ColorObject("#222222")
+            								}
+            							}
+            						}
+            					}
+            				]
             			},
             			"StaticControl" :
             			{
@@ -6746,7 +6763,6 @@
         		imgcache[nexacro._getImageLocation("theme://images/chk_WF_Box_D.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/chk_WF_Box_S.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/chk_WF_Box_DS.png")] = { width:13, height:13 };
-        		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop_O.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop_P.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Grdexpand.png")] = { width:13, height:13 };
@@ -6828,6 +6844,7 @@
         		imgcache[nexacro._getImageLocation("theme://images/btn_TF_Close_D.png")] = { width:30, height:30 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Stepitem.png")] = { width:13, height:13 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_WF_Stepitem_S.png")] = { width:13, height:13 };
+        		imgcache[nexacro._getImageLocation("theme://images/cmb_WF_Drop.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/btn_expand.png")] = { width:9, height:6 };
         		imgcache[nexacro._getImageLocation("theme://images/invalid.png")] = { width:24, height:24 };
         		imgcache[nexacro._getImageLocation("theme://images/valid.png")] = { width:24, height:24 };
