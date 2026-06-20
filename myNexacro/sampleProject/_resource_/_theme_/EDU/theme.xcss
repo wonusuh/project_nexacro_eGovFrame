@@ -40,9 +40,12 @@
 /* FileDownload */
 /* FileUpload */
 .Button {
+/*
 	background : #406ff;
 	-nexa-border : 1px solid #406ff;
 	color : #ffffff;
+*/
+	-nexa-border : 1px solid navy;
 }
 .Button[status=mouseover], .Button[status=focused] {
 	background : #243e91;

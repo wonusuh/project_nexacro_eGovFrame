@@ -337,9 +337,7 @@ textarea::-webkit-scrollbar { display: none; }
 }
 .Button
 {
-	background : #406ff;
-	border : 1px solid #406ff;
-	color : #ffffff;
+	border : 1px solid navy;
 }
 .ButtonControl
 {

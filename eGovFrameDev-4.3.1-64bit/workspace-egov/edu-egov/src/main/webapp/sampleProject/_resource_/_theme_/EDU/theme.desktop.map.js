@@ -89,8 +89,7 @@
             				{
             					"enabled" :
             					{
-            						"border" : nexacro.BorderObject("1px solid #406ff"),
-            						"color" : nexacro.ColorObject("#ffffff")
+            						"border" : nexacro.BorderObject("1px solid navy")
             					},
             					"mouseover" :
             					{
