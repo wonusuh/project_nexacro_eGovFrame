@@ -12,6 +12,11 @@
             obj = new Dataset("gds_corp", this);
             obj._setContents({"ColumnInfo" : {"ConstColumn" : [ {"id" : "DESC","type" : "STRING","size" : "30","value" : "Corporation List"},{"id" : "ROW_CNT","type" : "INT","size" : "30","value" : "3"}],"Column" : [ {"id" : "CODE","type" : "STRING","size" : "256"},{"id" : "NAME","type" : "STRING","size" : "256"}]},"Rows" : [{"CODE" : "KR","NAME" : "한국"},{"CODE" : "JP","NAME" : "일본"},{"CODE" : "US","NAME" : "미국"}]});
             this._addDataset(obj.name, obj);
+
+
+            obj = new Dataset("gds_menu", this);
+            obj._setContents({"ColumnInfo" : {"Column" : [ {"id" : "MENU_ID","type" : "STRING","size" : "256"},{"id" : "MENU_NAME","type" : "STRING","size" : "256"},{"id" : "MENU_LEVEL","type" : "STRING","size" : "256"},{"id" : "FORM_URL","type" : "STRING","size" : "256"}]},"Rows" : [{"MENU_ID" : "10","MENU_NAME" : "Human Resources","MENU_LEVEL" : "0"},{"MENU_ID" : "1010","MENU_NAME" : "Employee Management","MENU_LEVEL" : "1"},{"MENU_ID" : "101010","MENU_NAME" : "Hello","MENU_LEVEL" : "2","FORM_URL" : "Base::Hello.xfdl"},{"MENU_ID" : "101020","MENU_NAME" : "Employee","MENU_LEVEL" : "2","FORM_URL" : "Work::Form_Emp.xfdl"},{"MENU_ID" : "101030","MENU_NAME" : "Employee List","MENU_LEVEL" : "2","FORM_URL" : "Work::Form_EmpList.xfdl"},{"MENU_ID" : "1020","MENU_NAME" : "Department Management","MENU_LEVEL" : "1"},{"MENU_ID" : "102010","MENU_NAME" : "Department","MENU_LEVEL" : "2"},{"MENU_ID" : "102020","MENU_NAME" : "Department List","MENU_LEVEL" : "2"},{"MENU_ID" : "20","MENU_NAME" : "Admin","MENU_LEVEL" : "0"},{"MENU_ID" : "2110","MENU_NAME" : "User Management","MENU_LEVEL" : "1"},{"MENU_ID" : "3830","MENU_NAME" : "Setting","MENU_LEVEL" : "1"}]});
+            this._addDataset(obj.name, obj);
             
             // global variable
 

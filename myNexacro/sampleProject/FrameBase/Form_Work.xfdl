@@ -2,7 +2,57 @@
 <FDL version="2.1">
   <Form id="Form_Work" width="1280" height="840" titletext="Form_Work">
     <Layouts>
-      <Layout width="1280" height="840" screenid="Desktop_screen"/>
+      <Layout width="1280" height="840" screenid="Desktop_screen">
+        <Button id="Button00" taborder="0" text="Nexacro Sample Project" left="10" top="10" width="250" height="50"/>
+        <Menu id="mnu_top" taborder="1" left="270" top="10" height="50" right="10" innerdataset="gds_menu" idcolumn="MENU_ID" captioncolumn="MENU_NAME" levelcolumn="MENU_LEVEL" onmenuclick="mnu_top_onmenuclick"/>
+        <Grid id="grd_left" taborder="2" left="10" top="70" width="250" bottom="10" binddataset="gds_menu" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false" oncelldblclick="grd_left_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Menu" displaytype="normal" edittype="none"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LEVEL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_work" taborder="3" text="Div00" left="270" top="70" right="10" bottom="10"/>
+      </Layout>
     </Layouts>
+    <Script type="xscript5.1"><![CDATA[// 화면을 오픈하는 함수
+this.fn_openForm = (sMenuId) => {
+	const objApp = nexacro.getApplication();
+	const rowidx = objApp.gds_menu.findRow("MENU_ID", sMenuId);
+	const sFormUrl = objApp.gds_menu.getColumn(rowidx, "FORM_URL");
+	
+	// url 이 falsy 값일 때 함수 종료
+	if(typeof sFormUrl === 'undefined' || !sFormUrl) {
+		trace('url 을 확인하세요.');
+		return;
+	}
+	
+	this.div_work.url = sFormUrl;
+};
+
+this.mnu_top_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+	this.fn_openForm(e.id);
+};
+
+this.grd_left_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	const objApp = nexacro.getApplication();
+	const sMenuId = objApp.gds_menu.getColumn(e.row, "MENU_ID");
+	this.fn_openForm(sMenuId);
+};
+]]></Script>
   </Form>
 </FDL>

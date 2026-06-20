@@ -23,6 +23,74 @@
         </Row>
       </Rows>
     </Dataset>
+    <Dataset id="gds_menu">
+      <ColumnInfo>
+        <Column id="MENU_ID" type="STRING" size="256"/>
+        <Column id="MENU_NAME" type="STRING" size="256"/>
+        <Column id="MENU_LEVEL" type="STRING" size="256"/>
+        <Column id="FORM_URL" type="STRING" size="256"/>
+      </ColumnInfo>
+      <Rows>
+        <Row>
+          <Col id="MENU_ID">10</Col>
+          <Col id="MENU_NAME">Human Resources</Col>
+          <Col id="MENU_LEVEL">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1010</Col>
+          <Col id="MENU_NAME">Employee Management</Col>
+          <Col id="MENU_LEVEL">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">101010</Col>
+          <Col id="MENU_NAME">Hello</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Base::Hello.xfdl</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">101020</Col>
+          <Col id="MENU_NAME">Employee</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Work::Form_Emp.xfdl</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">101030</Col>
+          <Col id="MENU_NAME">Employee List</Col>
+          <Col id="MENU_LEVEL">2</Col>
+          <Col id="FORM_URL">Work::Form_EmpList.xfdl</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">1020</Col>
+          <Col id="MENU_NAME">Department Management</Col>
+          <Col id="MENU_LEVEL">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">102010</Col>
+          <Col id="MENU_NAME">Department</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">102020</Col>
+          <Col id="MENU_NAME">Department List</Col>
+          <Col id="MENU_LEVEL">2</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">20</Col>
+          <Col id="MENU_NAME">Admin</Col>
+          <Col id="MENU_LEVEL">0</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">2110</Col>
+          <Col id="MENU_NAME">User Management</Col>
+          <Col id="MENU_LEVEL">1</Col>
+        </Row>
+        <Row>
+          <Col id="MENU_ID">3830</Col>
+          <Col id="MENU_NAME">Setting</Col>
+          <Col id="MENU_LEVEL">1</Col>
+        </Row>
+      </Rows>
+    </Dataset>
   </Datasets>
   <Variables/>
   <DataObjects/>
