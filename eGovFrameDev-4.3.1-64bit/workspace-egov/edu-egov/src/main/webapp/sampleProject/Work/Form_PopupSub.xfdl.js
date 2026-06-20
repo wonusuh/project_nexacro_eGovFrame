@@ -101,6 +101,11 @@
         		rtn1 : this.edt_string.value,
         		rtn2 : this.msk_number.value
         	};
+
+        	// 부모 컴포넌트의 함수를 호출
+        	this.opener.fn_return(this.ds_child);
+
+        	// 파라미터 전달
         	this.close(JSON.stringify(objRtn));
         };
 
