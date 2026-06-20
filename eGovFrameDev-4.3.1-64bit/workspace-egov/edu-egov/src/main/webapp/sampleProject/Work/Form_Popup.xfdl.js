@@ -55,7 +55,16 @@
             obj.set_taborder("6");
             obj.set_text("Component");
             this.addChild(obj.name, obj);
+
+            obj = new PopupDiv("PopupDiv00","10","260","400","300",null,null,null,null,null,null,this);
+            obj.set_text("PopupDiv00");
+            obj.set_visible("false");
+            this.addChild(obj.name, obj);
             // Layout Functions
+            //-- Default Layout : this.PopupDiv00
+            obj = new Layout("default","",0,0,this.PopupDiv00.form,function(p){});
+            this.PopupDiv00.form.addLayout(obj.name, obj);
+
             //-- Default Layout : this
             obj = new Layout("default","",750,250,this,function(p){});
             obj.set_mobileorientation("landscape");
@@ -122,12 +131,75 @@
         	}
         };
 
+        // 모달에서 이 함수를 호출하여 참조형데이터를 전달 (array, object, JSON, etc...)
+        this.fn_return = async (pObj) => {
+        	this.ds_data.copyData(pObj);
+        };
+
+        // 모달리스 팝업 오
+        this.Button00_00_onclick = function(obj,e)
+        {
+        	const nWidth = 480;
+        	const nHeight = 420;
+        	const objApp = nexacro.getApplication();
+        	let nLeft = (objApp.mainframe.width / 2) - Math.round(nWidth / 2);
+        	let nTop = (objApp.mainframe.height / 2) - Math.round(nHeight / 2);
+        	nLeft = system.clientToScreenX(this, nLeft);
+        	nTop = system.clientToScreenY(this, nTop);
+
+        	const sOpenStyle = "dragmovetype=all"
+        	+ " openalign='center middle'"
+        	+ " resizable=false"
+        	+ " autosize=true"
+        	+ " titletext=Modeless Popup"
+        	+ " showtitlebar=true"
+        	+ " showstatusbar=false";
+
+        	const objParam = {
+        		param_title : 'Modeless Popup',
+        		param_string : this.edt_string.value,
+        		param_number : this.msk_number.value,
+        		param_object : this.ds_data
+        	};
+
+        	nexacro.open(
+        		"popupModeless",
+        		"Work::Form_PopupSub.xfdl",
+        		this.getOwnerFrame(),
+        		objParam,
+        		sOpenStyle,
+        		nLeft,
+        		nTop,
+        		nWidth,
+        		nHeight,
+        		this
+        	);
+        };
+
+        // 컴포넌트 기준으로 띄우기
+        this.Button00_00_01_onclick = function(obj,e)
+        {
+        	this.PopupDiv00.trackPopupByComponent(this.Button00, 0, this.Button00.height);
+        };
+
+        // 애플리케이션의 중앙에 띄우기
+        this.Button00_00_00_onclick = function(obj,e)
+        {
+        	const objApp = nexacro.getApplication();
+        	const nLeft = (objApp.mainframe.width / 2) - Math.round(this.PopupDiv00.width / 2);
+        	const nTop = (objApp.mainframe.height / 2) - Math.round(this.PopupDiv00.height / 2);
+        	this.PopupDiv00.trackPopup(nLeft, nTop);
+        };
+
         });
         
         // Regist UI Components Event
         this.on_initEvent = function()
         {
             this.Button00.addEventHandler("onclick",this.Button00_onclick,this);
+            this.Button00_00.addEventHandler("onclick",this.Button00_00_onclick,this);
+            this.Button00_00_00.addEventHandler("onclick",this.Button00_00_00_onclick,this);
+            this.Button00_00_01.addEventHandler("onclick",this.Button00_00_01_onclick,this);
         };
         this.loadIncludeScript("Form_Popup.xfdl");
         this.loadPreloadList();
