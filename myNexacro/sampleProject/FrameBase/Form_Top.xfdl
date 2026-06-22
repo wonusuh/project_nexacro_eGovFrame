@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Top" width="1280" height="70" titletext="New Form">
+    <Layouts>
+      <Layout height="70" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Nexacro Sample Project" left="10" top="10" width="250" height="50"/>
+        <Menu id="mnu_top" taborder="1" left="270" top="10" height="50" right="10" innerdataset="gds_menu" idcolumn="MENU_ID" captioncolumn="MENU_NAME" levelcolumn="MENU_LEVEL" onmenuclick="mnu_top_onmenuclick"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

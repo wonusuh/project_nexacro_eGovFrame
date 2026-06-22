@@ -27,10 +27,20 @@
         ],
         "screen" :
         [    
-        {"id":"Desktop_screen","type":"desktop","themeid":"theme::EDU","initvaluefileid":"initvalue::lst_item.xiv"}
+        {"id":"Desktop_screen","type":"desktop","themeid":"theme::EDU","initvaluefileid":"initvalue::lst_item.xiv"},
+        {"id":"DesktopMDI_screen","type":"desktop","themeid":"theme::blue"}
         ],
         "xadl" :
         [
+        {
+        	"screenid":"DesktopMDI_screen",
+        	"launch":"./Application_DesktopMDI.xadl.js",
+        	"quickview":"./Application_DesktopMDI.xadl.quickview.js",
+        	"form":[
+        				"./FrameBase/Form_Top.xfdl.js",
+        		"./FrameBase/Form_Left.xfdl.js"
+        	]
+        },
         {
         	"screenid":"Desktop_screen",
         	"launch":"./Application_Desktop.xadl.js",

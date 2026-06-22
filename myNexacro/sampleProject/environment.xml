@@ -3,6 +3,7 @@
   <Environment themeid="theme::blue" datatyperule="2.0">
     <ScreenDefinition>
       <Screen id="Desktop_screen" type="desktop" initvaluefileid="initvalue::lst_item.xiv" themeid="theme::EDU"/>
+      <Screen id="DesktopMDI_screen" type="desktop"/>
     </ScreenDefinition>
     <Variables/>
     <Cookies/>
