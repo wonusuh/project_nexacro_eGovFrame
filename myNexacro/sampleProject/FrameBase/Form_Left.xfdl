@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Left" width="270" height="770" titletext="New Form">
+    <Layouts>
+      <Layout height="770" mobileorientation="landscape" width="270">
+        <Grid id="grd_left" taborder="0" left="10" top="10" width="250" bottom="10" binddataset="gds_menu" autofittype="col" treeinitstatus="expand,all" treeusecheckbox="false" oncelldblclick="grd_left_oncelldblclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Menu" displaytype="normal" edittype="none"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MENU_NAME" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:MENU_LEVEL"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[// 화면을 오픈하는 함수
+this.fn_openForm = (sMenuId) => {
+    const objApp = nexacro.getApplication();
+    const rowidx = objApp.gds_menu.findRow("MENU_ID", sMenuId);
+    const sFormUrl = objApp.gds_menu.getColumn(rowidx, "FORM_URL");
+
+    // 잘못된 url 이면 여기서 함수종료
+    if (!sFormUrl || typeof sFormUrl === "undefined") {
+        return;
+    }
+
+    const arrObj = objApp.mainframe.VFrameSet00.HFrameSet00.FrameSet00.all;
+    for (let i = 0; i < arrObj.length; i += 1) {
+        //
+        if (arrObj[i].name === sMenuId) {
+            arrObj[i].setFocus();
+            return;
+        }
+    }
+
+    const objChildFrame = new ChildFrame(sMenuId, 0, 0, 800, 600);
+    objChildFrame.formurl = sFormUrl;
+    objChildFrame.resizable = true;
+    objChildFrame.openstatus = "normal";
+
+    objApp.mainframe.VFrameSet00.HFrameSet00.FrameSet00.addChild(
+        sMenuId,
+        objChildFrame
+    );
+    objChildFrame.show();
+};
+
+// 그리드 더블클릭 이벤트
+this.grd_left_oncelldblclick = function (obj:nexacro.Grid, e:nexacro.GridClickEventInfo) {
+    const objApp = nexacro.getApplication();
+    const sMenuId = objApp.gds_menu.getColumn(e.row, "MENU_ID");
+    this.fn_openForm(sMenuId);
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="2.0">
+  <Application id="Application_DesktopMDI" screenid="DesktopMDI_screen">
+    <Layout>
+      <MainFrame id="mainframe" showtitlebar="true" showstatusbar="true" left="0" top="0" width="1280" height="840">
+        <VFrameSet id="VFrameSet00" separatesize="70, *">
+          <Frames>
+            <ChildFrame id="TopFrame" formurl="FrameBase::Form_Top.xfdl" showtitlebar="false"/>
+            <HFrameSet id="HFrameSet00" separatesize="270, *">
+              <Frames>
+                <ChildFrame id="LeftFrame" formurl="FrameBase::Form_Left.xfdl" showtitlebar="false"/>
+                <FrameSet id="FrameSet00"/>
+              </Frames>
+            </HFrameSet>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
+    </Layout>
+  </Application>
+</ADL>
