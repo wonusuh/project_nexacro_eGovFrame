@@ -1,8 +1,0 @@
-﻿{
-admin off
-}
-:4098
-{
-root "C:/dev_wonuSuh/project_nexacro_eGovFrame/eGovFrameDev-4.3.1-64bit/workspace-egov/edu-egov/src/main/webapp/sampleProject"
-file_server
-}

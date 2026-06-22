@@ -17,4 +17,22 @@ this.fn_openForm = (sMenuId) => {
             return;
         }
     }
+
+    const objChildFrame = new ChildFrame(sMenuId, 0, 0, 800, 600);
+    objChildFrame.formurl = sFormUrl;
+    objChildFrame.resizable = true;
+    objChildFrame.openstatus = "normal";
+
+    objApp.mainframe.VFrameSet00.HFrameSet00.FrameSet00.addChild(
+        sMenuId,
+        objChildFrame
+    );
+    objChildFrame.show();
+};
+
+// 그리드 더블클릭 이벤트
+this.grd_left_oncelldblclick = function (obj:nexacro.Grid, e:nexacro.GridClickEventInfo) {
+    const objApp = nexacro.getApplication();
+    const sMenuId = objApp.gds_menu.getColumn(e.row, "MENU_ID");
+    this.fn_openForm(sMenuId);
 };
