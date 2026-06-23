@@ -33,20 +33,20 @@
         "xadl" :
         [
         {
+        	"screenid":"Desktop_screen",
+        	"launch":"./Application_Desktop.xadl.js",
+        	"quickview":"./Application_Desktop.xadl.quickview.js",
+        	"form":[
+        				"./FrameBase/Form_Work.xfdl.js"
+        	]
+        },
+        {
         	"screenid":"DesktopMDI_screen",
         	"launch":"./Application_DesktopMDI.xadl.js",
         	"quickview":"./Application_DesktopMDI.xadl.quickview.js",
         	"form":[
         				"./FrameBase/Form_Top.xfdl.js",
         		"./FrameBase/Form_Left.xfdl.js"
-        	]
-        },
-        {
-        	"screenid":"Desktop_screen",
-        	"launch":"./Application_Desktop.xadl.js",
-        	"quickview":"./Application_Desktop.xadl.quickview.js",
-        	"form":[
-        				"./FrameBase/Form_Work.xfdl.js"
         	]
         }
         ],  
