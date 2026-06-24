@@ -37,6 +37,7 @@
       <File url="Application_DesktopMDI.xadl" checksum="20260622183803" errormsg=""/>
       <File url="FrameBase\Form_Top.xfdl" checksum="20260622163520" errormsg=""/>
       <File url="FrameBase\Form_Left.xfdl" checksum="20260622181249" errormsg=""/>
+      <File url="Work\Form_GridTest.xfdl" checksum="20260624100005" errormsg=""/>
     </Info>
   </GenInfo>
 </root>

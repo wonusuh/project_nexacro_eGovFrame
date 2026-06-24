@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_GridTest" width="1000" height="500" titletext="New Form">
+    <Layouts>
+      <Layout height="500" mobileorientation="landscape" width="1000">
+        <Grid id="grd_list" taborder="0" left="10" top="10" width="850" height="450" binddataset="ds_list">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+                <Column size="100"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="EMP_NAME"/>
+                <Cell col="1" text="EMP_ID"/>
+                <Cell col="2" text="DEPT_CODE"/>
+                <Cell col="3" text="HIRE_DATE"/>
+                <Cell col="4" text="SALARY"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:EMP_NAME"/>
+                <Cell col="1" text="bind:EMP_ID"/>
+                <Cell col="2" text="bind:DEPT_CODE"/>
+                <Cell col="3" text="bind:HIRE_DATE"/>
+                <Cell col="4" text="bind:SALARY"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_list">
+        <ColumnInfo>
+          <Column id="EMP_NAME" type="STRING" size="50"/>
+          <Column id="EMP_ID" type="STRING" size="10"/>
+          <Column id="DEPT_CODE" type="STRING" size="256"/>
+          <Column id="HIRE_DATE" type="DATE" size="10"/>
+          <Column id="SALARY" type="INT" size="10"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="EMP_ID">KR010</Col>
+            <Col id="EMP_NAME">Melon</Col>
+            <Col id="DEPT_CODE">10</Col>
+            <Col id="HIRE_DATE">20071001</Col>
+            <Col id="SALARY">9000</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US050</Col>
+            <Col id="EMP_NAME">Jackson</Col>
+            <Col id="DEPT_CODE">20</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">6000</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">KR240</Col>
+            <Col id="EMP_NAME">Jennie</Col>
+            <Col id="DEPT_CODE">40</Col>
+            <Col id="HIRE_DATE">20110508</Col>
+            <Col id="SALARY">7000</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">JP150</Col>
+            <Col id="EMP_NAME">Dennis</Col>
+            <Col id="DEPT_CODE">30</Col>
+            <Col id="HIRE_DATE">20091021</Col>
+            <Col id="SALARY">5000</Col>
+          </Row>
+          <Row>
+            <Col id="EMP_ID">US020</Col>
+            <Col id="EMP_NAME">Andrew</Col>
+            <Col id="DEPT_CODE">60</Col>
+            <Col id="HIRE_DATE">20160602</Col>
+            <Col id="SALARY">6500</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
