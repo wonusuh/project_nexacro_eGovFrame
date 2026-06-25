@@ -24,6 +24,7 @@ if (nexacro.Environment)
         nexacro._addService("Base", "form", "./Base/", "session", null, "", "0", "0");
         nexacro._addService("FrameBase", "form", "./FrameBase/", "session", null, "", "0", "0");
         nexacro._addService("Work", "form", "./Work/", "session", null, "", "0", "0");
+        nexacro._addService("Lib", "js", "./Lib/", "session", null, "", "0", "0");
     	nexacro._component_uri = (nexacro._arg_compurl ? nexacro._arg_compurl : "./nexacrolib/component/");
     	nexacro._theme_uri = "./_resource_/_theme_/";
     	// load components
@@ -61,7 +62,8 @@ if (nexacro.Environment)
         		{"id":"DateRangePicker", "classname":"nexacro.DateRangePicker", "type":"JavaScript"},
         		{"id":"PopupDateRangePicker", "classname":"nexacro.PopupDateRangePicker", "type":"JavaScript"},
         		{"id":"SpinField", "classname":"nexacro.SpinField", "type":"JavaScript"},
-        		{"id":"SelectField", "classname":"nexacro.SelectField", "type":"JavaScript"}
+        		{"id":"SelectField", "classname":"nexacro.SelectField", "type":"JavaScript"},
+        		{"id":"WebView", "classname":"nexacro.WebView", "type":"JavaScript"}
         ];
     	nexacro._addClasses(registerclass);
     };

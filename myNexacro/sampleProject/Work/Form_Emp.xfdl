@@ -160,7 +160,9 @@
         </Div>
       </Layout>
     </Layouts>
-    <Script type="xscript5.1"><![CDATA[// 부서찾기 팝업
+    <Script type="xscript5.1"><![CDATA[include "Lib::Lib_Common.xjs";
+
+// 부서찾기 팝업
 this.fn_openPopupDept = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	const objChild = new ChildFrame('popupDept', 0, 0, 300, 400);
@@ -242,17 +244,17 @@ this.fn_callback = (svcId, errCd, errMsg) => {
 this.fn_add = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	const rowIdx = this.ds_emp.addRow();
-	this.ds_emp.setColumn(rowIdx, "HIRE_DATE", this.fn_today());
+	this.ds_emp.setColumn(rowIdx, "HIRE_DATE", this.lfn_getToday());
 };
 
 // 오늘 날짜를 반환
-this.fn_today = () => {
-	const objDate = new Date();
-	let sToday = objDate.getFullYear().toString();
-	sToday += (objDate.getMonth() + 1).toString().padLeft(2, '0')
-	sToday += objDate.getDate().toString().padLeft(2, '0');
-	return sToday;
-};
+// this.fn_today = () => {
+// 	const objDate = new Date();
+// 	let sToday = objDate.getFullYear().toString();
+// 	sToday += (objDate.getMonth() + 1).toString().padLeft(2, '0')
+// 	sToday += objDate.getDate().toString().padLeft(2, '0');
+// 	return sToday;
+// };
 
 // row 삭제
 this.fn_delete = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
@@ -276,6 +278,8 @@ this.fn_save = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 // 화면이 모두 로딩된 후 발생하는 이벤트 
 this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 {
+	this.gfn_formOnload(this);
+
 	this.transaction(
 		'svcSelectCode',
 		'http://localhost:8080/edu-egov/edu/getCode.do',
@@ -286,7 +290,7 @@ this.form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
 };
 ]]></Script>
     <Objects>
-      <Dataset id="ds_emp">
+      <Dataset id="ds_emp" onload="form_onload">
         <ColumnInfo>
           <Column id="EMP_NAME" type="STRING" size="50"/>
           <Column id="EMP_ID" type="STRING" size="10"/>

@@ -1,0 +1,7 @@
+{
+    "name": "EduJS",
+    "version": "24.0.0.200",
+    "description": "Nexacro N Unified Framework Library",
+    "License": "",
+    "scripts": ["EduJS/EduCommon.js", "EduJS/EduGrid.js"]
+}
