@@ -43,6 +43,7 @@
     <Component type="JavaScript" id="PopupDateRangePicker" classname="nexacro.PopupDateRangePicker"/>
     <Component type="JavaScript" id="SpinField" classname="nexacro.SpinField"/>
     <Component type="JavaScript" id="SelectField" classname="nexacro.SelectField"/>
+    <Component type="JavaScript" id="WebView" classname="nexacro.WebView" defaultwidth="0" defaultheight="0"/>
   </Components>
   <Services>
     <Service prefixid="theme" type="resource" url="./_resource_/_theme_/" version="0" cachelevel="session" include_subdir="true"/>
@@ -55,6 +56,7 @@
     <Service prefixid="Base" type="form" url="./Base/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
     <Service prefixid="FrameBase" type="form" url="./FrameBase/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
     <Service prefixid="Work" type="form" url="./Work/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
+    <Service prefixid="Lib" type="js" url="./Lib/" version="0" cachelevel="session" include_subdir="false" communicationversion="0"/>
   </Services>
   <Protocols/>
   <DeviceAdaptors/>
