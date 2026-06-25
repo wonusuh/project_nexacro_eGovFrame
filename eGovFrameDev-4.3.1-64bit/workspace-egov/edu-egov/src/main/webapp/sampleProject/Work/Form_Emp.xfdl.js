@@ -325,7 +325,10 @@
         };
         
         // User Script
+        this.addIncludeScript("Form_Emp.xfdl","Lib::Lib_Common.xjs");
         this.registerScript("Form_Emp.xfdl", function() {
+        this.executeIncludeScript("Lib::Lib_Common.xjs"); /*include "Lib::Lib_Common.xjs"*/;
+
         // 부서찾기 팝업
         this.fn_openPopupDept = function(obj,e)
         {
@@ -408,17 +411,17 @@
         this.fn_add = function(obj,e)
         {
         	const rowIdx = this.ds_emp.addRow();
-        	this.ds_emp.setColumn(rowIdx, "HIRE_DATE", this.fn_today());
+        	this.ds_emp.setColumn(rowIdx, "HIRE_DATE", this.lfn_getToday());
         };
 
         // 오늘 날짜를 반환
-        this.fn_today = () => {
-        	const objDate = new Date();
-        	let sToday = objDate.getFullYear().toString();
-        	sToday += (objDate.getMonth() + 1).toString().padLeft(2, '0')
-        	sToday += objDate.getDate().toString().padLeft(2, '0');
-        	return sToday;
-        };
+        // this.fn_today = () => {
+        // 	const objDate = new Date();
+        // 	let sToday = objDate.getFullYear().toString();
+        // 	sToday += (objDate.getMonth() + 1).toString().padLeft(2, '0')
+        // 	sToday += objDate.getDate().toString().padLeft(2, '0');
+        // 	return sToday;
+        // };
 
         // row 삭제
         this.fn_delete = function(obj,e)
@@ -442,6 +445,8 @@
         // 화면이 모두 로딩된 후 발생하는 이벤트
         this.form_onload = function(obj,e)
         {
+        	this.gfn_formOnload(this);
+
         	this.transaction(
         		'svcSelectCode',
         		'http://localhost:8080/edu-egov/edu/getCode.do',
@@ -472,6 +477,7 @@
             this.div_detail.form.Static00_07.addEventHandler("onclick",this.div_detail_Static00_07_onclick,this);
             this.div_detail.form.Static00_08.addEventHandler("onclick",this.div_detail_Static00_08_onclick,this);
             this.div_detail.form.txt_memo.addEventHandler("onchanged",this.Common_onchanged,this);
+            this.ds_emp.addEventHandler("onload",this.form_onload,this);
         };
         this.loadIncludeScript("Form_Emp.xfdl");
         this.loadPreloadList();

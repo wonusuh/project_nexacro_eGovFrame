@@ -7,6 +7,7 @@
     <Module url="ListView.json"/>
     <Module url="DeviceAPI.json"/>
     <Module url="MobileComp.json"/>
+    <Module url="extlib::EduJS.json"/>
   </Modules>
   <Components>
     <Component type="JavaScript" id="Button" classname="nexacro.Button"/>

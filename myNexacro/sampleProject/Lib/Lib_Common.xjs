@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script version="1.0" type="xscript5.1"><![CDATA[// 오늘 날짜를 반환
+this.lfn_getToday = () => {
+    const objDate = new Date();
+    let sToday = objDate.getFullYear().toString();
+    sToday += (objDate.getMonth() + 1)
+        .toString()
+        .padLeft(2, "0");
+    sToday += objDate.getDate().toString().padLeft(2, "0");
+    return sToday;
+};
+]]></Script>

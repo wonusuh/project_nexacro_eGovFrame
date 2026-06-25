@@ -17,7 +17,9 @@
         "./nexacrolib/component/Grid.js",
         "./nexacrolib/component/ListView.js",
         "./nexacrolib/component/DeviceAPI.js",
-        "./nexacrolib/component/MobileComp.js"
+        "./nexacrolib/component/MobileComp.js",
+        "./nexacrolib/component/EduJS/EduCommon.js",
+        "./nexacrolib/component/EduJS/EduGrid.js"
         ],
         "environment" :
         [    
